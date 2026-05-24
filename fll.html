@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Say Watt Robotics — FIRST LEGO League</title>
+  <meta name="description" content="Say Watt Robotics — Madison, AL. FIRST LEGO League team: curriculum, schedule, resources, and season progress." />
+  <link rel="icon" type="image/png" href="assets/logo-emblem.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-team="fll">
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html" data-logo>Say Watt Robotics</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <div class="team-tabs">
+          <a href="index.html" data-team-tab="rov">ROV Team</a>
+          <a href="fll.html" data-team-tab="fll">FIRST LEGO League</a>
+        </div>
+        <a href="#curriculum">Curriculum</a>
+        <a href="#calendar">Calendar</a>
+        <a href="#resources">Resources</a>
+        <a href="#team">Team</a>
+        <a href="#updates">Updates</a>
+        <a href="#sponsors" class="nav-donate" data-donate>Sponsors</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero"></section>
+
+    <!-- ===== Curriculum (phase / week / lesson explorer) ===== -->
+    <section class="section" id="curriculum">
+      <div class="wrap">
+        <p class="eyebrow">Curriculum</p>
+        <h2 class="section-title" id="curriculumTitle">Every phase. Every week. Every lesson.</h2>
+        <p class="section-lede" id="curriculumLede"></p>
+        <div id="roadmap"></div>
+        <div class="search">
+          <input type="search" id="curriculumSearch" placeholder="Search lessons, topics, skills…" autocomplete="off" />
+          <button class="search-clear" id="searchClear" aria-label="Clear search" hidden>Clear</button>
+        </div>
+        <div id="phaseList" class="phase-list"></div>
+        <p class="no-results" id="noResults" hidden>No lessons match that search.</p>
+      </div>
+    </section>
+
+    <!-- ===== Calendar ===== -->
+    <section class="section section-alt" id="calendar">
+      <div class="wrap">
+        <p class="eyebrow">Calendar</p>
+        <h2 class="section-title">What's coming up.</h2>
+        <div id="calendarList" class="calendar-list"></div>
+      </div>
+    </section>
+
+    <!-- ===== Resources ===== -->
+    <section class="section" id="resources">
+      <div class="wrap">
+        <p class="eyebrow">Resources</p>
+        <h2 class="section-title">Everything in one place.</h2>
+        <div id="resourceList" class="resource-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== Team ===== -->
+    <section class="section section-alt" id="team">
+      <div class="wrap">
+        <p class="eyebrow">The Team</p>
+        <h2 class="section-title">Who makes it happen.</h2>
+        <div id="rosterList" class="roster-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== Updates ===== -->
+    <section class="section" id="updates">
+      <div class="wrap">
+        <p class="eyebrow">Updates</p>
+        <h2 class="section-title">The season, as it unfolds.</h2>
+        <div id="updateList" class="update-list"></div>
+      </div>
+    </section>
+
+    <!-- ===== Sponsors ===== -->
+    <section class="section section-alt" id="sponsors">
+      <div class="wrap">
+        <p class="eyebrow">Sponsors</p>
+        <h2 class="section-title">Made possible by.</h2>
+        <p class="section-lede" id="sponsorLede"></p>
+        <div id="sponsorList" class="sponsor-grid"></div>
+        <div id="fundingBlock"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="wrap" id="footerInner"></div>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

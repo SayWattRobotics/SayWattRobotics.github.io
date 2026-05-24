@@ -1,0 +1,29 @@
+SPONSOR LOGOS GO IN THIS FOLDER
+================================
+
+The website is already wired to show a logo for each sponsor. To make the
+logos appear, drop the four image files into this "sponsors" folder using
+these EXACT file names:
+
+    tennessee-valley-robotics.png
+    simtech.png
+    5boys.png
+    first.png
+
+Tips for good-looking logos:
+  • PNG files with a transparent background work best.
+  • Aim for roughly 400-600 pixels wide.
+  • A dark or full-color logo on transparent background looks clean on the
+    white sponsor cards.
+
+Where to get each official logo:
+  • Tennessee Valley Robotics — https://www.tnvrobotics.org/
+  • SimTech                   — https://simtechinc.com/
+  • 5Boys Apparel             — https://www.5boysapparel.com/
+  • FIRST                     — https://www.firstinspires.org/  (brand/press page)
+
+Until you add a file, that sponsor simply shows its name as text — the site
+still looks fine and the link still works. Add the images whenever you have
+them; nothing else needs to change.
+
+You can delete this note file once you've added the logos.

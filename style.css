@@ -1,0 +1,698 @@
+/* ============================================================
+   ROV Team — Stylesheet
+   You should not need to edit this file to update content.
+   All content lives in content.js.
+   ============================================================ */
+
+:root {
+  --bg:        #ffffff;
+  --bg-alt:    #fbfbfd;
+  --ink:       #1d1d1f;
+  --ink-soft:  #6e6e73;
+  --ink-faint: #86868b;
+  --line:      #e3e3e6;
+  --accent:    #0d7490;   /* deep ocean teal */
+  --accent-dk: #095d75;
+  --radius:    18px;
+  --maxw:      1080px;
+  --ease:      cubic-bezier(.22,.61,.36,1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 124px; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+/* ===== Navigation ===== */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.82);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: var(--maxw); margin: 0 auto;
+  padding: 0 28px; height: 106px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  display: flex; align-items: center;
+  font-weight: 600; font-size: 17px; letter-spacing: -.01em;
+  color: var(--ink);
+}
+.logo-img {
+  display: block; height: 34px; width: auto; max-width: 280px;
+}
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links > a {
+  font-size: 14px; color: var(--ink-soft);
+  transition: color .2s var(--ease);
+}
+.nav-links > a:hover { color: var(--ink); }
+
+/* team switcher — segmented pill */
+.team-tabs {
+  display: flex;
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: 980px;
+  padding: 3px;
+}
+.team-tabs a {
+  font-size: 13px; font-weight: 500;
+  color: var(--ink-soft);
+  padding: 6px 14px; border-radius: 980px;
+  white-space: nowrap;
+  transition: background .2s var(--ease), color .2s var(--ease);
+}
+.team-tabs a:hover { color: var(--ink); }
+.team-tabs a.active { background: var(--accent); color: #fff; }
+
+/* nav "Sponsors" call-to-action button */
+.nav-links > a.nav-donate {
+  background: var(--accent); color: #fff;
+  padding: 9px 20px; border-radius: 980px; font-weight: 600;
+  transition: background .2s var(--ease), transform .15s var(--ease);
+}
+.nav-links > a.nav-donate:hover {
+  background: var(--accent-dk); color: #fff; transform: translateY(-1px);
+}
+.nav-toggle {
+  display: none; background: none; border: 0; cursor: pointer;
+  width: 30px; height: 30px; padding: 6px;
+}
+.nav-toggle span {
+  display: block; height: 1.5px; background: var(--ink);
+  margin: 5px 0; transition: .3s var(--ease);
+}
+
+/* ===== Hero ===== */
+.hero {
+  text-align: center;
+  padding: 120px 28px 130px;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--line);
+}
+.hero-eyebrow {
+  font-size: 15px; color: var(--accent);
+  font-weight: 600; letter-spacing: -.01em;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-size: clamp(40px, 6.5vw, 72px);
+  line-height: 1.06; letter-spacing: -.025em;
+  font-weight: 600; max-width: 16ch; margin: 0 auto 22px;
+}
+.hero-sub {
+  font-size: clamp(18px, 2.4vw, 24px);
+  color: var(--ink-soft); max-width: 40ch;
+  margin: 0 auto 36px; line-height: 1.4;
+}
+.hero-meta {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  justify-content: center; margin-bottom: 38px;
+}
+.hero-meta span {
+  font-size: 13px; color: var(--ink-soft);
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 980px; padding: 7px 16px;
+}
+.hero-cta {
+  display: inline-block;
+  background: var(--accent); color: #fff;
+  font-size: 15px; font-weight: 500;
+  padding: 12px 26px; border-radius: 980px;
+  transition: background .2s var(--ease), transform .2s var(--ease);
+}
+.hero-cta:hover { background: var(--accent-dk); transform: translateY(-1px); }
+
+/* ===== Sections ===== */
+.section { padding: 100px 0; }
+.section-alt { background: var(--bg-alt); }
+.eyebrow {
+  font-size: 14px; font-weight: 600;
+  color: var(--accent); margin-bottom: 12px;
+}
+.section-title {
+  font-size: clamp(30px, 4.4vw, 46px);
+  line-height: 1.1; letter-spacing: -.02em;
+  font-weight: 600; max-width: 18ch; margin-bottom: 18px;
+}
+.section-lede {
+  font-size: 19px; color: var(--ink-soft);
+  max-width: 56ch; margin-bottom: 40px; line-height: 1.5;
+}
+
+/* ===== Curriculum search ===== */
+.search {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 26px; max-width: 520px;
+}
+.search input {
+  flex: 1; font-size: 16px; font-family: inherit;
+  color: var(--ink);
+  padding: 13px 18px;
+  border: 1px solid var(--line); border-radius: 12px;
+  background: #fff; outline: none;
+  transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
+}
+.search input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(13,116,144,.1);
+}
+.search-clear {
+  font-size: 14px; color: var(--ink-soft);
+  background: none; border: 0; cursor: pointer; padding: 6px;
+}
+.search-clear:hover { color: var(--ink); }
+.no-results { color: var(--ink-soft); font-size: 17px; padding: 20px 4px; }
+
+/* ===== Phase / Week / Lesson explorer ===== */
+.phase-list { display: flex; flex-direction: column; gap: 14px; }
+
+.phase {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow .25s var(--ease);
+}
+.phase.open { box-shadow: 0 8px 36px rgba(0,0,0,.07); }
+
+.phase-head {
+  display: flex; align-items: center; gap: 18px;
+  padding: 24px 26px; cursor: pointer;
+  user-select: none;
+}
+.phase-num {
+  flex: none;
+  width: 42px; height: 42px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; font-weight: 600;
+  background: var(--bg-alt); color: var(--accent);
+  border: 1px solid var(--line);
+}
+.phase-titlewrap { flex: 1; min-width: 0; }
+.phase-title {
+  font-size: 20px; font-weight: 600; letter-spacing: -.01em;
+}
+.phase-dates { font-size: 14px; color: var(--ink-faint); margin-top: 2px; }
+.phase-status {
+  flex: none; font-size: 12px; font-weight: 600;
+  padding: 5px 12px; border-radius: 980px;
+  letter-spacing: .01em;
+}
+.status-complete  { background: #e8f3ee; color: #1f7a4d; }
+.status-active    { background: #e6f1f5; color: var(--accent-dk); }
+.status-upcoming  { background: #f0f0f2; color: var(--ink-faint); }
+
+.chevron {
+  flex: none; width: 11px; height: 11px;
+  border-right: 2px solid var(--ink-faint);
+  border-bottom: 2px solid var(--ink-faint);
+  transform: rotate(45deg);
+  transition: transform .3s var(--ease);
+}
+.phase.open > .phase-head .chevron { transform: rotate(225deg); }
+
+/* sliding container — 0fr→1fr grid trick = smooth, content-height agnostic */
+.collapse {
+  display: grid; grid-template-rows: 0fr;
+  transition: grid-template-rows .34s var(--ease);
+}
+.collapse > .collapse-inner { overflow: hidden; }
+.phase.open > .collapse,
+.week.open  > .collapse { grid-template-rows: 1fr; }
+
+.phase-body { padding: 0 26px 22px; }
+.phase-summary {
+  font-size: 15px; color: var(--ink-soft);
+  padding: 4px 0 18px; line-height: 1.55;
+  border-top: 1px solid var(--line); margin-top: 2px; padding-top: 18px;
+}
+
+/* Weeks */
+.week-list { display: flex; flex-direction: column; gap: 8px; }
+.week {
+  border: 1px solid var(--line);
+  border-radius: 12px; overflow: hidden;
+  background: var(--bg-alt);
+}
+.week.open { background: #fff; }
+.week-head {
+  display: flex; align-items: center; gap: 14px;
+  padding: 15px 18px; cursor: pointer; user-select: none;
+}
+.week-label {
+  flex: none; font-size: 13px; font-weight: 600;
+  color: var(--accent); min-width: 64px;
+}
+.week-theme { flex: 1; font-size: 15px; font-weight: 500; }
+.week-dates { flex: none; font-size: 13px; color: var(--ink-faint); }
+.week .chevron { width: 9px; height: 9px; }
+.week.open > .week-head .chevron { transform: rotate(225deg); }
+
+.week-body { padding: 4px 18px 18px 18px; }
+.lesson-list { list-style: none; }
+.lesson-list li {
+  position: relative;
+  font-size: 15px; color: var(--ink);
+  padding: 9px 0 9px 24px; line-height: 1.5;
+  border-top: 1px solid var(--line);
+}
+.lesson-list li:first-child { border-top: 0; }
+.lesson-list li::before {
+  content: ""; position: absolute; left: 4px; top: 17px;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent);
+}
+.week-resources {
+  margin-top: 12px; padding-top: 12px;
+  border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.week-resources a {
+  font-size: 13px; color: var(--accent);
+  border: 1px solid var(--line); border-radius: 980px;
+  padding: 5px 13px; transition: background .2s var(--ease);
+}
+.week-resources a:hover { background: var(--bg-alt); }
+
+mark {
+  background: #fff2b8; color: inherit;
+  border-radius: 3px; padding: 0 2px;
+}
+
+/* ===== Calendar ===== */
+.calendar-list { display: flex; flex-direction: column; gap: 0; }
+.cal-item {
+  display: flex; gap: 24px; align-items: baseline;
+  padding: 22px 0; border-top: 1px solid var(--line);
+}
+.cal-item:first-child { border-top: 0; }
+.cal-item.next { }
+.cal-date {
+  flex: none; width: 116px;
+  font-size: 14px; font-weight: 600; color: var(--accent);
+}
+.cal-main { flex: 1; }
+.cal-title { font-size: 18px; font-weight: 500; letter-spacing: -.01em; }
+.cal-meta { font-size: 14px; color: var(--ink-soft); margin-top: 3px; }
+.cal-tag {
+  flex: none; font-size: 12px; color: var(--ink-faint);
+  border: 1px solid var(--line); border-radius: 980px;
+  padding: 4px 11px;
+}
+.cal-next-flag {
+  display: inline-block; font-size: 11px; font-weight: 700;
+  letter-spacing: .04em; color: var(--accent);
+  margin-bottom: 4px;
+}
+
+/* ===== Resources ===== */
+.resource-grid {
+  display: grid; gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.resource-card {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 28px;
+}
+.resource-card h3 {
+  font-size: 18px; font-weight: 600; margin-bottom: 16px;
+  letter-spacing: -.01em;
+}
+.resource-card ul { list-style: none; }
+.resource-card li { border-top: 1px solid var(--line); }
+.resource-card li:first-child { border-top: 0; }
+.resource-card a, .resource-card .res-static {
+  display: block; padding: 13px 0;
+}
+.resource-card a { transition: opacity .15s var(--ease); }
+.resource-card a:hover { opacity: .6; }
+.res-title { font-size: 15px; font-weight: 500; }
+.res-title .arrow { color: var(--accent); margin-left: 4px; }
+.res-desc { font-size: 13px; color: var(--ink-soft); margin-top: 2px; }
+
+/* ===== Roster ===== */
+.roster-grid {
+  display: grid; gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.roster-card {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 26px;
+  text-align: center;
+}
+.roster-avatar {
+  width: 64px; height: 64px; border-radius: 50%;
+  margin: 0 auto 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; font-weight: 600;
+  background: var(--bg-alt); color: var(--accent);
+  border: 1px solid var(--line);
+}
+.roster-name { font-size: 17px; font-weight: 600; }
+.roster-role {
+  font-size: 13px; font-weight: 600; color: var(--accent);
+  margin-top: 4px;
+}
+.roster-detail {
+  font-size: 14px; color: var(--ink-soft); margin-top: 8px;
+  line-height: 1.45;
+}
+
+/* ===== Updates ===== */
+.update-list {
+  display: flex; flex-direction: column; gap: 0;
+  max-width: 680px;
+}
+.update {
+  padding: 32px 0; border-top: 1px solid var(--line);
+}
+.update:first-child { border-top: 0; padding-top: 0; }
+.update-date {
+  font-size: 13px; font-weight: 600; color: var(--accent);
+  margin-bottom: 8px;
+}
+.update h3 {
+  font-size: 22px; font-weight: 600; letter-spacing: -.015em;
+  margin-bottom: 10px;
+}
+.update p { font-size: 16px; color: var(--ink-soft); line-height: 1.6; }
+
+/* ===== Sponsors ===== */
+.sponsor-grid {
+  display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.sponsor-card {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 28px 24px;
+  text-align: center; min-height: 130px;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease);
+}
+a.sponsor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.07);
+}
+.sponsor-logo {
+  display: block; margin: 0 auto;
+  max-width: 100%; max-height: 64px; width: auto;
+  object-fit: contain;
+}
+.sponsor-name { font-size: 17px; font-weight: 600; }
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--line);
+  padding: 50px 0; text-align: center;
+}
+.footer p { font-size: 13px; color: var(--ink-faint); line-height: 1.7; }
+.footer a { color: var(--accent); }
+
+/* ===== Reveal on scroll ===== */
+.reveal {
+  opacity: 0; transform: translateY(22px);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+}
+.reveal.in { opacity: 1; transform: none; }
+
+/* ===== Responsive ===== */
+@media (max-width: 720px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    position: absolute; top: 106px; left: 0; right: 0;
+    flex-direction: column; gap: 0;
+    background: rgba(255,255,255,.97);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--line);
+    max-height: 0; overflow: hidden;
+    transition: max-height .35s var(--ease);
+  }
+  .nav-links.open { max-height: 420px; }
+  .nav-links > a {
+    padding: 16px 28px; border-top: 1px solid var(--line);
+    font-size: 16px;
+  }
+  .team-tabs {
+    margin: 14px 28px 4px; align-self: stretch;
+  }
+  .team-tabs a { flex: 1; text-align: center; padding: 9px 10px; }
+  .nav-links > a.nav-donate {
+    margin: 14px 28px 4px; padding: 13px; text-align: center; border-top: 0;
+  }
+  .section { padding: 70px 0; }
+  .hero { padding: 84px 24px 90px; }
+  .phase-head { padding: 20px 18px; gap: 14px; }
+  .phase-body { padding: 0 18px 18px; }
+  .phase-status { display: none; }
+  .cal-item { flex-wrap: wrap; gap: 6px 16px; }
+  .cal-date { width: auto; }
+  .cal-tag { order: 3; }
+}
+
+/* ============================================================
+   COMIC ACCENTS — a subtle pop-art layer over the clean base.
+   Every graphic lives in the assets/ folder. If a file is not
+   there yet, that accent simply doesn't appear — the layout
+   never breaks and the site still looks clean.
+   ============================================================ */
+
+/* --- nav logo: the Say Watt Robotics comic emblem --- */
+.logo-emblem {
+  display: block; height: 90px; width: auto;
+}
+
+/* --- each section eyebrow gets a tiny bolt --- */
+body.art-ready .eyebrow {
+  padding-left: 30px;
+  background: url(assets/lightning-bolt.svg) left center / auto 24px no-repeat;
+}
+
+/* --- hero: faint action lines + halftone corner --- */
+.hero { position: relative; overflow: hidden; }
+.hero .wrap { position: relative; z-index: 2; }
+.hero::before {
+  content: ""; position: absolute; z-index: 0; pointer-events: none;
+  top: 50%; left: 50%; width: 1150px; height: 1150px;
+  transform: translate(-50%, -47%);
+  background: url(assets/speed-lines.png) center/contain no-repeat;
+  opacity: .05;
+}
+.hero::after {
+  content: ""; position: absolute; z-index: 0; pointer-events: none;
+  top: 0; right: 0; width: 360px; height: 360px;
+  background: url(assets/halftone-corner.png) top right/contain no-repeat;
+  transform: rotate(180deg); opacity: .5;
+}
+
+/* --- hero illustration (ROV / brick robot) --- */
+.hero-art { display: none; }
+.hero-art.on {
+  display: block; position: relative;
+  margin: 52px auto 0; width: min(340px, 74vw);
+}
+.hero-art.on::before {            /* comic starburst behind it */
+  content: ""; position: absolute; z-index: 0; pointer-events: none;
+  top: 50%; left: 50%; width: 158%; height: 158%;
+  transform: translate(-50%, -50%);
+  background: url(assets/starburst.png) center/contain no-repeat;
+  opacity: .15;
+}
+.hero-art.on::after {             /* sparkle accent */
+  content: ""; position: absolute; z-index: 2; pointer-events: none;
+  top: -6px; right: 4px; width: 30px; height: 30px;
+  background: url(assets/sparkle.svg) center/contain no-repeat;
+}
+.hero-art img { position: relative; z-index: 1; display: block; width: 100%; }
+
+/* (the empty speech bubble was removed — an empty bubble read as
+   unfinished. speech-bubble.png stays in assets/ if needed later.) */
+
+/* (footer halftone band removed — it sat behind the contact text
+   and hurt readability. footer is kept clean.) */
+
+@media (max-width: 720px) {
+  .logo-emblem { height: 70px; }
+}
+
+/* ============================================================
+   SPONSOR FUNDING — meter + collapsible wish list
+   ============================================================ */
+.fund { margin-top: 46px; }
+
+.fund-toggle {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  margin: 0 auto; width: 100%; max-width: 470px;
+  background: #fff; border: 1px solid var(--line); border-radius: 980px;
+  padding: 16px 28px; cursor: pointer; font-family: inherit;
+  font-size: 15px; font-weight: 600; color: var(--accent);
+  transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
+}
+.fund-toggle:hover {
+  border-color: var(--accent); box-shadow: 0 4px 18px rgba(0,0,0,.06);
+}
+.fund-toggle .chevron { border-color: var(--accent); }
+.fund.open > .collapse { grid-template-rows: 1fr; }
+.fund.open .fund-toggle .chevron { transform: rotate(225deg); }
+
+.fund-panel { padding-top: 34px; }
+
+/* the two-team framing line */
+.fund-lede {
+  font-size: 17px; line-height: 1.6; color: var(--ink-soft);
+  max-width: 64ch; margin: 0 auto 38px; text-align: center;
+}
+
+/* ROV (left) and FIRST LEGO League (right), side by side */
+.fund-cols {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 46px;
+  max-width: 1040px; margin: 0 auto;
+}
+.fund-col { min-width: 0; }
+.fund-col-head {
+  font-size: 19px; font-weight: 700; letter-spacing: -.01em;
+  color: var(--ink); text-align: center;
+  padding-bottom: 12px; margin-bottom: 22px;
+  border-bottom: 2px solid var(--accent);
+}
+@media (max-width: 760px) {
+  .fund-cols { grid-template-columns: 1fr; gap: 50px; }
+}
+
+.fund-intro {
+  font-size: 17px; line-height: 1.6; color: var(--ink-soft);
+  max-width: 60ch; margin: 0 auto 34px; text-align: center;
+}
+
+/* funding meter */
+.meter { max-width: 560px; margin: 0 auto 44px; }
+.meter-track {
+  height: 20px; background: #fff;
+  border: 1px solid var(--line); border-radius: 980px; overflow: hidden;
+}
+.meter-fill {
+  height: 100%; background: var(--accent);
+  border-radius: 980px; transition: width .6s var(--ease);
+}
+.meter-label {
+  font-size: 15px; font-weight: 600; color: var(--ink);
+  text-align: center; margin-top: 13px;
+}
+.meter-asof {
+  font-size: 13px; color: var(--ink-faint);
+  text-align: center; margin-top: 3px;
+}
+
+/* wish list */
+.wish-list { max-width: 720px; margin: 0 auto; }
+.wish-tier { margin-top: 32px; }
+.wish-tier:first-child { margin-top: 0; }
+.tier-label {
+  font-size: 14px; font-weight: 700; color: var(--accent);
+  margin-bottom: 13px; padding-bottom: 9px;
+  border-bottom: 1px solid var(--line);
+}
+.wish-item {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 14px; padding: 18px 20px; margin-bottom: 10px;
+}
+.wish-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 16px;
+}
+.wish-name { font-size: 16px; font-weight: 600; letter-spacing: -.01em; }
+.wish-cost {
+  font-size: 16px; font-weight: 700; color: var(--accent); flex: none;
+}
+.wish-unit {
+  display: inline-block; margin-top: 9px;
+  font-size: 13px; font-weight: 600; color: var(--accent-dk);
+  background: var(--bg-alt); border: 1px solid var(--line);
+  border-radius: 980px; padding: 4px 12px;
+}
+.wish-why {
+  font-size: 14px; color: var(--ink-soft); line-height: 1.55; margin-top: 11px;
+}
+.wish-funded {
+  display: inline-block; margin-top: 11px;
+  font-size: 12px; font-weight: 700; color: #1f7a4d;
+}
+.wish-item.is-funded { opacity: .6; }
+.wish-item.is-funded .wish-name { text-decoration: line-through; }
+.wish-aspire { background: var(--bg-alt); border-style: dashed; }
+
+.fund-cta {
+  max-width: 58ch; margin: 36px auto 0; text-align: center;
+  font-size: 16px; line-height: 1.6; color: var(--ink);
+}
+.fund-cta a { color: var(--accent); font-weight: 600; white-space: nowrap; }
+
+.fund-tax {
+  max-width: 52ch; margin: 16px auto 0; text-align: center;
+  font-size: 14px; font-weight: 600; color: var(--accent);
+}
+
+.fund-thanks {
+  max-width: 56ch; margin: 42px auto 0; text-align: center;
+  font-size: 15px; line-height: 1.65; color: var(--ink-soft);
+}
+
+/* ============================================================
+   SEASON PLAN — an elegant link card at the top of Curriculum
+   ============================================================ */
+.plan-link {
+  display: flex; align-items: center; gap: 18px;
+  background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 20px 24px;
+  margin-bottom: 46px;
+  transition: border-color .2s var(--ease), box-shadow .2s var(--ease),
+              transform .2s var(--ease);
+}
+.plan-link:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(0,0,0,.07);
+  transform: translateY(-2px);
+}
+.plan-badge {
+  flex: none; width: 48px; height: 48px; border-radius: 12px;
+  background: var(--accent); color: #fff;
+  font-size: 12px; font-weight: 700; letter-spacing: .04em;
+  display: flex; align-items: center; justify-content: center;
+}
+.plan-text { flex: 1; min-width: 0; }
+.plan-title {
+  display: block; font-size: 16px; font-weight: 600;
+  color: var(--ink); letter-spacing: -.01em;
+}
+.plan-blurb {
+  display: block; font-size: 14px; color: var(--ink-soft);
+  line-height: 1.5; margin-top: 3px;
+}
+.plan-arrow {
+  flex: none; font-size: 22px; color: var(--accent);
+  transition: transform .2s var(--ease);
+}
+.plan-link:hover .plan-arrow { transform: translateX(3px); }
+
+@media (max-width: 720px) {
+  .plan-link { padding: 18px; gap: 14px; }
+  .plan-badge { width: 42px; height: 42px; }
+}
