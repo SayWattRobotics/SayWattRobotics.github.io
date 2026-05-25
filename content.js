@@ -765,7 +765,7 @@ window.SITE = {
           { title: "Game & season", description: "The current BIOGLOW challenge",
             url: "https://www.firstinspires.org/programs/fll/game-and-season" },
           { title: "Core Values", description: "What FIRST teams are judged on",
-            url: "https://www.firstinspires.org/robotics/fll/core-values" }
+            url: "https://www.firstinspires.org/about" }
         ]
       },
       {
@@ -816,7 +816,7 @@ window.SITE = {
         "Say Watt Robotics is a registered 501(c)(3) non-profit — every " +
         "sponsorship is fully tax-deductible.",
 
-      contactEmail: "saywattrobotics@gmail.com",
+      contactEmail: "saywattrobotics2022@gmail.com",
 
       thankYou:
         "Thank you to everyone supporting our FIRST LEGO League team.",
