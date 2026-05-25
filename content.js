@@ -55,17 +55,22 @@ window.SITE = {
     {
       name: "DoW STEM",
       url:  "https://dowstem.us/",
-      logo: "sponsors/DODSTEM.png"
+      logo: "sponsors/DoDSTEM.png"
     },
     {
       name: "TactWare",
       url:  "https://tactware.net/",
-      logo: "sponsors/tactware.png"
+      logo: "sponsors/TactWare.png"
     },
     {
       name: "National Space Club",
       url:  "https://www.spaceclubhsv.org/",
       logo: "sponsors/NSC.png"
+    },
+    {
+      name: "AUVSI",
+      url:  "https://www.auvsipathfinder.org/",
+      logo: "sponsors/AUVSI_Pathfinder.png"
     }
   ],
   sponsorLede:
