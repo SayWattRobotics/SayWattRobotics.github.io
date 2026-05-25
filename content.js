@@ -53,14 +53,14 @@ window.SITE = {
       logo: "sponsors/tennessee-valley-robotics.png"
     },
     {
+      name: "AUVSI",
+      url:  "https://www.auvsipathfinder.org/",
+      logo: "sponsors/AUVSI_Pathfinder.png"},
+    }, 
+    {
       name: "DoW STEM",
       url:  "https://dowstem.us/",
       logo: "sponsors/DoDSTEM.png"
-    },
-    {
-      name: "TactWare",
-      url:  "https://tactware.net/",
-      logo: "sponsors/TactWare.png"
     },
     {
       name: "National Space Club",
@@ -68,9 +68,14 @@ window.SITE = {
       logo: "sponsors/NSC.png"
     },
     {
-      name: "AUVSI",
-      url:  "https://www.auvsipathfinder.org/",
-      logo: "sponsors/AUVSI_Pathfinder.png"
+      name: "TactWare",
+      url:  "https://tactware.net/",
+      logo: "sponsors/TactWare.png"
+    },
+    {
+       name:"GigaParts",
+       url: "https://www.gigaparts.com/"
+       logo: "sponsors/GigaParts.png"
     }
   ],
   sponsorLede:
