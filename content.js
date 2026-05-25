@@ -76,7 +76,7 @@ window.SITE = {
        name:"GigaParts",
        url: "https://www.gigaparts.com/"
        logo: "sponsors/GigaParts.png"
-    },
+    }
   ],
   sponsorLede:
     "Say Watt Robotics runs on the generosity of our sponsors. Their support " +
