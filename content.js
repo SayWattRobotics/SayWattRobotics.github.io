@@ -520,26 +520,17 @@ window.SITE = {
       }
     ],
 
-    /* ---- 5. TEAM ROSTER ---- */
-    roster: [
-      { name: "Add Student", role: "CEO",             detail: "Schedule, judges, and the safety briefing" },
-      { name: "Add Student", role: "CFO",             detail: "Budget, bill of materials, and cost report" },
-      { name: "Add Student", role: "Mechanical Lead", detail: "Frame, buoyancy, and the manipulator" },
-      { name: "Add Student", role: "Electrical Lead", detail: "Power system, SID, and fuse selection" },
-      { name: "Add Student", role: "Software Lead",   detail: "Control software, video, and vision" },
-      { name: "Add Student", role: "Pilot",           detail: "In-water operator at the competition" },
-      { name: "Add Student", role: "Tether Manager",  detail: "Manages the tether and calls obstructions" }
-    ],
-
-    /* ---- 5b. ROLES — what each job on the team actually does ----
+    /* ---- 5. TEAM ROSTER ----
        MATE runs the competition like a company: every student holds a
-       real title with real duties, and judges score how well the team
-       works as a company. These show as an expandable list in the
-       Team section. Edit the title, summary, or duties freely. */
-    roles: [
+       real title with real duties. Each card shows the role and a
+       one-line summary; on the website, clicking a card opens it to
+       reveal the full duty list. Edit the name, role, detail, or duties
+       freely. When a student is elected, change "Not Elected Yet" to
+       their name. */
+    roster: [
       {
-        title:   "Chief Executive Officer (CEO)",
-        summary: "Runs the company — keeps the team organized, on schedule, and ready for the judges.",
+        name: "Not Elected Yet", role: "CEO",
+        detail: "Schedule, judges, and the safety briefing",
         duties: [
           "Owns the team's schedule and meeting agendas, and keeps every sub-team on track to its deadlines.",
           "Is the team's main point of contact with the judges, competition officials, and the regional coordinator.",
@@ -551,8 +542,8 @@ window.SITE = {
         ]
       },
       {
-        title:   "Chief Financial Officer (CFO)",
-        summary: "Owns the money — the budget, the parts list, and the cost report the judges score.",
+        name: "Not Elected Yet", role: "CFO",
+        detail: "Budget, bill of materials, and cost report",
         duties: [
           "Maintains the team budget and tracks every dollar spent against it.",
           "Keeps the Bill of Materials — the master list of every part — updated weekly, not the night before a deadline.",
@@ -564,8 +555,8 @@ window.SITE = {
         ]
       },
       {
-        title:   "Mechanical Lead",
-        summary: "Owns the physical robot — the frame, how it floats, and the tools that do the mission tasks.",
+        name: "Not Elected Yet", role: "Mechanical Lead",
+        detail: "Frame, buoyancy, and the manipulator",
         duties: [
           "Designs the ROV frame and leads its construction.",
           "Owns buoyancy and trim — making the robot sit level and neutral in the water.",
@@ -577,8 +568,8 @@ window.SITE = {
         ]
       },
       {
-        title:   "Electrical Lead",
-        summary: "Owns the power and wiring — getting energy safely from the surface to every motor and sensor.",
+        name: "Not Elected Yet", role: "Electrical Lead",
+        detail: "Power system, SID, and fuse selection",
         duties: [
           "Designs the power system — the path from the topside supply, through the fuse, to every device.",
           "Draws the System Interconnection Diagram (SID) using proper, standard electrical symbols.",
@@ -590,8 +581,8 @@ window.SITE = {
         ]
       },
       {
-        title:   "Software Lead",
-        summary: "Owns the code — how the pilot's commands reach the robot, and what the robot sees.",
+        name: "Not Elected Yet", role: "Software Lead",
+        detail: "Control software, video, and vision",
         duties: [
           "Builds and maintains the control software — the loop from the gamepad to the thrusters.",
           "Sets up the video streaming and keeps the camera delay low, testing it regularly.",
@@ -603,8 +594,8 @@ window.SITE = {
         ]
       },
       {
-        title:   "Pilot",
-        summary: "Flies the ROV during competition runs — the calm hands at the controls.",
+        name: "Not Elected Yet", role: "Pilot",
+        detail: "In-water operator at the competition",
         duties: [
           "Operates the ROV during every mission run and pool rehearsal.",
           "Logs serious water time — strong pilots practice weekly from October onward.",
@@ -616,8 +607,8 @@ window.SITE = {
         ]
       },
       {
-        title:   "Tether Manager",
-        summary: "Manages the lifeline — the cable carrying power and data — and is the pilot's second set of eyes.",
+        name: "Not Elected Yet", role: "Tether Manager",
+        detail: "Manages the tether and calls obstructions",
         duties: [
           "Manages the tether during every run — feeding slack, taking it up, and keeping it clear of obstacles and propellers.",
           "Calls out obstructions, distances, and hazards to the pilot in real time.",
@@ -913,9 +904,9 @@ window.SITE = {
 
     /* ---- 5. TEAM ROSTER ---- */
     roster: [
-      { name: "Add Student", role: "Team Member", detail: "Robot design and build" },
-      { name: "Add Student", role: "Team Member", detail: "Programming" },
-      { name: "Add Student", role: "Team Member", detail: "Innovation Project" }
+      { name: "Not Elected Yet", role: "Team Member", detail: "Robot design and build" },
+      { name: "Not Elected Yet", role: "Team Member", detail: "Programming" },
+      { name: "Not Elected Yet", role: "Team Member", detail: "Innovation Project" }
     ],
 
     /* ---- 6. UPDATES ---- */

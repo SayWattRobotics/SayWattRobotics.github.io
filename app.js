@@ -295,39 +295,30 @@
   }
   function renderRoster() {
     const host = $("rosterList");
+    if (!host) return;
     (S.roster || []).forEach((m) => {
-      host.appendChild(el("div", "roster-card", `
-        <div class="roster-avatar">${esc(initials(m.name || "?"))}</div>
-        <div class="roster-name">${esc(m.name || "")}</div>
-        ${m.role ? `<div class="roster-role">${esc(m.role)}</div>` : ""}
-        ${m.detail ? `<div class="roster-detail">${esc(m.detail)}</div>` : ""}`));
-    });
-  }
-
-  /* ---------- roles — expandable "what each job does" ---------- */
-  function renderRoles() {
-    const host = $("rolesList");
-    const roles = S.roles || [];
-    if (!host || !roles.length) return;
-    host.innerHTML =
-      '<h3 class="roles-h">What each role does</h3>' +
-      '<div class="role-list">' +
-      roles.map((r) =>
-        '<div class="role">' +
-          '<div class="role-head">' +
-            '<span class="role-title">' + esc(r.title || "") + "</span>" +
-            (r.summary ? '<span class="role-summary">' + esc(r.summary) + "</span>" : "") +
-            '<span class="chevron"></span>' +
-          "</div>" +
-          '<div class="collapse"><div class="collapse-inner"><div class="role-body">' +
-            '<ul class="role-duties">' +
-              (r.duties || []).map((d) => "<li>" + esc(d) + "</li>").join("") +
-            "</ul>" +
-          "</div></div></div>" +
-        "</div>").join("") +
-      "</div>";
-    host.querySelectorAll(".role-head").forEach((h) => {
-      h.addEventListener("click", () => h.parentElement.classList.toggle("open"));
+      const duties = m.duties || [];
+      const has = duties.length > 0;
+      const card = el("div", "roster-card" + (has ? " has-duties" : ""));
+      card.innerHTML =
+        '<div class="roster-avatar">' + esc(initials(m.name || "?")) + "</div>" +
+        '<div class="roster-name">' + esc(m.name || "") + "</div>" +
+        (m.role ? '<div class="roster-role">' + esc(m.role) + "</div>" : "") +
+        (m.detail ? '<div class="roster-detail">' + esc(m.detail) + "</div>" : "") +
+        (has
+          ? '<div class="roster-toggle">' +
+              "<span>What this role does</span><span class=\"chevron\"></span>" +
+            "</div>" +
+            '<div class="collapse"><div class="collapse-inner">' +
+              '<ul class="roster-duties">' +
+                duties.map((d) => "<li>" + esc(d) + "</li>").join("") +
+              "</ul>" +
+            "</div></div>"
+          : "");
+      if (has) {
+        card.addEventListener("click", () => card.classList.toggle("open"));
+      }
+      host.appendChild(card);
     });
   }
 
@@ -543,7 +534,6 @@
       renderCalendar();
       renderResources();
       renderRoster();
-      renderRoles();
       renderUpdates();
     }
     renderSponsors();
