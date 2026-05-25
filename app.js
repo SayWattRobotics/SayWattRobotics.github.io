@@ -304,6 +304,33 @@
     });
   }
 
+  /* ---------- roles — expandable "what each job does" ---------- */
+  function renderRoles() {
+    const host = $("rolesList");
+    const roles = S.roles || [];
+    if (!host || !roles.length) return;
+    host.innerHTML =
+      '<h3 class="roles-h">What each role does</h3>' +
+      '<div class="role-list">' +
+      roles.map((r) =>
+        '<div class="role">' +
+          '<div class="role-head">' +
+            '<span class="role-title">' + esc(r.title || "") + "</span>" +
+            (r.summary ? '<span class="role-summary">' + esc(r.summary) + "</span>" : "") +
+            '<span class="chevron"></span>' +
+          "</div>" +
+          '<div class="collapse"><div class="collapse-inner"><div class="role-body">' +
+            '<ul class="role-duties">' +
+              (r.duties || []).map((d) => "<li>" + esc(d) + "</li>").join("") +
+            "</ul>" +
+          "</div></div></div>" +
+        "</div>").join("") +
+      "</div>";
+    host.querySelectorAll(".role-head").forEach((h) => {
+      h.addEventListener("click", () => h.parentElement.classList.toggle("open"));
+    });
+  }
+
   /* ---------- updates ---------- */
   function renderUpdates() {
     const host = $("updateList");
@@ -516,6 +543,7 @@
       renderCalendar();
       renderResources();
       renderRoster();
+      renderRoles();
       renderUpdates();
     }
     renderSponsors();

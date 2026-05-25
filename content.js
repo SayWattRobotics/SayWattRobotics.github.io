@@ -169,6 +169,7 @@ window.SITE = {
               "Starting the community-outreach log on day one"
             ],
             resources: [
+              { label: "Week 1 slide deck", url: "Classes/Phase%201/ROV-Week-01-Kickoff.pptx" },
               { label: "MATE ROV Competition", url: "https://materovcompetition.org" }
             ]
           },
@@ -528,6 +529,105 @@ window.SITE = {
       { name: "Add Student", role: "Software Lead",   detail: "Control software, video, and vision" },
       { name: "Add Student", role: "Pilot",           detail: "In-water operator at the competition" },
       { name: "Add Student", role: "Tether Manager",  detail: "Manages the tether and calls obstructions" }
+    ],
+
+    /* ---- 5b. ROLES — what each job on the team actually does ----
+       MATE runs the competition like a company: every student holds a
+       real title with real duties, and judges score how well the team
+       works as a company. These show as an expandable list in the
+       Team section. Edit the title, summary, or duties freely. */
+    roles: [
+      {
+        title:   "Chief Executive Officer (CEO)",
+        summary: "Runs the company — keeps the team organized, on schedule, and ready for the judges.",
+        duties: [
+          "Owns the team's schedule and meeting agendas, and keeps every sub-team on track to its deadlines.",
+          "Is the team's main point of contact with the judges, competition officials, and the regional coordinator.",
+          "Leads the safety briefing at the start of every pool session and competition run.",
+          "Runs team meetings, assigns action items, and follows up to make sure they get done.",
+          "Keeps the whole team pointed at the season's milestones — and steps in when a sub-team falls behind.",
+          "Helps lead the engineering presentation and hands each question to the right teammate.",
+          "Builds team culture so every member has a real job and a voice. (The CEO does not pilot — running the company is a full job.)"
+        ]
+      },
+      {
+        title:   "Chief Financial Officer (CFO)",
+        summary: "Owns the money — the budget, the parts list, and the cost report the judges score.",
+        duties: [
+          "Maintains the team budget and tracks every dollar spent against it.",
+          "Keeps the Bill of Materials — the master list of every part — updated weekly, not the night before a deadline.",
+          "Collects and files every invoice and receipt.",
+          "Writes the cost report that goes into the technical documentation and is scored by the judges.",
+          "Warns the team before a purchase pushes the build over budget, and asks 'what does this trade off?'",
+          "Works with the CEO and mentors to track sponsors and fundraising.",
+          "Reports the financial picture to the team so spending decisions are made with eyes open."
+        ]
+      },
+      {
+        title:   "Mechanical Lead",
+        summary: "Owns the physical robot — the frame, how it floats, and the tools that do the mission tasks.",
+        duties: [
+          "Designs the ROV frame and leads its construction.",
+          "Owns buoyancy and trim — making the robot sit level and neutral in the water.",
+          "Designs and builds the manipulator and any mission-specific tools, such as grippers and hooks.",
+          "Runs trade studies on frame material and layout, and records the reasoning in the project notebook.",
+          "Leads the CAD work for the mechanical design.",
+          "Makes sure the build passes safety inspection — no sharp edges, shrouded propellers, proper strain relief.",
+          "Works closely with the Electrical Lead so the electronics and payload fit and balance."
+        ]
+      },
+      {
+        title:   "Electrical Lead",
+        summary: "Owns the power and wiring — getting energy safely from the surface to every motor and sensor.",
+        duties: [
+          "Designs the power system — the path from the topside supply, through the fuse, to every device.",
+          "Draws the System Interconnection Diagram (SID) using proper, standard electrical symbols.",
+          "Selects the main fuse from measured full-load-amp values and documents the choice against the rules.",
+          "Wires and tests the Electronic Speed Controllers (ESCs) and motor connections.",
+          "Owns clean, reliable wiring and solder joints — no 'rat's nest,' with strain relief at every termination.",
+          "Makes sure the electrical build passes safety inspection — fuse placement, correct fuse type, waterproofed motors.",
+          "Partners with the Software Lead on the control electronics and with Mechanical on the layout."
+        ]
+      },
+      {
+        title:   "Software Lead",
+        summary: "Owns the code — how the pilot's commands reach the robot, and what the robot sees.",
+        duties: [
+          "Builds and maintains the control software — the loop from the gamepad to the thrusters.",
+          "Sets up the video streaming and keeps the camera delay low, testing it regularly.",
+          "Writes the computer-vision code for mission tasks such as detecting, counting, and measuring objects.",
+          "Handles telemetry — depth, sensor data, and the profiling float's transmitted readings.",
+          "Develops on a topside bench replica so software can progress while the real vehicle is being built.",
+          "Keeps the code in version control with clean, student-pushed commits.",
+          "Documents any AI tools used, as the rules require, and can explain every part of the code to a judge."
+        ]
+      },
+      {
+        title:   "Pilot",
+        summary: "Flies the ROV during competition runs — the calm hands at the controls.",
+        duties: [
+          "Operates the ROV during every mission run and pool rehearsal.",
+          "Logs serious water time — strong pilots practice weekly from October onward.",
+          "Learns each mission task cold, and the most efficient order to attempt them in.",
+          "Stays calm and focused under competition lights — the pilot should be the steadiest teammate, not the loudest.",
+          "Works in constant communication with the Tether Manager during every run.",
+          "Gives the engineers honest feedback after each test: what handled well, what to change.",
+          "Should not also be the Software Lead during finals — flying and debugging at once is too much at once."
+        ]
+      },
+      {
+        title:   "Tether Manager",
+        summary: "Manages the lifeline — the cable carrying power and data — and is the pilot's second set of eyes.",
+        duties: [
+          "Manages the tether during every run — feeding slack, taking it up, and keeping it clear of obstacles and propellers.",
+          "Calls out obstructions, distances, and hazards to the pilot in real time.",
+          "Inspects the tether and its strain relief before and after every session for wear or damage.",
+          "Helps deploy and recover the ROV safely at poolside.",
+          "Serves as co-pilot — a backup operator and a second read on the run.",
+          "Keeps the tether properly protected with braided sleeving or spiral wrap — never tape as the main method.",
+          "Practices the run choreography with the pilot until the handoffs are automatic."
+        ]
+      }
     ],
 
     /* ---- 6. UPDATES — newest at the top ---- */

@@ -744,3 +744,47 @@ body.art-ready .eyebrow {
   .team-grid { grid-template-columns: 1fr; gap: 20px; }
   .team-card-art { padding: 32px; }
 }
+
+/* ============================================================
+   ROLES — expandable "what each job does" in the Team section
+   ============================================================ */
+.roles-h {
+  font-size: 19px; font-weight: 600; letter-spacing: -.01em;
+  margin: 46px 0 16px;
+}
+.role-list {
+  display: flex; flex-direction: column; gap: 10px;
+  max-width: 760px;
+}
+.role {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 14px; overflow: hidden;
+}
+.role-head {
+  display: flex; align-items: center; gap: 14px;
+  padding: 17px 20px; cursor: pointer; user-select: none;
+}
+.role-title { font-size: 16px; font-weight: 600; flex: none; }
+.role-summary {
+  font-size: 14px; color: var(--ink-soft); flex: 1; min-width: 0;
+}
+.role .chevron { flex: none; }
+.role.open > .collapse { grid-template-rows: 1fr; }
+.role.open .chevron { transform: rotate(225deg); }
+.role-body { padding: 2px 20px 18px; }
+.role-duties { list-style: none; }
+.role-duties li {
+  position: relative;
+  font-size: 14px; color: var(--ink); line-height: 1.55;
+  padding: 9px 0 9px 22px;
+  border-top: 1px solid var(--line);
+}
+.role-duties li:first-child { border-top: 0; }
+.role-duties li::before {
+  content: ""; position: absolute; left: 3px; top: 16px;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+}
+
+@media (max-width: 720px) {
+  .role-summary { display: none; }
+}
