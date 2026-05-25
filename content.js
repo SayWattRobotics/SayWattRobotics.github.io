@@ -133,12 +133,12 @@ window.SITE = {
       name:        "Say Watt Robotics — ROV Team",
       season:      "2026–2027 Season",
       heroHeadline:"Engineering an underwater robot, one week at a time.",
-      heroSub:     "A student-run RANGER-class team building an ROV and a profiling float for the 2027 Northern Gulf Coast Regional.",
+      heroSub:     "A student-run RANGER-class team building an ROV and a profiling float for the 2026-2027 Season.",
       facts: [
         "RANGER Class",
         "Dauphin Island Sea Lab",
         "Regional · April 2027",
-        "6 students at the pool"
+        "Students at the pool"
       ]
     },
 
@@ -454,7 +454,7 @@ window.SITE = {
           },
           {
             label: "Compete",
-            theme: "Travel to Dauphin Island",
+            theme: "Travel to Competition",
             lessons: [
               "Packing the trailer",
               "Driving to the Northern Gulf Coast Regional at the Dauphin Island Sea Lab, late April 2027"
