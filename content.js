@@ -55,7 +55,7 @@ window.SITE = {
     {
       name: "AUVSI",
       url:  "https://www.auvsipathfinder.org/",
-      logo: "sponsors/AUVSI_Pathfinder.png"}
+      logo: "sponsors/AUVSI_Pathfinder.png"
     }, 
     {
       name: "DoW STEM",
