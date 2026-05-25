@@ -779,7 +779,7 @@ window.SITE = {
     updates: [
       {
         date:  "Summer 2026",
-        title: "Heading into our fourth season",
+        title: "Heading into our fifth season",
         body:  "Say Watt's FIRST LEGO League team is back for the BIOGLOW season — " +
                "the program where this club began three years ago."
       }
