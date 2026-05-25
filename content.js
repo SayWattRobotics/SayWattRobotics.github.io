@@ -537,7 +537,7 @@ window.SITE = {
         "Say Watt Robotics is a registered 501(c)(3) non-profit — every " +
         "sponsorship is fully tax-deductible.",
 
-      contactEmail: "preston@prestonpysh.com",   // ← CONFIRM the real sponsor contact
+      contactEmail: "saywattrobotics2022@gmail.com",   // ← CONFIRM the real sponsor contact
 
       thankYou:
         "To everyone who's already chipped in — thank you. You're the reason " +
