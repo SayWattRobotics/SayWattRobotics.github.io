@@ -63,9 +63,9 @@ window.SITE = {
       logo: "sponsors/tactware.png"
     },
     {
-      name: "FIRST",
-      url:  "https://www.firstinspires.org/",
-      logo: "sponsors/first.png"
+      name: "National Space Club",
+      url:  "https://www.spaceclubhsv.org/",
+      logo: "sponsors/NSC.png"
     }
   ],
   sponsorLede:
