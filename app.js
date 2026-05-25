@@ -471,7 +471,7 @@
       <p>
         <strong>${esc(name)}</strong>${ORG.location ? " &middot; " + esc(ORG.location) : ""}<br>
         ${ORG.contactEmail ? `<a href="mailto:${esc(ORG.contactEmail)}">${esc(ORG.contactEmail)}</a><br>` : ""}
-        &copy; ${year} ${esc(name)}. A 501(c)(3) non-profit youth robotics program.
+        &copy; ${year} ${esc(name)}. A 501(c)(3) non-profit youth robotics program since 2022.
       </p>`;
   }
 
