@@ -28,7 +28,7 @@ window.SITE = {
   org: {
     name:         "Say Watt Robotics",
     location:     "Madison, AL",
-    contactEmail: "saywattrobotics@gmail.com",    // ← your real club email
+    contactEmail: "saywattrobotics2022@gmail.com",    // ← your real club email
 
     // The "Donate" button in the top navigation bar.
     // • Leave it as "#sponsors" and the button scrolls down to the
@@ -53,14 +53,14 @@ window.SITE = {
       logo: "sponsors/tennessee-valley-robotics.png"
     },
     {
-      name: "SimTech",
-      url:  "https://simtechinc.com/",
-      logo: "sponsors/simtech.png"
+      name: "DoW STEM",
+      url:  "https://dowstem.us/",
+      logo: "sponsors/DODSTEM.png"
     },
     {
-      name: "5Boys Apparel",
-      url:  "https://www.5boysapparel.com/",
-      logo: "sponsors/5boys.png"
+      name: "TactWare",
+      url:  "https://tactware.net/",
+      logo: "sponsors/tactware.png"
     },
     {
       name: "FIRST",
