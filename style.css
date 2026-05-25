@@ -696,3 +696,51 @@ body.art-ready .eyebrow {
   .plan-link { padding: 18px; gap: 14px; }
   .plan-badge { width: 42px; height: 42px; }
 }
+
+/* ============================================================
+   LANDING PAGE — the two team entry cards
+   ============================================================ */
+.team-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 26px;
+  margin-top: 8px;
+}
+.team-card {
+  display: flex; flex-direction: column;
+  background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); overflow: hidden;
+  transition: transform .22s var(--ease), box-shadow .22s var(--ease),
+              border-color .22s var(--ease);
+}
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.09);
+  border-color: var(--accent);
+}
+.team-card-art {
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--line);
+  height: 252px; padding: 24px 32px;
+  display: flex; align-items: center; justify-content: center;
+}
+.team-card-art img {
+  display: block; width: auto; height: auto;
+  max-width: 80%; max-height: 100%;
+}
+.team-card-body { padding: 28px 30px 32px; }
+.team-card-name {
+  font-size: 25px; font-weight: 600; letter-spacing: -.02em;
+}
+.team-card-tag {
+  font-size: 15px; color: var(--ink-soft);
+  line-height: 1.55; margin-top: 9px;
+}
+.team-card-cta {
+  display: inline-block; margin-top: 18px;
+  font-size: 15px; font-weight: 600; color: var(--accent);
+}
+.team-card:hover .team-card-cta { text-decoration: underline; }
+
+@media (max-width: 720px) {
+  .team-grid { grid-template-columns: 1fr; gap: 20px; }
+  .team-card-art { padding: 32px; }
+}

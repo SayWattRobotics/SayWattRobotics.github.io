@@ -5,10 +5,11 @@
    change the text below, save, and (if using GitHub) commit the file.
    The website updates itself.
 
-   THE SITE HAS TWO TEAM PAGES:
-     • rov  — the ROV competition team   (this is the homepage)
-     • fll  — the FIRST LEGO League team
-   Each has its own section below. Edit whichever team you need.
+   THE SITE HAS THREE PAGES:
+     • landing — the front hub            (index.html)
+     • rov     — the MATE ROV team page   (MATEROV.html)
+     • fll     — the FIRST LEGO League page (fll.html)
+   Each has its own section below. Edit whichever you need.
 
    A FEW SIMPLE RULES so nothing breaks:
    1. Keep every piece of text inside "double quotes".
@@ -89,9 +90,39 @@ window.SITE = {
     "money this season. Here's exactly where each one stands, and what your " +
     "support buys, side by side. Back whichever team you like — or both.",
 
+  /* =================================================================
+     LANDING PAGE — the main hub (index.html)
+     The welcome text and the two team cards on the front page.
+     ================================================================= */
+  landing: {
+    eyebrow:      "Madison, Alabama",
+    heroHeadline: "One workshop. Two teams.",
+    heroSub:
+      "Say Watt Robotics is a student robotics program in Madison, Alabama. " +
+      "We started in FIRST LEGO League and now field a MATE ROV team too. " +
+      "Choose a team to explore — or scroll down to sponsor the program.",
+    teams: [
+      {
+        name:    "MATE ROV",
+        tagline: "Our RANGER-class team building an underwater robot and a " +
+                 "profiling float for the 2027 Northern Gulf Coast Regional.",
+        art:     "assets/rov-illustration.png",
+        href:    "MATEROV.html",
+        cta:     "Explore the ROV team"
+      },
+      {
+        name:    "FIRST LEGO League",
+        tagline: "Our founding team — designing, building, and programming " +
+                 "LEGO robots for the FIRST LEGO League Challenge.",
+        art:     "assets/lego-robot-illustration.png",
+        href:    "fll.html",
+        cta:     "Explore the FLL team"
+      }
+    ]
+  },
 
   /* =================================================================
-     ROV TEAM  —  this is the homepage (index.html)
+     ROV TEAM  —  the MATEROV.html page
      ================================================================= */
   rov: {
 

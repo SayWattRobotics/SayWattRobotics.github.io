@@ -469,6 +469,35 @@
     });
   }
 
+  /* ---------- landing page (the hub) ---------- */
+  function renderLanding() {
+    const L = SITE.landing || {};
+    const hero = $("hero");
+    if (hero) {
+      hero.innerHTML =
+        '<div class="wrap">' +
+          (L.eyebrow ? '<p class="hero-eyebrow">' + esc(L.eyebrow) + "</p>" : "") +
+          "<h1>" + esc(L.heroHeadline || (ORG.name || "Say Watt Robotics")) + "</h1>" +
+          (L.heroSub ? '<p class="hero-sub">' + esc(L.heroSub) + "</p>" : "") +
+        "</div>";
+    }
+    const grid = $("teamGrid");
+    if (grid) {
+      grid.innerHTML = (L.teams || []).map((t) =>
+        '<a class="team-card" href="' + esc(t.href || "#") + '">' +
+          '<div class="team-card-art">' +
+            (t.art ? '<img src="' + esc(t.art) + '" alt="" />' : "") +
+          "</div>" +
+          '<div class="team-card-body">' +
+            '<h3 class="team-card-name">' + esc(t.name || "") + "</h3>" +
+            (t.tagline ? '<p class="team-card-tag">' + esc(t.tagline) + "</p>" : "") +
+            '<span class="team-card-cta">' + esc(t.cta || "Explore") +
+              " &rarr;</span>" +
+          "</div>" +
+        "</a>").join("");
+    }
+  }
+
   /* ---------- boot ---------- */
   function boot() {
     if (!window.SITE) {
@@ -478,13 +507,17 @@
       return;
     }
     renderChrome();
-    renderHero();
-    renderCurriculum();
-    renderRoadmap();
-    renderCalendar();
-    renderResources();
-    renderRoster();
-    renderUpdates();
+    if (PAGE === "home") {
+      renderLanding();
+    } else {
+      renderHero();
+      renderCurriculum();
+      renderRoadmap();
+      renderCalendar();
+      renderResources();
+      renderRoster();
+      renderUpdates();
+    }
     renderSponsors();
     renderFunding();
     renderFooter();
