@@ -35,7 +35,7 @@ window.SITE = {
     //   sponsor section and opens the funding plan.
     // • Or paste a real donation-page link (PayPal, Givebutter,
     //   Zeffy, etc.) and the button sends people straight there.
-    donateUrl: "#sponsors"
+    donateUrl: "#sponsors",
 
     // The top-left logo is built automatically from the Say Watt
     // emblem (assets/logo-emblem.png) — no logo file to manage here.
@@ -55,7 +55,7 @@ window.SITE = {
     {
       name: "AUVSI",
       url:  "https://www.auvsipathfinder.org/",
-      logo: "sponsors/AUVSI_Pathfinder.png"},
+      logo: "sponsors/AUVSI_Pathfinder.png"}
     }, 
     {
       name: "DoW STEM",
