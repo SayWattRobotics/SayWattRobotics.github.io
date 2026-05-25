@@ -73,9 +73,9 @@ window.SITE = {
       logo: "sponsors/TactWare.png"
     },
     {
-       name:"GigaParts",
-       url: "https://www.gigaparts.com/"
-       logo: "sponsors/GigaParts.png"
+      name:"GigaParts",
+      url: "https://www.gigaparts.com/",
+      logo: "sponsors/GigaParts.png"
     }
   ],
   sponsorLede:
