@@ -647,7 +647,7 @@ window.SITE = {
     team: {
       name:        "Say Watt Robotics — FIRST LEGO League",
       season:      "2026–2027 Season · BIOGLOW",
-      heroHeadline:"Three seasons of LEGO robotics, and just getting started.",
+      heroHeadline:"Four seasons of LEGO robotics, and just getting started.",
       heroSub:     "Say Watt's founding team — designing, building, and programming LEGO robots while tackling the FIRST LEGO League Challenge.",
       facts: [
         "FIRST LEGO League Challenge",
