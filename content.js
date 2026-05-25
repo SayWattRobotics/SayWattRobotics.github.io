@@ -766,6 +766,8 @@ window.SITE = {
             url: "https://www.firstinspires.org/programs/fll/game-and-season" },
           { title: "Core Values", description: "What FIRST teams are judged on",
             url: "https://www.firstinspires.org/about" }
+          { title: "FIRST in Alabama", description: "FIRST Delivery Partner",
+            url: "https://www.firstinalabama.org/" }
         ]
       },
       {
