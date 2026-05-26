@@ -29,7 +29,7 @@ window.SITE = {
   org: {
     name:         "Say Watt Robotics",
     location:     "Madison, AL",
-    contactEmail: "saywattrobotics2022@gmail.com",    // ← your real club email
+    contactEmail: "contact@saywattrobotics.org",    // ← your real club email
 
     // The "Donate" button in the top navigation bar.
     // • Leave it as "#sponsors" and the button scrolls down to the
@@ -659,7 +659,7 @@ window.SITE = {
         "Say Watt Robotics is a registered 501(c)(3) non-profit — every " +
         "sponsorship is fully tax-deductible.",
 
-      contactEmail: "saywattrobotics2022@gmail.com",   // ← CONFIRM the real sponsor contact
+      contactEmail: "contact@saywattrobotics.org",   // ← CONFIRM the real sponsor contact
 
       thankYou:
         "To everyone who's already chipped in — thank you. You're the reason " +
@@ -940,7 +940,7 @@ window.SITE = {
         "Say Watt Robotics is a registered 501(c)(3) non-profit — every " +
         "sponsorship is fully tax-deductible.",
 
-      contactEmail: "saywattrobotics2022@gmail.com",
+      contactEmail: "contact@saywattrobotics.org",
 
       thankYou:
         "Thank you to everyone supporting our FIRST LEGO League team.",
