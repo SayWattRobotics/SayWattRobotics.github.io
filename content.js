@@ -481,7 +481,7 @@ window.SITE = {
       { date: "2026-06-15", title: "Season kickoff meeting",        type: "Meeting",     location: "Team workspace" },
       { date: "2026-06-22", title: "Soldering bootcamp",            type: "Workshop",    location: "Team workspace" },
       { date: "2026-06-29", title: "Waterproofing exercise",        type: "Workshop",    location: "Team workspace" },
-      { date: "2026-11-01", title: "2027 competition manual drops", type: "Milestone",   location: "https://materovcompetition.org/2026" },
+      { date: "2026-11-01", title: "2027 competition manual drops", type: "Milestone",   location: "MATEROV Website", url: "https://materovcompetition.org/2026" },
       { date: "2027-04-23", title: "Regional Competition",  type: "Competition", location: "TBD" }
     ],
 
