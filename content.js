@@ -105,7 +105,7 @@ window.SITE = {
       {
         name:    "MATE ROV",
         tagline: "Our RANGER-class team building an underwater robot and a " +
-                 "profiling float for the 2027 Northern Gulf Coast Regional.",
+                 "profiling float for the 2027 Competition.",
         art:     "assets/rov-illustration.png",
         href:    "MATEROV.html",
         cta:     "Explore the ROV team"
@@ -481,8 +481,8 @@ window.SITE = {
       { date: "2026-06-15", title: "Season kickoff meeting",        type: "Meeting",     location: "Team workspace" },
       { date: "2026-06-22", title: "Soldering bootcamp",            type: "Workshop",    location: "Team workspace" },
       { date: "2026-06-29", title: "Waterproofing exercise",        type: "Workshop",    location: "Team workspace" },
-      { date: "2026-11-01", title: "2027 competition manual drops", type: "Milestone",   location: "—" },
-      { date: "2027-04-23", title: "Northern Gulf Coast Regional",  type: "Competition", location: "Dauphin Island Sea Lab, AL" }
+      { date: "2026-11-01", title: "2027 competition manual drops", type: "Milestone",   location: "https://materovcompetition.org/2026" },
+      { date: "2027-04-23", title: "Regional Competition",  type: "Competition", location: "TBD" }
     ],
 
     /* ---- 4. RESOURCES — grouped links and documents ---- */
@@ -503,7 +503,7 @@ window.SITE = {
         items: [
           { title: "Shared drive", description: "Photos, notes, and working files",
             url: "https://drive.google.com" },
-          { title: "Bill of Materials", description: "Running parts list and budget" },
+          { title: "Bill of Materials", description: "Running parts list and budget", url: "Team_Docs/Parts_List.doc" },
           { title: "Pool-test log", description: "Every splash test, recorded" }
         ]
       },
