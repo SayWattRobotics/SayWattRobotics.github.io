@@ -639,12 +639,12 @@ window.SITE = {
        • Set an item's funded: to true once it's covered (it gets
          a "Funded" check on the site). */
     funding: {
-      raised: 4500,                 // ← update as money comes in
+      raised: 1000,                 // ← update as money comes in
       goal:   9600,
       asOf:   "May 2026",           // ← date the raised figure is current as of
 
       intro:
-        "We've raised $4,500 toward a $9,600 season. Here's the thing about " +
+        "We've raised $1,000 toward a $9,600 season. Here's the thing about " +
         "that gap — it isn't abstract. Every dollar maps to a specific piece of " +
         "equipment or a specific cost, and the full list is right here. You can " +
         "see exactly what you'd be funding and why it moves the team forward. " +
