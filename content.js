@@ -153,73 +153,152 @@ window.SITE = {
 
       {
         name:    "Phase 1 — Foundation",
-        dates:   "Mid-June – July 2026 · 6 weeks",
+        dates:   "Summer 2026 · 12 lessons · dates set with the team",
         status:  "active",
         summary: "The goal isn't a competition ROV. It's a team that exists, a starter " +
                  "ROV in the water, and kids who have soldered something.",
+        resources: [
+          { label: "Phase 1 Plan (PDF) — the 12-lesson plan", url: "Classes/Phase%201/0%20Phase%201%20Plan.pdf" }
+        ],
         weeks: [
           {
-            label: "Kickoff",
-            theme: "Forming the company",
+            label: "1.1",
+            theme: "Kickoff — form the company",
             lessons: [
               "Overview of the MATE ROV Competition and the RANGER class",
               "Assigning the six company roles — CEO, CFO, and the mechanical, electrical, software, and communications leads",
-              "Walking the 2026–2027 season timeline and its six phases",
+              "Walking the season timeline and its six phases",
               "Setting the safety culture — every meeting opens with a safety brief",
               "Starting the community-outreach log on day one"
             ],
             resources: [
-              { label: "Week 1 slide deck", url: "Classes/Phase%201/ROV-Week-01-Kickoff.pptx" },
-              { label: "MATE ROV Competition", url: "https://materovcompetition.org" }
+              { label: "Class 1.1 slide deck (view)", url: "Classes/Phase%201/1.1%20Kickoff%20-%20Slides.pdf" },
+              { label: "Class 1.1 slides (PowerPoint)", url: "Classes/Phase%201/1.1%20Kickoff%20-%20Slides.pptx" },
+              { label: "Class 1.1 prep sheet (PDF)", url: "Classes/Phase%201/1.1%20Kickoff%20-%20Prep%20Sheet.pdf" },
+              { label: "Class 1.1 instructor notes (PDF)", url: "Classes/Phase%201/1.1%20Kickoff%20-%20Instructor%20Notes.pdf" },
+              { label: "Homework — ROV 101 and ROV Design (MATE presentation)", url: "https://docs.google.com/presentation/d/e/2PACX-1vTql59VIKXynX5l6OrLGbOcxuekBsvHDZzkmqO37C_3kOFx3K9sbHUjmqJgSWZP_by8WUMNWb1GXN4v/pub?start=false&loop=false&delayms=3000" },
+              { label: "Homework — How to Get a Team Started (MATE presentation)", url: "https://docs.google.com/presentation/d/e/2PACX-1vSRLerTRTqIqNuLh1LyRupOuqgAKxFCaHuACFYmSPNw8HRB9vDzBJLCwLT-rIoRTt-GruDI7zj8ccSC/pub?start=false&loop=false&delayms=3000" }
             ]
           },
           {
-            label: "Soldering",
+            label: "1.2",
             theme: "Soldering bootcamp",
             lessons: [
-              "Reading a basic wiring diagram",
-              "Through-hole soldering practice on a junk board",
-              "Tinning wires and making a clean, strong joint",
-              "Heat-shrink and strain-relief basics"
+              "Soldering safety — irons, burns, fumes, eye protection",
+              "The three joints: cold, good, and bridged — know them on sight",
+              "The five moves, demonstrated once: strip, tin, heat, feed, heat-shrink",
+              "Hands-on practice until every kid has a clean, steady joint"
             ],
             resources: [
-              { label: "Adafruit soldering guide", url: "https://learn.adafruit.com/adafruit-guide-excellent-soldering" }
+              { label: "Class 1.2 slide deck (view)", url: "Classes/Phase%201/1.2%20Soldering%20Bootcamp%20-%20Slides.pdf" },
+              { label: "Class 1.2 slides (PowerPoint)", url: "Classes/Phase%201/1.2%20Soldering%20Bootcamp%20-%20Slides.pptx" },
+              { label: "Class 1.2 prep sheet (PDF)", url: "Classes/Phase%201/1.2%20Soldering%20Bootcamp%20-%20Prep%20Sheet.pdf" },
+              { label: "Class 1.2 instructor notes (PDF)", url: "Classes/Phase%201/1.2%20Soldering%20Bootcamp%20-%20Instructor%20Notes.pdf" }
             ]
           },
           {
-            label: "Starter ROV",
-            theme: "Build the SeaMATE Triggerfish",
+            label: "1.3",
+            theme: "Kit unboxing & first electronics",
             lessons: [
-              "Assembling the SeaMATE Triggerfish kit — the team's first ROV",
-              "Wiring the 12 V sealed lead-acid battery, charger, and Powerpole leads (the kit ships without a power source)",
-              "Getting every team member in the pool by week three"
+              "Inventory the SeaMATE Triggerfish against the build manual",
+              "Read the build sequence; make the first real kit joints",
+              "Open the three records — GitHub repo, project notebook, photo log",
+              "Sketch the waterproofing capsule — a sealed PVC body, one cable penetration"
+            ],
+            resources: [
+              { label: "Class 1.3 slide deck (view)", url: "Classes/Phase%201/1.3%20Kit%20Unboxing%20and%20First%20Electronics%20-%20Slides.pdf" },
+              { label: "Class 1.3 slides (PowerPoint)", url: "Classes/Phase%201/1.3%20Kit%20Unboxing%20and%20First%20Electronics%20-%20Slides.pptx" },
+              { label: "Class 1.3 prep sheet (PDF)", url: "Classes/Phase%201/1.3%20Kit%20Unboxing%20and%20First%20Electronics%20-%20Prep%20Sheet.pdf" },
+              { label: "Class 1.3 instructor notes (PDF)", url: "Classes/Phase%201/1.3%20Kit%20Unboxing%20and%20First%20Electronics%20-%20Instructor%20Notes.pdf" }
             ]
           },
           {
-            label: "Electronics",
-            theme: "Electronics & the project notebook",
+            label: "1.4",
+            theme: "Electronics workshop",
             lessons: [
-              "Multimeter basics — measuring voltage, continuity, and current",
-              "Circuits, fuses, and full-load-amp measurement",
-              "The project-notebook session — how the team records every decision"
+              "The multimeter — voltage, continuity, current, and Ohm's law",
+              "How switches work; building a circuit on the Simple Circuits Lab Kit",
+              "The schematic symbols — learning to read a circuit",
+              "The Electrical Symbols handout — kept forever, the standard the competition SID is graded against"
+            ],
+            resources: [
+              { label: "Class 1.4 slide deck (view)", url: "Classes/Phase%201/1.4%20Electronics%20Workshop%20-%20Slides.pdf" },
+              { label: "Class 1.4 slides (PowerPoint)", url: "Classes/Phase%201/1.4%20Electronics%20Workshop%20-%20Slides.pptx" },
+              { label: "Class 1.4 prep sheet (PDF)", url: "Classes/Phase%201/1.4%20Electronics%20Workshop%20-%20Prep%20Sheet.pdf" },
+              { label: "Class 1.4 instructor notes (PDF)", url: "Classes/Phase%201/1.4%20Electronics%20Workshop%20-%20Instructor%20Notes.pdf" }
             ]
           },
           {
-            label: "Waterproofing",
-            theme: "Waterproofing capsule exercise",
+            label: "1.5",
+            theme: "Control box I",
             lessons: [
-              "How water pressure increases with depth",
-              "Designing a sealed PVC capsule with a single cable penetration",
-              "Drop, recover, and check the paper towel inside — then iterate",
-              "Passing three consecutive dry dives — the foundation skill for the Phase 2 float"
+              "The PufferFish practice board — earn a clean joint first",
+              "Start the TriggerFish REV 4 control-box build, stage by stage",
+              "Meter-check each stage as you go — continuity good, no shorts"
             ]
           },
           {
-            label: "Setup",
-            theme: "Lock in the season",
+            label: "1.6",
+            theme: "Control box II",
             lessons: [
-              "Confirming pool access for the year, including one deep-water host",
-              "The parallel track — registration, waivers, insurance, and fundraising underway"
+              "Finish the control-box wiring",
+              "Build the ROV's power wire; connect the tether",
+              "Fuse the circuit to its full-load amps",
+              "Meter-check every stage before first power-up"
+            ]
+          },
+          {
+            label: "1.7",
+            theme: "Capsule build & first splash",
+            lessons: [
+              "Build the capsules for real — PVC, end caps, O-rings, epoxy",
+              "First poolside safety brief — lifeguard, buddy system, dry hands",
+              "Every kid in the water — comfort and familiarity first",
+              "Capsule drop #1 — open it, check the towel, log the result"
+            ]
+          },
+          {
+            label: "1.8",
+            theme: "Build & iterate I",
+            lessons: [
+              "Assemble the Triggerfish frame, thrusters, and tether — the first full build",
+              "Poolside safety, tether handling, and deck discipline"
+            ]
+          },
+          {
+            label: "1.9",
+            theme: "Build & iterate II",
+            lessons: [
+              "Pool operations — flying the Triggerfish on the tether",
+              "Capsule dive #2 — diagnose every leak to a cause, then re-seal",
+              "Notebook: what leaked, why, and the fix that was tried"
+            ]
+          },
+          {
+            label: "1.10",
+            theme: "Pilot & validate I",
+            lessons: [
+              "Tuning buoyancy and trim",
+              "Every team member pilots the Triggerfish"
+            ]
+          },
+          {
+            label: "1.11",
+            theme: "Pilot & validate II",
+            lessons: [
+              "Capsule dive #3 — the gate is three consecutive dry dives",
+              "Basic electrical troubleshooting; tracing voltage through the ROV",
+              "First SID exposure — the TriggerFish System Integration Diagram"
+            ]
+          },
+          {
+            label: "1.12",
+            theme: "Showcase & launch Phase 2",
+            lessons: [
+              "The final Triggerfish demonstration for parents, stakeholders, and sponsors",
+              "Role retrospective — reviewing the notebook, outreach, and photo logs",
+              "Previewing Phase 2 — sub-team mini-projects and the float v1",
+              "Thank-yous to every host, donor, and volunteer — logged as outreach"
             ]
           }
         ]
@@ -323,12 +402,13 @@ window.SITE = {
           },
           {
             label: "Vehicle",
-            theme: "Commit to the competition vehicle",
+            theme: "Choose the competition vehicle",
             lessons: [
-              "Six Blue Robotics T200 thrusters — brushless, reliable, and reusable across seasons",
-              "A pre-terminated competition tether — faulty hand-made terminations are a top failure mode for new teams",
-              "A sealed Blue Robotics enclosure, an aluminum T-slot frame, and a regulated topside power supply",
-              "A go / no-go on the thrusters in the fall — the full T200 set if funding is in hand, bilge-pump conversions if not"
+              "The trade studies conclude in the team's own vehicle decisions — the budget funds the default candidates; the students confirm or amend them",
+              "Default candidates: six Blue Robotics T200 thrusters, a pre-terminated tether, a sealed enclosure, an aluminum T-slot frame, a regulated topside supply",
+              "Designing to the weight budget — under 15 kg in air earns the +10-point tier",
+              "A go / no-go on the thrusters in the fall — the full T200 set if funding is in hand, bilge-pump conversions if not",
+              "Standing up the topside bench replica in December, so software develops before the build begins"
             ]
           }
         ]
@@ -353,10 +433,10 @@ window.SITE = {
           },
           {
             label: "Bench",
-            theme: "The topside bench replica",
+            theme: "Software on the bench replica",
             lessons: [
-              "Building a bench replica that mirrors the ROV electronics",
-              "Letting software develop in parallel while the real vehicle stays safe"
+              "Software develops in parallel on the December bench replica while the real vehicle stays safe",
+              "The replica doubles as the demonstration rig whenever the ROV is in pieces"
             ]
           },
           {
@@ -371,10 +451,11 @@ window.SITE = {
           },
           {
             label: "Safety",
-            theme: "Start the safety track",
+            theme: "Start the safety and Q&A tracks",
             lessons: [
               "Beginning the fluid-power quiz",
-              "Beginning the safety pre-inspection tracking"
+              "Beginning the safety pre-inspection tracking",
+              "Weekly mock Q&A begins in January — one mentor plus one outside adult per session"
             ]
           }
         ]
@@ -478,11 +559,13 @@ window.SITE = {
 
     /* ---- 3. CALENDAR — dates written as "YYYY-MM-DD" ---- */
     calendar: [
-      { date: "2026-06-15", title: "Season kickoff meeting",        type: "Meeting",     location: "Team workspace" },
-      { date: "2026-06-22", title: "Soldering bootcamp",            type: "Workshop",    location: "Team workspace" },
-      { date: "2026-06-29", title: "Waterproofing exercise",        type: "Workshop",    location: "Team workspace" },
-      { date: "2026-11-01", title: "2027 competition manual drops", type: "Milestone",   location: "MATEROV Website", url: "https://materovcompetition.org/2026" },
-      { date: "2027-04-23", title: "Regional Competition",  type: "Competition", location: "TBD" }
+      // Weekly Phase 1 meetings run Week 1–6 (see the Phase 1 Plan); dates will be
+      // added here once the meeting day is locked.
+      { date: "2026-11-01", title: "2027 competition manual drops — full-team read-through within 48 hours", type: "Milestone", location: "materovcompetition.org", url: "https://materovcompetition.org" },
+      { date: "2026-12-14", title: "CAD locked — long-lead parts ordered before the holiday break", type: "Milestone", location: "Team workspace" },
+      { date: "2027-02-15", title: "Regional registration opens — we register this week", type: "Milestone", location: "Northern Gulf Coast Regional" },
+      { date: "2027-04-05", title: "Documentation submission deadline — confirm exact date with DISL", type: "Deadline", location: "Northern Gulf Coast Regional" },
+      { date: "2027-04-23", title: "Northern Gulf Coast Regional", type: "Competition", location: "Dauphin Island Sea Lab · exact dates TBC" }
     ],
 
     /* ---- 4. RESOURCES — grouped links and documents ---- */
@@ -510,6 +593,8 @@ window.SITE = {
       {
         category: "Build References",
         items: [
+          { title: "TriggerFish ROV Guide", description: "MATE's official build curriculum for our starter ROV — presentations, activities, and materials",
+            url: "https://materovcompetition.org/rov-kits/triggerfish-rov-guide" },
           { title: "Blue Robotics", description: "Thrusters, enclosures, penetrators",
             url: "https://bluerobotics.com" },
           { title: "Onshape", description: "Free browser-based CAD",
@@ -640,11 +725,11 @@ window.SITE = {
          a "Funded" check on the site). */
     funding: {
       raised: 1000,                 // ← update as money comes in
-      goal:   9600,
+      goal:   9800,
       asOf:   "May 2026",           // ← date the raised figure is current as of
 
       intro:
-        "We've raised $1,000 toward a $9,600 season. Here's the thing about " +
+        "We've raised $1,000 toward a $9,800 season. Here's the thing about " +
         "that gap — it isn't abstract. Every dollar maps to a specific piece of " +
         "equipment or a specific cost, and the full list is right here. You can " +
         "see exactly what you'd be funding and why it moves the team forward. " +

@@ -13,6 +13,8 @@
   --line:      #e3e3e6;
   --accent:    #0d7490;   /* deep ocean teal */
   --accent-dk: #095d75;
+  --red:       #d93732;   /* Say Watt red — from the official logo */
+  --red-dk:    #b82b27;
   --radius:    18px;
   --maxw:      1080px;
   --ease:      cubic-bezier(.22,.61,.36,1);
@@ -84,12 +86,12 @@ a { color: inherit; text-decoration: none; }
 
 /* nav "Sponsors" call-to-action button */
 .nav-links > a.nav-donate {
-  background: var(--accent); color: #fff;
+  background: var(--red); color: #fff;
   padding: 9px 20px; border-radius: 980px; font-weight: 600;
   transition: background .2s var(--ease), transform .15s var(--ease);
 }
 .nav-links > a.nav-donate:hover {
-  background: var(--accent-dk); color: #fff; transform: translateY(-1px);
+  background: var(--red-dk); color: #fff; transform: translateY(-1px);
 }
 .nav-toggle {
   display: none; background: none; border: 0; cursor: pointer;
@@ -291,6 +293,9 @@ a { color: inherit; text-decoration: none; }
   padding: 5px 13px; transition: background .2s var(--ease);
 }
 .week-resources a:hover { background: var(--bg-alt); }
+.phase-resources {
+  margin: 0 0 16px; padding-top: 0; border-top: 0;
+}
 
 mark {
   background: #fff2b8; color: inherit;
@@ -319,7 +324,7 @@ mark {
 }
 .cal-next-flag {
   display: inline-block; font-size: 11px; font-weight: 700;
-  letter-spacing: .04em; color: var(--accent);
+  letter-spacing: .04em; color: var(--red);
   margin-bottom: 4px;
 }
 

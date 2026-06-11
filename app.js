@@ -176,6 +176,7 @@
       </div>
       <div class="collapse"><div class="collapse-inner"><div class="phase-body">
         ${phase.summary ? `<p class="phase-summary">${highlight(phase.summary, q)}</p>` : ""}
+        ${(phase.resources && phase.resources.length) ? `<div class="week-resources phase-resources">${phase.resources.map((r) => `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.label)}</a>`).join("")}</div>` : ""}
         <div class="week-list"></div>
       </div></div></div>`;
 
