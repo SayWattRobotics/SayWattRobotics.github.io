@@ -597,6 +597,47 @@ body.art-ready .eyebrow {
   max-width: 64ch; margin: 0 auto 38px; text-align: center;
 }
 
+/* the transparency pledge — 100% to the mission */
+.fund-pledge {
+  max-width: 720px; margin: 0 auto 44px; text-align: center;
+  background: linear-gradient(180deg, #f3f9fb 0%, #eaf2f4 100%);
+  border: 1px solid #cfe3e8; border-radius: var(--radius);
+  padding: 34px 34px 28px;
+}
+.pledge-badge {
+  display: inline-block; background: var(--accent); color: #fff;
+  font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  padding: 7px 16px; border-radius: 980px; margin-bottom: 16px;
+}
+.pledge-headline {
+  font-size: 26px; font-weight: 700; letter-spacing: -.02em;
+  color: var(--ink); margin: 0 0 12px; line-height: 1.2;
+}
+.pledge-body {
+  font-size: 15.5px; line-height: 1.6; color: var(--ink-soft);
+  max-width: 56ch; margin: 0 auto 22px;
+}
+.pledge-split {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  text-align: left; margin-top: 4px;
+}
+.pledge-cell {
+  background: #fff; border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px 18px; font-size: 14.5px; line-height: 1.55; color: var(--ink);
+}
+.pledge-goes  { border-left: 3px solid var(--accent); }
+.pledge-never { border-left: 3px solid var(--ink-faint); }
+.pledge-k {
+  display: block; font-size: 11px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; margin-bottom: 6px;
+}
+.pledge-goes  .pledge-k { color: var(--accent); }
+.pledge-never .pledge-k { color: var(--ink-faint); }
+@media (max-width: 640px) {
+  .pledge-split { grid-template-columns: 1fr; }
+  .pledge-headline { font-size: 22px; }
+}
+
 /* ROV (left) and FIRST LEGO League (right), side by side */
 .fund-cols {
   display: grid; grid-template-columns: 1fr 1fr; gap: 46px;

@@ -431,6 +431,23 @@
 
     const lede = SITE.fundingLede
       ? '<p class="fund-lede">' + esc(SITE.fundingLede) + "</p>" : "";
+
+    const P = SITE.fundingPledge;
+    const pledge = P
+      ? '<div class="fund-pledge">' +
+          (P.badge ? '<div class="pledge-badge">' + esc(P.badge) + "</div>" : "") +
+          (P.headline ? '<h3 class="pledge-headline">' + esc(P.headline) + "</h3>" : "") +
+          (P.body ? '<p class="pledge-body">' + esc(P.body) + "</p>" : "") +
+          ((P.goesTo || P.neverGoesTo) ?
+            '<div class="pledge-split">' +
+              (P.goesTo ? '<div class="pledge-cell pledge-goes">' +
+                '<span class="pledge-k">Goes to</span>' + esc(P.goesTo) + "</div>" : "") +
+              (P.neverGoesTo ? '<div class="pledge-cell pledge-never">' +
+                '<span class="pledge-k">Never goes to</span>' + esc(P.neverGoesTo) + "</div>" : "") +
+            "</div>" : "") +
+        "</div>"
+      : "";
+
     const taxNote = (rovF && rovF.taxNote) || (fllF && fllF.taxNote) || "";
     const thanks  = (rovF && rovF.thankYou) || (fllF && fllF.thankYou) || "";
 
@@ -442,6 +459,7 @@
         "</button>" +
         '<div class="collapse"><div class="collapse-inner"><div class="fund-panel">' +
           lede +
+          pledge +
           '<div class="fund-cols">' +
             colHtml(rovF, "ROV Team") +
             colHtml(fllF, "FIRST LEGO League") +

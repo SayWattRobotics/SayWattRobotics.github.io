@@ -90,6 +90,24 @@ window.SITE = {
     "money this season. Here's exactly where each one stands, and what your " +
     "support buys, side by side. Back whichever team you like — or both.",
 
+  /* The transparency pledge — a highlighted badge at the top of the funding
+     plan. The itemized tiers below are the proof behind the "100%" claim. */
+  fundingPledge: {
+    badge:    "100% to the mission",
+    headline: "Every dollar reaches the team. $0 goes to overhead.",
+    body:
+      "We're an all-volunteer, parent-run team — no salaries, no office, no " +
+      "administrative costs. Sponsors give by check or Venmo, so there are no " +
+      "processing fees either. Every dollar you give maps to a specific part " +
+      "on the list below.",
+    goesTo:
+      "Thrusters, tether, the manipulator, the camera, and the trip to " +
+      "compete — every line itemized below.",
+    neverGoesTo:
+      "Salaries, office rent, administrative overhead, or fundraising costs. " +
+      "There are none — and there never will be.",
+  },
+
   /* =================================================================
      LANDING PAGE — the main hub (index.html)
      The welcome text and the two team cards on the front page.
