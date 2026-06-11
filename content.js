@@ -771,8 +771,16 @@ window.SITE = {
 
       tiers: [
         {
-          label: "Tier 1 — Gets the team to the competition",
+          label: "Tier 1 — Gets the team to the competition  ·  $1,650",
           items: [
+            {
+              name: "RANGER competition registration", cost: "$250", unit: "",
+              funded: false,
+              rationale:
+                "The team's entry fee for the MATE Northern Gulf Coast Regional. " +
+                "No registration, no competition — this is the first dollar the " +
+                "season needs."
+            },
             {
               name: "Regional travel & lodging", cost: "$1,400", unit: "",
               funded: false,
@@ -787,7 +795,7 @@ window.SITE = {
           ]
         },
         {
-          label: "Tier 2 — Makes the team competitive",
+          label: "Tier 2 — Propulsion, frame & power  ·  $2,800",
           items: [
             {
               name: "Competition thruster system", cost: "$1,750",
@@ -801,59 +809,188 @@ window.SITE = {
                 "the full set for $1,750."
             },
             {
-              name: "Pneumatic manipulator", cost: "$175", unit: "",
+              name: "Spare thruster & printed propellers", cost: "$300", unit: "",
+              funded: false,
+              rationale:
+                "A backup thruster and a stock of spare props. Thrusters take the " +
+                "most abuse on the robot, and a dead one mid-competition ends the " +
+                "run. The spare turns a season-ender into a five-minute swap."
+            },
+            {
+              name: "ROV frame & structure", cost: "$450", unit: "",
+              funded: false,
+              rationale:
+                "The aluminum extrusion, HDPE plate, and 316 stainless hardware " +
+                "the whole robot is built on. Marine-grade stainless is non-" +
+                "negotiable — ordinary steel rusts through in a single season of " +
+                "pool water."
+            },
+            {
+              name: "12 V battery system", cost: "$300", unit: "",
+              funded: false,
+              rationale:
+                "The onboard battery, charger, approved enclosure, and power " +
+                "distribution. Safety inspection requires the battery in a proper " +
+                "enclosure with the main fuse correctly placed — this funds it " +
+                "done right."
+            }
+          ]
+        },
+        {
+          label: "Tier 3 — Electronics, control & payload  ·  $2,320",
+          items: [
+            {
+              name: "Watertight electronics enclosure", cost: "$300", unit: "",
+              funded: false,
+              rationale:
+                "A professional sealed housing — tube, end caps, clamp, and rails " +
+                "— for the electronics. It replaces a hand-built one, protects the " +
+                "most expensive parts on the robot, and saves the team weeks of " +
+                "chasing leaks."
+            },
+            {
+              name: "Penetrators & waterproof connectors", cost: "$300", unit: "",
+              funded: false,
+              rationale:
+                "The sealed pass-throughs that get power and signal wires through " +
+                "the enclosure wall without leaking — eight or more across " +
+                "thrusters, cameras, sensors, and the tether. Each one is a " +
+                "potential flood point; these are the parts that keep the water out."
+            },
+            {
+              name: "Pre-terminated tether", cost: "$600", unit: "",
+              funded: false,
+              rationale:
+                "The robot's lifeline — power and data down a single neutrally-" +
+                "buoyant cable. Bad hand-made connections are a top-three way a new " +
+                "team's run fails. A professionally terminated tether removes that " +
+                "failure mode, and it gets reused every season."
+            },
+            {
+              name: "Onboard compute & control electronics", cost: "$400", unit: "",
+              funded: false,
+              rationale:
+                "The Raspberry Pi, microcontroller, and topside control box that " +
+                "run the robot and stream video. This is the brain that turns the " +
+                "pilot's commands into thruster motion."
+            },
+            {
+              name: "Upgraded camera & vision system", cost: "$250", unit: "",
+              funded: false,
+              rationale:
+                "The pilot flies the robot entirely through its cameras, and the " +
+                "vision tasks are scored from the same feed. Better underwater " +
+                "cameras mean more completed tasks — you can't grab what you can't " +
+                "see."
+            },
+            {
+              name: "Depth & orientation sensors", cost: "$170", unit: "",
+              funded: false,
+              rationale:
+                "A pressure-depth sensor and an orientation sensor so the robot " +
+                "knows how deep and how level it is. Several scored tasks depend on " +
+                "holding a depth or flying a steady transect."
+            },
+            {
+              name: "Pneumatic manipulator", cost: "$300", unit: "",
               funded: false,
               rationale:
                 "The robot's gripper is the tool that does the scored tasks — " +
                 "collecting samples, turning valves, recovering objects off the " +
                 "seafloor. A precision pneumatic gripper instead of a fixed hook " +
                 "is the difference between points earned and points missed."
-            },
-            {
-              name: "Pre-terminated tether", cost: "$350", unit: "",
-              funded: false,
-              rationale:
-                "The tether is the robot's lifeline — power and data down a " +
-                "single cable. Bad hand-made cable connections are one of the " +
-                "most common ways a new team's run fails. A professionally " +
-                "terminated tether removes that failure mode, and it gets reused " +
-                "every season."
             }
           ]
         },
         {
-          label: "Tier 3 — Stretch goals",
+          label: "Tier 4 — Tools, safety & shop (carries forward every season)  ·  $1,400",
           items: [
             {
-              name: "Sealed electronics enclosure", cost: "$250", unit: "",
+              name: "Soldering stations & irons", cost: "$300", unit: "",
               funded: false,
               rationale:
-                "A professional watertight housing for the electronics. It " +
-                "replaces a hand-built one, protects the most expensive parts on " +
-                "the robot, and saves the team weeks of chasing leaks."
+                "The team's bench soldering stations. Every electrical connection " +
+                "on the robot is made here, and these outfit the workshop for " +
+                "years of teams to come."
             },
             {
-              name: "Competition spares & reliability kit", cost: "$200",
+              name: "Hand tools & test equipment", cost: "$400", unit: "",
+              funded: false,
+              rationale:
+                "Multimeters, a clamp meter, wire strippers, cutters, and pliers. " +
+                "The clamp meter is required to measure current draw for the fuse " +
+                "calculations the competition demands — and the whole set carries " +
+                "forward."
+            },
+            {
+              name: "Safety gear", cost: "$180", unit: "",
+              funded: false,
+              rationale:
+                "A fume extractor, fire extinguisher, first-aid kit, heat-safe " +
+                "mats, and safety glasses. Soldering and battery work happen every " +
+                "week; this is the non-optional cost of doing it safely."
+            },
+            {
+              name: "Adhesives, sealants & O-ring supplies", cost: "$200", unit: "",
+              funded: false,
+              rationale:
+                "Marine-grade epoxy, the two adhesives that reliably bond plastics " +
+                "underwater, and O-ring grease. The difference between a seal that " +
+                "holds for a season and one that floods on the first dive."
+            },
+            {
+              name: "Build consumables", cost: "$200", unit: "",
+              funded: false,
+              rationale:
+                "Silicone wire, heat-shrink, solder, zip ties, fasteners, and " +
+                "printed props — the steady stream of small parts a build burns " +
+                "through from first prototype to competition."
+            },
+            {
+              name: "Soldering & circuit practice kits", cost: "$120", unit: "",
+              funded: false,
+              rationale:
+                "The practice boards every student learns to solder on before they " +
+                "touch the real robot. Cheap insurance against a bad joint on a " +
+                "$300 thruster cable."
+            }
+          ]
+        },
+        {
+          label: "Tier 5 — Float, documentation & reliability  ·  $1,630",
+          items: [
+            {
+              name: "Vertical profiling float build", cost: "$400", unit: "",
+              funded: false,
+              rationale:
+                "The competition requires a second, non-ROV device — a float that " +
+                "sinks, holds, and rises on its own and radios back its data. This " +
+                "funds its buoyancy engine, pressure sensor, microcontroller, and " +
+                "battery. Worth a full scored task on its own."
+            },
+            {
+              name: "Notebooks, documentation & marketing display", cost: "$350",
               unit: "", funded: false,
               rationale:
-                "Backup controllers, seals, connectors, and adhesives the team " +
-                "carries to the event. Something always breaks on the deck. This " +
-                "kit is the difference between a five-minute fix and a forfeited " +
-                "run."
-            },
-            {
-              name: "Upgraded camera & vision system", cost: "$120", unit: "",
-              funded: false,
-              rationale:
-                "The pilot flies the robot entirely through its cameras. Better " +
-                "underwater vision means more completed tasks — you can't grab " +
-                "what you can't see."
+                "Engineering & communication is roughly 40% of the score. This " +
+                "covers the project notebooks, the printed technical documentation, " +
+                "and the marketing display the team presents to judges. The robot " +
+                "earns half the points; the documentation earns the other half."
             },
             {
               name: "Team jerseys", cost: "$160", unit: "", funded: false,
               rationale:
                 "Competition uniforms with sponsor logos on them. A visible " +
                 "thank-you that travels everywhere the team does."
+            },
+            {
+              name: "Spares, replacement & reliability parts", cost: "$720",
+              unit: "", funded: false,
+              rationale:
+                "Backup ESCs, seals, connectors, O-rings, and props — the parts " +
+                "an underwater robot genuinely consumes across a season of testing " +
+                "and on competition day. Something always breaks on the deck; this " +
+                "is the difference between a five-minute fix and a forfeited run."
             }
           ]
         }
@@ -1032,12 +1169,14 @@ window.SITE = {
 
       intro:
         "Our FIRST LEGO League team — the program Say Watt Robotics was " +
-        "founded on — is mapping out its season budget now. Support is " +
-        "welcome today; the detailed plan lands here soon.",
+        "founded on — is heading into its fifth season on the BIOGLOW " +
+        "challenge. Same deal as the ROV team: every dollar maps to a real " +
+        "line item, and the full $3,000 season is itemized right here.",
 
       cta:
-        "Want to support the FIRST LEGO League team? Get in touch — every " +
-        "level of support is welcome.",
+        "Want to back the FIRST LEGO League team? Cover the registration, the " +
+        "robot kit, or the trip to the tournament — every level is listed, and " +
+        "every dollar is accounted for.",
 
       taxNote:
         "Say Watt Robotics is a registered 501(c)(3) non-profit — every " +
@@ -1046,27 +1185,124 @@ window.SITE = {
       contactEmail: "contact@saywattrobotics.org",
 
       thankYou:
-        "Thank you to everyone supporting our FIRST LEGO League team.",
+        "Thank you to everyone supporting our FIRST LEGO League team — the " +
+        "program where this whole club began.",
 
       tiers: [
         {
-          label: "Tier 1 — Essentials",
+          label: "Tier 1 — Gets the team to the table  ·  $600",
           items: [
             {
-              name: "Registration & season fees", cost: "$500", unit: "",
+              name: "FIRST season team registration", cost: "$250", unit: "",
               funded: false,
               rationale:
-                "Placeholder rationale — describe what this covers and why it " +
-                "matters to the team."
+                "The team's annual registration with FIRST. It's the first " +
+                "requirement of the season — without it, the team isn't official " +
+                "and can't compete."
+            },
+            {
+              name: "Tournament registration", cost: "$175", unit: "",
+              funded: false,
+              rationale:
+                "The entry fee for the qualifying and regional tournaments. " +
+                "Registration with FIRST doesn't include the events themselves — " +
+                "this is what puts the team on the competition floor."
+            },
+            {
+              name: "BIOGLOW Challenge Set & mission models", cost: "$175",
+              unit: "", funded: false,
+              rationale:
+                "The new season's mission models the robot has to complete on the " +
+                "game table. A fresh set ships every year with the new challenge — " +
+                "this is the season's playing field."
+            }
+          ]
+        },
+        {
+          label: "Tier 2 — The robot  ·  $1,100",
+          items: [
+            {
+              name: "SPIKE Prime robot set", cost: "$520", unit: "",
+              funded: false,
+              rationale:
+                "The LEGO Education SPIKE Prime kit the team builds and programs " +
+                "its robot from. 2026–2027 is the final season before the platform " +
+                "retires, so this is the last chance to add a set the program keeps " +
+                "for years."
+            },
+            {
+              name: "Supplemental LEGO elements, motors & sensors", cost: "$260",
+              unit: "", funded: false,
+              rationale:
+                "The extra beams, gears, motors, and sensors a competitive robot " +
+                "needs beyond the base kit — for attachments that swap fast between " +
+                "missions."
+            },
+            {
+              name: "Competition practice mat & game-table refresh", cost: "$140",
+              unit: "", funded: false,
+              rationale:
+                "An official mat and table materials so the team practices on the " +
+                "real surface. Robots tuned only on the floor miss on competition " +
+                "day; reps on the actual mat are where the points come from."
+            },
+            {
+              name: "Rechargeable battery packs & chargers", cost: "$180",
+              unit: "", funded: false,
+              rationale:
+                "Spare hub batteries and chargers so the robot never dies between " +
+                "practice rounds or competition matches. Cheap insurance against a " +
+                "dead robot at the worst possible moment."
+            }
+          ]
+        },
+        {
+          label: "Tier 3 — Season & competition day  ·  $1,300",
+          items: [
+            {
+              name: "Travel & lodging to the tournament", cost: "$700", unit: "",
+              funded: false,
+              rationale:
+                "Transport and overnight lodging for the team and chaperones. Our " +
+                "FLL team has traveled out of state to compete every year for the " +
+                "past four seasons, so this is a real, recurring cost — and it's " +
+                "the line that actually gets the kids and the robot to the event."
+            },
+            {
+              name: "Innovation Project materials & display", cost: "$200",
+              unit: "", funded: false,
+              rationale:
+                "FLL is judged as much on the Innovation Project as on the robot. " +
+                "This funds the research materials, the prototype, and the display " +
+                "board the team presents to judges."
+            },
+            {
+              name: "Team t-shirts", cost: "$160", unit: "", funded: false,
+              rationale:
+                "Team uniforms with sponsor logos on them. A visible thank-you " +
+                "that travels everywhere the team does."
+            },
+            {
+              name: "Competition-day kit", cost: "$240", unit: "",
+              funded: false,
+              rationale:
+                "Spare parts, batteries, tools, and the small-team essentials for " +
+                "the pit — plus the goody-swap items that are part of the FLL " +
+                "culture. The difference between a calm competition day and a " +
+                "scramble."
             }
           ]
         }
       ],
 
       aspirational: {
-        name: "Championship travel", cost: "$1,000", funded: false,
+        name: "FIRST LEGO League World Festival travel", cost: "$2,500–$3,500",
+        funded: false,
         rationale:
-          "Placeholder — describe the team's stretch goal here."
+          "Win at the regional, and the team can advance to the FIRST global " +
+          "championship. This reserve would fund that trip — flights, lodging, " +
+          "and registration. It's a stretch, but it's the dream, and we'd rather " +
+          "tell you the truth about where we're aiming."
       }
     }
 
