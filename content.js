@@ -778,7 +778,7 @@ window.SITE = {
           items: [
             {
               name: "RANGER competition registration", cost: "$250", unit: "",
-              funded: false,
+              funded: true,
               rationale:
                 "The team's entry fee for the MATE Northern Gulf Coast Regional. " +
                 "No registration, no competition — this is the first dollar the " +
@@ -786,7 +786,7 @@ window.SITE = {
             },
             {
               name: "Regional travel & lodging", cost: "$1,400", unit: "",
-              funded: false,
+              funded: true,
               rationale:
                 "The regional championship is at the Dauphin Island Sea Lab — a " +
                 "six-hour drive south. This covers transport, two nights' lodging, " +
@@ -813,7 +813,7 @@ window.SITE = {
             },
             {
               name: "Spare thruster & printed propellers", cost: "$300", unit: "",
-              funded: false,
+              funded: true,
               rationale:
                 "A backup thruster and a stock of spare props. Thrusters take the " +
                 "most abuse on the robot, and a dead one mid-competition ends the " +
@@ -821,7 +821,7 @@ window.SITE = {
             },
             {
               name: "ROV frame & structure", cost: "$450", unit: "",
-              funded: false,
+              funded: true,
               rationale:
                 "The aluminum extrusion, HDPE plate, and 316 stainless hardware " +
                 "the whole robot is built on. Marine-grade stainless is non-" +
@@ -830,7 +830,7 @@ window.SITE = {
             },
             {
               name: "12 V battery system", cost: "$300", unit: "",
-              funded: false,
+              funded: true,
               rationale:
                 "The onboard battery, charger, approved enclosure, and power " +
                 "distribution. Safety inspection requires the battery in a proper " +
@@ -896,7 +896,7 @@ window.SITE = {
             },
             {
               name: "Pneumatic manipulator", cost: "$300", unit: "",
-              funded: false,
+              funded: true,
               rationale:
                 "The robot's gripper is the tool that does the scored tasks — " +
                 "collecting samples, turning valves, recovering objects off the " +
