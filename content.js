@@ -54,10 +54,13 @@ window.SITE = {
       logo: "sponsors/tennessee-valley-robotics.png"
     },
     {
-      name: "AUVSI",
-      url:  "https://www.auvsipathfinder.org/",
-      logo: "sponsors/AUVSI_Pathfinder.png"
-    }, 
+      // Charitable arm of the AUVSI Pathfinder Chapter (Huntsville).
+      // This is the actual donor — the $2,500 came from the Foundation,
+      // not from AUVSI national.
+      name: "Pathfinder Charitable Foundation",
+      url:  "https://www.auvsipathfinder.org/foundation-home",
+      logo: "sponsors/pathfinder-charitable-foundation.jpg"
+    },
     {
       name: "DoW STEM",
       url:  "https://dowstem.us/",
@@ -742,12 +745,12 @@ window.SITE = {
        • Set an item's funded: to true once it's covered (it gets
          a "Funded" check on the site). */
     funding: {
-      raised: 1000,                 // ← update as money comes in
+      raised: 3000,                 // ← update as money comes in
       goal:   9800,
-      asOf:   "May 2026",           // ← date the raised figure is current as of
+      asOf:   "June 2026",          // ← date the raised figure is current as of
 
       intro:
-        "We've raised $1,000 toward a $9,800 season. Here's the thing about " +
+        "We've raised $3,000 toward a $9,800 season. Here's the thing about " +
         "that gap — it isn't abstract. Every dollar maps to a specific piece of " +
         "equipment or a specific cost, and the full list is right here. You can " +
         "see exactly what you'd be funding and why it moves the team forward. " +
