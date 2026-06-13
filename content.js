@@ -582,7 +582,7 @@ window.SITE = {
     calendar: [
       // Weekly Phase 1 meetings run Week 1–6 (see the Phase 1 Plan); dates will be
       // added here once the meeting day is locked.
-		  { date: "2026-06-14", title: "Summer Learning and Season Interest Kickoff", type: "Milestone", location: "Say Watt Robotics Headquarters" }
+		  { date: "2026-06-14", title: "Summer Learning and Season Interest Kickoff", type: "Milestone", location: "Say Watt Robotics Headquarters" },
       { date: "2026-11-01", title: "2027 competition manual drops — full-team read-through within 48 hours", type: "Milestone", location: "materovcompetition.org", url: "https://materovcompetition.org" },
       { date: "2026-12-14", title: "CAD locked — long-lead parts ordered before the holiday break", type: "Milestone", location: "Team workspace" },
       { date: "2027-02-15", title: "Regional registration opens — we register this week", type: "Milestone", location: "Northern Gulf Coast Regional" },
