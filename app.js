@@ -321,6 +321,24 @@
       }
       host.appendChild(card);
     });
+
+    /* Weekly rotating duties — chip row beneath the elected officer cards.
+       Spans the full grid via .weekly-duties' grid-column: 1 / -1. */
+    const duties = S.weeklyDuties || [];
+    if (duties.length) {
+      const block = el("div", "weekly-duties");
+      block.innerHTML =
+        '<p class="weekly-duties-eyebrow">Each week, every student rotates through</p>' +
+        '<div class="weekly-duties-chips">' +
+          duties.map((d) =>
+            '<div class="weekly-duty">' +
+              '<div class="weekly-duty-role">' + esc(d.role || "") + "</div>" +
+              (d.detail ? '<div class="weekly-duty-detail">' + esc(d.detail) + "</div>" : "") +
+            "</div>"
+          ).join("") +
+        "</div>";
+      host.appendChild(block);
+    }
   }
 
   /* ---------- updates ---------- */

@@ -649,12 +649,13 @@ window.SITE = {
       },
       {
         name: "Not Elected Yet", role: "CFO",
-        detail: "Budget, bill of materials, and cost report",
+        detail: "Budget, bill of materials, cost report, and the engineering notebook",
         duties: [
           "Maintains the team budget and tracks every dollar spent against it.",
           "Keeps the Bill of Materials — the master list of every part — updated weekly, not the night before a deadline.",
           "Collects and files every invoice and receipt.",
           "Writes the cost report that goes into the technical documentation and is scored by the judges.",
+          "Owns the engineering notebook — the formal record of designs, decisions, build logs, and trade studies that the judges read at competition.",
           "Warns the team before a purchase pushes the build over budget, and asks 'what does this trade off?'",
           "Works with the CEO and mentors to track sponsors and fundraising.",
           "Reports the financial picture to the team so spending decisions are made with eyes open."
@@ -724,6 +725,30 @@ window.SITE = {
           "Keeps the tether properly protected with braided sleeving or spiral wrap — never tape as the main method.",
           "Practices the run choreography with the pilot until the handoffs are automatic."
         ]
+      }
+    ],
+
+    /* ---- 5c. WEEKLY ROTATING DUTIES ----
+       Four jobs every meeting that rotate across the team — not elected
+       positions, just assignments made at the start of each meeting so
+       every student touches every duty. Render as small chips below the
+       elected officer cards. */
+    weeklyDuties: [
+      {
+        role:   "Notetaker / Scribe",
+        detail: "Captures meeting minutes — decisions, action items, blockers — and files them with the CFO for the engineering notebook."
+      },
+      {
+        role:   "Safety Briefer",
+        detail: "Delivers the standing four-question safety brief at the start of the meeting."
+      },
+      {
+        role:   "Photographer",
+        detail: "Captures photos and short videos of the meeting for the engineering notebook and the marketing display."
+      },
+      {
+        role:   "Timekeeper",
+        detail: "Keeps the meeting on the agenda's clock — calls the time at each block change."
       }
     ],
 
