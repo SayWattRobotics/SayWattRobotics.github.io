@@ -140,6 +140,7 @@
       .join("");
 
     const week_el = el("div", "week");
+    week_el.id = "week-" + String(week.label || "").replace(/\./g, "-");
     if (forceOpen) week_el.classList.add("open");
     week_el.innerHTML = `
       <div class="week-head">
@@ -260,14 +261,35 @@
       const pretty = isNaN(d) ? esc(ev.date) :
         d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
       const item = el("div", "cal-item" + (isNext ? " next" : ""));
+      // Wrap the title in an <a> when a url is present. Hash-links scroll
+      // in-page; external URLs open in a new tab.
+      const titleHtml = ev.url
+        ? '<a class="cal-title cal-title-link" href="' + esc(ev.url) + '"' +
+            (/^https?:/i.test(ev.url) ? ' target="_blank" rel="noopener"' : "") +
+          '>' + esc(ev.title) + " &rarr;</a>"
+        : '<span class="cal-title">' + esc(ev.title) + "</span>";
       item.innerHTML = `
         <span class="cal-date">${pretty}</span>
         <span class="cal-main">
           ${isNext ? '<span class="cal-next-flag">NEXT UP</span><br>' : ""}
-          <span class="cal-title">${esc(ev.title)}</span>
+          ${titleHtml}
           ${ev.location ? `<div class="cal-meta">${esc(ev.location)}</div>` : ""}
         </span>
         ${ev.type ? `<span class="cal-tag">${esc(ev.type)}</span>` : ""}`;
+      // When the deep link points to a curriculum week, force that week
+      // open before scrolling so the user lands on the expanded content.
+      if (ev.url && ev.url.charAt(0) === "#") {
+        const link = item.querySelector(".cal-title-link");
+        if (link) link.addEventListener("click", () => {
+          const target = document.getElementById(ev.url.slice(1));
+          if (target && target.classList && !target.classList.contains("open")) {
+            target.classList.add("open");
+            // Also open the parent phase if applicable so the week is visible.
+            const phase = target.closest(".phase");
+            if (phase && !phase.classList.contains("open")) phase.classList.add("open");
+          }
+        });
+      }
       host.appendChild(item);
     });
   }
@@ -341,19 +363,179 @@
     }
   }
 
-  /* ---------- updates ---------- */
-  function renderUpdates() {
-    const host = $("updateList");
-    const items = (S.updates || []).slice();
-    if (!items.length) {
-      host.innerHTML = '<p style="color:var(--ink-faint)">Season updates will be posted here.</p>';
+  /* ---------- field log (meeting notes) ---------- */
+  function renderFieldLog() {
+    const host = $("fieldLogList");
+    if (!host) return;
+    const notes = (S.meetingNotes || []).slice();
+    if (!notes.length) {
+      host.innerHTML = '<p style="color:var(--ink-faint)">' +
+        'Meeting notes will appear here, in the kids\' own voice, after each Sunday meeting.' +
+      '</p>';
       return;
     }
-    items.forEach((u) => {
-      host.appendChild(el("div", "update", `
-        ${u.date ? `<div class="update-date">${esc(u.date)}</div>` : ""}
-        <h3>${esc(u.title || "")}</h3>
-        ${u.body ? `<p>${esc(u.body)}</p>` : ""}`));
+
+    notes.forEach((n, idx) => {
+      const card = el("article", "field-note" + (idx === 0 ? " open" : ""));
+      card.id = "field-log-" + String(n.week || "").replace(/\./g, "-");
+
+      // Header band — always visible; click to toggle the body
+      const header =
+        '<button type="button" class="field-note-head">' +
+          '<div class="field-note-head-text">' +
+            (n.week  ? '<span class="field-note-week">WEEK ' + esc(n.week) + '</span>'  : "") +
+            (n.theme ? '<h3 class="field-note-theme">'  + esc(n.theme) + '</h3>' : "") +
+            '<div class="field-note-meta">' +
+              (n.date ? esc(n.date) : "") +
+              (n.time ? '  ·  ' + esc(n.time) : "") +
+            "</div>" +
+          "</div>" +
+          '<span class="chevron" aria-hidden="true"></span>' +
+        "</button>";
+
+      // Recap prose
+      const recap = n.recap ? '<p class="field-note-recap">' + esc(n.recap) + "</p>" : "";
+
+      // By the numbers chip row
+      const stats = (n.byNumbers && n.byNumbers.length)
+        ? '<div class="field-note-stats">' +
+            n.byNumbers.map((s) =>
+              '<div class="field-stat">' +
+                '<div class="field-stat-value">' + esc(s.value || "") + "</div>" +
+                '<div class="field-stat-label">' + esc(s.label || "") + "</div>" +
+              "</div>"
+            ).join("") +
+          "</div>"
+        : "";
+
+      // Today's roles
+      const roles = (n.todaysRoles && n.todaysRoles.length)
+        ? '<div class="field-note-section">' +
+            '<h4 class="field-note-eyebrow">Today\'s roles</h4>' +
+            '<div class="field-roles-grid">' +
+              n.todaysRoles.map((r) =>
+                '<div class="field-role">' +
+                  '<div class="field-role-role">' + esc(r.role || "") + "</div>" +
+                  '<div class="field-role-holder">' + esc(r.holder || "—") + "</div>" +
+                "</div>"
+              ).join("") +
+            "</div>" +
+            (n.rolesNote ? '<p class="field-note-aside">' + esc(n.rolesNote) + "</p>" : "") +
+          "</div>"
+        : "";
+
+      // Decisions list
+      const decisions = (n.decisions && n.decisions.length)
+        ? '<div class="field-note-section">' +
+            '<h4 class="field-note-eyebrow">Decisions made</h4>' +
+            '<ul class="field-bullets">' +
+              n.decisions.map((d) => "<li>" + esc(d) + "</li>").join("") +
+            "</ul>" +
+          "</div>"
+        : "";
+
+      // Action items table
+      const actions = (n.actionItems && n.actionItems.length)
+        ? '<div class="field-note-section">' +
+            '<h4 class="field-note-eyebrow">Action items</h4>' +
+            '<table class="field-actions">' +
+              '<thead><tr><th>Item</th><th>Owner</th><th>Due</th></tr></thead>' +
+              '<tbody>' +
+                n.actionItems.map((a) =>
+                  "<tr>" +
+                    "<td>" + esc(a.item  || "") + "</td>" +
+                    "<td>" + esc(a.owner || "") + "</td>" +
+                    "<td>" + esc(a.due   || "") + "</td>" +
+                  "</tr>"
+                ).join("") +
+              "</tbody>" +
+            "</table>" +
+          "</div>"
+        : "";
+
+      // What we learned
+      const learned = (n.learned && n.learned.length)
+        ? '<div class="field-note-section">' +
+            '<h4 class="field-note-eyebrow">What we learned</h4>' +
+            '<ul class="field-bullets">' +
+              n.learned.map((l) => "<li>" + esc(l) + "</li>").join("") +
+            "</ul>" +
+          "</div>"
+        : "";
+
+      // Looking ahead
+      const ahead = n.nextWeek
+        ? '<div class="field-note-section">' +
+            '<h4 class="field-note-eyebrow">Looking ahead</h4>' +
+            '<p class="field-note-ahead">' + esc(n.nextWeek) + "</p>" +
+          "</div>"
+        : "";
+
+      // Photos — only render if consent is NOT pending
+      const photos = (n.photos && n.photos.length && !n.photoConsentPending)
+        ? '<div class="field-note-section">' +
+            '<h4 class="field-note-eyebrow">Photos</h4>' +
+            '<div class="field-photos">' +
+              n.photos.map((p) =>
+                '<figure class="field-photo">' +
+                  '<img src="' + esc(p.src || "") + '" alt="' + esc(p.caption || "") + '" />' +
+                  (p.caption ? '<figcaption>' + esc(p.caption) + "</figcaption>" : "") +
+                "</figure>"
+              ).join("") +
+            "</div>" +
+          "</div>"
+        : (n.photos && n.photos.length && n.photoConsentPending
+            ? '<div class="field-note-section field-photos-pending">' +
+                '<h4 class="field-note-eyebrow">Photos</h4>' +
+                '<p class="field-note-aside">Photos held until every student in frame has a signed photo-release form on file.</p>' +
+              "</div>"
+            : "");
+
+      // Quiet sponsor row at the bottom
+      const sponsorRow = SPONSORS && SPONSORS.length
+        ? '<div class="field-note-sponsors">' +
+            '<span class="field-note-sponsors-label">Made possible by</span>' +
+            '<div class="field-note-sponsors-row" id="field-sponsors-' + esc(n.week || "") + '"></div>' +
+          "</div>"
+        : "";
+
+      // Body wrapped in the standard sliding .collapse container so the
+      // open/closed transition matches the curriculum + roster accordions.
+      const body =
+        '<div class="collapse"><div class="collapse-inner field-note-body">' +
+          recap + stats + roles + decisions + actions + learned + ahead + photos + sponsorRow +
+        "</div></div>";
+
+      card.innerHTML = header + body;
+      host.appendChild(card);
+
+      // Click the header to toggle the body.
+      const head = card.querySelector(".field-note-head");
+      if (head) head.addEventListener("click", () => card.classList.toggle("open"));
+
+      // Populate sponsor row with small images, falling back to text-only.
+      const row = card.querySelector(".field-note-sponsors-row");
+      if (row) {
+        SPONSORS.forEach((s) => {
+          const a = document.createElement("a");
+          a.className = "field-sponsor";
+          a.href = s.url || "#";
+          if (s.url) { a.target = "_blank"; a.rel = "noopener"; }
+          a.textContent = s.name || "";
+          row.appendChild(a);
+          if (s.logo) {
+            const probe = new Image();
+            probe.onload = function () {
+              const img = document.createElement("img");
+              img.src = s.logo;
+              img.alt = s.name || "";
+              a.innerHTML = "";
+              a.appendChild(img);
+            };
+            probe.src = s.logo;
+          }
+        });
+      }
     });
   }
 
@@ -571,7 +753,7 @@
       renderCalendar();
       renderResources();
       renderRoster();
-      renderUpdates();
+      renderFieldLog();
     }
     renderSponsors();
     renderFunding();

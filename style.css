@@ -444,6 +444,218 @@ mark {
   margin-top: 6px; line-height: 1.5;
 }
 
+/* Calendar — make linked titles look clickable */
+.cal-title-link {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .15s ease;
+}
+.cal-title-link:hover { color: var(--accent); }
+
+/* ===== Field Log (meeting notes) ===== */
+.field-log-list {
+  display: flex; flex-direction: column;
+  gap: 32px;
+  max-width: 880px;
+}
+.field-note {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  scroll-margin-top: 80px;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.field-note:hover { border-color: var(--accent); box-shadow: 0 6px 22px rgba(0,0,0,.06); }
+.field-note-head {
+  appearance: none;
+  display: flex; align-items: center; justify-content: space-between; gap: 22px;
+  width: 100%;
+  background: transparent; border: 0;
+  padding: 28px 36px;
+  cursor: pointer;
+  text-align: left;
+  font: inherit; color: inherit;
+}
+.field-note-head-text { flex: 1; }
+.field-note-head .chevron { margin-right: 6px; }
+.field-note.open > .collapse { grid-template-rows: 1fr; }
+.field-note.open .field-note-head .chevron { transform: rotate(225deg); }
+.field-note-body {
+  padding: 4px 36px 28px;
+  border-top: 1px solid var(--line);
+}
+.field-note-body > * + * { margin-top: 0; }
+.field-note-body > .field-note-recap { padding-top: 22px; margin: 0; }
+.field-note-week {
+  display: inline-block;
+  font-size: 11px; font-weight: 700; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 8px;
+}
+.field-note-theme {
+  font-size: 24px; font-weight: 700; line-height: 1.2;
+  color: var(--ink); margin: 4px 0 8px;
+}
+.field-note-meta {
+  font-size: 13px; color: var(--ink-faint);
+  letter-spacing: .01em;
+}
+.field-note-recap {
+  font-size: 16.5px; line-height: 1.65;
+  color: var(--ink); margin: 0 0 4px;
+}
+.field-note-stats {
+  display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  margin: 26px 0 8px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.field-stat { text-align: center; }
+.field-stat-value {
+  font-size: 26px; font-weight: 700; color: var(--ink); line-height: 1;
+}
+.field-stat-label {
+  font-size: 11px; font-weight: 600; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-faint);
+  margin-top: 6px;
+}
+.field-note-section { margin-top: 26px; }
+.field-note-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--ink-faint);
+  margin: 0 0 12px;
+}
+.field-roles-grid {
+  display: grid; gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.field-role {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.field-role-role {
+  font-size: 12.5px; font-weight: 700; color: var(--accent);
+}
+.field-role-holder {
+  font-size: 13px; color: var(--ink-soft);
+  margin-top: 4px;
+}
+.field-note-aside {
+  font-size: 13px; font-style: italic;
+  color: var(--ink-faint);
+  margin: 10px 0 0;
+}
+.field-bullets {
+  list-style: none; padding: 0; margin: 0;
+}
+.field-bullets li {
+  position: relative;
+  padding: 10px 0 10px 20px;
+  font-size: 14.5px; line-height: 1.55;
+  color: var(--ink);
+  border-top: 1px solid var(--line);
+}
+.field-bullets li:first-child { border-top: 0; }
+.field-bullets li::before {
+  content: ""; position: absolute; left: 2px; top: 17px;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+}
+.field-actions {
+  width: 100%; border-collapse: collapse;
+  font-size: 14px;
+}
+.field-actions thead th {
+  text-align: left;
+  font-size: 10.5px; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: #fff;
+  background: var(--accent);
+  padding: 8px 12px;
+}
+.field-actions thead th:first-child { border-radius: 8px 0 0 8px; }
+.field-actions thead th:last-child  { border-radius: 0 8px 8px 0; }
+.field-actions tbody td {
+  padding: 12px 12px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink); vertical-align: top;
+}
+.field-actions tbody td:nth-child(2),
+.field-actions tbody td:nth-child(3) {
+  color: var(--ink-soft); white-space: nowrap;
+  font-size: 13px;
+}
+.field-note-ahead {
+  font-size: 15px; font-style: italic;
+  color: var(--ink-soft); line-height: 1.6;
+  margin: 0;
+}
+.field-photos {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.field-photo {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg-alt);
+}
+.field-photo img {
+  display: block; width: 100%; height: auto;
+}
+.field-photo figcaption {
+  padding: 10px 14px;
+  font-size: 12.5px; color: var(--ink-soft);
+  font-style: italic;
+  border-top: 1px solid var(--line);
+}
+.field-photos-pending { /* visual placeholder when consent is pending */ }
+.field-note-sponsors {
+  margin-top: 32px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+.field-note-sponsors-label {
+  display: block;
+  font-size: 10.5px; font-weight: 700; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--ink-faint);
+  margin-bottom: 14px;
+}
+.field-note-sponsors-row {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 18px 28px;
+  opacity: 0.75;
+}
+.field-sponsor {
+  font-size: 11px; letter-spacing: .04em;
+  color: var(--ink-soft); text-decoration: none;
+  align-self: center;
+}
+.field-sponsor img {
+  max-height: 26px; max-width: 92px;
+  width: auto; height: auto;
+  display: block;
+  filter: grayscale(0.35);
+  transition: filter .2s ease, opacity .2s ease;
+}
+.field-sponsor:hover img {
+  filter: grayscale(0);
+}
+@media (max-width: 600px) {
+  .field-note { padding: 28px 22px 22px; }
+  .field-note-theme { font-size: 20px; }
+  .field-note-recap { font-size: 15px; }
+  .field-actions { font-size: 13px; }
+  .field-actions tbody td:nth-child(2),
+  .field-actions tbody td:nth-child(3) { white-space: normal; }
+}
+
 /* ===== Updates ===== */
 .update-list {
   display: flex; flex-direction: column; gap: 0;

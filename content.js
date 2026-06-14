@@ -193,6 +193,8 @@ window.SITE = {
               "Starting the community-outreach log on day one"
             ],
             resources: [
+              { label: "Meeting 1.1 field log — what we did on day one", url: "#field-log-1-1" },
+              { label: "Photo Release Form — for parents to sign before any team photo goes online", url: "Team_Files/Photo%20Release%20Form.pdf" },
               { label: "Class 1.1 slide deck (view)", url: "Classes/Phase%201/1.1%20Kickoff%20-%20Slides.pdf" },
               { label: "Class 1.1 slides (PowerPoint)", url: "Classes/Phase%201/1.1%20Kickoff%20-%20Slides.pptx" },
               { label: "Class 1.1 prep sheet (PDF)", url: "Classes/Phase%201/1.1%20Kickoff%20-%20Prep%20Sheet.pdf" },
@@ -580,8 +582,11 @@ window.SITE = {
 
     /* ---- 3. CALENDAR — dates written as "YYYY-MM-DD" ---- */
     calendar: [
-      // Weekly Phase 1 meetings run Week 1–6 (see the Phase 1 Plan); dates will be
-      // added here once the meeting day is locked.
+      // Weekly Phase 1 meetings — 3 PM Sundays at Mr. Holcombe's house.
+      // Each row has a deep link to the matching curriculum week (#week-1-2 → Class 1.2).
+      { date: "2026-06-21", title: "Class 1.2 — Soldering Bootcamp",        type: "Class", location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-2" },
+      { date: "2026-06-28", title: "Class 1.3 — Kit Unboxing & First Electronics", type: "Class", location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-3" },
+      { date: "2026-07-05", title: "Class 1.4 — Electronics Workshop",      type: "Class", location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-4" },
       { date: "2026-11-01", title: "2027 competition manual drops — full-team read-through within 48 hours", type: "Milestone", location: "materovcompetition.org", url: "https://materovcompetition.org" },
       { date: "2026-12-14", title: "CAD locked — long-lead parts ordered before the holiday break", type: "Milestone", location: "Team workspace" },
       { date: "2027-02-15", title: "Regional registration opens — we register this week", type: "Milestone", location: "Northern Gulf Coast Regional" },
@@ -605,10 +610,18 @@ window.SITE = {
       {
         category: "Team Documents",
         items: [
-          { title: "Shared drive", description: "Photos, notes, and working files",
-            url: "https://drive.google.com" },
-          { title: "Bill of Materials", description: "Running parts list and budget", url: "Team_Docs/Parts_List.doc" },
-          { title: "Pool-test log", description: "Every splash test, recorded" }
+          { title: "Team Google Drive", description: "Project notebook, photo log, parts list, every working file",
+            url: "https://drive.google.com/drive/folders/1MUgbtFhBYDasChrol9BsCRQBBEiibHU0" },
+          { title: "Bill of Materials (view PDF)", description: "Current parts list, tier-by-tier, with funding status",
+            url: "Team_Files/Bill%20of%20Materials.pdf" },
+          { title: "Bill of Materials (download Excel)", description: "Editable workbook — formulas roll up to the season meter",
+            url: "Team_Files/Bill%20of%20Materials.xlsx" },
+          { title: "Pool-Test Log (view PDF)", description: "Template — one row per pool session, plus pre/post checklist",
+            url: "Team_Files/Pool-Test%20Log.pdf" },
+          { title: "Pool-Test Log (download Excel)", description: "Editable template — fill in during the session",
+            url: "Team_Files/Pool-Test%20Log.xlsx" },
+          { title: "Photo Release Form (PDF)", description: "Required from every parent before a student appears in team photos",
+            url: "Team_Files/Photo%20Release%20Form.pdf" }
         ]
       },
       {
@@ -728,6 +741,90 @@ window.SITE = {
       }
     ],
 
+    /* ---- 5d. MEETING NOTES — the field log ----
+       The Notetaker writes this each week, in the kids' voice. Renders
+       as a chronological feed in the Field Log section of the page and
+       links from the matching curriculum week's resources. Set
+       photoConsentPending: true to hide the photo gallery for any
+       entry until every kid in the photos has a release form on file. */
+    meetingNotes: [
+      {
+        week:  "1.1",
+        date:  "Sunday, June 14, 2026",
+        time:  "3:00 PM",
+        theme: "Kickoff — Forming the Company",
+
+        recap:
+          "Eleven of us crammed into Mr. Holcombe's living room tonight for the " +
+          "first meeting of the season — twelve on the roster, one absent. " +
+          "We watched the slide deck on the TV with the family dog stretched " +
+          "out on the rug like he was officially on the roster too. We learned " +
+          "what the MATE ROV Competition actually is, what it means to be a " +
+          "RANGER-class company (not a \"club\"), and that the season ends at " +
+          "our regional next April — likely Dauphin Island Sea Lab, depending " +
+          "on which district we land in when registration closes. Not all of us " +
+          "will be the six standing on the pool deck that day — but most of " +
+          "the room came in wanting to do this, which is a good way to start. " +
+          "We didn't elect officers tonight. We're each taking a week to think " +
+          "about which role fits us and coming back with a first and second choice.",
+
+        byNumbers: [
+          { value: "2",      label: "hours"           },
+          { value: "11/12",  label: "students"        },
+          { value: "$0",     label: "spent"           },
+          { value: "1",      label: "dog on the rug"  }
+        ],
+
+        todaysRoles: [
+          { role: "Notetaker",      holder: "Mentor-led" },
+          { role: "Safety Briefer", holder: "Mentor-led" },
+          { role: "Photographer",   holder: "Mentor-led" },
+          { role: "Timekeeper",     holder: "Mentor-led" }
+        ],
+        rolesNote: "Rotation starts at Meeting 1.2.",
+
+        decisions: [
+          "Meeting cadence: 3 PM on Sundays, with extra weekday meetings when the season calls for them.",
+          "Officer elections deferred to Meeting 1.2.",
+          "Mechanical Lead will be broken into sub-areas (frame, manipulator, payload).",
+          "Considering Deputies for some officer roles — second-in-command and backup. Final structure to be decided once the officers are elected.",
+          "Software Lead starts studying prior teams' open-source code right away.",
+          "Spiral development is our build philosophy. We build, test, fix, repeat — we don't wait for a perfect plan and then build once.",
+          "The team Drive is set up with a project notebook and a photo log.",
+          "Parent photo-consent forms are required before any team photo goes on the public site."
+        ],
+
+        actionItems: [
+          { item: "Distribute parent photo-consent forms",                                 owner: "Advisor",                       due: "by 1.2" },
+          { item: "Bring first + second choice for officer role",                          owner: "Every student",                 due: "1.2"     },
+          { item: "Watch MATE pre-watch: \"Using Tools and Soldering & Waterproofing\"",   owner: "Every student",                 due: "by 1.2" },
+          { item: "Bring closed-toe shoes (soldering irons on the table)",                 owner: "Every student",                 due: "1.2"     },
+          { item: "Update team document links on the website",                             owner: "Advisor",                       due: "by 1.2" },
+          { item: "Define Mechanical Lead sub-roles",                                      owner: "CEO + Mech Lead (post-election)", due: "by 1.3" },
+          { item: "Define Deputy structure across all officer roles",                      owner: "CEO (post-election)",           due: "by 1.3" }
+        ],
+
+        learned: [
+          "A RANGER company is bigger than \"a school club.\" It has a budget, a schedule, deputies, and people who own real jobs.",
+          "Spiral development beats waterfall. We're going to build, test, fix, repeat — not draft a perfect plan and then build once.",
+          "Safety briefs aren't theater. Real engineering and dive teams do them before every job, so we do them before every meeting. We start the habit now, while the irons are still cold."
+        ],
+
+        nextWeek:
+          "Next Sunday at 3 PM is Class 1.2 — Soldering Bootcamp. Closed-toe " +
+          "shoes required — soldering irons are on the table for the first " +
+          "time. Officer elections happen at the top of the meeting, so we " +
+          "each show up with a first and second choice ready.",
+
+        photos: [
+          { src: "assets/meetings/1.1/01-the-cast-assembles.jpg",      caption: "Meeting 1, slide 1. The cast assembles." },
+          { src: "assets/meetings/1.1/02-room-ran-out-of-couch.jpg",   caption: "Twelve students showed up. The room ran out of couch." }
+        ],
+
+        photoConsentPending: true
+      }
+    ],
+
     /* ---- 5c. WEEKLY ROTATING DUTIES ----
        Four jobs every meeting that rotate across the team — not elected
        positions, just assignments made at the start of each meeting so
@@ -749,18 +846,6 @@ window.SITE = {
       {
         role:   "Timekeeper",
         detail: "Keeps the meeting on the agenda's clock — calls the time at each block change."
-      }
-    ],
-
-    /* ---- 6. UPDATES — newest at the top ---- */
-    updates: [
-      {
-        date:  "June 2026",
-        title: "The ROV team launches",
-        body:  "Say Watt Robotics is adding a RANGER-class ROV team for the 2026–2027 " +
-               "season. Over the coming weeks we'll build core engineering skills — " +
-               "soldering, waterproofing, and ROV operation — before the 2027 " +
-               "competition manual is released in November."
       }
     ],
 
@@ -1175,16 +1260,6 @@ window.SITE = {
       { name: "Not Elected Yet", role: "Team Member", detail: "Robot design and build" },
       { name: "Not Elected Yet", role: "Team Member", detail: "Programming" },
       { name: "Not Elected Yet", role: "Team Member", detail: "Innovation Project" }
-    ],
-
-    /* ---- 6. UPDATES ---- */
-    updates: [
-      {
-        date:  "Summer 2026",
-        title: "Heading into our fifth season",
-        body:  "Say Watt's FIRST LEGO League team is back for the BIOGLOW season — " +
-               "the program where this club began three years ago."
-      }
     ],
 
     /* ---- 7. FUNDING — placeholder for the FLL team ----
