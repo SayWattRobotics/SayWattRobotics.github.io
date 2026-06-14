@@ -623,7 +623,7 @@ window.SITE = {
             url: "https://www.onshape.com" },
           { title: "Soldering guide", description: "Adafruit's beginner walkthrough",
             url: "https://learn.adafruit.com/adafruit-guide-excellent-soldering" },
-		  { title: "rovAR Simulatorr", description: "Interactive AR Underwater ROV Simulator",
+		  { title: "rovAR Simulator", description: "Interactive AR Underwater ROV Simulator",
 		    url: "https://ncatech.org/rovar/#Educator" }
         ]
       }
