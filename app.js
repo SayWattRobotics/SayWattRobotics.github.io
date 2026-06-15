@@ -375,8 +375,8 @@
       return;
     }
 
-    notes.forEach((n, idx) => {
-      const card = el("article", "field-note" + (idx === 0 ? " open" : ""));
+    notes.forEach((n) => {
+      const card = el("article", "field-note");
       card.id = "field-log-" + String(n.week || "").replace(/\./g, "-");
 
       // Header band — always visible; click to toggle the body
