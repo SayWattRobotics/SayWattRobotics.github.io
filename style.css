@@ -460,6 +460,7 @@ mark {
   max-width: 880px;
 }
 .field-note {
+  position: relative;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -467,13 +468,33 @@ mark {
   scroll-margin-top: 80px;
   transition: border-color .15s ease, box-shadow .15s ease;
 }
+.field-note-pdf {
+  position: absolute;
+  top: 18px; right: 18px;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 10px;
+  font-size: 11px; font-weight: 600; letter-spacing: .04em;
+  color: var(--accent);
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+  z-index: 2;
+}
+.field-note-pdf:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.field-note-pdf svg { display: block; }
 .field-note:hover { border-color: var(--accent); box-shadow: 0 6px 22px rgba(0,0,0,.06); }
 .field-note-head {
   appearance: none;
   display: flex; align-items: center; justify-content: space-between; gap: 22px;
   width: 100%;
   background: transparent; border: 0;
-  padding: 28px 36px;
+  padding: 28px 96px 28px 36px;
   cursor: pointer;
   text-align: left;
   font: inherit; color: inherit;

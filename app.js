@@ -379,6 +379,18 @@
       const card = el("article", "field-note");
       card.id = "field-log-" + String(n.week || "").replace(/\./g, "-");
 
+      // PDF download — small chip in the top-right corner of the card.
+      // Rendered OUTSIDE the toggle button so clicking it downloads
+      // instead of opening the entry.
+      const pdfLink = n.pdfUrl
+        ? '<a class="field-note-pdf" href="' + esc(n.pdfUrl) + '" target="_blank" rel="noopener" download title="Download a printable one-page PDF of this meeting note">' +
+            '<svg viewBox="0 0 16 16" aria-hidden="true" width="13" height="13">' +
+              '<path fill="currentColor" d="M8 1.5a.75.75 0 0 1 .75.75v6.69l2.22-2.22a.75.75 0 1 1 1.06 1.06l-3.5 3.5a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.22 2.22V2.25A.75.75 0 0 1 8 1.5Zm-5.25 11a.75.75 0 0 1 .75.75v.5h9v-.5a.75.75 0 0 1 1.5 0v1.25a.75.75 0 0 1-.75.75H2.75A.75.75 0 0 1 2 14.5v-1.25a.75.75 0 0 1 .75-.75Z"/>' +
+            "</svg>" +
+            "<span>PDF</span>" +
+          "</a>"
+        : "";
+
       // Header band — always visible; click to toggle the body
       const header =
         '<button type="button" class="field-note-head">' +
@@ -391,7 +403,7 @@
             "</div>" +
           "</div>" +
           '<span class="chevron" aria-hidden="true"></span>' +
-        "</button>";
+        "</button>" + pdfLink;
 
       // Recap prose
       const recap = n.recap ? '<p class="field-note-recap">' + esc(n.recap) + "</p>" : "";
