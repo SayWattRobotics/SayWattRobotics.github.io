@@ -583,10 +583,12 @@ window.SITE = {
     /* ---- 3. CALENDAR — dates written as "YYYY-MM-DD" ---- */
     calendar: [
       // Weekly Phase 1 meetings — 3 PM Sundays at Mr. Holcombe's house.
-      // Each row has a deep link to the matching curriculum week (#week-1-2 → Class 1.2).
-      { date: "2026-06-21", title: "Class 1.2 — Soldering Bootcamp",        type: "Class", location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-2" },
-      { date: "2026-06-28", title: "Class 1.3 — Kit Unboxing & First Electronics", type: "Class", location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-3" },
-      { date: "2026-07-05", title: "Class 1.4 — Electronics Workshop",      type: "Class", location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-4" },
+      // Each Class row has a deep link to the matching curriculum week
+      // (#week-1-2 → Class 1.2).
+      { date: "2026-06-14", title: "Summer Learning and Season Interest Kickoff",  type: "Milestone", location: "Say Watt Robotics Headquarters" },
+      { date: "2026-06-21", title: "Class 1.2 — Soldering Bootcamp",               type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-2" },
+      { date: "2026-06-28", title: "Class 1.3 — Kit Unboxing & First Electronics", type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-3" },
+      { date: "2026-07-05", title: "Class 1.4 — Electronics Workshop",             type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-4" },
       { date: "2026-11-01", title: "2027 competition manual drops — full-team read-through within 48 hours", type: "Milestone", location: "materovcompetition.org", url: "https://materovcompetition.org" },
       { date: "2026-12-14", title: "CAD locked — long-lead parts ordered before the holiday break", type: "Milestone", location: "Team workspace" },
       { date: "2027-02-15", title: "Regional registration opens — we register this week", type: "Milestone", location: "Northern Gulf Coast Regional" },
@@ -634,7 +636,9 @@ window.SITE = {
           { title: "Onshape", description: "Free browser-based CAD",
             url: "https://www.onshape.com" },
           { title: "Soldering guide", description: "Adafruit's beginner walkthrough",
-            url: "https://learn.adafruit.com/adafruit-guide-excellent-soldering" }
+            url: "https://learn.adafruit.com/adafruit-guide-excellent-soldering" },
+		  { title: "rovAR Simulator", description: "Interactive AR Underwater ROV Simulator",
+		    url: "https://ncatech.org/rovar/#Educator" }
         ]
       }
     ],
@@ -855,12 +859,12 @@ window.SITE = {
        • Set an item's funded: to true once it's covered (it gets
          a "Funded" check on the site). */
     funding: {
-      raised: 3000,                 // ← update as money comes in
+      raised: 3500,                 // ← update as money comes in
       goal:   9800,
       asOf:   "June 2026",          // ← date the raised figure is current as of
 
       intro:
-        "We've raised $3,000 toward a $9,800 season. Here's the thing about " +
+        "We've raised $3,500 toward a $9,800 season. Here's the thing about " +
         "that gap — it isn't abstract. Every dollar maps to a specific piece of " +
         "equipment or a specific cost, and the full list is right here. You can " +
         "see exactly what you'd be funding and why it moves the team forward. " +
