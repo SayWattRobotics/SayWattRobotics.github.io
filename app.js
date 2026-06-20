@@ -511,11 +511,42 @@
           "</div>"
         : "";
 
+      // Hero photo — renders above the recap. Respects requiresConsent
+      // so the hero hides when the entry's gallery consent gate is on.
+      const hero = (n.heroPhoto && n.heroPhoto.src &&
+                    (!n.heroPhoto.requiresConsent || !n.photoConsentPending))
+        ? '<figure class="field-note-hero">' +
+            '<img src="' + esc(n.heroPhoto.src) + '" alt="' + esc(n.heroPhoto.alt || "") + '" />' +
+            (n.heroPhoto.caption ? '<figcaption>' + esc(n.heroPhoto.caption) + "</figcaption>" : "") +
+          "</figure>"
+        : "";
+
+      // Safety subsection — important enough to live above the fold,
+      // directly under the by-the-numbers strip.
+      const safety = (n.safety && n.safety.length)
+        ? '<div class="field-note-section">' +
+            '<h4 class="field-note-eyebrow">Safety</h4>' +
+            '<ul class="field-bullets">' +
+              n.safety.map((s) => "<li>" + esc(s) + "</li>").join("") +
+            "</ul>" +
+          "</div>"
+        : "";
+
+      // Student learning outcomes — what the kids took out of the session.
+      const outcomes = (n.studentOutcomes && n.studentOutcomes.length)
+        ? '<div class="field-note-section">' +
+            '<h4 class="field-note-eyebrow">Student learning outcomes</h4>' +
+            '<ul class="field-bullets">' +
+              n.studentOutcomes.map((s) => "<li>" + esc(s) + "</li>").join("") +
+            "</ul>" +
+          "</div>"
+        : "";
+
       // Body wrapped in the standard sliding .collapse container so the
       // open/closed transition matches the curriculum + roster accordions.
       const body =
         '<div class="collapse"><div class="collapse-inner field-note-body">' +
-          recap + stats + roles + decisions + actions + learned + ahead + photos + sponsorRow +
+          hero + recap + stats + safety + roles + decisions + actions + learned + outcomes + ahead + photos + sponsorRow +
         "</div></div>";
 
       card.innerHTML = header + body;

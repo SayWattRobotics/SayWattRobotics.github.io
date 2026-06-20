@@ -157,7 +157,7 @@ window.SITE = {
       heroSub:     "A student-run RANGER-class team building an ROV and a profiling float for the 2026-2027 Season.",
       facts: [
         "RANGER Class",
-        "Dauphin Island Sea Lab",
+        "MATE ROV Competition",
         "Regional · April 2027",
         "Students at the pool"
       ]
@@ -531,13 +531,13 @@ window.SITE = {
         dates:   "April 2027 · through the regional",
         status:  "upcoming",
         summary: "Documentation submitted, the marketing display printed, the " +
-                 "presentation rehearsed, and the trailer packed for Dauphin Island.",
+                 "presentation rehearsed, and the trailer packed for our 2027 regional.",
         weeks: [
           {
             label: "Submit",
             theme: "Submit the documentation",
             lessons: [
-              "Documentation submission deadlines hit in early April — confirm the exact dates with DISL",
+              "Documentation submission deadlines hit in early April — confirm the exact dates once the regional is assigned",
               "Confirm regional registration is complete (registration opens mid-February)"
             ]
           },
@@ -562,7 +562,7 @@ window.SITE = {
             theme: "Travel to Competition",
             lessons: [
               "Packing the trailer",
-              "Driving to the Northern Gulf Coast Regional at the Dauphin Island Sea Lab, late April 2027"
+              "Driving to our 2027 MATE ROV regional, late April 2027"
             ]
           }
         ]
@@ -576,7 +576,7 @@ window.SITE = {
        • Leave pdf as "" to hide the card. */
     roadmap: {
       title: "The 2026–2027 Season Plan",
-      blurb: "Twelve months, six phases, one regional — the full plan, from the first soldering iron to Dauphin Island.",
+      blurb: "Twelve months, six phases, one regional — the full plan, from the first soldering iron to the competition.",
       pdf:   "RANGER_2027_Plan.pdf"
     },
 
@@ -591,9 +591,9 @@ window.SITE = {
       { date: "2026-07-05", title: "Class 1.4 — Electronics Workshop",             type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-4" },
       { date: "2026-11-01", title: "2027 competition manual drops — full-team read-through within 48 hours", type: "Milestone", location: "materovcompetition.org", url: "https://materovcompetition.org" },
       { date: "2026-12-14", title: "CAD locked — long-lead parts ordered before the holiday break", type: "Milestone", location: "Team workspace" },
-      { date: "2027-02-15", title: "Regional registration opens — we register this week", type: "Milestone", location: "Northern Gulf Coast Regional" },
-      { date: "2027-04-05", title: "Documentation submission deadline — confirm exact date with DISL", type: "Deadline", location: "Northern Gulf Coast Regional" },
-      { date: "2027-04-23", title: "Northern Gulf Coast Regional", type: "Competition", location: "Dauphin Island Sea Lab · exact dates TBC" }
+      { date: "2027-02-15", title: "Regional registration opens — we register this week", type: "Milestone", location: "2027 MATE ROV regional (assignment TBD)" },
+      { date: "2027-04-05", title: "Documentation submission deadline — confirm exact date once regional is assigned", type: "Deadline", location: "2027 MATE ROV regional (assignment TBD)" },
+      { date: "2027-04-23", title: "2027 MATE ROV regional competition", type: "Competition", location: "Regional and dates TBD" }
     ],
 
     /* ---- 4. RESOURCES — grouped links and documents ---- */
@@ -603,8 +603,8 @@ window.SITE = {
         items: [
           { title: "MATE ROV Competition site", description: "Official rules, news, and forum",
             url: "https://materovcompetition.org" },
-          { title: "Northern Gulf Coast Regional", description: "Our regional at Dauphin Island Sea Lab",
-            url: "https://materovcompetition.org/register-regionals/northerngulfcoast" },
+          { title: "MATE ROV regionals (all)", description: "Where we'll compete — regional assignment finalized at registration",
+            url: "https://materovcompetition.org/regionals" },
           { title: "Safety inspection tutorial", description: "What inspectors check before the pool",
             url: "https://materovcompetition.org/safety" }
         ]
@@ -753,6 +753,96 @@ window.SITE = {
        entry until every kid in the photos has a release form on file. */
     meetingNotes: [
       {
+        week:  "1.2",
+        date:  "Friday, June 19, 2026  (Sunday cohort upcoming June 21)",
+        time:  "Two sessions  ·  Friday cohort documented; Sunday pending",
+        theme: "Soldering Bootcamp",
+
+        heroPhoto: {
+          src:     "assets/meetings/1.2/00-soldering-in-action.jpg",
+          alt:     "Two team members soldering the SpaceWings Lucky Wheel kit during Lesson 1.2 — laptop open, soldering iron and handheld fume extractor in use, kit on the work surface.",
+          caption: "Two of the team mid-build. Laptop alongside for reference, fume extractor in hand, the Lucky Wheel on the counter, red flush cutters within reach.",
+          requiresConsent: true
+        },
+
+        recap:
+          "Lesson 1.2 was soldering bootcamp — the team's first night with " +
+          "hot irons in their hands. Before the rest of the team touched " +
+          "the kits, Coach John ran Trenton — who had prior soldering " +
+          "experience — through a full test build on Friday June 18, the " +
+          "day before the live class. That prep session is where the four " +
+          "rules below actually came from. Use an experienced student to " +
+          "surface lessons before the new ones make them: that's the " +
+          "mentor pattern, and it kept Friday's class clean. We split the " +
+          "live class across Friday June 19 and Sunday June 21 because we " +
+          "had more kids than workstations. Friday's cohort — Rebecca, " +
+          "Isaac, Liam, Maddox, and Tyler — ran the full sequence: safety " +
+          "brief, general soldering instruction, then practice board. Coach " +
+          "John ran the brief and led the instruction. Each kid built the " +
+          "SpaceWings DIY Lucky Wheel — an NE555 + CD4017 spinner that " +
+          "lights ten LEDs in sequence. Through-hole, mixed small and big " +
+          "components, immediate visual payoff when you press the button. " +
+          "About an hour per board. Iron set to 650°F, which flows good " +
+          "solder cleanly without cooking the components. Sunday's cohort " +
+          "meets next; the rest of the team builds the same kit then.",
+
+        byNumbers: [
+          { value: "2",      label: "sessions"        },
+          { value: "5/12",   label: "students Friday" },
+          { value: "~1 hr",  label: "per board"       },
+          { value: "650°F",  label: "iron temp"       }
+        ],
+
+        safety: [
+          "Solder is lead-based. Don't inhale the fumes; wash hands when you're done.",
+          "Place a fan to extract or blow fumes away from the student. Direction matters — away, not toward.",
+          "The iron tip burns. So do the back of the board and the component leads. Treat both as hot.",
+          "Safety glasses on whenever you're snipping leads. Small metal clippings fly off the cutters."
+        ],
+
+        decisions: [
+          "Coach John runs the safety brief and the general soldering instruction at each session — the standing pattern.",
+          "Trenton handles pre-class test builds on new kits, to surface lessons before the rest of the team touches an iron.",
+          "Iron temperature standardized at 650°F for the team's practice kits.",
+          "Split the class across two sessions when workstations are the bottleneck.",
+          "Safety brief at the start of every soldering session. No exceptions."
+        ],
+
+        actionItems: [
+          { item: "Run the Sunday cohort through the same kit + brief + instruction sequence",          owner: "Coach John",     due: "Sun 6/21" },
+          { item: "Bring kits and components to next class (Lesson 1.3)",                               owner: "Advisor",        due: "6/28" },
+          { item: "Practice soldering at home if a station is available",                               owner: "Every student",  due: "ongoing" },
+          { item: "Add team photos from Friday + Sunday sessions to the photo log once parent releases are returned", owner: "Photographer",   due: "when consent is in" }
+        ],
+
+        learned: [
+          "Work from the inside of the board outward. Anything you've already soldered is a vertical obstacle to whatever you solder next. Building outward keeps your iron's path open.",
+          "Small components before big ones. Resistors and low-profile caps first; headers and tall connectors last. Same reasoning — don't build a wall you have to reach over.",
+          "Right-handed solderers do multi-pin parts left to right. Left-handed, right to left. Your hand and iron drag across joints you just made if you go the other direction, and heat plus motion is exactly how a clean joint becomes a smeared one.",
+          "Solder the battery pack last. The pack hangs off the PCB and blocks access to every joint underneath it. Mount it after everything else is on the board and your workspace stays clean to the end."
+        ],
+
+        studentOutcomes: [
+          "The importance of polarity in certain components — diodes, electrolytic caps, transistors — and the habit of slowing down to check it before you commit the joint.",
+          "Soldering technique, equipment care, and the safety habits that go with hot tools and lead-based material."
+        ],
+
+        nextWeek:
+          "Sunday June 21 brings the rest of the team through the same kit + brief + instruction " +
+          "sequence. After that, Class 1.3 — Kit Unboxing and First Electronics — on June 28. " +
+          "Kits get opened, components get identified, and we move from practice joints to circuits " +
+          "that actually do something. Closed-toe shoes still required.",
+
+        photos: [
+          { src: "assets/meetings/1.2/01-spacewings-lucky-wheel-kit.jpg",      caption: "The SpaceWings DIY Lucky Wheel kit — the night's project, in the bag." },
+          { src: "assets/meetings/1.2/02-schematic-and-instructions.jpg",     caption: "The included instruction sheet — circuit schematic, parameters, and how the spinner plays." }
+        ],
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/1.2/meeting-note.pdf"
+      },
+      {
         week:  "1.1",
         date:  "Sunday, June 14, 2026",
         time:  "3:00 PM",
@@ -765,8 +855,8 @@ window.SITE = {
           "out on the rug like he was officially on the roster too. We learned " +
           "what the MATE ROV Competition actually is, what it means to be a " +
           "RANGER-class company (not a \"club\"), and that the season ends at " +
-          "our regional next April — likely Dauphin Island Sea Lab, depending " +
-          "on which district we land in when registration closes. Not all of us " +
+          "our 2027 MATE ROV regional next April — which regional we land at " +
+          "gets sorted when registrations shake out. Not all of us " +
           "will be the six standing on the pool deck that day — but most of " +
           "the room came in wanting to do this, which is a good way to start. " +
           "We didn't elect officers tonight. We're each taking a week to think " +
@@ -885,7 +975,7 @@ window.SITE = {
         "Say Watt Robotics is a registered 501(c)(3) non-profit — every " +
         "sponsorship is fully tax-deductible.",
 
-      contactEmail: "contact@saywattrobotics.org",   // ← CONFIRM the real sponsor contact
+      contactEmail: "saywattrobotics2022@gmail.com",   // ← CONFIRM the real sponsor contact
 
       thankYou:
         "To everyone who's already chipped in — thank you. You're the reason " +
@@ -900,7 +990,7 @@ window.SITE = {
               name: "RANGER competition registration", cost: "$250", unit: "",
               funded: true,
               rationale:
-                "The team's entry fee for the MATE Northern Gulf Coast Regional. " +
+                "The team's entry fee for our 2027 MATE ROV regional. " +
                 "No registration, no competition — this is the first dollar the " +
                 "season needs."
             },
@@ -908,12 +998,11 @@ window.SITE = {
               name: "Regional travel & lodging", cost: "$1,400", unit: "",
               funded: true,
               rationale:
-                "The regional championship is at the Dauphin Island Sea Lab — a " +
-                "six-hour drive south. This covers transport, two nights' lodging, " +
-                "and meals for the students and chaperones. Every other item on " +
-                "this list builds the robot. This is the one that gets the robot, " +
-                "and the team, to the water. Without it, a season of work never " +
-                "gets scored."
+                "Covers transport, two nights' lodging, and meals for the " +
+                "students and chaperones to wherever our 2027 MATE ROV " +
+                "regional is assigned. Every other item on this list builds " +
+                "the robot. This is the one that gets the robot, and the team, " +
+                "to the water. Without it, a season of work never gets scored."
             }
           ]
         },
@@ -1295,7 +1384,7 @@ window.SITE = {
         "Say Watt Robotics is a registered 501(c)(3) non-profit — every " +
         "sponsorship is fully tax-deductible.",
 
-      contactEmail: "contact@saywattrobotics.org",
+      contactEmail: "saywattrobotics2022@gmail.com",
 
       thankYou:
         "Thank you to everyone supporting our FIRST LEGO League team — the " +
