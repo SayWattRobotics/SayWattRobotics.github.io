@@ -542,11 +542,24 @@
           "</div>"
         : "";
 
+      // Waterproofing test — sessions where a specific waterproof or
+      // splash-test result was generated get this subsection. Renders the
+      // method, the result, the failure analysis, and the fixes that
+      // come out of it.
+      const waterproofing = (n.waterproofing && n.waterproofing.length)
+        ? '<div class="field-note-section">' +
+            '<h4 class="field-note-eyebrow">Waterproofing test</h4>' +
+            '<ul class="field-bullets">' +
+              n.waterproofing.map((w) => "<li>" + esc(w) + "</li>").join("") +
+            "</ul>" +
+          "</div>"
+        : "";
+
       // Body wrapped in the standard sliding .collapse container so the
       // open/closed transition matches the curriculum + roster accordions.
       const body =
         '<div class="collapse"><div class="collapse-inner field-note-body">' +
-          hero + recap + stats + safety + roles + decisions + actions + learned + outcomes + ahead + photos + sponsorRow +
+          hero + recap + stats + safety + roles + decisions + actions + learned + waterproofing + outcomes + ahead + photos + sponsorRow +
         "</div></div>";
 
       card.innerHTML = header + body;

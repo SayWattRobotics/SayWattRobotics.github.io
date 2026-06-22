@@ -754,8 +754,8 @@ window.SITE = {
     meetingNotes: [
       {
         week:  "1.2",
-        date:  "Friday, June 19, 2026  (Sunday cohort upcoming June 21)",
-        time:  "Two sessions  ·  Friday cohort documented; Sunday pending",
+        date:  "June 19 – 21, 2026",
+        time:  "Three sub-sessions  ·  Fri / Sat / Sun",
         theme: "Soldering Bootcamp",
 
         heroPhoto: {
@@ -766,31 +766,42 @@ window.SITE = {
         },
 
         recap:
-          "Lesson 1.2 was soldering bootcamp — the team's first night with " +
-          "hot irons in their hands. Before the rest of the team touched " +
-          "the kits, Coach John ran Trenton — who had prior soldering " +
-          "experience — through a full test build on Friday June 18, the " +
+          "Lesson 1.2 was soldering bootcamp — the team's first weekend " +
+          "with hot irons in their hands. It ran as three sub-sessions " +
+          "across three days because workstations were the bottleneck and " +
+          "the kids' schedules were uneven. Before any of the new kids " +
+          "touched a kit, Coach John ran Trenton — who had prior soldering " +
+          "experience — through a full test build on Thursday June 18, the " +
           "day before the live class. That prep session is where the four " +
-          "rules below actually came from. Use an experienced student to " +
-          "surface lessons before the new ones make them: that's the " +
-          "mentor pattern, and it kept Friday's class clean. We split the " +
-          "live class across Friday June 19 and Sunday June 21 because we " +
-          "had more kids than workstations. Friday's cohort — Rebecca, " +
-          "Isaac, Liam, Maddox, and Tyler — ran the full sequence: safety " +
-          "brief, general soldering instruction, then practice board. Coach " +
-          "John ran the brief and led the instruction. Each kid built the " +
-          "SpaceWings DIY Lucky Wheel — an NE555 + CD4017 spinner that " +
-          "lights ten LEDs in sequence. Through-hole, mixed small and big " +
-          "components, immediate visual payoff when you press the button. " +
-          "About an hour per board. Iron set to 650°F, which flows good " +
-          "solder cleanly without cooking the components. Sunday's cohort " +
-          "meets next; the rest of the team builds the same kit then.",
+          "soldering rules below actually came from. Use an experienced " +
+          "student to surface lessons before the new ones make them: that's " +
+          "the mentor pattern, and it kept the rest of the weekend clean. " +
+          "Friday June 19 brought the first live cohort — Rebecca, Isaac, " +
+          "Liam, Maddox, and Tyler — through the full sequence: safety " +
+          "brief, general soldering instruction, then practice board on " +
+          "the SpaceWings DIY Lucky Wheel (an NE555 + CD4017 spinner that " +
+          "lights ten LEDs in sequence). About an hour per board. Iron at " +
+          "650°F. Saturday June 20 was a two-person makeup — Evan and " +
+          "Rhylan — who split one practice board between them, half the " +
+          "components each. Worked fine; it's a viable fallback when " +
+          "boards are short, and both walked away able to tell a cold " +
+          "joint from a good one, which is the actual point of the " +
+          "practice board anyway. Sunday June 21, 3:00–5:15 PM, was the " +
+          "full Sunday cohort — Maddox, Frankie, Trenton, Adrian, Isaac, " +
+          "Liam, and Luke — seven kids, with three repeaters back for a " +
+          "second pass. Sunday added a new block: splicing two wires and " +
+          "waterproofing the joint with hot glue and heatshrink, then " +
+          "dunking the joints in salt water to test them. We built nine " +
+          "joints. Two passed. Seven leaked. The waterproofing-test " +
+          "section below has the method, the failure analysis, and the " +
+          "four fixes that come out of a 22% first-try pass rate — which " +
+          "is exactly what early-season failure is for.",
 
         byNumbers: [
-          { value: "2",      label: "sessions"        },
-          { value: "5/12",   label: "students Friday" },
-          { value: "~1 hr",  label: "per board"       },
-          { value: "650°F",  label: "iron temp"       }
+          { value: "3",      label: "sub-sessions"      },
+          { value: "11/12",  label: "unique students"   },
+          { value: "~1 hr",  label: "per board"         },
+          { value: "2 / 9",  label: "waterproof joints" }
         ],
 
         safety: [
@@ -804,15 +815,18 @@ window.SITE = {
           "Coach John runs the safety brief and the general soldering instruction at each session — the standing pattern.",
           "Trenton handles pre-class test builds on new kits, to surface lessons before the rest of the team touches an iron.",
           "Iron temperature standardized at 650°F for the team's practice kits.",
-          "Split the class across two sessions when workstations are the bottleneck.",
+          "Split the class across multiple sessions when workstations or schedules are the bottleneck.",
+          "Splitting one practice board between two students works as a fallback when boards are short — Evan and Rhylan did it Saturday.",
+          "Salt-water + multimeter is the team's standard waterproof test going forward. Infinite resistance means sealed; anything finite is a leak path.",
           "Safety brief at the start of every soldering session. No exceptions."
         ],
 
         actionItems: [
-          { item: "Run the Sunday cohort through the same kit + brief + instruction sequence",          owner: "Coach John",     due: "Sun 6/21" },
-          { item: "Bring kits and components to next class (Lesson 1.3)",                               owner: "Advisor",        due: "6/28" },
-          { item: "Practice soldering at home if a station is available",                               owner: "Every student",  due: "ongoing" },
-          { item: "Add team photos from Friday + Sunday sessions to the photo log once parent releases are returned", owner: "Photographer",   due: "when consent is in" }
+          { item: "Rebuild the seven failed waterproof joints with the new technique; re-run the salt-water test", owner: "Sunday cohort", due: "by 1.3" },
+          { item: "Bring kits and components to next class (Lesson 1.3)",                                          owner: "Advisor",        due: "6/28"  },
+          { item: "Set the date for officer elections (deferred from 1.1, discussed Sunday)",                      owner: "Advisor",        due: "by 1.3" },
+          { item: "Practice soldering at home if a station is available",                                          owner: "Every student",  due: "ongoing" },
+          { item: "Add Saturday + Sunday session photos to the photo log once parent releases are returned",       owner: "Photographer",   due: "when consent is in" }
         ],
 
         learned: [
@@ -822,19 +836,31 @@ window.SITE = {
           "Solder the battery pack last. The pack hangs off the PCB and blocks access to every joint underneath it. Mount it after everything else is on the board and your workspace stays clean to the end."
         ],
 
+        waterproofing: [
+          "Test method: 2 cups of warm water with 2 tablespoons of sea salt dissolved in. Multimeter set to 2000k ohms. One probe in the water, one on the open end of the wire. Submerge the joint. Infinite resistance means it's sealed. Anything finite is a leak path.",
+          "Result on the first try: 2 of 9 joints passed. 22 percent. Most leaked.",
+          "Root cause: water seeped in through improperly heatshrunk wires — wires poking out the ends, the heatshrink not tight enough, the seal not continuous.",
+          "Fix 1 — Use longer heatshrinks so the seal extends past the joint on both sides.",
+          "Fix 2 — Hot-glue underneath the heatshrink before shrinking. The glue fills voids the heatshrink can't close on its own.",
+          "Fix 3 — Clip the poking wires flush before sealing. A poking wire is a leak path.",
+          "Fix 4 — If the heatshrink is too big, layer a smaller one underneath to tighten the seal."
+        ],
+
         studentOutcomes: [
           "The importance of polarity in certain components — diodes, electrolytic caps, transistors — and the habit of slowing down to check it before you commit the joint.",
-          "Soldering technique, equipment care, and the safety habits that go with hot tools and lead-based material."
+          "Soldering technique, equipment care, and the safety habits that go with hot tools and lead-based material. Including the visual and tactile difference between a cold joint and a good one — dull versus shiny, rough versus smooth.",
+          "Waterproofing is iteration. The 2-of-9 first-try pass rate isn't a failure of the team — it's how you find out where the real seal-points are. The four fixes above become the standard procedure going forward."
         ],
 
         nextWeek:
-          "Sunday June 21 brings the rest of the team through the same kit + brief + instruction " +
-          "sequence. After that, Class 1.3 — Kit Unboxing and First Electronics — on June 28. " +
-          "Kits get opened, components get identified, and we move from practice joints to circuits " +
-          "that actually do something. Closed-toe shoes still required.",
+          "Class 1.3 — Kit Unboxing and First Electronics — is Sunday June 28. Kits get opened, " +
+          "components get identified, and we move from practice joints to circuits that actually " +
+          "do something. The Sunday cohort also owes a rebuild of the seven failed waterproof " +
+          "joints with the new technique and a re-run of the salt-water test. Closed-toe shoes " +
+          "still required.",
 
         photos: [
-          { src: "assets/meetings/1.2/01-spacewings-lucky-wheel-kit.jpg",      caption: "The SpaceWings DIY Lucky Wheel kit — the night's project, in the bag." },
+          { src: "assets/meetings/1.2/01-spacewings-lucky-wheel-kit.jpg",      caption: "The SpaceWings DIY Lucky Wheel kit — the weekend's project, in the bag." },
           { src: "assets/meetings/1.2/02-schematic-and-instructions.jpg",     caption: "The included instruction sheet — circuit schematic, parameters, and how the spinner plays." }
         ],
 
