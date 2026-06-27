@@ -245,13 +245,18 @@
   /* ---------- calendar ---------- */
   function renderCalendar() {
     const host = $("calendarList");
-    const items = (S.calendar || []).slice().sort((a, b) =>
-      String(a.date).localeCompare(String(b.date)));
+    // "What's coming up" should only show today + future events. Past
+    // events stay in content.js as the historical record but are
+    // filtered out of the rendered list. ISO date strings sort
+    // chronologically as strings, so a >= comparison is enough.
     const todayISO = new Date().toISOString().slice(0, 10);
+    const items = (S.calendar || [])
+      .filter((ev) => String(ev.date) >= todayISO)
+      .sort((a, b) => String(a.date).localeCompare(String(b.date)));
     let nextFlagged = false;
 
     if (!items.length) {
-      host.innerHTML = '<p style="color:var(--ink-faint)">No events scheduled yet.</p>';
+      host.innerHTML = '<p style="color:var(--ink-faint)">No upcoming events scheduled. Check the Field Log for what we just did.</p>';
       return;
     }
     items.forEach((ev) => {
