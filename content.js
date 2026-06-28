@@ -258,6 +258,12 @@ window.SITE = {
               "The PufferFish practice board — earn a clean joint first",
               "Start the TriggerFish REV 4 control-box build, stage by stage",
               "Meter-check each stage as you go — continuity good, no shorts"
+            ],
+            resources: [
+              { label: "Class 1.5 slide deck (view)",          url: "Classes/Phase%201/1.5%20Control%20Box%20I%20-%20Slides.pdf" },
+              { label: "Class 1.5 slides (PowerPoint)",        url: "Classes/Phase%201/1.5%20Control%20Box%20I%20-%20Slides.pptx" },
+              { label: "Class 1.5 prep sheet (PDF)",           url: "Classes/Phase%201/1.5%20Control%20Box%20I%20-%20Prep%20Sheet.pdf" },
+              { label: "Class 1.5 instructor notes (PDF)",     url: "Classes/Phase%201/1.5%20Control%20Box%20I%20-%20Instructor%20Notes.pdf" }
             ]
           },
           {
@@ -268,6 +274,12 @@ window.SITE = {
               "Build the ROV's power wire; connect the tether",
               "Fuse the circuit to its full-load amps",
               "Meter-check every stage before first power-up"
+            ],
+            resources: [
+              { label: "Class 1.6 slide deck (view)",          url: "Classes/Phase%201/1.6%20Control%20Box%20II%20-%20Slides.pdf" },
+              { label: "Class 1.6 slides (PowerPoint)",        url: "Classes/Phase%201/1.6%20Control%20Box%20II%20-%20Slides.pptx" },
+              { label: "Class 1.6 prep sheet (PDF)",           url: "Classes/Phase%201/1.6%20Control%20Box%20II%20-%20Prep%20Sheet.pdf" },
+              { label: "Class 1.6 instructor notes (PDF)",     url: "Classes/Phase%201/1.6%20Control%20Box%20II%20-%20Instructor%20Notes.pdf" }
             ]
           },
           {
@@ -278,6 +290,12 @@ window.SITE = {
               "First poolside safety brief — lifeguard, buddy system, dry hands",
               "Every kid in the water — comfort and familiarity first",
               "Capsule drop #1 — open it, check the towel, log the result"
+            ],
+            resources: [
+              { label: "Class 1.7 slide deck (view)",          url: "Classes/Phase%201/1.7%20Capsule%20Build%20%26%20First%20Splash%20-%20Slides.pdf" },
+              { label: "Class 1.7 slides (PowerPoint)",        url: "Classes/Phase%201/1.7%20Capsule%20Build%20%26%20First%20Splash%20-%20Slides.pptx" },
+              { label: "Class 1.7 prep sheet (PDF)",           url: "Classes/Phase%201/1.7%20Capsule%20Build%20%26%20First%20Splash%20-%20Prep%20Sheet.pdf" },
+              { label: "Class 1.7 instructor notes (PDF)",     url: "Classes/Phase%201/1.7%20Capsule%20Build%20%26%20First%20Splash%20-%20Instructor%20Notes.pdf" }
             ]
           },
           {
@@ -589,6 +607,9 @@ window.SITE = {
       { date: "2026-06-21", title: "Class 1.2 — Soldering Bootcamp",               type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-2" },
       { date: "2026-06-28", title: "Class 1.3 — Kit Unboxing & First Electronics", type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-3" },
       { date: "2026-07-05", title: "Class 1.4 — Electronics Workshop",             type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-4" },
+      { date: "2026-07-12", title: "Class 1.5 — Control Box I",                    type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-5" },
+      { date: "2026-07-19", title: "Class 1.6 — Control Box II",                   type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-6" },
+      { date: "2026-07-26", title: "Class 1.7 — Capsule Build & First Splash",     type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-7" },
       { date: "2026-11-01", title: "2027 competition manual drops — full-team read-through within 48 hours", type: "Milestone", location: "materovcompetition.org", url: "https://materovcompetition.org" },
       { date: "2026-12-14", title: "CAD locked — long-lead parts ordered before the holiday break", type: "Milestone", location: "Team workspace" },
       { date: "2027-02-15", title: "Regional registration opens — we register this week", type: "Milestone", location: "2027 MATE ROV regional (assignment TBD)" },
@@ -1064,11 +1085,11 @@ window.SITE = {
          a "Funded" check on the site). */
     funding: {
       raised: 3500,                 // ← update as money comes in
-      goal:   9800,
+      goal:   10150,
       asOf:   "June 2026",          // ← date the raised figure is current as of
 
       intro:
-        "We've raised $3,500 toward a $9,800 season. Here's the thing about " +
+        "We've raised $3,500 toward a $10,150 season. Here's the thing about " +
         "that gap — it isn't abstract. Every dollar maps to a specific piece of " +
         "equipment or a specific cost, and the full list is right here. You can " +
         "see exactly what you'd be funding and why it moves the team forward. " +
