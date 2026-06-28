@@ -753,6 +753,88 @@ window.SITE = {
        entry until every kid in the photos has a release form on file. */
     meetingNotes: [
       {
+        week:  "1.3",
+        date:  "Sunday, June 28, 2026",
+        time:  "3:00 PM",
+        theme: "TriggerFish Build Begins — Working vs. Crafted",
+
+        heroPhoto: {
+          src:     "assets/meetings/1.3/00-hero-triggerfish-board.jpg",
+          alt:     "Bare MATE TriggerFish ROV control board, Rev 4 (2019), unpopulated on a granite counter with flush cutters nearby.",
+          caption: "Bare MATE TriggerFish control board, Rev 4 (2019), out of the kit — the first thing the team meets when the box opens. The actual ROV starts here.",
+          requiresConsent: false
+        },
+
+        recap:
+          "Lesson 1.3 was the start of the actual TriggerFish build. The SpaceWings " +
+          "practice kit from 1.2 is behind us; the real ROV control board sat on the " +
+          "granite counter today, out of the kit, waiting. That's a different feeling " +
+          "than a practice board — when you slip on this one, you slip on the boat. " +
+          "The day's milestones: kit opened, the two 1000µF / 16V capacitors mounted " +
+          "(the iPad-displayed page from the SeaMATE TriggerFish ROV Guide explicitly " +
+          "called out polarity — get it wrong on an electrolytic and the cap fails " +
+          "when you power it up), the fuse holder soldered down, a 3 A fuse seated, " +
+          "and power leads run through heatshrink. The 150A high-precision watt meter " +
+          "and power analyzer also moved onto the bench — the kind of instrument that " +
+          "turns guesses about current draw into actual measurements. The lesson of " +
+          "the day wasn't a technique; it was a frame. The team explicitly " +
+          "distinguished a \"working\" build from a \"crafted\" build, and named the " +
+          "connection between craftsmanship and reliability. The three bullets in " +
+          "What We Learned have the specifics. Last call of the day: officer " +
+          "elections deferred until the summer 1.01 TriggerFish build is wrapped. " +
+          "Roles get assigned based on what the team actually does well during the " +
+          "build, not on day-one guesses.",
+
+        byNumbers: [
+          { value: "1",        label: "ROV board opened" },
+          { value: "2",        label: "caps (1000µF / 16V)" },
+          { value: "3 A",      label: "fuse seated" },
+          { value: "150 A",    label: "watt meter on bench" }
+        ],
+
+        decisions: [
+          "Officer elections deferred until the summer 1.01 TriggerFish build is complete. Roles get assigned based on what the team actually does well during the build, not on day-one guesses.",
+          "Polarity gets verified before any electrolytic cap touches the board. Tuition for getting it wrong on a 1000µF cap is high — they fail open and they fail loud.",
+          "The SeaMATE TriggerFish ROV Guide is the team's procedural reference of record for Phase 1. Every build step gets verified against the relevant slide before any iron touches the board."
+        ],
+
+        actionItems: [
+          { item: "Continue the TriggerFish control-board build at Lesson 1.4 — next block of components per the SeaMATE Guide", owner: "Sunday cohort", due: "7/5" },
+          { item: "Nominate a photographer for the rest of the summer build. Documented build-progression photos matter for the engineering presentation and the team photo log", owner: "Advisor (until CEO is elected)", due: "by 1.4" },
+          { item: "Start a parts-inventory tracker for the TriggerFish kit — every component counted, every consumable logged", owner: "Advisor (until CFO is elected)", due: "by 1.4" }
+        ],
+
+        learned: [
+          "Working and crafted both pass a multimeter check. Only crafted survives vibration, heat, water ingress, and the trip from the hotel to the pool deck. Reliability is a function of craftsmanship, not luck.",
+          "Craftsmanship has a specific checklist on this board: polarity verified before commit, joints clean and shiny (not dull or grainy), components seated flush against the PCB, leads clipped flush after soldering, heatshrink covering every exposed conductor with strain relief at both ends.",
+          "If you're not sure a joint is crafted, ask whether you'd ship it to the regional pool and bet a season on it. If the answer is \"probably,\" redo it. The standard isn't \"good enough today\" — it's \"good in April when it counts.\""
+        ],
+
+        studentOutcomes: [
+          "A working definition of \"craftsmanship\" that isn't vague effort — it's a specific habit list: polarity check, clean joints, flush seating, clipped leads, heatshrink with strain relief. Habits the team can grade itself against.",
+          "First time handling live ROV-grade components — the actual control board, the 1000µF capacitors that will move thrusters, the watt meter that will read real current. The practice phase ended when the box opened.",
+          "The discipline of working against a printed-and-projected reference (the SeaMATE Guide). Build steps don't get done from memory; they get done from the page."
+        ],
+
+        nextWeek:
+          "Class 1.4 continues the TriggerFish build — next blocks of components on " +
+          "the control board, working toward a powered-up smoke test later in Phase 1. " +
+          "SeaMATE Guide stays open on the iPad. The watt meter joins us for the first " +
+          "powered tests when those come.",
+
+        photos: [
+          { src: "assets/meetings/1.3/00-hero-triggerfish-board.jpg",         caption: "Bare MATE TriggerFish control board, Rev 4 (2019), out of the kit. The real ROV starts here." },
+          { src: "assets/meetings/1.3/03-ipad-guide-fuse-capacitors.jpg",     caption: "Slide 20 of the SeaMATE TriggerFish ROV Guide on the iPad — fuse holder and the two 1000µF / 16V caps, with the polarity warning called out before any iron touches the board." },
+          { src: "assets/meetings/1.3/04-heat-gun-work.jpg",                  caption: "Heat gun on the power leads — heatshrink seated over the conductor and shrunk down." },
+          { src: "assets/meetings/1.3/01-watt-meter-in-hand.jpg",             caption: "150A high-precision watt meter and power analyzer joining the bench. Current draw stops being a guess." },
+          { src: "assets/meetings/1.3/02-watt-meter-box.jpg",                 caption: "The watt meter, still in the box, for scale. Real instrumentation for a real build." }
+        ],
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/1.3/meeting-note.pdf"
+      },
+      {
         week:  "1.2",
         date:  "June 19 – 21, 2026",
         time:  "Three sub-sessions  ·  Fri / Sat / Sun",
