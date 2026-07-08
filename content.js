@@ -774,9 +774,94 @@ window.SITE = {
        entry until every kid in the photos has a release form on file. */
     meetingNotes: [
       {
+        week:  "1.4",
+        date:  "Sunday, July 5, 2026",
+        time:  "3:00 – 5:30 PM",
+        theme: "First Frame Sketches — Motors, Frame, CAD",
+
+        recap:
+          "Class 1.4 was the day the ROV started to look like a machine, not a pile " +
+          "of parts. Eleven kids showed up — Trenton, Rhylan, Eli, Oliver, Luke, " +
+          "Frankie, Rebecca, Liam, Maddox, Evan, and Carter. Meeting ran 3:00 to " +
+          "5:30. The night moved on three parallel tracks: the control board kept " +
+          "getting soldered (with a wrinkle we're still working through), the " +
+          "motors got propellers assembled onto them for the first time, and the " +
+          "team started sketching frame ideas on paper and in CAD. On the control " +
+          "board — soldering continued from 1.3's list, but the wider iron tip we " +
+          "swapped in last week is causing temperature-regulation issues. The " +
+          "setpoint that worked at 720°F isn't holding steady, which makes joints " +
+          "inconsistent. Coach John's call: order the original tips. Sometimes the " +
+          "right answer to a tool problem is not to work around it. On the motors " +
+          "— propellers went onto the motor shafts. That sounds small but it's the " +
+          "moment the drivetrain stops being a line item on the BoM and becomes a " +
+          "thing you can hold. We also reviewed the Sabertooth motor controller " +
+          "and spent time on how a modulator and a potentiometer actually work in " +
+          "that circuit, so the kids can trace the signal through when we power " +
+          "up. On the frame — the team brainstormed geometry and motor positions " +
+          "on paper first. Several kids drew concepts from top, side, front, and " +
+          "bottom views with a key marking PVC, tether, thrusters, and thrust " +
+          "direction. Then Coach John moved the discussion into CAD and started " +
+          "the first Onshape design. A CAD tutorial is on its way so the students " +
+          "can self-learn Onshape between meetings — that self-study track is what " +
+          "turns Phase 1's exit gate into a Phase 2 outcome.",
+
+        byNumbers: [
+          { value: "11",         label: "students" },
+          { value: "5",          label: "frame sketches" },
+          { value: "1",          label: "Onshape design started" },
+          { value: "2 hr 30 min",label: "meeting duration" }
+        ],
+
+        decisions: [
+          "Order the original iron tips. The wider tip fixed 1.3's oxidation problem but introduced a temperature-regulation problem. Sometimes the answer to a tool problem is to un-do the previous fix.",
+          "Frame design starts on paper. Top / side / front / bottom views with a symbol key, before any CAD is opened. The paper version catches proportion problems the CAD version won't tell you about.",
+          "Onshape is the team's CAD tool. Between-meeting self-study is on the roster — a CAD tutorial goes out to the students this week.",
+          "Officer elections still deferred until the summer TriggerFish build is wrapped. Same rule as 1.3 — roles get assigned based on what the team does well during the build."
+        ],
+
+        actionItems: [
+          { item: "Order the original iron tips for the soldering stations",                      owner: "Coach John",     due: "by 1.5" },
+          { item: "Send the Onshape CAD tutorial to every student for between-meeting self-study", owner: "Coach John",     due: "this week" },
+          { item: "Continue the TriggerFish control-box build once the correct tips arrive",       owner: "Sunday cohort",  due: "1.5" },
+          { item: "Refine the frame sketches into a shortlist of concepts to CAD next week",       owner: "Frame group",    due: "by 1.5" },
+          { item: "Photograph the paper sketches and upload to the team folder",                   owner: "Photographer",   due: "by 1.5" }
+        ],
+
+        learned: [
+          "When a workaround isn't working, name it and replace the tool. The wider tip solved 1.3's oxidation but introduced temperature instability. We reverted; we didn't paper over it.",
+          "Frame design starts on paper. Sketch top, side, front, and bottom views with a symbol key. Proportions and motor placements get sanity-checked at the paper stage before any CAD gets drawn.",
+          "Motors + propellers + a controller = the ROV's drivetrain. Understanding how the Sabertooth motor controller, the modulator, and the potentiometer interact is what lets you diagnose a bad run instead of guessing at it.",
+          "CAD is a skill the team owns individually, not just a thing Coach John does. Between-meeting self-study on Onshape is how every student gets fluent enough to design and modify parts by Phase 2."
+        ],
+
+        studentOutcomes: [
+          "First hardware-in-hand moment for the drivetrain — propellers seated on motor shafts, not just on a slide.",
+          "First real drawings of the robot: top, side, front, and bottom views on paper, with the team's first shared symbol key (PVC, tether, thruster, cross-tether, thrust direction).",
+          "Introduction to Onshape — the CAD tool the team will use through Phase 2 and beyond. Self-study track begins this week.",
+          "A working mental model of the Sabertooth motor controller and how a modulator and potentiometer shape the signal that ends up at the motor."
+        ],
+
+        nextWeek:
+          "Class 1.5 continues the TriggerFish control-box build once the original tips arrive, and the frame group " +
+          "narrows the sketches down to a shortlist to CAD in Onshape. Meanwhile everyone is expected to have watched " +
+          "the CAD tutorial that goes out this week — Phase 2 doesn't wait for us to catch up.",
+
+        photos: [
+          { src: "assets/meetings/1.4/01-frame-concept-a.jpg",             caption: "First frame concept — a stretched hexagonal top view with tether attachment noted, plus a second smaller top view sketch, a labeled front elevation, a small oval concept, and a base plate detail." },
+          { src: "assets/meetings/1.4/02-frame-top-side-bottom-key.jpg",   caption: "Top / Side / Bottom views of a boxier frame with the team's first shared symbol legend — PVC, tether, thruster, cross-tether, and direction of thrust. The key is the point." },
+          { src: "assets/meetings/1.4/03-frame-side-top-front.jpg",        caption: "Perspective sketch — Side, Top, Front views — with motor placement and dimension studies. The crown and the flowers in the corner are unrelated." },
+          { src: "assets/meetings/1.4/04-frame-top-front-motors.jpg",      caption: "Top and Front views of a rectangular frame with motors marked at each corner. Motor positions first, everything else later." },
+          { src: "assets/meetings/1.4/05-frame-single-view.jpg",           caption: "Trapezoidal frame from a four-view orientation (top, left, right, bottom) — a fifth kid's concept alongside the others." }
+        ],
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/1.4/meeting-note.pdf"
+      },
+      {
         week:  "1.3",
         date:  "Sunday, June 28, 2026",
-        time:  "3:00 PM",
+        time:  "3:00 – 5:15 PM",
         theme: "TriggerFish Build Begins — Working vs. Crafted",
 
         heroPhoto: {
@@ -791,32 +876,37 @@ window.SITE = {
           "practice kit from 1.2 is behind us; the real ROV control board sat on the " +
           "granite counter today, out of the kit, waiting. That's a different feeling " +
           "than a practice board — when you slip on this one, you slip on the boat. " +
-          "The day's milestones: kit opened, the two 1000µF / 16V capacitors mounted " +
-          "(the iPad-displayed page from the SeaMATE TriggerFish ROV Guide explicitly " +
-          "called out polarity — get it wrong on an electrolytic and the cap fails " +
-          "when you power it up), the fuse holder soldered down, a 3 A fuse seated, " +
-          "and power leads run through heatshrink. The 150A high-precision watt meter " +
-          "and power analyzer also moved onto the bench — the kind of instrument that " +
-          "turns guesses about current draw into actual measurements. The lesson of " +
+          "Eight kids showed up — Maddox, Frankie, Rebecca, Isaac, Liam, Luke, Tyler, " +
+          "and Trenton (Trenton stepped out at 3:45). Meeting ran 3:00 to 5:15. The " +
+          "day's work: kit opened, ten to fifteen components soldered onto the board " +
+          "per the SeaMATE TriggerFish ROV Guide (the two 1000µF / 16V capacitors with " +
+          "polarity verified, the fuse holder, the 3 A fuse, and the next block from " +
+          "the slide), ribbon wires soldered to the joysticks, and the 150A " +
+          "high-precision watt meter and power analyzer added to the bench with " +
+          "extended leads. One process note worth keeping: the existing iron tip was " +
+          "oxidized to the point that the standard 650°F wasn't flowing solder " +
+          "cleanly. We swapped to a slightly wider tip and bumped the temperature to " +
+          "720°F to compensate. Both stay until the next oxidization. The lesson of " +
           "the day wasn't a technique; it was a frame. The team explicitly " +
           "distinguished a \"working\" build from a \"crafted\" build, and named the " +
-          "connection between craftsmanship and reliability. The three bullets in " +
+          "connection between craftsmanship and reliability. The four bullets in " +
           "What We Learned have the specifics. Last call of the day: officer " +
           "elections deferred until the summer 1.01 TriggerFish build is wrapped. " +
           "Roles get assigned based on what the team actually does well during the " +
           "build, not on day-one guesses.",
 
         byNumbers: [
-          { value: "1",        label: "ROV board opened" },
-          { value: "2",        label: "caps (1000µF / 16V)" },
-          { value: "3 A",      label: "fuse seated" },
-          { value: "150 A",    label: "watt meter on bench" }
+          { value: "8",          label: "students" },
+          { value: "10–15",      label: "components soldered" },
+          { value: "650 → 720°F",label: "iron temp (new tip)" },
+          { value: "150 A",      label: "watt meter on bench" }
         ],
 
         decisions: [
           "Officer elections deferred until the summer 1.01 TriggerFish build is complete. Roles get assigned based on what the team actually does well during the build, not on day-one guesses.",
           "Polarity gets verified before any electrolytic cap touches the board. Tuition for getting it wrong on a 1000µF cap is high — they fail open and they fail loud.",
-          "The SeaMATE TriggerFish ROV Guide is the team's procedural reference of record for Phase 1. Every build step gets verified against the relevant slide before any iron touches the board."
+          "The SeaMATE TriggerFish ROV Guide is the team's procedural reference of record for Phase 1. Every build step gets verified against the relevant slide before any iron touches the board.",
+          "When the iron tip oxidizes past the point of flowing solder cleanly at the standard 650°F, swap the tip and bump the temperature until the new tip flows cleanly. Document both the swap and the new setpoint. Tonight: wider tip, 720°F."
         ],
 
         actionItems: [
@@ -828,13 +918,15 @@ window.SITE = {
         learned: [
           "Working and crafted both pass a multimeter check. Only crafted survives vibration, heat, water ingress, and the trip from the hotel to the pool deck. Reliability is a function of craftsmanship, not luck.",
           "Craftsmanship has a specific checklist on this board: polarity verified before commit, joints clean and shiny (not dull or grainy), components seated flush against the PCB, leads clipped flush after soldering, heatshrink covering every exposed conductor with strain relief at both ends.",
-          "If you're not sure a joint is crafted, ask whether you'd ship it to the regional pool and bet a season on it. If the answer is \"probably,\" redo it. The standard isn't \"good enough today\" — it's \"good in April when it counts.\""
+          "If you're not sure a joint is crafted, ask whether you'd ship it to the regional pool and bet a season on it. If the answer is \"probably,\" redo it. The standard isn't \"good enough today\" — it's \"good in April when it counts.\"",
+          "Iron tips don't last forever. When solder won't flow cleanly at the standard temp, the tip is the variable — not the operator. Change it, document the swap, and bump the setpoint until the new tip flows cleanly. Tonight's bump was 650 → 720°F."
         ],
 
         studentOutcomes: [
           "A working definition of \"craftsmanship\" that isn't vague effort — it's a specific habit list: polarity check, clean joints, flush seating, clipped leads, heatshrink with strain relief. Habits the team can grade itself against.",
           "First time handling live ROV-grade components — the actual control board, the 1000µF capacitors that will move thrusters, the watt meter that will read real current. The practice phase ended when the box opened.",
-          "The discipline of working against a printed-and-projected reference (the SeaMATE Guide). Build steps don't get done from memory; they get done from the page."
+          "The discipline of working against a printed-and-projected reference (the SeaMATE Guide). Build steps don't get done from memory; they get done from the page.",
+          "Equipment care is part of the engineering, not background noise. Tonight the iron tip degraded mid-build; the response was to notice, document, change the tip, and adjust the temp — not to push through and hope."
         ],
 
         nextWeek:
