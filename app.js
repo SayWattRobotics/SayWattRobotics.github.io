@@ -820,6 +820,17 @@
     renderFunding();
     renderFooter();
     initReveal();
+
+    // Team section is collapsed by default — officers get elected at Phase 2.
+    // Click the header to toggle the roster preview.
+    const teamHead = document.getElementById("teamHead");
+    if (teamHead) {
+      const teamSection = document.getElementById("team");
+      teamHead.addEventListener("click", () => {
+        const open = teamSection.classList.toggle("open");
+        teamHead.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    }
   }
 
   if (document.readyState === "loading") {

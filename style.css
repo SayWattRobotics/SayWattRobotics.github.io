@@ -353,6 +353,34 @@ mark {
 .res-title .arrow { color: var(--accent); margin-left: 4px; }
 .res-desc { font-size: 13px; color: var(--ink-soft); margin-top: 2px; }
 
+/* ===== Team section — collapsible ===== */
+.team-head {
+  appearance: none;
+  display: flex; align-items: center; justify-content: space-between; gap: 22px;
+  width: 100%;
+  background: transparent; border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font: inherit; color: inherit;
+}
+.team-head-text {
+  flex: 1;
+}
+.team-head-text .eyebrow,
+.team-head-text .section-title,
+.team-head-text .section-lede {
+  pointer-events: none;
+}
+.team-head .chevron {
+  flex: none;
+  margin-right: 6px;
+  border-color: var(--accent);
+}
+#team.open .team-head .chevron { transform: rotate(225deg); }
+#team > .wrap > .collapse { margin-top: 26px; }
+#team.open > .wrap > .collapse { grid-template-rows: 1fr; }
+
 /* ===== Roster ===== */
 .roster-grid {
   display: grid; gap: 18px; align-items: start;

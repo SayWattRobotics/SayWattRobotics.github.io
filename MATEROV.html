@@ -22,11 +22,11 @@
           <a href="MATEROV.html" data-team-tab="rov">ROV Team</a>
           <a href="fll.html" data-team-tab="fll">FIRST LEGO League</a>
         </div>
+        <a href="#field-log">Field Log</a>
         <a href="#curriculum">Curriculum</a>
         <a href="#calendar">Calendar</a>
         <a href="#resources">Resources</a>
         <a href="#team">Team</a>
-        <a href="#field-log">Field Log</a>
         <a href="#sponsors" class="nav-donate" data-donate>Sponsors</a>
       </nav>
     </div>
@@ -37,8 +37,18 @@
     <!-- ===== Hero ===== -->
     <section class="hero" id="hero"></section>
 
+    <!-- ===== Field Log (meeting notes) ===== -->
+    <section class="section" id="field-log">
+      <div class="wrap">
+        <p class="eyebrow">Field Log</p>
+        <h2 class="section-title">Meeting by meeting. In our own words.</h2>
+        <p class="section-lede">The Notetaker writes these. Mentors don't.</p>
+        <div id="fieldLogList" class="field-log-list"></div>
+      </div>
+    </section>
+
     <!-- ===== Curriculum (phase / week / lesson explorer) ===== -->
-    <section class="section" id="curriculum">
+    <section class="section section-alt" id="curriculum">
       <div class="wrap">
         <p class="eyebrow">Curriculum</p>
         <h2 class="section-title" id="curriculumTitle">Every phase. Every week. Every lesson.</h2>
@@ -54,7 +64,7 @@
     </section>
 
     <!-- ===== Calendar ===== -->
-    <section class="section section-alt" id="calendar">
+    <section class="section" id="calendar">
       <div class="wrap">
         <p class="eyebrow">Calendar</p>
         <h2 class="section-title">What's coming up.</h2>
@@ -63,7 +73,7 @@
     </section>
 
     <!-- ===== Resources ===== -->
-    <section class="section" id="resources">
+    <section class="section section-alt" id="resources">
       <div class="wrap">
         <p class="eyebrow">Resources</p>
         <h2 class="section-title">Everything in one place.</h2>
@@ -71,22 +81,20 @@
       </div>
     </section>
 
-    <!-- ===== Team ===== -->
-    <section class="section section-alt" id="team">
+    <!-- ===== Team — collapsible; officers get elected at Phase 2 kickoff ===== -->
+    <section class="section" id="team">
       <div class="wrap">
-        <p class="eyebrow">The Team</p>
-        <h2 class="section-title">Who makes it happen.</h2>
-        <div id="rosterList" class="roster-grid"></div>
-      </div>
-    </section>
-
-    <!-- ===== Field Log (meeting notes) ===== -->
-    <section class="section" id="field-log">
-      <div class="wrap">
-        <p class="eyebrow">Field Log</p>
-        <h2 class="section-title">Meeting by meeting. In our own words.</h2>
-        <p class="section-lede">The Notetaker writes these. Mentors don't.</p>
-        <div id="fieldLogList" class="field-log-list"></div>
+        <button type="button" class="team-head" id="teamHead" aria-expanded="false">
+          <div class="team-head-text">
+            <p class="eyebrow">The Team</p>
+            <h2 class="section-title">Who makes it happen.</h2>
+            <p class="section-lede">Officer roles get elected at Phase 2 kickoff, once the summer TriggerFish build wraps and we've seen who runs each track well. Preview the placeholder positions below.</p>
+          </div>
+          <span class="chevron" aria-hidden="true"></span>
+        </button>
+        <div class="collapse"><div class="collapse-inner">
+          <div id="rosterList" class="roster-grid"></div>
+        </div></div>
       </div>
     </section>
 
