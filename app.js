@@ -380,7 +380,7 @@
       return;
     }
 
-    notes.forEach((n) => {
+    notes.forEach((n, idx) => {
       const card = el("article", "field-note");
       card.id = "field-log-" + String(n.week || "").replace(/\./g, "-");
 
@@ -570,6 +570,34 @@
       card.innerHTML = header + body;
       host.appendChild(card);
 
+      // Show only the latest 3 field logs by default; the rest stay hidden
+      // until the "See older field logs" control below reveals them.
+      if (idx >= 3) { card.style.display = "none"; card.dataset.olderLog = "1"; }
+
+      // Guard against missing image files so the live site never shows a
+      // broken-image icon. Any figure whose image fails to load is removed,
+      // and the whole Photos section is dropped if none of its images load.
+      // Photos added later (with the matching filenames) appear automatically.
+      const heroImg = card.querySelector(".field-note-hero img");
+      if (heroImg) heroImg.addEventListener("error", () => {
+        const fig = heroImg.closest(".field-note-hero");
+        if (fig) fig.remove();
+      });
+      const photoFigs = card.querySelectorAll(".field-photo");
+      const photoSection = Array.prototype.slice
+        .call(card.querySelectorAll(".field-note-section"))
+        .find((s) => s.querySelector(".field-photos"));
+      let photoFails = 0;
+      photoFigs.forEach((fig) => {
+        const im = fig.querySelector("img");
+        if (!im) return;
+        im.addEventListener("error", () => {
+          fig.remove();
+          photoFails += 1;
+          if (photoSection && photoFails === photoFigs.length) photoSection.remove();
+        });
+      });
+
       // Click the header to toggle the body.
       const head = card.querySelector(".field-note-head");
       if (head) head.addEventListener("click", () => card.classList.toggle("open"));
@@ -598,6 +626,38 @@
         });
       }
     });
+
+    // "See older field logs" — keep the feed to the latest 3 entries and
+    // reveal the archive on demand. Only renders when there are older ones.
+    const olderCount = notes.length - 3;
+    if (olderCount > 0) {
+      const more = document.createElement("button");
+      more.type = "button";
+      more.className = "field-log-more";
+      more.style.cssText =
+        "display:block;margin:22px auto 4px;padding:10px 24px;border-radius:999px;" +
+        "border:1px solid #E3E3E6;background:#FBFBFD;color:#0D7490;font-weight:600;" +
+        "font-size:13px;font-family:inherit;letter-spacing:.02em;cursor:pointer;" +
+        "transition:background .15s,border-color .15s;";
+      more.onmouseenter = () => { more.style.background = "#EAF2F4"; more.style.borderColor = "#CFE0E5"; };
+      more.onmouseleave = () => { more.style.background = "#FBFBFD"; more.style.borderColor = "#E3E3E6"; };
+      let expanded = false;
+      const setLabel = () => {
+        more.textContent = expanded
+          ? "Show fewer field logs  ▴"
+          : "See older field logs (" + olderCount + ")  ▾";
+      };
+      setLabel();
+      more.addEventListener("click", () => {
+        expanded = !expanded;
+        Array.prototype.slice
+          .call(host.querySelectorAll("[data-older-log]"))
+          .forEach((c) => { c.style.display = expanded ? "" : "none"; });
+        setLabel();
+        if (!expanded) more.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      host.appendChild(more);
+    }
   }
 
   /* ---------- sponsors (shared across both pages) ---------- */
