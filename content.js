@@ -774,6 +774,108 @@ window.SITE = {
        entry until every kid in the photos has a release form on file. */
     meetingNotes: [
       {
+        week:  "1.5",
+        date:  "Sunday, July 12, 2026",
+        time:  "3:00 – 4:45 PM",
+        theme: "The Frame Becomes Real — PVC Cut List, Control Board, Peer-Taught CAD",
+
+        heroPhoto: {
+          src:     "assets/meetings/1.5/00-hero-pvc-frame-assembled.jpg",
+          alt:     "Coach holding up the fully assembled four-motor TriggerFish PVC frame at Class 1.5, with team members on the couch in the background.",
+          caption: "The four-motor TriggerFish frame — cut from a cut list and assembled in one session. Everything is on it now except the motors. Six weeks ago this was a box of pipe and fittings.",
+          requiresConsent: false
+        },
+
+        recap:
+          "Class 1.5 was the day the frame stopped being sketches on paper and became " +
+          "something you can pick up with two hands. Nine of us were there — Trenton, " +
+          "Rhylan, Rebecca, Liam, Maddox, Evan, Tyler, Isaac, and Trooper — and the " +
+          "meeting ran 3:00 to 4:45. The night split three ways: cutting and building " +
+          "the PVC frame, finishing the control board, and CAD. On the frame, we did " +
+          "the talking before the cutting — cutter safety, what PVC we're using, and " +
+          "the cut list — and then cut and assembled the full TriggerFish frame in the " +
+          "four-motor configuration. It's fully built now, motors being the only thing " +
+          "left to hang on it. The cutting taught us a few things the direct way: have " +
+          "somebody hold both ends of the pipe so the offcut doesn't get flung, use the " +
+          "first good piece as the template for every piece like it, mark every cut with " +
+          "an Expo marker before the blade touches the pipe, and remember the PVC cutter " +
+          "doesn't leave a flush edge — every piece needs a cleanup pass before it seats. " +
+          "On the control board, we finished soldering the backboard. We still have to " +
+          "screw in the tether wires, and we're short a few wires. We also hit a real " +
+          "problem: the LED polarity is coming back reversed and we haven't figured out " +
+          "why yet. Get a board like this wired wrong enough and it turns into a toxic " +
+          "smoke machine — so instead of powering it up to see what happens, we checked " +
+          "it with a multimeter, and we may contact the manufacturer to be sure. On CAD, " +
+          "Trenton ran lessons for Rhylan, Tyler, Evan, and Maddox; the group built a " +
+          "LEGO-block-style model in Onshape, and it's going into a shared \"Learning CAD\" " +
+          "folder so everybody can learn from it. Goals for next time: mount the motors, " +
+          "weigh the frame, test buoyancy, and finish the control board.",
+
+        byNumbers: [
+          { value: "4-motor",     label: "frame config, assembled minus motors" },
+          { value: "4",           label: "kids taught CAD by a teammate" },
+          { value: "1",           label: "wiring bug to solve (LED polarity)" },
+          { value: "1 hr 45 min", label: "meeting duration" }
+        ],
+
+        safety: [
+          "PVC cutting: have somebody hold both ends of the pipe so the offcut can't get flung across the bench when the cut finishes.",
+          "Measure, mark with an Expo marker, then cut. The mark comes before the blade — never cut to an eyeballed line.",
+          "Use the first good piece as the template for every identical piece after it. Copying a known-good cut beats re-measuring, which is just more chances to be wrong.",
+          "Know the tool's limit: the PVC cutter doesn't leave a flush, square face, so every cut needs a cleanup pass before the pipe will seat fully into a fitting.",
+          "On the control board — wire it right or don't power it. A miswired board isn't just dead, it's a \"toxic smoke machine.\" That's why the board gets a multimeter check before power ever touches it."
+        ],
+
+        decisions: [
+          "Build the frame in the four-motor TriggerFish configuration. Assemble the full PVC skeleton first; motors go on last.",
+          "Cut discipline is fixed: talk through the cut list and safety first, mark with an Expo marker, cut, then template every identical piece off the first good one.",
+          "Don't power the control board until the wiring is verified. The LED polarity came back reversed with no obvious cause, so the board gets a multimeter trace — and we contact the manufacturer before any smoke test.",
+          "CAD gets taught peer-to-peer. Trenton runs the lessons, and every practice model lives in a shared \"Learning CAD\" folder so the whole team can see and copy the work."
+        ],
+
+        actionItems: [
+          { item: "Trace why the LED polarity reads reversed on the control board — multimeter check, and contact the manufacturer if the board is otherwise correct", owner: "Control-board group", due: "by 1.6" },
+          { item: "Screw in the tether wires and source the missing wires to finish the backboard",                                                                    owner: "Control-board group", due: "by 1.6" },
+          { item: "Mount the four motors onto the assembled PVC frame",                                                                                                owner: "Frame group",        due: "1.6" },
+          { item: "Weigh the completed frame and run a first buoyancy test",                                                                                           owner: "Sunday cohort",      due: "1.6" },
+          { item: "Keep the \"Learning CAD\" folder going — every kid uploads their practice Onshape model",                                                            owner: "CAD group (Trenton lead)", due: "ongoing" },
+          { item: "Start the plan to move from analog to digital control and pick a code editor",                                                                      owner: "Advisor + team",     due: "by Aug 15" }
+        ],
+
+        learned: [
+          "A PVC cutter is fast but not precise. It won't leave a flush, square face, so every cut needs a cleanup pass before the pipe seats fully. Knowing a tool's limits is part of using it well.",
+          "The template trick beats re-measuring. Cut one piece right, then use it as the master for every identical piece — re-measuring each cut is just more chances to introduce an error.",
+          "A control board is one of the few parts on the ROV that can fail dangerously. \"Working\" isn't the bar — verified is. Reversed LED polarity is a signal to stop, meter the board, and call the manufacturer, not to power up and hope.",
+          "Teaching is how you find out whether you actually understand something. Trenton didn't just do the CAD — he taught four teammates to build a model from scratch, which is a harder skill than drawing it himself."
+        ],
+
+        studentOutcomes: [
+          "First full ROV frame in hand — the four-motor TriggerFish PVC skeleton, cut from a cut list and assembled in one session, with only the motors left to mount.",
+          "Real shop technique on the PVC cutters: hold both ends, mark before cutting, template off the first piece, and account for the non-flush cut.",
+          "Finished the backboard soldering and met a genuine debugging problem — a reversed LED polarity with no obvious cause — and learned the right first move is to meter it, not to power it.",
+          "Peer-taught CAD: four kids built their first Onshape \"LEGO-block\" model with a teammate teaching, and the work is saved where the whole team can learn from it."
+        ],
+
+        nextWeek:
+          "Next session is about turning the skeleton into a robot that can float. The four motors get " +
+          "mounted onto the PVC frame, then we weigh the whole thing and run a first buoyancy test to see " +
+          "how close we are to neutral. The control-board group keeps chasing the LED-polarity bug, screws " +
+          "in the tether wires, and finishes the backboard. Looking further out, the team wants to move the " +
+          "ROV from analog to digital control and settle on a code editor by August 15 — the first real step " +
+          "toward writing the software that flies this thing.",
+
+        photos: [
+          { src: "assets/meetings/1.5/01-vector-rov-frame-reference.jpg", caption: "The MATE \"Vector\" ROV kit on screen (materovcompetition.org/rov-kits) — the reference geometry behind the team's PVC frame: a low box frame with four thrusters." },
+          { src: "assets/meetings/1.5/02-control-board-wattmeter.jpg",    caption: "The TriggerFish control board mid-debug, watt meter reading 13.63 V on the bench. The backboard soldering is done; the reversed-LED-polarity mystery is not." },
+          { src: "assets/meetings/1.5/03-cad-onshape-lesson.jpg",         caption: "Onshape on the big screen — a first solid model (a cylinder on a rounded box) during the CAD lesson. Learning the tool the team will design every custom part in." },
+          { src: "assets/meetings/1.5/04-cad-lego-block-models.jpg",      caption: "Two laptops, two \"LEGO-block\" practice models — Trenton teaching teammates to build in CAD from scratch. The models go in the shared \"Learning CAD\" folder." }
+        ],
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/1.5/meeting-note.pdf"
+      },
+      {
         week:  "1.4",
         date:  "Sunday, July 5, 2026",
         time:  "3:00 – 5:30 PM",
