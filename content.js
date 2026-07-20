@@ -774,6 +774,100 @@ window.SITE = {
        entry until every kid in the photos has a release form on file. */
     meetingNotes: [
       {
+        week:  "1.6",
+        date:  "Sunday, July 19, 2026",
+        time:  "3:00 – 5:30 PM",
+        theme: "TriggerFish Setbacks — Steps Back That Move Us Forward",
+
+        heroPhoto: {
+          src:     "assets/meetings/1.6/00-hero-rebecca-tether-solder.jpg",
+          alt:     "Rebecca soldering the topside tether lead onto an 8-pin connector at Class 1.6, with the SeaMATE color-coded pinout reference on the counter next to her.",
+          caption: "Rebecca on the topside tether lead — solder iron in one hand, the SeaMATE 8-conductor pinout reference at her elbow. She did the joints beautifully. And then we had to take them all apart.",
+          requiresConsent: false
+        },
+
+        recap:
+          "Class 1.6 was a night of setbacks that turned into the whole lesson. Four of us " +
+          "— Rebecca, Tyler, Frankie, and Isaac — worked the TriggerFish control-box side of " +
+          "the build from 3:00 to 5:30. Rebecca soldered the topside tether lead onto the " +
+          "8-pin connector, and she did it really well. Then we tried to seat the metal " +
+          "cover — and the eight color-coded conductors were too long to fit inside. " +
+          "Everything had to come apart. Cables trimmed shorter. All eight joints re-soldered. " +
+          "About an hour and a half we won't get back. On the bench test we still couldn't " +
+          "get the LED indicators to read anything but red — polarity is off somewhere and " +
+          "none of us can tell why yet, so Coach John's staying on the TriggerFish " +
+          "manufacturer to sort it out before we power anything up. While the tether work " +
+          "was happening, the rest of the team broke off to install the backplate into the " +
+          "yellow Pelican case. Halfway through, one of the power cables came undone inside " +
+          "a plastic protective sleeve. Re-setting that crimped joint was precision work — " +
+          "no room to force it — and it swallowed another chunk of the night. But by the " +
+          "end we did get the tether backplate mounted onto the case and the video wire " +
+          "soldered onto the backplate. Two lessons from tonight, and both of them landed " +
+          "hard: sometimes you have to take a step backward to take a step forward — that's " +
+          "what perseverance actually looks like. And watch the whole install video before " +
+          "you start work, even when the task feels intuitive. The gotchas live in the " +
+          "parts you'd skip.",
+
+        byNumbers: [
+          { value: "4",           label: "students on the Sunday cohort" },
+          { value: "8",           label: "conductors re-soldered on the tether" },
+          { value: "~1.5 hr",     label: "solder rework" },
+          { value: "1",           label: "video wire on the backplate (installed)" }
+        ],
+
+        safety: [
+          "Watch the full install video before starting the work — even when the task feels intuitive. Half of tonight's rework would have been caught by finishing the video first.",
+          "A crimped joint inside a plastic sleeve is a precision job, not a strength job. When it comes apart, force won't fix it — slowing down will.",
+          "Cables that are too long for the enclosure force reworks that stress joints. Measure the enclosure clearance BEFORE the final solder, not after.",
+          "Do not power up a board with the LED indicators reading reversed polarity. Meter it, ask the manufacturer, verify — then power."
+        ],
+
+        decisions: [
+          "Watch the full install video before starting the work, every time. The gotchas — like cable-length versus enclosure clearance — live in the parts you'd skip.",
+          "Measure cable length against the enclosure BEFORE the final solder. Cable management is a design step, not a cleanup step.",
+          "Do not smoke-test the control board until the TriggerFish manufacturer answers on the reversed LED polarity. Verified beats \"probably working.\"",
+          "Perseverance is the standard on this team: setbacks get named and worked through, not skipped over. Tonight was ninety minutes of the same solder done twice — and we still finished the video wire and the backplate."
+        ],
+
+        actionItems: [
+          { item: "Follow up with the TriggerFish manufacturer on the reversed LED polarity — and hold power-up until the answer is in", owner: "Coach John",              due: "ongoing" },
+          { item: "Standing rule: measure the enclosure clearance BEFORE final solder — \"measure the space, not the wire\"",           owner: "Sunday cohort",           due: "ongoing" },
+          { item: "Cut vertical-motor pipe segments at 45° / 65° / 75° (SOHCAHTOA on the length)",                                       owner: "Frame group",             due: "by 1.7" },
+          { item: "Trade-study depth sensor (analog vs digital) and pick a camera + display path",                                       owner: "Sunday cohort",           due: "by 1.8" },
+          { item: "Continue backplate wiring and finish the control-box case assembly",                                                   owner: "Sunday cohort",           due: "by 1.7" }
+        ],
+
+        learned: [
+          "Sometimes you take a step backward to take a step forward. Rebecca soldered the topside tether beautifully — and we still had to undo every joint because the cables were too long for the cover. That's ninety minutes of the same solder done twice. It's not failure — it's what a rework looks like when we catch a problem before it ships to the pool.",
+          "Watch the whole video before you start. Even with a strong intuitive sense of what to do, the video is where the gotchas live — like cable-length-versus-enclosure-space — that intuition doesn't warn you about.",
+          "A crimped joint inside a plastic sleeve is a precision job, not a strength job. When the power cable came apart during the backplate install, force wasn't going to fix it. Slowing down did.",
+          "When the bench-test LEDs come back the wrong color, you don't power up and see what happens. You meter the board, you ask the manufacturer, and you don't move on until you understand why."
+        ],
+
+        studentOutcomes: [
+          "First hands-on solder of the topside tether — 8 color-coded conductors mapped to the SeaMATE pinout — including the humbling experience of taking every joint apart and doing it over.",
+          "First TriggerFish backplate mounted into the yellow Pelican control-box housing; first video wire soldered to the backplate.",
+          "Real debugging experience: a bench-test result (reversed LED polarity) that doesn't yet have an answer — and the discipline to stop, meter, and reach the manufacturer instead of powering through.",
+          "The reflex of watching the full reference video before starting the work — the same difference between a \"working\" build and a \"crafted\" one we named at 1.3."
+        ],
+
+        nextWeek:
+          "Class 1.7 is Capsule Build & First Splash — the team builds the watertight capsules " +
+          "and heads to the pool for the first time. Every kid in the water. Capsule drop #1 " +
+          "with the towel check. Meanwhile the electronics track keeps chasing the LED-polarity " +
+          "issue with the TriggerFish manufacturer, and the frame group cuts the 45° / 65° / 75° " +
+          "pipe segments the vertical motors get mounted at.",
+
+        photos: [
+          { src: "assets/meetings/1.6/01-triggerfish-guide-and-case.jpg", caption: "The SeaMATE TriggerFish Guide open on the laptop (\"TF Installing the Tether Connector\") next to the yellow Pelican case with the backplane in hand. The Guide has been the team's procedural reference of record since 1.3." },
+          { src: "assets/meetings/1.6/02-triggerfish-case-installation.jpg", caption: "Two of the team working the tether backplate onto the SeaMATE TriggerFish case; Rebecca still on the topside tether solder in the background. Parallel tracks all night." }
+        ],
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/1.6/meeting-note.pdf"
+      },
+      {
         week:  "1.5",
         date:  "Sunday, July 12, 2026",
         time:  "3:00 – 4:45 PM",
