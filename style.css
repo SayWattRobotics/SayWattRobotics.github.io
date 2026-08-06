@@ -683,6 +683,32 @@ mark {
   border-top: 1px solid var(--line);
 }
 .field-photos-pending { /* visual placeholder when consent is pending */ }
+/* Video clips — same card language as the photo gallery, with a wider
+   minimum column so a 16:9 clip has room to be watchable. */
+.field-videos {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+.field-video {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+.field-video video {
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  object-fit: contain;
+}
+.field-video figcaption {
+  padding: 10px 14px;
+  font-size: 12.5px; color: var(--ink-soft);
+  font-style: italic;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--line);
+}
 .field-note-sponsors {
   margin-top: 32px;
   padding-top: 22px;

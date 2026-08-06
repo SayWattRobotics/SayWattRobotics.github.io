@@ -774,6 +774,118 @@ window.SITE = {
        entry until every kid in the photos has a release form on file. */
     meetingNotes: [
       {
+        week:  "1.7",
+        date:  "Sunday, July 26, 2026",
+        time:  "3:00 – 5:00 PM",
+        theme: "First Splash — The ROV Gets Wet, and We Meter a Fault All the Way Down",
+
+        heroPhoto: {
+          src:     "assets/meetings/1.7/00-hero-poolside-first-splash.jpg",
+          alt:     "Three Say Watt Robotics students at the edge of the pool at Class 1.7 with the four-motor PVC ROV on pool-noodle floats, the tether coiled on the deck, and the yellow TriggerFish control box on the cart beside them.",
+          caption: "Poolside, minutes before the first splash — the frame on noodle floats, the tether flaked out on the deck, and the yellow control box powered up on the cart. Seven weeks from a box of PVC to a vehicle that goes in the water.",
+          requiresConsent: false
+        },
+
+        recap:
+          "Class 1.7 was the first time the ROV got wet. Eleven of us — Trenton, Rhylan, Luke, " +
+          "Frankie, Evan, Carter, Maddox, Annable, Lilian, Madelyn, and Isaac — worked from " +
+          "3:00 to 5:00. We started by connecting all four motors to the tether, testing the " +
+          "motor pairs on each tether line and checking polarity on every one before anything " +
+          "got power. On the frame we drilled set screws into the side-panel frame and cut the " +
+          "vertical pole for 60° and 45°. The 70° angle that was on our cut list didn't survive " +
+          "testing — at 70° we couldn't fit both vertical motors in at the same time, so the " +
+          "frame told us the answer instead of the drawing. Then we ran the waterproofing check " +
+          "and went in the water for the first time. That's where the problems showed up. Motor " +
+          "4 only spins one direction, and it's inconsistent about it. So we metered the whole " +
+          "chain instead of guessing: the right Sabertooth gave motor 3 a full 12 V at full " +
+          "throttle both ways, but motor 4 got 6 V one way and 12 V the other. The left " +
+          "Sabertooth gave motors 1 and 2 a full 12 V both ways. The joystick read 2.5 V at " +
+          "center and 5 V at max — both correct — and we swapped the joystick anyway and got " +
+          "the exact same error. Everything upstream checks out, so the fault is the board. We " +
+          "ordered a new Sabertooth 2x5. Both vertical motors also only push the robot up and " +
+          "never down, and that one is still open. Next up: sensors, microcontrollers, and " +
+          "taking this ROV from analog to digital.",
+
+        byNumbers: [
+          { value: "11",   label: "students on the build" },
+          { value: "4",    label: "motors connected to the tether" },
+          { value: "1st",  label: "in-water test of the vehicle" },
+          { value: "6 V",  label: "on motor 4 where 12 V belonged" }
+        ],
+
+        safety: [
+          "Waterproofing check happens before anyone goes near the water — it is a gate, not a formality. We checked seals and penetrators dry-side first, and nothing got wet until that check was done.",
+          "Polarity verified on every motor pair before power. Four motors, four checks, no assumptions.",
+          "Poolside discipline: dry hands on the control box, the tether flaked out on the deck where it can't tangle a swimmer, and everyone clear of the vehicle before power goes on.",
+          "When a motor misbehaves, you do not fix it by running it harder. Power down, get the meter out, and measure."
+        ],
+
+        decisions: [
+          "The 70° vertical-motor angle is out. Testing showed the frame can't fit both vertical motors at 70° at the same time, so we cut the vertical pole for 60° and 45° instead. Test result beats cut list.",
+          "Order a replacement Sabertooth 2x5. We are replacing the board because we measured it, not because we're out of ideas — the joystick, the wiring, and the left Sabertooth all read correct.",
+          "Change one variable at a time. Swapping the joystick was the controlled experiment that ruled out the input side; the error stayed, and that told us more than a fix would have.",
+          "The next research track is taking the ROV from analog to digital — sensors and microcontrollers. Analog got us into the water; it won't get us through a mission."
+        ],
+
+        waterproofing: [
+          "Pre-splash inspection: motor seals and the tether run checked on the deck before anything went in the water. Passing that check is what earned the first splash — no check, no pool.",
+          "Run one went in deliberately positively buoyant, on pool-noodle floats, with a swimmer alongside as spotter. If the controls quit on the first splash, the vehicle comes back up on its own instead of sitting on the bottom.",
+          "The floats came off for the second run and the vehicle held station under the surface on the tether — which is also where the up-only vertical-motor behavior became obvious.",
+          "The faults we found traced to the electronics, not to water: motor 4's one-direction anomaly reproduced at the Sabertooth outputs with a multimeter, off the water.",
+          "Standing rule going forward: log the waterproofing check in the Pool-Test Log every session, pass or fail. A check nobody wrote down didn't happen."
+        ],
+
+        actionItems: [
+          { item: "Install the new Sabertooth 2x5 when it arrives and re-run the full-throttle voltage measurement on all four motors, both directions", owner: "Electrical group", due: "by 1.8" },
+          { item: "Diagnose why both vertical motors only drive the robot up and never down — check thrust direction, wiring, and mixing before blaming the board",  owner: "Electrical group", due: "by 1.8" },
+          { item: "Finish mounting the vertical motors on the 60° and 45° cuts, and write up why 70° was rejected in the engineering notebook",                    owner: "Frame group",      due: "by 1.8" },
+          { item: "Start the analog-to-digital research: candidate microcontrollers, depth and sensor options, and what each one costs",                          owner: "Sunday cohort",    due: "by 1.8" },
+          { item: "Log the full Sabertooth voltage table and the joystick readings in the engineering notebook — this is the evidence behind the board swap",      owner: "Notetaker",        due: "by 1.8" }
+        ],
+
+        learned: [
+          "How to isolate a fault instead of guessing at it. Motor 4 only spun one direction, so we measured the known-good channels first — left Sabertooth, motors 1 and 2, 12 V both ways; right Sabertooth, motor 3, 12 V both ways — then the suspect one: motor 4 at 6 V one way and 12 V the other. Then the input: joystick center 2.5 V, joystick max 5 V, both correct. Working from good to bad is what turns a mystery into a part number.",
+          "Change one variable at a time. We swapped the joystick even though it metered fine, and the error came back identical. A test that doesn't fix anything still eliminates something.",
+          "Testing beats the plan on paper. 70° was on our cut list from 1.6 and it did not survive contact with the actual frame — both vertical motors wouldn't fit. 60° and 45° came out of the build, not the drawing.",
+          "Polarity is a check, not an assumption. Four motors got wired to the tether tonight and all four got verified before power. That's the cheapest ten minutes on the whole build.",
+          "Two vertical motors that only go up are a different problem than a motor that runs slow. Direction and speed fail in different ways, and naming which one you have is half the diagnosis."
+        ],
+
+        studentOutcomes: [
+          "Wired four motors to the tether, tested each motor pair on its tether line, and verified polarity on all four before any power was applied.",
+          "Ran a real fault-isolation sequence with a multimeter — measure the known-good channels, then the suspect channel, then the input — and reached a defensible conclusion: replace the controller.",
+          "Drilled set screws into the side-panel frame and cut vertical pipe to angle, then learned a design constraint by testing it rather than by drawing it.",
+          "First in-water operation of the vehicle the team built, including running the pre-splash waterproofing check as the gate for going in at all.",
+          "First exposure to what 'analog to digital' means for this ROV — and why the sensors-and-microcontroller track is the next real jump in capability."
+        ],
+
+        nextWeek:
+          "Class 1.8 is Build & Iterate I. The replacement Sabertooth 2x5 goes in and every motor " +
+          "gets re-measured at full throttle in both directions. The vertical-motor problem — up " +
+          "but never down — gets chased down to a cause. The frame group finishes mounting the " +
+          "vertical motors on the 60° and 45° cuts. And the whole team starts the research that " +
+          "takes this vehicle from analog to digital: sensors, microcontrollers, and what it " +
+          "costs to get there.",
+
+        photos: [
+          { src: "assets/meetings/1.7/01-motor-pairs-control-box-bench.jpg", caption: "Before the pool — testing the motor pairs on each tether line at the bench, with the yellow TriggerFish control box open and the tether coiled beside it. Polarity got checked on all four motors here, not at poolside." },
+          { src: "assets/meetings/1.7/02-first-in-water-test-piloting.jpg",  caption: "The first in-water test, hands on the joysticks. This is the run where motor 4 showed the one-direction anomaly that sent us to the multimeter." }
+        ],
+
+        videos: [
+          { src:     "assets/meetings/1.7/03-first-splash-noodle-floats.mp4",
+            poster:  "assets/meetings/1.7/03-first-splash-noodle-floats.jpg",
+            caption: "The first splash. Run one went in deliberately positively buoyant on pool-noodle floats — if the controls quit, the vehicle surfaces on its own instead of sitting on the bottom — with a swimmer alongside as spotter and the tether tended from the deck." },
+          { src:     "assets/meetings/1.7/04-submerged-run-vertical-motors.mp4",
+            poster:  "assets/meetings/1.7/04-submerged-run-vertical-motors.jpg",
+            caption: "Noodles off, hovering on the tether over the 5-foot mark. This is the run where \"both vertical motors only go up\" stopped being a theory — the vehicle would climb on command and would not drive itself back down." }
+        ],
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/1.7/meeting-note.pdf"
+      },
+      {
         week:  "1.6",
         date:  "Sunday, July 19, 2026",
         time:  "3:00 – 5:30 PM",

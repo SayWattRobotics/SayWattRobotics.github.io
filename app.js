@@ -508,6 +508,29 @@
               "</div>"
             : "");
 
+      // Videos — short clips from the session. Same consent gate as the
+      // photo gallery: nothing plays until every student in frame has a
+      // signed release on file. preload="none" plus a poster frame keeps
+      // the page light until someone actually presses play.
+      const videos = (n.videos && n.videos.length && !n.photoConsentPending)
+        ? '<div class="field-note-section">' +
+            '<h4 class="field-note-eyebrow">Video</h4>' +
+            '<div class="field-videos">' +
+              n.videos.map((v) =>
+                '<figure class="field-video">' +
+                  '<video controls playsinline preload="none"' +
+                    (v.poster ? ' poster="' + esc(v.poster) + '"' : "") +
+                    ' src="' + esc(v.src || "") + '">' +
+                    "Your browser can't play this clip. " +
+                    '<a href="' + esc(v.src || "") + '">Download it instead.</a>' +
+                  "</video>" +
+                  (v.caption ? "<figcaption>" + esc(v.caption) + "</figcaption>" : "") +
+                "</figure>"
+              ).join("") +
+            "</div>" +
+          "</div>"
+        : "";
+
       // Quiet sponsor row at the bottom
       const sponsorRow = SPONSORS && SPONSORS.length
         ? '<div class="field-note-sponsors">' +
@@ -564,7 +587,7 @@
       // open/closed transition matches the curriculum + roster accordions.
       const body =
         '<div class="collapse"><div class="collapse-inner field-note-body">' +
-          hero + recap + stats + safety + roles + decisions + actions + learned + waterproofing + outcomes + ahead + photos + sponsorRow +
+          hero + recap + stats + safety + roles + decisions + actions + learned + waterproofing + outcomes + ahead + photos + videos + sponsorRow +
         "</div></div>";
 
       card.innerHTML = header + body;
@@ -595,6 +618,36 @@
           fig.remove();
           photoFails += 1;
           if (photoSection && photoFails === photoFigs.length) photoSection.remove();
+        });
+      });
+
+      // Same guard for video: a clip that can't load is removed, and the
+      // whole Video section is dropped if none of them load. Clips added
+      // later (with the matching filenames) appear automatically.
+      const videoFigs = card.querySelectorAll(".field-video");
+      const videoSection = Array.prototype.slice
+        .call(card.querySelectorAll(".field-note-section"))
+        .find((s) => s.querySelector(".field-videos"));
+      let videoFails = 0;
+      videoFigs.forEach((fig) => {
+        const vd = fig.querySelector("video");
+        if (!vd) return;
+        vd.addEventListener("error", () => {
+          fig.remove();
+          videoFails += 1;
+          if (videoSection && videoFails === videoFigs.length) videoSection.remove();
+        });
+      });
+
+      // Only one clip plays at a time — starting one pauses the others.
+      videoFigs.forEach((fig) => {
+        const vd = fig.querySelector("video");
+        if (!vd) return;
+        vd.addEventListener("play", () => {
+          videoFigs.forEach((other) => {
+            const ov = other.querySelector("video");
+            if (ov && ov !== vd) ov.pause();
+          });
         });
       });
 
