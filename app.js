@@ -583,11 +583,36 @@
           "</div>"
         : "";
 
+      // Retrospective — after a pool session or a milestone test, the team
+      // grades its own work: what held up, and what has to change. Takes
+      // `retro: { worked: [...], needsWork: [...] }`; either list may be
+      // omitted. Renders as two side-by-side columns so the honest half is
+      // impossible to skip past.
+      const retroCol = (title, items) =>
+        (items && items.length)
+          ? '<div class="field-retro-col">' +
+              '<div class="field-retro-head">' + esc(title) + "</div>" +
+              '<ul class="field-bullets">' +
+                items.map((i) => "<li>" + esc(i) + "</li>").join("") +
+              "</ul>" +
+            "</div>"
+          : "";
+      const retro = (n.retro && ((n.retro.worked && n.retro.worked.length) ||
+                                 (n.retro.needsWork && n.retro.needsWork.length)))
+        ? '<div class="field-note-section">' +
+            '<h4 class="field-note-eyebrow">' + esc(n.retro.title || "Retrospective") + "</h4>" +
+            '<div class="field-retro">' +
+              retroCol("What worked", n.retro.worked) +
+              retroCol("What needs addressed", n.retro.needsWork) +
+            "</div>" +
+          "</div>"
+        : "";
+
       // Body wrapped in the standard sliding .collapse container so the
       // open/closed transition matches the curriculum + roster accordions.
       const body =
         '<div class="collapse"><div class="collapse-inner field-note-body">' +
-          hero + recap + stats + safety + roles + decisions + actions + learned + waterproofing + outcomes + ahead + photos + videos + sponsorRow +
+          hero + recap + stats + safety + retro + roles + decisions + actions + learned + waterproofing + outcomes + ahead + photos + videos + sponsorRow +
         "</div></div>";
 
       card.innerHTML = header + body;

@@ -610,6 +610,7 @@ window.SITE = {
       { date: "2026-07-12", title: "Class 1.5 — Control Box I",                    type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-5" },
       { date: "2026-07-19", title: "Class 1.6 — Control Box II",                   type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-6" },
       { date: "2026-07-26", title: "Class 1.7 — Capsule Build & First Splash",     type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-7" },
+      { date: "2026-08-09", title: "Class 1.8 — Build & Iterate I",                type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-8" },
       { date: "2026-11-01", title: "2027 competition manual drops — full-team read-through within 48 hours", type: "Milestone", location: "materovcompetition.org", url: "https://materovcompetition.org" },
       { date: "2026-12-14", title: "CAD locked — long-lead parts ordered before the holiday break", type: "Milestone", location: "Team workspace" },
       { date: "2027-02-15", title: "Regional registration opens — we register this week", type: "Milestone", location: "2027 MATE ROV regional (assignment TBD)" },
@@ -773,6 +774,106 @@ window.SITE = {
        photoConsentPending: true to hide the photo gallery for any
        entry until every kid in the photos has a release form on file. */
     meetingNotes: [
+      {
+        week:  "1.8",
+        date:  "Sunday, August 9, 2026",
+        time:  "3:00 – 5:00 PM",
+        theme: "Debrief and Go Digital — Grading the First Splash, Then Opening the Electronics Lab",
+
+        recap:
+          "Class 1.8 was the biggest turnout of the season — fourteen of us: Trenton, Rhylan, Luke, " +
+          "Frankie, Evan, Carter, Maddox, Sam, Lilian, Isaac, Adrian, Rebecca, Tyler, and Liam — " +
+          "from 3:00 to 5:00. No build tonight. We started by grading our own work on the first " +
+          "splash, and we made ourselves write down both columns: six things that worked and six " +
+          "things that have to change. The good column is real — the buoyancy devices did their job, " +
+          "the center of mass sat below the center of buoyancy the way it's supposed to, the tether " +
+          "waterproofing held, the frame stayed together, some of the motors ran, and the cart turned " +
+          "out to be a genuinely good control platform. The other column matters more: we can't tune " +
+          "buoyancy yet, the foam won't stay on, one motor still only runs one direction, the whole " +
+          "thing is slow, the control station takes deliberate effort to make the ROV do what you " +
+          "want, and our motor placement may not be the right one. Then we looked at the entire " +
+          "season, start to finish, so everybody can see where this is going. We went through the " +
+          "company — why MATE runs the team like one, and what each position actually does — and " +
+          "every student wrote down their top three. Last hour we stood up an electronics lab: " +
+          "HackPacks and computer stations, and a first pass at the digital side of the house — " +
+          "Arduino Nano, servos, stepper motors, LED displays, and the IDE we'll write the code in. " +
+          "We closed on how the team is going to work together: GitHub for anything that's code, " +
+          "Google Drive for everything else.",
+
+        byNumbers: [
+          { value: "14",  label: "students — biggest turnout yet" },
+          { value: "6",   label: "things that worked on the first splash" },
+          { value: "6",   label: "problems named for the fix list" },
+          { value: "1st", label: "digital electronics lab" }
+        ],
+
+        retro: {
+          title: "First-splash retrospective",
+          worked: [
+            "The buoyancy devices did their job — the vehicle floated the way we intended it to.",
+            "Center of mass sat below center of buoyancy. The ROV self-rights instead of rolling over, which is the whole reason we stack it that way.",
+            "Tether waterproofing held. No intrusion through the tether run.",
+            "Some of the motors worked — enough thrust to move the vehicle under control.",
+            "The cart earned its place. We used it to haul everything to the pool and then as the topside control platform, and it was good at both.",
+            "The frame stayed together. Everything we cut, drilled, and set-screwed in 1.5 through 1.7 held up in the water."
+          ],
+          needsWork: [
+            "We can't tune buoyancy. Right now it's whatever the foam gives us — there's no way to trim the vehicle to neutral, and we need one.",
+            "The buoyancy foam won't stay attached to the ROV. The mounting method has to change.",
+            "One motor still only runs in one direction — the open Sabertooth fault from 1.7.",
+            "The vehicle is slow. Slower than it should be, and we don't yet know whether that's thrust, drag, voltage, or all three.",
+            "The control station takes deliberate effort. Making the ROV do what the operator wants is harder than it should be — that's an interface and mixing problem, not a pilot problem.",
+            "Motor placement may be wrong. Alternative thrust vectors are on the table for the next frame revision."
+          ]
+        },
+
+        decisions: [
+          "Buoyancy becomes a tunable system, not a fixed one. \"Some foam attached to the frame\" is not a design — we need a way to add and remove trim, and a mount that survives the water.",
+          "Motor placement is reopened. The first splash gave us real handling data, so alternative thrust vectors get evaluated against that instead of against a sketch.",
+          "The team goes digital. Analog got the vehicle into the water; the Arduino Nano, servos, steppers, and displays we set up tonight are the path to a vehicle that can fly a mission.",
+          "GitHub for code, Google Drive for everything else. One place per kind of file, decided now — before there are forty files and nobody knows which copy is current.",
+          "Every student named a top-three position tonight. Elections come next, and nobody gets a title without knowing what the job actually is."
+        ],
+
+        actionItems: [
+          { item: "Design a tunable buoyancy solution — adjustable trim plus a foam mount that stays attached in the water", owner: "Mechanical group", due: "by 1.9" },
+          { item: "Trade-study alternative motor placements against the first-splash handling notes, not against a sketch",   owner: "Mechanical group", due: "by 1.9" },
+          { item: "Close out the one-direction motor fault with the replacement Sabertooth 2x5 and re-measure",              owner: "Electrical group", due: "by 1.9" },
+          { item: "Find the cause of the slow speed — separate thrust, drag, and voltage drop before changing anything",     owner: "Electrical group", due: "by 1.9" },
+          { item: "Collect every student's top-three position picks and set an election date",                               owner: "Coach John",       due: "by 1.9" },
+          { item: "Stand up the team GitHub org and the Drive folder structure; get every student an account and access",    owner: "Coach John",       due: "by 1.9" },
+          { item: "Keep working the HackPack exercises between meetings — Arduino Nano, servo, stepper, and display",        owner: "All students",     due: "ongoing" }
+        ],
+
+        learned: [
+          "A retrospective only works if you write both columns. It's easy to list what broke; it's just as important to write down what held, because that's the part you don't want to accidentally redesign away. Center of mass below center of buoyancy worked — so it stays.",
+          "\"It's slow\" is not a diagnosis. Slow could be thrust, drag, voltage drop down the tether, or a motor that isn't pulling its share. Naming the candidates is the first step; measuring them is the second.",
+          "\"The control station required deliberate control\" is an engineering finding, not a complaint about the pilot. When the operator has to fight the interface, the interface is the thing to fix.",
+          "Buoyancy you can't adjust isn't really designed — it's whatever the foam happened to give you. A real vehicle has a way to trim to neutral and a mount that survives the water.",
+          "Analog electronics got us into the pool. Digital is what makes the vehicle controllable — a microcontroller between the joystick and the motors is what turns raw throttle into something a pilot can actually fly.",
+          "Deciding where files live before you have a lot of them is cheap. Deciding after is expensive. Code in GitHub, everything else in Drive."
+        ],
+
+        studentOutcomes: [
+          "Ran a structured engineering retrospective on their own vehicle — separating what held up from what has to change, and writing both down honestly.",
+          "Saw the full season laid out end to end, so this stops being a series of Sundays and starts being a project with a deadline.",
+          "Learned what each company position actually does, and picked a top three. Choosing a role you understand is a different thing than volunteering for a title.",
+          "First hands-on with digital electronics — Arduino Nano, servos, stepper motors, and LED displays on the HackPack stations, plus a first look at the IDE they'll write the code in.",
+          "First exposure to version control and shared storage as a team practice: GitHub for code, Google Drive for everything else."
+        ],
+
+        nextWeek:
+          "Class 1.9 turns the fix list into hardware. The tunable-buoyancy design and the foam mounting " +
+          "get worked, the alternative motor placements get traded against what the first splash actually " +
+          "showed us, and the electrical group closes out the one-direction motor with the replacement " +
+          "Sabertooth. The HackPack work keeps going in parallel — every student needs to be comfortable " +
+          "with the Nano before the code that flies this thing gets written. And elections are coming: " +
+          "everyone named a top three tonight.",
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/1.8/meeting-note.pdf"
+      },
       {
         week:  "1.7",
         date:  "Sunday, July 26, 2026",

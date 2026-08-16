@@ -597,6 +597,26 @@ mark {
   text-transform: uppercase; color: var(--ink-faint);
   margin: 0 0 12px;
 }
+/* Retrospective — what worked / what needs addressed, side by side.
+   Deliberately monochrome: no green-vs-red scoring. Both columns are
+   the same kind of finding, and the honest half gets equal weight. */
+.field-retro {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.field-retro-col {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 15px 18px 16px;
+}
+.field-retro-head {
+  font-size: 12.5px; font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.field-retro-col .field-bullets li:first-child { padding-top: 0; }
+.field-retro-col .field-bullets li:last-child  { padding-bottom: 0; }
 .field-roles-grid {
   display: grid; gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
