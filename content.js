@@ -611,6 +611,7 @@ window.SITE = {
       { date: "2026-07-19", title: "Class 1.6 — Control Box II",                   type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-6" },
       { date: "2026-07-26", title: "Class 1.7 — Capsule Build & First Splash",     type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-7" },
       { date: "2026-08-09", title: "Class 1.8 — Build & Iterate I",                type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-8" },
+      { date: "2026-08-16", title: "Class 1.9 — Build & Iterate II",               type: "Class",     location: "3 PM  ·  Mr. Holcombe's house",  url: "#week-1-9" },
       { date: "2026-11-01", title: "2027 competition manual drops — full-team read-through within 48 hours", type: "Milestone", location: "materovcompetition.org", url: "https://materovcompetition.org" },
       { date: "2026-12-14", title: "CAD locked — long-lead parts ordered before the holiday break", type: "Milestone", location: "Team workspace" },
       { date: "2027-02-15", title: "Regional registration opens — we register this week", type: "Milestone", location: "2027 MATE ROV regional (assignment TBD)" },
@@ -669,12 +670,15 @@ window.SITE = {
        MATE runs the competition like a company: every student holds a
        real title with real duties. Each card shows the role and a
        one-line summary; on the website, clicking a card opens it to
-       reveal the full duty list. Edit the name, role, detail, or duties
-       freely. When a student is elected, change "Not Elected Yet" to
-       their name. */
+       reveal the full duty list.
+
+       Elected at Class 1.9 on 16 August 2026. The three executive
+       officers were seated first from the students' stated position
+       preferences; the executives then assigned the lead roles. Edit a
+       name, role, detail, or duty list freely as the season develops. */
     roster: [
       {
-        name: "Not Elected Yet", role: "CEO",
+        name: "Trenton", role: "CEO",
         detail: "Schedule, judges, and the safety briefing",
         duties: [
           "Owns the team's schedule and meeting agendas, and keeps every sub-team on track to its deadlines.",
@@ -687,7 +691,7 @@ window.SITE = {
         ]
       },
       {
-        name: "Not Elected Yet", role: "CFO",
+        name: "Maddox", role: "CFO",
         detail: "Budget, bill of materials, cost report, and the engineering notebook",
         duties: [
           "Maintains the team budget and tracks every dollar spent against it.",
@@ -701,68 +705,198 @@ window.SITE = {
         ]
       },
       {
-        name: "Not Elected Yet", role: "Mechanical Lead",
-        detail: "Frame, buoyancy, and the manipulator",
+        name: "Annabelle", role: "COO",
+        detail: "Day-to-day operations, the integrated master schedule, and the workspace",
         duties: [
-          "Designs the ROV frame and leads its construction.",
-          "Owns buoyancy and trim — making the robot sit level and neutral in the water.",
-          "Designs and builds the manipulator and any mission-specific tools, such as grippers and hooks.",
-          "Runs trade studies on frame material and layout, and records the reasoning in the project notebook.",
-          "Leads the CAD work for the mechanical design.",
-          "Makes sure the build passes safety inspection — no sharp edges, shrouded propellers, proper strain relief.",
-          "Works closely with the Electrical Lead so the electronics and payload fit and balance."
+          "Owns the integrated master schedule — the one calendar that shows what every sub-team owes, and when.",
+          "Turns the CEO's plan into the week's actual work: who is doing what this Sunday, and what they need to have on the table when they arrive.",
+          "Runs the integrated product team meetings so the leads talk to each other instead of building in parallel and colliding later.",
+          "Tracks action items to closure and surfaces the ones that are slipping before they become a deadline problem.",
+          "Owns logistics — workspace setup, tool and part availability, transport to pool sessions, and the pack-out list.",
+          "Keeps the leads unblocked: when two sub-teams need the same part, the same bench, or the same afternoon, the COO resolves it.",
+          "Is the CEO's backup for running a meeting or a competition day."
         ]
       },
       {
-        name: "Not Elected Yet", role: "Electrical Lead",
+        name: "Isaac", role: "CTO / Chief Engineer",
+        detail: "Technical authority across the vehicle — the design integrates or it doesn't ship",
+        duties: [
+          "Holds technical authority over the whole vehicle: how the mechanical, electrical, software, and payload pieces fit together as one system.",
+          "Runs the design reviews and makes the call when two sub-teams want incompatible things.",
+          "Owns the system-level requirements and makes sure every sub-team's design traces back to a mission task or a rule.",
+          "Reviews the System Interconnection Diagram, the trade studies, and the technical documentation for engineering soundness before they go to the judges.",
+          "Sets the engineering standards the team builds to — how a joint is made, how a change is documented, what 'done' means.",
+          "Works with the COO to sequence technical work so integration is not left until the last month.",
+          "Leads the technical half of the engineering presentation and can defend any design decision to a judge."
+        ]
+      },
+      {
+        name: "Adrian", role: "Mechanical Lead",
+        detail: "Frame, structure, and how it all mounts together",
+        duties: [
+          "Designs the ROV frame and leads its construction.",
+          "Owns the structural layout — where every component mounts, and whether the frame survives handling, transport, and the water.",
+          "Runs trade studies on frame material and geometry, and records the reasoning in the engineering notebook.",
+          "Leads the CAD work for the mechanical design.",
+          "Makes sure the build passes safety inspection — no sharp edges, shrouded propellers, proper strain relief.",
+          "Coordinates with Propulsion, Buoyancy, Payload, and Electrical so everything physically fits and balances.",
+          "Owns the fabrication plan: what gets cut, drilled, and assembled in what order."
+        ]
+      },
+      {
+        name: "Sam", role: "Propulsion Lead",
+        detail: "Thrusters, thrust vectors, and how the vehicle moves",
+        duties: [
+          "Owns the thruster selection and the thrust-vector layout — how many motors, pointed which way, and why.",
+          "Runs the trade studies on motor placement against measured handling, not against a sketch.",
+          "Characterizes thrust and current draw for each motor so the electrical team can size the fuse and the software team can size the mixing.",
+          "Diagnoses propulsion faults to a cause — a motor that runs slow, runs one direction, or doesn't pull its share.",
+          "Owns propeller guards and shrouding for safety inspection.",
+          "Works with the Pilot Station lead so the control mapping matches how the vehicle actually moves.",
+          "Documents the propulsion design and its rationale for the technical documentation."
+        ]
+      },
+      {
+        name: "Eli", role: "Payload / Manipulator Lead",
+        detail: "Grippers, tools, and everything the ROV carries to do a job",
+        duties: [
+          "Designs and builds the manipulator and any mission-specific tools — grippers, hooks, cutters, collection devices.",
+          "Reads the mission tasks closely and turns them into tool requirements: what has to be grabbed, moved, measured, or retrieved.",
+          "Prototypes and tests each tool against a mock-up of the actual mission prop before it goes near the pool.",
+          "Owns payload mounting and the mass and drag budget the payload costs the vehicle.",
+          "Works with Propulsion and Buoyancy so a loaded ROV still flies and still trims.",
+          "Makes sure every tool passes safety inspection — no pinch hazards, no unshielded sharp edges.",
+          "Documents the payload design and its mission rationale."
+        ]
+      },
+      {
+        name: "Evan", role: "Buoyancy / Stability Control Lead",
+        detail: "Trim, ballast, and keeping the vehicle level",
+        duties: [
+          "Owns buoyancy and trim — making the vehicle sit level and neutral in the water.",
+          "Designs a tunable buoyancy system: a way to add and remove trim, not a fixed block of foam.",
+          "Owns the flotation mounting so nothing comes loose in the water.",
+          "Keeps center of mass below center of buoyancy so the vehicle self-rights, and verifies it after every configuration change.",
+          "Re-trims the vehicle whenever payload, batteries, or hardware move, and logs the new configuration.",
+          "Runs the trim checks poolside before each run and records the result in the Pool-Test Log.",
+          "Works with Mechanical and Payload, because every gram they add is a trim problem."
+        ]
+      },
+      {
+        name: "Liam", role: "Electrical / Power Lead",
         detail: "Power system, SID, and fuse selection",
         duties: [
           "Designs the power system — the path from the topside supply, through the fuse, to every device.",
           "Draws the System Interconnection Diagram (SID) using proper, standard electrical symbols.",
           "Selects the main fuse from measured full-load-amp values and documents the choice against the rules.",
-          "Wires and tests the Electronic Speed Controllers (ESCs) and motor connections.",
+          "Wires and tests the motor controllers and motor connections.",
           "Owns clean, reliable wiring and solder joints — no 'rat's nest,' with strain relief at every termination.",
           "Makes sure the electrical build passes safety inspection — fuse placement, correct fuse type, waterproofed motors.",
-          "Partners with the Software Lead on the control electronics and with Mechanical on the layout."
+          "Meters faults to a cause instead of guessing, and records the measurements in the engineering notebook."
         ]
       },
       {
-        name: "Not Elected Yet", role: "Software Lead",
-        detail: "Control software, video, and vision",
+        name: "Rhylan", role: "Sensor Lead",
+        detail: "Depth, cameras, and everything the vehicle measures",
         duties: [
-          "Builds and maintains the control software — the loop from the gamepad to the thrusters.",
+          "Owns the sensor suite — depth, temperature, cameras, and any mission-specific instrument.",
+          "Runs the trade studies on each sensor: analog versus digital, resolution, cost, and how it interfaces to the microcontroller.",
+          "Calibrates every sensor and knows how accurate each reading actually is.",
+          "Owns camera placement and the field of view the pilot flies on.",
+          "Waterproofs sensor housings and penetrators, and verifies them before every pool session.",
+          "Works with Software/Telemetry so readings reach the surface in a form the team can use.",
+          "Documents the sensor design and calibration for the technical documentation."
+        ]
+      },
+      {
+        name: "Rebecca", role: "Tether Lead",
+        detail: "The tether, its management, and the strain relief at both ends",
+        duties: [
+          "Owns the tether build — conductors, waterproofing, penetrators, and strain relief at both ends.",
+          "Manages the tether during every run: feeding slack, taking it up, and keeping it clear of obstacles and propellers.",
+          "Calls out obstructions, distances, and hazards to the pilot in real time.",
+          "Inspects the tether and its strain relief before and after every session for wear or damage.",
+          "Keeps the tether properly protected with braided sleeving or spiral wrap — never tape as the main method.",
+          "Measures and accounts for voltage drop down the tether so the electrical team can design around it.",
+          "Helps deploy and recover the ROV safely at poolside, and practices the run choreography with the pilot."
+        ]
+      },
+      {
+        name: "Tyler", role: "Pilot Station / Control Lead",
+        detail: "The control box, the operator interface, and flying the vehicle",
+        duties: [
+          "Owns the pilot station — the control box, the joysticks, the displays, and how the whole thing sets up poolside.",
+          "Designs the operator interface so the pilot doesn't have to fight it: control mapping, labeling, and feedback that match how the vehicle moves.",
+          "Operates the ROV during mission runs and pool rehearsals, and logs serious water time.",
+          "Learns each mission task cold, and the most efficient order to attempt them in.",
+          "Works in constant communication with the Tether Lead during every run.",
+          "Gives the engineers honest feedback after each test: what handled well, what to change.",
+          "Stays calm and focused under competition lights — the pilot should be the steadiest teammate, not the loudest."
+        ]
+      },
+      {
+        name: "Oliver", role: "Software / Telemetry Lead",
+        detail: "Control software, the GUI, video, and the data that comes back up",
+        duties: [
+          "Builds and maintains the control software — the loop from the gamepad through the microcontroller to the thrusters.",
+          "Owns the graphical user interface the pilot and crew actually look at during a run.",
           "Sets up the video streaming and keeps the camera delay low, testing it regularly.",
-          "Writes the computer-vision code for mission tasks such as detecting, counting, and measuring objects.",
           "Handles telemetry — depth, sensor data, and the profiling float's transmitted readings.",
-          "Develops on a topside bench replica so software can progress while the real vehicle is being built.",
-          "Keeps the code in version control with clean, student-pushed commits.",
+          "Writes any computer-vision code for mission tasks such as detecting, counting, and measuring objects.",
+          "Keeps the code in version control on the team GitHub with clean, student-pushed commits.",
           "Documents any AI tools used, as the rules require, and can explain every part of the code to a judge."
         ]
       },
       {
-        name: "Not Elected Yet", role: "Pilot",
-        detail: "In-water operator at the competition",
+        name: "Frankie", role: "Test & Quality Lead / Safety & Compliance Lead",
+        detail: "The JSEA, the safety inspection, and proving the thing actually works",
         duties: [
-          "Operates the ROV during every mission run and pool rehearsal.",
-          "Logs serious water time — strong pilots practice weekly from October onward.",
-          "Learns each mission task cold, and the most efficient order to attempt them in.",
-          "Stays calm and focused under competition lights — the pilot should be the steadiest teammate, not the loudest.",
-          "Works in constant communication with the Tether Manager during every run.",
-          "Gives the engineers honest feedback after each test: what handled well, what to change.",
-          "Should not also be the Software Lead during finals — flying and debugging at once is too much at once."
+          "Owns the Job Safety Analysis (JSEA) and keeps it current as the build changes.",
+          "Runs the pre-splash safety and waterproofing checks, and has the authority to stop a launch.",
+          "Owns the Pool-Test Log — every session logged, pass or fail, with the configuration that was in the water.",
+          "Writes and runs the test plans that prove each subsystem works before it gets integrated.",
+          "Prepares the vehicle for the competition safety inspection and knows every rule it will be checked against.",
+          "Tracks every open defect to closure so nothing quietly stays broken.",
+          "Enforces the standing safety rules at the bench and poolside, for everybody, including the leads."
         ]
       },
       {
-        name: "Not Elected Yet", role: "Tether Manager",
-        detail: "Manages the tether and calls obstructions",
+        name: "Lillian", role: "Marketing / Communications / Public Outreach Lead",
+        detail: "The team's story, the marketing display, and the community",
         duties: [
-          "Manages the tether during every run — feeding slack, taking it up, and keeping it clear of obstacles and propellers.",
-          "Calls out obstructions, distances, and hazards to the pilot in real time.",
-          "Inspects the tether and its strain relief before and after every session for wear or damage.",
-          "Helps deploy and recover the ROV safely at poolside.",
-          "Serves as co-pilot — a backup operator and a second read on the run.",
-          "Keeps the tether properly protected with braided sleeving or spiral wrap — never tape as the main method.",
-          "Practices the run choreography with the pilot until the handoffs are automatic."
+          "Owns the team's public story — how Say Watt Robotics is presented to sponsors, the community, and the judges.",
+          "Builds the marketing display that is scored at competition.",
+          "Runs outreach: school visits, community events, and demonstrations that get other kids interested.",
+          "Keeps the website's Field Log and photo record current so the season is documented as it happens, not reconstructed later.",
+          "Writes the sponsor thank-yous and keeps sponsors updated on what their support built.",
+          "Manages photo consent, and makes sure no student appears in public material without a release on file.",
+          "Works with the CFO on the fundraising ask and the materials behind it."
+        ]
+      },
+      {
+        name: "Luke", role: "Document Manager Lead",
+        detail: "The technical documentation, version control, and where everything lives",
+        duties: [
+          "Owns the technical documentation package that goes to the judges — structure, deadlines, and final assembly.",
+          "Maintains the document control system: GitHub for code, Google Drive for everything else, one current version of each file.",
+          "Enforces naming and versioning so nobody works from a stale copy.",
+          "Collects each lead's written contribution on schedule instead of the week of the deadline.",
+          "Proofreads and formats the documentation for consistency before submission.",
+          "Keeps the engineering notebook complete alongside the CFO, and makes sure decisions get written down when they are made.",
+          "Archives every trade study, test result, and design revision so the team can show its reasoning."
+        ]
+      },
+      {
+        name: "Carter", role: "Strategic Lead",
+        detail: "Mission strategy, run order, and where the points actually are",
+        duties: [
+          "Studies the mission tasks and the scoring rubric closely, and knows where the points actually are.",
+          "Builds the run plan: which tasks to attempt, in what order, and what to skip when the clock is short.",
+          "Runs the time trials so the plan is based on how long tasks really take, not how long the team hopes they take.",
+          "Identifies which mission tasks need a dedicated tool and gets that requirement to the Payload lead early.",
+          "Plans the contingencies — what the team does when a task fails or a system goes down mid-run.",
+          "Works with the CEO and CTO to make sure the build schedule serves the scoring strategy.",
+          "Debriefs every practice run against the plan and adjusts."
         ]
       }
     ],
@@ -775,6 +909,111 @@ window.SITE = {
        entry until every kid in the photos has a release form on file. */
     meetingNotes: [
       {
+        week:  "1.9",
+        date:  "Sunday, August 16, 2026",
+        time:  "3:00 – 5:00 PM",
+        theme: "Election Day — The Team Becomes a Company, and the ROV Gets a Brain",
+
+        recap:
+          "Class 1.9 is the day Say Watt Robotics stopped being a group of kids who build a robot " +
+          "and became a company. Thirteen of us were there — Trenton, Rhylan, Luke, Frankie, Evan, " +
+          "Annabelle, Maddox, Sam, Isaac, Adrian, Rebecca, Tyler, and Liam — from 3:00 to 5:00. " +
+          "First we finished what we decided at 1.8 and actually registered where our documents " +
+          "live: GitHub for code, Google Drive for everything else, with everybody signed up. Then " +
+          "came the demo that made the digital side click — a mock remote operated vehicle running " +
+          "on an Arduino microcontroller with a real graphical user interface, built across the " +
+          "Arduino IDE and VS Code. Seeing a joystick move something on a screen through code we " +
+          "could read is a different thing than reading about it. After that we talked about how " +
+          "real engineering organizations work: the integrated product team, where the leads have " +
+          "to talk to each other instead of building in parallel and colliding at the end, and the " +
+          "integrated master schedule, which is the one calendar that says what every sub-team owes " +
+          "and when. Then we ran the elections. We went back through everyone's stated position " +
+          "preferences from 1.8 and seated the three executives — Trenton as CEO, Maddox as CFO, " +
+          "Annabelle as COO — and the executives turned around and assigned the lead roles " +
+          "themselves. Seventeen positions, every one of them filled, every one of them a real job " +
+          "with real duties. Nobody on this team is a spare part.",
+
+        byNumbers: [
+          { value: "17",  label: "positions filled — every one a real job" },
+          { value: "3",   label: "executives seated, who then picked the leads" },
+          { value: "13",  label: "students at the session" },
+          { value: "2",   label: "systems of record — GitHub and Drive" }
+        ],
+
+        todaysRoles: [
+          { role: "CEO",                                          holder: "Trenton"   },
+          { role: "CFO",                                          holder: "Maddox"    },
+          { role: "COO",                                          holder: "Annabelle" },
+          { role: "CTO / Chief Engineer",                         holder: "Isaac"     },
+          { role: "Mechanical Lead",                              holder: "Adrian"    },
+          { role: "Propulsion Lead",                              holder: "Sam"       },
+          { role: "Payload / Manipulator Lead",                   holder: "Eli"       },
+          { role: "Buoyancy / Stability Control Lead",            holder: "Evan"      },
+          { role: "Electrical / Power Lead",                      holder: "Liam"      },
+          { role: "Sensor Lead",                                  holder: "Rhylan"    },
+          { role: "Tether Lead",                                  holder: "Rebecca"   },
+          { role: "Pilot Station / Control Lead",                 holder: "Tyler"     },
+          { role: "Software / Telemetry Lead",                    holder: "Oliver"    },
+          { role: "Test & Quality / Safety & Compliance Lead",    holder: "Frankie"   },
+          { role: "Marketing / Communications / Public Outreach", holder: "Lillian"   },
+          { role: "Document Manager Lead",                        holder: "Luke"      },
+          { role: "Strategic Lead",                               holder: "Carter"    }
+        ],
+
+        rolesNote:
+          "The three executive officers were seated first, from the position preferences every " +
+          "student wrote down at 1.8. The executives then assigned the lead roles themselves — " +
+          "which is how it works in a real company, and which means the leads answer to teammates, " +
+          "not to a coach. Full duty lists for every position are on the Team page.",
+
+        decisions: [
+          "GitHub for code, Google Drive for everything else — registered, not just agreed to. Everybody has an account and knows which system a given file belongs in.",
+          "The three executives were seated from the students' own stated preferences, and then the executives assigned the leads. Coaches did not hand out the titles.",
+          "Every position on the org chart is a real job with a written duty list. A title nobody can describe the work of is not a title.",
+          "The team runs as an integrated product team. Leads are expected to talk to each other during the week, not discover a conflict at integration.",
+          "The COO owns an integrated master schedule — one calendar, every sub-team's deliverables and dates on it."
+        ],
+
+        actionItems: [
+          { item: "Publish the integrated master schedule — every sub-team's deliverables and due dates on one calendar",   owner: "Annabelle (COO)",  due: "by 1.10" },
+          { item: "Run the first integrated product team meeting with all leads reporting status",                          owner: "Trenton (CEO)",    due: "by 1.10" },
+          { item: "Confirm every student has GitHub and Google Drive access, and file the first documents in the right place", owner: "Luke (Document Manager)", due: "by 1.10" },
+          { item: "Each lead reads their duty list and comes back with the first three things they own this season",        owner: "All leads",        due: "by 1.10" },
+          { item: "Extend the Arduino mock-ROV demo toward the real vehicle — joystick to microcontroller to motor driver", owner: "Oliver (Software)", due: "by 1.10" },
+          { item: "Carry over from 1.8: tunable buoyancy design, motor-placement trade study, and the Sabertooth swap",     owner: "Adrian / Evan / Liam", due: "by 1.10" }
+        ],
+
+        learned: [
+          "An integrated product team is not a seating chart. The point is that the person designing the frame and the person designing the payload talk to each other while there's still time to change something — not at integration, when the only option left is a workaround.",
+          "An integrated master schedule is what turns \"we should probably do that soon\" into a date somebody owns. One calendar, every sub-team, every deliverable.",
+          "A microcontroller with a GUI is the bridge between what we built and what we need. The mock ROV demo showed the whole chain — joystick input, code we can read, something moving in response — and that chain is what makes a vehicle flyable instead of just powered.",
+          "The Arduino IDE and VS Code are both tools for the same job, and knowing why you'd reach for each one is part of learning the craft.",
+          "Picking leaders from what people actually want to do beats assigning by who's loudest. Everyone wrote down preferences a week before anyone got a title.",
+          "Executives who pick their own leads own the outcome differently than executives who inherit them."
+        ],
+
+        studentOutcomes: [
+          "Every student on the team now holds a named position with a written duty list — seventeen real jobs, no spare parts.",
+          "Saw a complete digital control chain end to end: joystick input, Arduino microcontroller, code in the IDE, and a graphical interface responding in real time.",
+          "First exposure to two professional development environments — the Arduino IDE and VS Code — and why a team might use both.",
+          "Learned what an integrated product team and an integrated master schedule are, and why engineering organizations that skip them fail at integration.",
+          "Registered on the team's real systems of record: GitHub for code, Google Drive for documents.",
+          "Practiced how a real organization seats leadership — stated preferences first, executives seated from them, executives assigning their own leads."
+        ],
+
+        nextWeek:
+          "Class 1.10 is the first week the org chart has to do actual work. The COO publishes the " +
+          "integrated master schedule, the CEO runs the first integrated product team meeting, and " +
+          "every lead comes back with the first three things they own. The engineering carryover " +
+          "from 1.8 is still live: tunable buoyancy, the motor-placement trade study, and the " +
+          "Sabertooth swap. And the software track keeps pushing the Arduino demo toward the real " +
+          "vehicle.",
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/1.9/meeting-note.pdf"
+      },
+      {
         week:  "1.8",
         date:  "Sunday, August 9, 2026",
         time:  "3:00 – 5:00 PM",
@@ -782,7 +1021,7 @@ window.SITE = {
 
         recap:
           "Class 1.8 was the biggest turnout of the season — fourteen of us: Trenton, Rhylan, Luke, " +
-          "Frankie, Evan, Carter, Maddox, Sam, Lilian, Isaac, Adrian, Rebecca, Tyler, and Liam — " +
+          "Frankie, Evan, Carter, Maddox, Sam, Lillian, Isaac, Adrian, Rebecca, Tyler, and Liam — " +
           "from 3:00 to 5:00. No build tonight. We started by grading our own work on the first " +
           "splash, and we made ourselves write down both columns: six things that worked and six " +
           "things that have to change. The good column is real — the buoyancy devices did their job, " +
@@ -889,7 +1128,7 @@ window.SITE = {
 
         recap:
           "Class 1.7 was the first time the ROV got wet. Eleven of us — Trenton, Rhylan, Luke, " +
-          "Frankie, Evan, Carter, Maddox, Annable, Lilian, Madelyn, and Isaac — worked from " +
+          "Frankie, Evan, Carter, Maddox, Annabelle, Lillian, Madelyn, and Isaac — worked from " +
           "3:00 to 5:00. We started by connecting all four motors to the tether, testing the " +
           "motor pairs on each tether line and checking polarity on every one before anything " +
           "got power. On the frame we drilled set screws into the side-panel frame and cut the " +
