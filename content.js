@@ -1,4 +1,4 @@
-F/* =================================================================
+/* =================================================================
    ★ THIS IS THE ONLY FILE YOU NEED TO EDIT ★
 
    Everything on the website comes from this file. To change the site,
