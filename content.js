@@ -2198,7 +2198,7 @@ window.SITE = {
     calendar: [
       { date: "2026-08-04", title: "BIOGLOW season launch", type: "Milestone", location: "—" },
       { date: "2026-08-16", title: "FLL team kickoff meeting", type: "Meeting", location: "Team workspace" },
-	  { date: "2026-08-23", title: "Team Finish Mission Model Builds", type: "Meeting", location "Team workspace" },
+	  { date: "2026-08-23", title: "Team Finish Mission Model Builds", type: "Meeting", location: "Team workspace" },
 	  { date: "2026-08-30", title: "Innovation Project Brainstorming & Robot Design Lessons", type: "Meeting", location "Team workspace" }
     ],
 
