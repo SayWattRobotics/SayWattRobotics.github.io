@@ -617,7 +617,7 @@ window.SITE = {
       { date: "2027-02-15", title: "Regional registration opens — we register this week", type: "Milestone", location: "2027 MATE ROV regional (assignment TBD)" },
       { date: "2027-04-05", title: "Documentation submission deadline — confirm exact date once regional is assigned", type: "Deadline", location: "2027 MATE ROV regional (assignment TBD)" },
       { date: "2027-04-23", title: "2027 MATE ROV regional competition", type: "Competition", location: "Regional and dates TBD" },
-	  { date: "2027-06-24" - "2027-06-26", title: "2027 World Championship competition", type: "Competition", location: "Federal Way, Washington" }
+	  { date: "2027-06-24 - 2027-06-26", title: "2027 World Championship competition", type: "Competition", location: "Federal Way, Washington" }
 		
     ],
 
