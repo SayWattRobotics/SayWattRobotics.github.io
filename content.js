@@ -616,8 +616,7 @@ window.SITE = {
       { date: "2026-12-14", title: "CAD locked — long-lead parts ordered before the holiday break", type: "Milestone", location: "Team workspace" },
       { date: "2027-02-15", title: "Regional registration opens — we register this week", type: "Milestone", location: "2027 MATE ROV regional (assignment TBD)" },
       { date: "2027-04-05", title: "Documentation submission deadline — confirm exact date once regional is assigned", type: "Deadline", location: "2027 MATE ROV regional (assignment TBD)" },
-      { date: "2027-04-23", title: "2027 MATE ROV regional competition", type: "Competition", location: "Regional and dates TBD" },
-	  { date: "2027-06-24 - 2027-06-26", title: "2027 World Championship competition", type: "Competition", location: "Federal Way, Washington" }		
+      { date: "2027-04-23", title: "2027 MATE ROV regional competition", type: "Competition", location: "Regional and dates TBD" }
     ],
 
     /* ---- 4. RESOURCES — grouped links and documents ---- */
@@ -1825,12 +1824,12 @@ window.SITE = {
        • Set an item's funded: to true once it's covered (it gets
          a "Funded" check on the site). */
     funding: {
-      raised: 6000,                 // ← update as money comes in
+      raised: 3500,                 // ← update as money comes in
       goal:   10150,
       asOf:   "June 2026",          // ← date the raised figure is current as of
 
       intro:
-        "We've raised $6,000 toward a $10,150 season. Here's the thing about " +
+        "We've raised $3,500 toward a $10,150 season. Here's the thing about " +
         "that gap — it isn't abstract. Every dollar maps to a specific piece of " +
         "equipment or a specific cost, and the full list is right here. You can " +
         "see exactly what you'd be funding and why it moves the team forward. " +
@@ -1857,7 +1856,7 @@ window.SITE = {
           label: "Tier 1 — Gets the team to the competition  ·  $1,650",
           items: [
             {
-              name: "RANGER competition registration", cost: "$450", unit: "",
+              name: "RANGER competition registration", cost: "$250", unit: "",
               funded: true,
               rationale:
                 "The team's entry fee for our 2027 MATE ROV regional. " +
@@ -1872,7 +1871,7 @@ window.SITE = {
                 "students and chaperones to wherever our 2027 MATE ROV " +
                 "regional is assigned. Every other item on this list builds " +
                 "the robot. This is the one that gets the robot, and the team, " +
-                "to the water. Without it, a season of work never gets scored." 
+                "to the water. Without it, a season of work never gets scored."
             }
           ]
         },
@@ -2120,20 +2119,20 @@ window.SITE = {
     phases: [
       {
         name:    "Phase 1 — Season Kickoff",
-        dates:   "August 16, 2026",
-        status:  "completed",
+        dates:   "August 2026",
+        status:  "upcoming",
         summary: "The BIOGLOW season is revealed. The team reads the challenge, " +
                  "assigns roles, and reviews the FIRST Core Values together.",
         weeks: [
           {
             label:  "Week 1",
-            dates:  "August 16, 2026",
+            dates:  "August 2026",
             theme:  "BIOGLOW season reveal",
             lessons: [
               "Watching the BIOGLOW season launch",
               "Reading the challenge and missions as a team",
               "Reviewing the FIRST Core Values",
-              "Team member introductions"
+              "Assigning team roles for the season"
             ],
             resources: [
               { label: "FIRST LEGO League", url: "https://www.firstinspires.org/programs/fll/" }
@@ -2196,9 +2195,7 @@ window.SITE = {
     /* ---- 3. CALENDAR ---- */
     calendar: [
       { date: "2026-08-04", title: "BIOGLOW season launch", type: "Milestone", location: "—" },
-      { date: "2026-08-16", title: "FLL team kickoff meeting", type: "Meeting", location: "Team workspace" },
-	  { date: "2026-08-23", title: "Team Finish Mission Model Builds", type: "Meeting", location: "Team workspace" },
-	  { date: "2026-08-30", title: "Innovation Project Brainstorming & Robot Design Lessons", type: "Meeting", location "Team workspace" }
+      { date: "2026-08-15", title: "FLL team kickoff meeting", type: "Meeting", location: "Team workspace" }
     ],
 
     /* ---- 4. RESOURCES ---- */
