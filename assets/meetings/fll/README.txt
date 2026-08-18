@@ -11,20 +11,26 @@ STRUCTURE
     ...
 
 MEETING 1.1 — Sunday, August 16, 2026 · "Kickoff — The Boxes Come Open"
-  00-hero-kit-unboxing.jpg
-    HERO. Coaches and parents opening the LEGO Education kits at the
-    kitchen island.
+  00-hero-first-drive-base.jpg
+    HERO. Two builders at the dining table with the first drive base of
+    the season beside them — hub mounted, motors on.
   01-sorting-first-pieces.jpg
     Two builders sorting the first elements out of the bags at the
     dining table.
   02-digital-build-instructions.jpg
     Digital build instructions open on a Chromebook, elements laid out,
     a sub-assembly coming together by hand.
-  03-first-drive-base.jpg
-    Two builders with a drive base already on the table — hub mounted,
-    motors on.
-  04-building-at-the-coffee-table.jpg
+  03-building-at-the-coffee-table.jpg
     The coffee table as the fourth build station.
+  04-coaches-opening-the-kits.jpg
+    Coaches and parents opening the LEGO Education kits at the kitchen
+    island.
+
+  HERO RULE: the hero is always the kids. Adults can appear in the
+  gallery — the coaches-opening-the-kits shot is a good one — but the
+  image at the top of an entry should show the builders, not the
+  grown-ups. The first cut of this entry led with the parents; it was
+  wrong and got changed.
 
   Source files were iPhone HEIC, converted to progressive JPEG and
   resized to 1920 px on the long edge. EXIF puts all five at

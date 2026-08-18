@@ -2209,9 +2209,9 @@ window.SITE = {
         theme: "Kickoff — The Boxes Come Open",
 
         heroPhoto: {
-          src:     "assets/meetings/fll/1.1/00-hero-kit-unboxing.jpg",
-          alt:     "Say Watt Robotics FLL coaches and parents opening the LEGO Education kits at the kitchen island during the first meeting of the BIOGLOW season.",
-          caption: "The first ten minutes of the season: coaches and parents getting the LEGO Education kits open and the hubs handed out. Everything that happens between now and the tournament starts in these boxes.",
+          src:     "assets/meetings/fll/1.1/00-hero-first-drive-base.jpg",
+          alt:     "Two Say Watt Robotics FLL builders working at the dining table on the first day of the BIOGLOW season, with a completed drive base beside them — hub mounted and motors on.",
+          caption: "Two of our builders at the dining table, with the first drive base of the season already sitting next to them — hub mounted, motors on. That is a robot, on day one.",
           requiresConsent: false
         },
 
@@ -2222,9 +2222,9 @@ window.SITE = {
           "one at the coffee table, one more wherever there was room. Every builder had a " +
           "laptop open to the digital build instructions and a pile of elements in front of " +
           "them, and from there it was heads-down. Sorting. Finding the one piece the screen " +
-          "is asking for. Getting the first sub-assemblies to click together. Nobody read the " +
-          "steps out loud to anybody — everyone followed their own screen at their own pace, " +
-          "which is exactly how it should work. By the end of the afternoon there were real " +
+          "is asking for. Getting the first sub-assemblies to click together. Everybody moved " +
+          "at their own pace on their own screen, which is exactly how it should work — no " +
+          "waiting on the group, nobody left behind. By the end of the afternoon there were real " +
           "builds on the table, including a drive base with the hub mounted and motors on. " +
           "That is a good first day: boxes open, screens on, and something that looks like a " +
           "robot before anyone went home.",
@@ -2232,7 +2232,7 @@ window.SITE = {
         byNumbers: [
           { value: "1st", label: "meeting of the BIOGLOW season" },
           { value: "4",   label: "build stations running at once" },
-          { value: "0",   label: "instructions read aloud — every builder on their own screen" }
+          { value: "1",   label: "drive base built — hub mounted, motors on" }
         ],
 
         learned: [
@@ -2249,9 +2249,9 @@ window.SITE = {
 
         photos: [
           { src: "assets/meetings/fll/1.1/01-sorting-first-pieces.jpg", caption: "Sorting the first elements out of the bags at the dining table. Finding the piece the screen is asking for is most of the job on day one." },
-          { src: "assets/meetings/fll/1.1/02-digital-build-instructions.jpg", caption: "The digital build instructions open on a Chromebook, elements laid out, a sub-assembly coming together by hand. Everybody worked their own screen at their own pace." },
-          { src: "assets/meetings/fll/1.1/03-first-drive-base.jpg", caption: "Two builders comparing notes with a drive base already on the table — hub mounted, motors on. That's a robot, on the first afternoon." },
-          { src: "assets/meetings/fll/1.1/04-building-at-the-coffee-table.jpg", caption: "The coffee table became the fourth build station. Laptop open, pieces out, heads down." }
+          { src: "assets/meetings/fll/1.1/02-digital-build-instructions.jpg", caption: "The digital build instructions open on a Chromebook, elements laid out, a sub-assembly coming together by hand." },
+          { src: "assets/meetings/fll/1.1/03-building-at-the-coffee-table.jpg", caption: "The coffee table became the fourth build station. Laptop open, pieces out, head down." },
+          { src: "assets/meetings/fll/1.1/04-coaches-opening-the-kits.jpg", caption: "Meanwhile, at the kitchen island: coaches and parents getting the LEGO Education kits open and the hubs handed out." }
         ],
 
         photoConsentPending: false
