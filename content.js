@@ -2111,34 +2111,19 @@ window.SITE = {
     },
 
     curriculumLede:
-      "Our FIRST LEGO League season runs in six phases. Open any phase to see " +
-      "its weeks, and open any week to see exactly what the team worked on. " +
-      "Use the search box to jump to any topic, skill, or lesson.",
+      "Our FIRST LEGO League season runs in six phases from August through the " +
+      "tournament. Here is roughly what the team is working on, and when. For " +
+      "what actually happened in any given week, read the Field Log above.",
 
     /* ---- 2. CURRICULUM — phases, weeks, lessons ---- */
     phases: [
       {
         name:    "Phase 1 — Season Kickoff",
         dates:   "August 2026",
-        status:  "upcoming",
-        summary: "The BIOGLOW season is revealed. The team reads the challenge, " +
-                 "assigns roles, and reviews the FIRST Core Values together.",
-        weeks: [
-          {
-            label:  "Week 1",
-            dates:  "August 2026",
-            theme:  "BIOGLOW season reveal",
-            lessons: [
-              "Watching the BIOGLOW season launch",
-              "Reading the challenge and missions as a team",
-              "Reviewing the FIRST Core Values",
-              "Assigning team roles for the season"
-            ],
-            resources: [
-              { label: "FIRST LEGO League", url: "https://www.firstinspires.org/programs/fll/" }
-            ]
-          }
-        ]
+        status:  "current",
+        summary: "Kits come open, the BIOGLOW challenge gets read together, and " +
+                 "every builder gets their first robot on the table.",
+        weeks: []
       },
       {
         name:    "Phase 2 — Innovation Project",
@@ -2182,24 +2167,20 @@ window.SITE = {
       }
     ],
 
-    /* ---- 2b. SEASON PLAN — placeholder for the FLL team ----
-       When the FLL team has a season-plan PDF, drop it next to
-       index.html and put its filename in "pdf" below. While "pdf"
-       is "", no card shows on the FLL page. */
-    roadmap: {
-      title: "The FIRST LEGO League Season Plan",
-      blurb: "Our full BIOGLOW season plan — coming soon.",
-      pdf:   ""
-    },
-
     /* ---- 3. CALENDAR ---- */
-    calendar: [
-      { date: "2026-08-04", title: "BIOGLOW season launch", type: "Milestone", location: "—" },
-      { date: "2026-08-15", title: "FLL team kickoff meeting", type: "Meeting", location: "Team workspace" }
-    ],
-
-    /* ---- 4. RESOURCES ---- */
+    /* ---- 3. RESOURCES ----
+       The FLL page is deliberately lean: the Field Log at the top, one
+       compact season schedule, and this. No week-by-week explorer, no
+       dated calendar, no roster — these kids are young enough that the
+       write-up and the shared drive are the whole story. */
     resources: [
+      {
+        category: "Team Documents",
+        items: [
+          { title: "Shared drive", description: "Photos, build notes, and working files",
+            url: "https://drive.google.com/drive/folders/1y1XPm9H0SW-TL7OecOyukhcoSChW9iSz" }
+        ]
+      },
       {
         category: "FIRST LEGO League",
         items: [
@@ -2212,22 +2193,69 @@ window.SITE = {
           { title: "FIRST in Alabama", description: "FIRST Delivery Partner",
             url: "https://www.firstinalabama.org/" }
         ]
-      },
-      {
-        category: "Team Documents",
-        items: [
-          { title: "Shared drive", description: "Photos, notes, and working files",
-            url: "https://drive.google.com" },
-          { title: "Engineering notebook", description: "The team's running record" }
-        ]
       }
     ],
 
-    /* ---- 5. TEAM ROSTER ---- */
-    roster: [
-      { name: "Not Elected Yet", role: "Team Member", detail: "Robot design and build" },
-      { name: "Not Elected Yet", role: "Team Member", detail: "Programming" },
-      { name: "Not Elected Yet", role: "Team Member", detail: "Innovation Project" }
+    /* ---- 4. FIELD LOG — the rolling weekly write-up ----
+       Same structure as the ROV team's field log, rendered by the same
+       code. Keep it warm and plain — these are elementary and middle
+       school builders. No names by request; "the team" and "one of our
+       builders" do the work. Set photoConsentPending: true to hide the
+       hero and gallery for any entry whose releases are not yet on file. */
+    meetingNotes: [
+      {
+        week:  "1.1",
+        date:  "Sunday, August 16, 2026",
+        theme: "Kickoff — The Boxes Come Open",
+
+        heroPhoto: {
+          src:     "assets/meetings/fll/1.1/00-hero-kit-unboxing.jpg",
+          alt:     "Say Watt Robotics FLL coaches and parents opening the LEGO Education kits at the kitchen island during the first meeting of the BIOGLOW season.",
+          caption: "The first ten minutes of the season: coaches and parents getting the LEGO Education kits open and the hubs handed out. Everything that happens between now and the tournament starts in these boxes.",
+          requiresConsent: false
+        },
+
+        recap:
+          "First meeting of the BIOGLOW season, and it was exactly the right kind of loud. " +
+          "The coaches got the LEGO Education kits open at the kitchen island while the team " +
+          "spread out across the house and claimed a spot — two groups at the dining table, " +
+          "one at the coffee table, one more wherever there was room. Every builder had a " +
+          "laptop open to the digital build instructions and a pile of elements in front of " +
+          "them, and from there it was heads-down. Sorting. Finding the one piece the screen " +
+          "is asking for. Getting the first sub-assemblies to click together. Nobody read the " +
+          "steps out loud to anybody — everyone followed their own screen at their own pace, " +
+          "which is exactly how it should work. By the end of the afternoon there were real " +
+          "builds on the table, including a drive base with the hub mounted and motors on. " +
+          "That is a good first day: boxes open, screens on, and something that looks like a " +
+          "robot before anyone went home.",
+
+        byNumbers: [
+          { value: "1st", label: "meeting of the BIOGLOW season" },
+          { value: "4",   label: "build stations running at once" },
+          { value: "0",   label: "instructions read aloud — every builder on their own screen" }
+        ],
+
+        learned: [
+          "Sort before you build. The step on the screen asks for one specific piece, and finding it in a pile is most of the work. The builders who spread their elements out first got further than the ones who dug through a bag every step.",
+          "The digital instructions let everybody move at their own speed. Nobody had to wait for the group, and nobody got left behind — you just go to the next step when you're ready for it.",
+          "A build that clicks together solidly stays together. Pieces that are only half-pressed fall apart the first time the robot moves, and you lose more time re-finding them than you saved.",
+          "It's fine to ask the person next to you. Half the room was helping each other find pieces by the end, and that's the point of building in the same room instead of alone at home."
+        ],
+
+        nextWeek:
+          "We keep building. The goal is to get every builder's base robot finished and driving, " +
+          "and then read the BIOGLOW challenge together so everyone knows what the missions " +
+          "actually ask the robot to do.",
+
+        photos: [
+          { src: "assets/meetings/fll/1.1/01-sorting-first-pieces.jpg", caption: "Sorting the first elements out of the bags at the dining table. Finding the piece the screen is asking for is most of the job on day one." },
+          { src: "assets/meetings/fll/1.1/02-digital-build-instructions.jpg", caption: "The digital build instructions open on a Chromebook, elements laid out, a sub-assembly coming together by hand. Everybody worked their own screen at their own pace." },
+          { src: "assets/meetings/fll/1.1/03-first-drive-base.jpg", caption: "Two builders comparing notes with a drive base already on the table — hub mounted, motors on. That's a robot, on the first afternoon." },
+          { src: "assets/meetings/fll/1.1/04-building-at-the-coffee-table.jpg", caption: "The coffee table became the fourth build station. Laptop open, pieces out, heads down." }
+        ],
+
+        photoConsentPending: false
+      }
     ],
 
     /* ---- 7. FUNDING — placeholder for the FLL team ----

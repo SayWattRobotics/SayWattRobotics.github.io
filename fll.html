@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Say Watt Robotics — FIRST LEGO League</title>
-  <meta name="description" content="Say Watt Robotics — Madison, AL. FIRST LEGO League team: curriculum, schedule, resources, and season progress." />
+  <meta name="description" content="Say Watt Robotics — Madison, AL. FIRST LEGO League team: the weekly field log, season schedule, and team resources." />
   <link rel="icon" type="image/png" href="assets/logo-emblem.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -22,10 +22,9 @@
           <a href="MATEROV.html" data-team-tab="rov">ROV Team</a>
           <a href="fll.html" data-team-tab="fll">FIRST LEGO League</a>
         </div>
-        <a href="#curriculum">Curriculum</a>
-        <a href="#calendar">Calendar</a>
+        <a href="#field-log">Field Log</a>
+        <a href="#season">Season</a>
         <a href="#resources">Resources</a>
-        <a href="#team">Team</a>
         <a href="#sponsors" class="nav-donate" data-donate>Sponsors</a>
       </nav>
     </div>
@@ -36,28 +35,25 @@
     <!-- ===== Hero ===== -->
     <section class="hero" id="hero"></section>
 
-    <!-- ===== Curriculum (phase / week / lesson explorer) ===== -->
-    <section class="section" id="curriculum">
+    <!-- ===== Field Log — the rolling weekly write-up, same as the ROV page ===== -->
+    <section class="section" id="field-log">
       <div class="wrap">
-        <p class="eyebrow">Curriculum</p>
-        <h2 class="section-title" id="curriculumTitle">Every phase. Every week. Every lesson.</h2>
-        <p class="section-lede" id="curriculumLede"></p>
-        <div id="roadmap"></div>
-        <div class="search">
-          <input type="search" id="curriculumSearch" placeholder="Search lessons, topics, skills…" autocomplete="off" />
-          <button class="search-clear" id="searchClear" aria-label="Clear search" hidden>Clear</button>
-        </div>
-        <div id="phaseList" class="phase-list"></div>
-        <p class="no-results" id="noResults" hidden>No lessons match that search.</p>
+        <p class="eyebrow">Field Log</p>
+        <h2 class="section-title">Meeting by meeting. In our own words.</h2>
+        <p class="section-lede">What the team built each week, written up after every meeting.</p>
+        <div id="fieldLogList" class="field-log-list"></div>
       </div>
     </section>
 
-    <!-- ===== Calendar ===== -->
-    <section class="section section-alt" id="calendar">
+    <!-- ===== Season schedule — one compact block so parents can see
+              what's happening and roughly when. No week-by-week explorer
+              and no separate calendar; this is the whole picture. ===== -->
+    <section class="section section-alt" id="season">
       <div class="wrap">
-        <p class="eyebrow">Calendar</p>
-        <h2 class="section-title">What's coming up.</h2>
-        <div id="calendarList" class="calendar-list"></div>
+        <p class="eyebrow">The Season</p>
+        <h2 class="section-title">What we're working on, and when.</h2>
+        <p class="section-lede" id="curriculumLede"></p>
+        <div id="seasonSchedule" class="season-schedule"></div>
       </div>
     </section>
 
@@ -67,15 +63,6 @@
         <p class="eyebrow">Resources</p>
         <h2 class="section-title">Everything in one place.</h2>
         <div id="resourceList" class="resource-grid"></div>
-      </div>
-    </section>
-
-    <!-- ===== Team ===== -->
-    <section class="section section-alt" id="team">
-      <div class="wrap">
-        <p class="eyebrow">The Team</p>
-        <h2 class="section-title">Who makes it happen.</h2>
-        <div id="rosterList" class="roster-grid"></div>
       </div>
     </section>
 

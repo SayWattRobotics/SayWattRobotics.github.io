@@ -200,19 +200,26 @@
 
   function renderPhases(q) {
     const host = $("phaseList");
+    if (!host) return;
     host.innerHTML = "";
     const query = (q || "").trim().toLowerCase();
     const matched = phases.filter((p) => phaseMatches(p, query));
     (query ? matched : phases).forEach((p) => {
       host.appendChild(buildPhase(p, phases.indexOf(p), query));
     });
-    $("noResults").hidden = !(query && matched.length === 0);
+    const nr = $("noResults");
+    if (nr) nr.hidden = !(query && matched.length === 0);
   }
 
   function renderCurriculum() {
-    if (S.curriculumLede) $("curriculumLede").textContent = S.curriculumLede;
+    // A page may omit the curriculum explorer entirely — the FLL page does,
+    // in favour of the compact season schedule below.
+    if (!$("phaseList")) return;
+    const lede = $("curriculumLede");
+    if (lede && S.curriculumLede) lede.textContent = S.curriculumLede;
     renderPhases("");
     const input = $("curriculumSearch"), clear = $("searchClear");
+    if (!input || !clear) return;
     let timer;
     input.addEventListener("input", () => {
       clearTimeout(timer);
@@ -242,9 +249,36 @@
       "</a>";
   }
 
+  /* ---------- season schedule (compact) ----------
+     A one-glance "what's happening and when" for parents. Renders the
+     same S.phases data as the curriculum explorer, but as a quiet list of
+     phase / dates / one-line summary with no drill-down. Used by the FLL
+     page, which deliberately has no week-by-week explorer. Any page
+     without #seasonSchedule simply skips this. */
+  function renderSeasonSchedule() {
+    const host = $("seasonSchedule");
+    if (!host) return;
+    const phases = S.phases || [];
+    if (!phases.length) {
+      host.innerHTML = '<p style="color:var(--ink-faint)">The season schedule will appear here.</p>';
+      return;
+    }
+    host.innerHTML = phases.map((p, i) =>
+      '<div class="season-row' + (p.status === "current" ? " is-current" : "") + '">' +
+        '<div class="season-num">' + String(i + 1).padStart(2, "0") + "</div>" +
+        '<div class="season-body">' +
+          '<div class="season-name">' + esc(p.name || "") + "</div>" +
+          (p.summary ? '<div class="season-summary">' + esc(p.summary) + "</div>" : "") +
+        "</div>" +
+        '<div class="season-dates">' + esc(p.dates || "") + "</div>" +
+      "</div>"
+    ).join("");
+  }
+
   /* ---------- calendar ---------- */
   function renderCalendar() {
     const host = $("calendarList");
+    if (!host) return;
     // "What's coming up" should only show today + future events. Past
     // events stay in content.js as the historical record but are
     // filtered out of the rendered list. ISO date strings sort
@@ -302,6 +336,7 @@
   /* ---------- resources ---------- */
   function renderResources() {
     const host = $("resourceList");
+    if (!host) return;
     (S.resources || []).forEach((group) => {
       const items = (group.items || []).map((it) => {
         const inner = `
@@ -949,6 +984,7 @@
       renderHero();
       renderCurriculum();
       renderRoadmap();
+      renderSeasonSchedule();
       renderCalendar();
       renderResources();
       renderRoster();

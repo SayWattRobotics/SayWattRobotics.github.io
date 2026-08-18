@@ -1180,3 +1180,40 @@ body.art-ready .eyebrow {
   .team-card-art { padding: 32px; }
 }
 
+/* ===== Season schedule (compact) =====
+   The FLL page's single "what's happening and when" block. Quiet by
+   design: a number, a name, a one-line summary, and a date range. No
+   drill-down, because there is nothing underneath to drill into. */
+.season-schedule { border-top: 1px solid var(--line); }
+.season-row {
+  display: flex; align-items: baseline; gap: 18px;
+  padding: 18px 4px;
+  border-bottom: 1px solid var(--line);
+}
+.season-num {
+  flex: 0 0 auto; width: 26px;
+  font-size: 12px; font-weight: 700; letter-spacing: .06em;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+.season-body { flex: 1 1 auto; min-width: 0; }
+.season-name {
+  font-size: 16px; font-weight: 600; letter-spacing: -.01em;
+  color: var(--ink);
+}
+.season-summary {
+  margin-top: 4px;
+  font-size: 14px; line-height: 1.55; color: var(--ink-soft);
+}
+.season-dates {
+  flex: 0 0 auto; text-align: right;
+  font-size: 12.5px; font-weight: 600; letter-spacing: .02em;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+.season-row.is-current .season-num,
+.season-row.is-current .season-dates { color: var(--accent); }
+@media (max-width: 640px) {
+  .season-row { flex-wrap: wrap; gap: 8px 14px; padding: 15px 2px; }
+  .season-dates { width: 100%; text-align: left; padding-left: 44px; }
+}
