@@ -909,6 +909,191 @@ window.SITE = {
        entry until every kid in the photos has a release form on file. */
     meetingNotes: [
       {
+        week:  "1.11",
+        date:  "Sunday, August 30, 2026",
+        time:  "3:00 – 5:00 PM",
+        theme: "Do the Math — Buoyancy Stops Being a Guess, and the Company Starts Acting Like One",
+
+        recap:
+          "Fourteen of us at 1.11 — Trenton, Isaac, Luke, Maddox, Carter, Rebecca, Sam, Oliver, Eli, " +
+          "Rhylan, Tyler, Adrian, Lillian, and Annabelle — from 3:00 to 5:00, matching the season's " +
+          "biggest turnout. No pool this week and no build. This was a desk session, and it moved more " +
+          "than most build nights do. The headline is buoyancy. Back at 1.8 we wrote down that we can't " +
+          "tune buoyancy, that it's whatever the foam happens to give us. This week we stopped guessing " +
+          "and started calculating: we worked out the water displacement of the PVC pipe we have on hand, " +
+          "turned that number into how much lift each section actually provides, and designed a buoyancy " +
+          "solution around the arithmetic instead of around a hunch. That is the difference between a " +
+          "vehicle that floats and a vehicle you can trim. Alongside that, the mechanical track kept " +
+          "closing out the PVC frame model in CAD and produced a V1 design of the payload manipulator, " +
+          "with a cost breakdown of the whole concept so nobody falls in love with a claw we can't " +
+          "afford. The electrical track spent the session learning to read and draw schematics — a " +
+          "schematic is a language, and until you can read one you're guessing at what a circuit does. " +
+          "The sensor track ran real comparisons: three camera modules against each other and two " +
+          "pressure sensors against each other, judged against what the missions need rather than what " +
+          "looks impressive. Management worked the integrated master schedule and the budget, and started " +
+          "the conversation about the one thing a MATE company needs that we don't have yet — a name.",
+
+        byNumbers: [
+          { value: "14",  label: "students — matched the season high" },
+          { value: "3",   label: "camera modules compared head to head" },
+          { value: "2",   label: "pressure sensors on the short list" },
+          { value: "V1",  label: "manipulator design, in CAD and costed" }
+        ],
+
+        decisions: [
+          "Buoyancy is arithmetic from here forward. We calculated the water displacement of the PVC we have and built the design around that number — the 1.8 finding that we can't tune buoyancy is now being answered with math instead of more foam.",
+          "The team needs a company name. Say Watt Robotics is the program; MATE teams compete as companies, and the company needs its own identity before the technical documentation and marketing display get written.",
+          "The integrated master schedule stops being a document and gets integrated. Every sub-team's dates land on one calendar, and the schedule has to exist before the 2027 game manual drops in November.",
+          "The budget gets finished against the grants actually in hand, not against a wish list. Cost enters the design conversation now, at concept, not after somebody has built the thing.",
+          "Parts get compared against requirements before anything is bought. Cameras and pressure sensors go on a written short list, and the recommendation goes to the CFO with the reasoning attached."
+        ],
+
+        actionItems: [
+          { item: "Bring three candidate company names to the team for a vote",                                    owner: "Trenton (CEO)",       due: "by 1.12" },
+          { item: "Integrate the master schedule — every sub-team's deliverables on one calendar, before November", owner: "Annabelle (COO)",     due: "by 1.12" },
+          { item: "Close the budget against confirmed grant funding",                                              owner: "Maddox (CFO)",        due: "by 1.12" },
+          { item: "Finish the PVC frame model in CAD",                                                             owner: "Adrian (Mechanical)", due: "by 1.12" },
+          { item: "Build the calculated buoyancy design and test whether the vehicle trims to neutral",             owner: "Mechanical group",    due: "by 1.12" },
+          { item: "Pick a schematic and PCB drawing tool the whole electrical track will use",                     owner: "Electrical group",    due: "by 1.12" },
+          { item: "Narrow to one camera and one pressure sensor, with the comparison written down",                owner: "Rhylan (Sensor)",     due: "by 1.12" },
+          { item: "Cost out the V1 manipulator concept and bring it to the CFO",                                   owner: "Eli (Payload)",       due: "by 1.12" }
+        ],
+
+        learned: [
+          "Buoyancy is a calculation, not a feeling. The displacement of a length of PVC pipe is a number you can work out at a desk, before you cut anything, and it tells you exactly how much lift you're going to get.",
+          "A schematic is a language. Until you can read one, you are guessing at what a circuit does — and a team that guesses at its own wiring cannot troubleshoot it under pressure.",
+          "Researching a part is not reading reviews. It is writing down what the mission requires and then checking each candidate against that list. Three cameras compared against requirements beats one camera chosen because it looked good.",
+          "An integrated master schedule that hasn't been integrated is just a document. The value is in the merge — where two sub-teams find out they both need the same week.",
+          "Cost belongs in the design conversation at concept, not after the build. The manipulator got a cost sheet at V1, which is the right time to learn a design is too expensive.",
+          "MATE teams compete as companies, and a company has a name. That's not decoration — it's what goes on the technical documentation, the marketing display, and the poster at the regional."
+        ],
+
+        studentOutcomes: [
+          "Calculated the water displacement of PVC pipe and converted it into usable lift, then designed a buoyancy solution from that number.",
+          "Learned to read and draw electrical schematics — the notation, what the symbols mean, and how to trace a circuit on paper.",
+          "Advanced the PVC frame model in CAD toward a finished assembly.",
+          "Produced a V1 CAD design of the payload manipulator and built a cost breakdown of the concept.",
+          "Ran a structured parts comparison: three camera modules and two pressure sensors, judged against mission requirements.",
+          "Worked the integrated master schedule and the grant-based budget — the management side of an engineering program, not just the build side.",
+          "Started the outreach and marketing track that MATE scores separately from the vehicle."
+        ],
+
+        nextWeek:
+          "Class 1.12 closes Phase 1 — the final TriggerFish demonstration for parents, stakeholders, and " +
+          "sponsors, plus the role retrospective. Before then: the company name goes to a vote, the budget " +
+          "closes, the buoyancy design gets built and tested against the calculation, and the sensor track " +
+          "brings back one camera and one pressure sensor with the reasoning written down. Two items from " +
+          "the 1.11 plan did not happen this session and carry forward — capsule dive #3 (the gate is three " +
+          "consecutive dry dives) and the first walkthrough of a System Integration Diagram.",
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/1.11/meeting-note.pdf"
+      },
+      {
+        week:  "1.10",
+        date:  "Sunday, August 23, 2026",
+        time:  "3:00 – 5:00 PM",
+        theme: "The Org Chart Goes to Work — A New Motor Driver, and the Second Splash",
+
+        recap:
+          "Thirteen of us at 1.10 — Trenton, Isaac, Luke, Maddox, Carter, Rebecca, Sam, Frankie, Oliver, " +
+          "Eli, Rhylan, Tyler, and Adrian — from 3:00 to 5:00. This was the first session run with the " +
+          "structured roles we elected at 1.9, and the honest report is that it worked. People knew what " +
+          "they owned and went and did it instead of waiting to be told. The build headline is that the " +
+          "one-direction motor fault we have been carrying since 1.7 is finally closed. The electrical " +
+          "track swapped in the replacement Sabertooth motor driver, found and resoldered a loose wire " +
+          "while they were in there, and all four motors now run in both directions. Then we took the " +
+          "vehicle back to the water for the second pool session, and the second splash told us more than " +
+          "the first one did — because this time we knew what to look for. The nose sits up, the vehicle " +
+          "is slow going forward, it gets noticeably harder to move the farther out it goes as the tether " +
+          "drags, and it turns fast. Four observations, all of them useful, all of them written down. " +
+          "Meanwhile the mechanical track took the TriggerFish CAD model to roughly forty percent, the " +
+          "software track laid out the computing architecture it wants and started building the purchase " +
+          "case to take to the CFO, the sensor track ruled out analog video and named a digital camera " +
+          "candidate, and the payload track sketched claw concepts and ran into the real question — how " +
+          "the joints actually move. Leadership spent their time on the unglamorous half: surveying " +
+          "sub-roles, getting a schedule built before the game releases, and putting together a rough " +
+          "bill of materials.",
+
+        byNumbers: [
+          { value: "4/4",  label: "motors running after the Sabertooth swap" },
+          { value: "2nd",  label: "pool session of the season" },
+          { value: "40%",  label: "TriggerFish CAD model complete" },
+          { value: "13",   label: "students at the session" }
+        ],
+
+        retro: {
+          title: "Second-splash observations",
+          worked: [
+            "All four motors run in both directions. The replacement Sabertooth plus a resoldered joint closed the fault we had been carrying since 1.7.",
+            "The vehicle turns fast — yaw authority is not a problem, which tells us the horizontal thrust is there even if the forward speed is not.",
+            "The first session with real roles ran itself. People knew what they owned and worked without being assigned tasks.",
+            "We went into this splash with a list of things to watch, so the observations are specific instead of \"it felt slow.\""
+          ],
+          needsWork: [
+            "The front of the ROV rides nose-up, every time. That is a trim problem, and it is almost certainly related to the next item.",
+            "Forward speed is poor. A vehicle that flies nose-up is pushing water with its underside instead of moving through it — the two findings may be one finding.",
+            "Tether drag scales with distance. The farther out the vehicle goes, the harder it is to move, which means the tether needs buoyancy management, not just more thrust.",
+            "The control box is still analog. It got us into the water, but it cannot do what a mission run needs, and digitizing it is now an owned task."
+          ]
+        },
+
+        decisions: [
+          "The Sabertooth swap closes the 1.7 motor fault. Replacement driver in, loose wire resoldered, all four motors verified in both directions before the vehicle went in the water.",
+          "The analog control box becomes a digital one. Analog got the TriggerFish into the pool; it is not the path to a vehicle that can fly a mission, and the conversion is now on somebody's plate.",
+          "The computing architecture is settled in principle: a Raspberry Pi as the central hub, an Arduino handling the real-time motor signals, and the Pi carrying data topside. The Pi talks to the Arduino, and the Arduino talks to the motors.",
+          "Analog video is ruled out. The SeaMATE TriggerFish Barracuda kit works, but a digital camera is what serves the image-recognition and modeling goals we have set — so the extra effort is worth it.",
+          "The Raspberry Pi Camera Module 3 Wide NoIR is the sensor track's candidate to beat.",
+          "Hardware requests go through the CFO with a written justification. The Raspberry Pi 4 Model B and the Arduino Mega 2560 R3 both get reviewed and presented before any money moves.",
+          "The season schedule gets built before the game releases in November — not after, when everyone is reacting."
+        ],
+
+        actionItems: [
+          { item: "Survey sub-roles so every lead knows who is on their sub-team",                                 owner: "All leads",           due: "by 1.11" },
+          { item: "Build the season schedule before the 2027 game manual drops in November",                       owner: "Annabelle (COO)",     due: "by 1.11" },
+          { item: "Turn the rough bill of materials into a costed list",                                           owner: "Maddox (CFO)",        due: "by 1.11" },
+          { item: "Write the purchase case for the Raspberry Pi 4 Model B and Arduino Mega 2560 R3, present to CFO", owner: "Oliver (Software)",  due: "by 1.11" },
+          { item: "Diagnose the nose-up trim and the poor forward speed — treat them as one problem first",        owner: "Frankie (Test) / Mechanical", due: "by 1.11" },
+          { item: "Start converting the control box from analog to digital",                                       owner: "Electrical group",    due: "by 1.11" },
+          { item: "Carry the TriggerFish CAD model past forty percent toward a complete assembly",                 owner: "Adrian (Mechanical)", due: "by 1.11" },
+          { item: "Decide how the claw joints move — hydraulics or gears — and sketch the winner",                 owner: "Eli (Payload)",       due: "by 1.11" },
+          { item: "Work out how the motors and the microcontroller actually talk to each other, signal by signal", owner: "Oliver (Software)",   due: "by 1.11" }
+        ],
+
+        learned: [
+          "A motor that only runs one direction looks like a code problem right up until you swap the driver. We spent weeks with that fault; the fix was a new Sabertooth and a resoldered joint.",
+          "Tether drag is a real force, not a nuisance. The vehicle got measurably harder to move the farther out it went, and no amount of extra thrust fixes a tether that is dragging — that is a buoyancy problem on the tether itself.",
+          "Nose-up trim and slow forward speed are probably the same problem. A vehicle flying nose-high is shoving water with its belly. Chase the trim first and the speed may come with it.",
+          "Choosing digital video over analog is a goals question, not a quality question. The Barracuda analog kit works fine — it just cannot feed the image recognition and modeling we want to do.",
+          "The three-tier computing split has a reason behind it: the Pi is good at networking and video, the Arduino is good at precise timing, and asking either one to do the other's job is where teams lose their season.",
+          "Wanting a part and getting a part are different steps. A purchase request goes to the CFO with a written case for why it is the right part — that is how a real company spends money.",
+          "A claw is a joints problem before it is a claw problem. Hydraulics or gears is the decision that determines everything downstream."
+        ],
+
+        studentOutcomes: [
+          "Ran the first working session under the elected org chart — leads owned their tracks without being assigned tasks.",
+          "Replaced a failed motor driver and resoldered a bad joint, then verified all four motors in both directions before going in the water.",
+          "Completed a second pool session and produced four specific, written handling observations instead of general impressions.",
+          "Took a CAD model of the TriggerFish to roughly forty percent.",
+          "Specified a computing architecture — Raspberry Pi as hub, Arduino for real-time motor control — and learned why the split exists.",
+          "Compared analog and digital video paths and made a documented choice tied to team goals.",
+          "Learned how a purchase request works inside a company: written justification, reviewed, presented to the CFO.",
+          "Sketched manipulator concepts and identified the joint-actuation decision as the real design question."
+        ],
+
+        nextWeek:
+          "Class 1.11 moves to the desk. The mechanical track calculates buoyancy properly instead of " +
+          "guessing at foam, the electrical track learns to read schematics, the sensor track runs real " +
+          "comparisons on cameras and pressure sensors, and management works the integrated master " +
+          "schedule and the budget. The trim and speed findings from this splash go to the top of the " +
+          "mechanical list.",
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/1.10/meeting-note.pdf"
+      },
+      {
         week:  "1.9",
         date:  "Sunday, August 16, 2026",
         time:  "3:00 – 5:00 PM",
