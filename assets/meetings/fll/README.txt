@@ -36,6 +36,75 @@ MEETING 1.1 — Sunday, August 16, 2026 · "Kickoff — The Boxes Come Open"
   resized to 1920 px on the long edge. EXIF puts all five at
   16 Aug 2026, 2:26–2:27 PM.
 
+MEETING 1.2 — Sunday, August 23, 2026 · "Bring Me a Problem"
+  No photos submitted. If any surface, create assets/meetings/fll/1.2/
+  and follow the naming convention above.
+
+  Worth chasing: the table with everyone's research out, and the Kahoot
+  scoreboard on screen.
+
+  SOURCE NOTES — attendance read Alex, Isaiah, Savannah, Claire, Daniel
+  and Samuel (six). A seventh student, Jenna, has research recorded in
+  the same notes but is missing from the attendance line; the entry
+  counts her work and assumes the attendance list simply missed her.
+  The notes also use "Sam" in the research and "Samuel" in attendance —
+  treated as the same person. Correct here if either assumption is wrong.
+  None of this appears on the site: the no-names house rule means the
+  entry says "one builder" throughout, so a roster error cannot reach
+  the public page.
+
+  Two students on the attendance list — Claire and Daniel — have no
+  research recorded in the notes. The published entry describes seven
+  ideas without claiming everyone brought one.
+
+  The agenda linked a YouTube video on FLL strategy
+  (https://youtu.be/wbD9HPol4mk). It is referenced in the recap as "a
+  short video" but not linked from the site — the Field Log has no link
+  field and an unvetted third-party video is not something to point
+  parents at from the team page.
+
+  FACT CHECK — two of the students' ideas are real, active research and
+  the entry says so, because it is true and it is encouraging:
+    · Seaweed in cattle feed to cut enteric methane is a genuine and
+      well-documented line of research.
+    · Egg oiling (addling) is an established wildlife-management
+      technique, done under permit.
+  Neither claim goes further than "scientists are working on this" /
+  "wildlife managers use this." Do not let the entry drift into stating
+  effectiveness numbers the kids did not research themselves.
+
+MEETING 1.3 — Sunday, August 30, 2026 · "Define It Before You Solve It"
+  No photos submitted.
+
+  INCOMPLETE SOURCE — the raw notes for this session have an agenda but
+  the "Accomplished" and "Notes" sections were left blank. The published
+  entry is written from the agenda alone (mission model builds, the
+  lesson on defining a problem, and a biodiversity Kahoot) and makes no
+  claim about outcomes that were not recorded. It is deliberately shorter
+  than 1.2.
+
+  To upgrade this entry, four facts would do it:
+    1. How many mission models actually got finished, and how many remain.
+    2. Whether the team narrowed the seven ideas at all, or just learned
+       the method.
+    3. Anything a builder said or figured out that is worth quoting.
+    4. Whether the Kahoot had a winner worth a line.
+
+  Attendance was four: Alex, Claire, Isaiah, Daniel. Names do not appear
+  in the entry, per the house rule.
+
+FIELD NOTE ON `time`
+  Entry 1.1 has no `time` field. Entries 1.2 and 1.3 include one
+  (1:30 – 2:30 PM) because the source notes recorded it and the renderer
+  displays it beside the date. Worth backfilling 1.1 if anyone remembers
+  the hour.
+
+PDFs
+  Still none for FLL, per the house rule above. The ROV team's printable
+  notes double as instructor artifacts; this feed has no equivalent need.
+  If that changes, the ROV generator reads straight from content.js and
+  would work for these entries without modification.
+
 HOUSE RULES FOR FLL ENTRIES
   · No student names. These builders are younger than the ROV team and
     there is no roster page to match names against — write "the team"

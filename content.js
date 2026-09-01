@@ -2389,6 +2389,96 @@ window.SITE = {
        hero and gallery for any entry whose releases are not yet on file. */
     meetingNotes: [
       {
+        week:  "1.3",
+        date:  "Sunday, August 30, 2026",
+        time:  "1:30 – 2:30 PM",
+        theme: "Define It Before You Solve It",
+
+        recap:
+          "A smaller table this week — four builders for the hour. Two things on the plan and " +
+          "both of them got done. First, we kept working through the mission model builds, the " +
+          "little LEGO structures that go on the game table and give the robot something to " +
+          "actually do. Every one of them has to be built right, because a model that falls " +
+          "apart on the table costs points the robot already earned. Then we spent time on " +
+          "something that sounds simple and isn't: how to define a problem well enough to " +
+          "solve it. Last week the team came in with seven ideas. Every one of them is a real " +
+          "problem, and not one of them is small enough yet to build a project around. That is " +
+          "the work now — taking something big and true and cutting it down to something a " +
+          "team of kids can actually do something about. We closed the hour with a Kahoot on " +
+          "biodiversity, which is the second one this season and nobody has complained yet.",
+
+        byNumbers: [
+          { value: "3rd", label: "meeting of the BIOGLOW season" },
+          { value: "4",   label: "builders at the table" },
+          { value: "2nd", label: "biodiversity Kahoot of the season" }
+        ],
+
+        learned: [
+          "A problem you cannot say in one sentence is a problem you cannot solve yet. If it takes a paragraph, it is still too big.",
+          "\"Pollution is bad\" is not a problem statement. Who it hurts, what causes it, and where it happens are what turn a topic into a problem — and a problem is the thing you can build against.",
+          "Narrow beats broad. A small problem you can actually fix makes a better project than a huge one you can only talk about.",
+          "The mission models are how you learn the game. Building them by hand is the fastest way to understand what the robot is going to be asked to do on the table."
+        ],
+
+        nextWeek:
+          "The seven ideas from last week get narrowed down. The team picks the problem it is " +
+          "going to carry into the Innovation Project — the one we research properly, design a " +
+          "solution for, and eventually present to judges. Mission model builds continue " +
+          "alongside it.",
+
+        photoConsentPending: false
+      },
+      {
+        week:  "1.2",
+        date:  "Sunday, August 23, 2026",
+        time:  "1:30 – 2:30 PM",
+        theme: "Bring Me a Problem — Seven Ideas for the Innovation Project",
+
+        recap:
+          "Homework was due this week, and it was a real one: come back with an ecosystem worth " +
+          "researching. Everybody who brought something brought a genuine problem, and most of " +
+          "them brought a fix to go with it. Geese came up first — they are aggressive, and the " +
+          "mess they leave washes into the water and hurts the wildlife living there along with " +
+          "the food those animals depend on. The proposed fix was to oil the eggs so they never " +
+          "hatch, which turns out to be a real technique that wildlife managers actually use. " +
+          "Then came something closer to home: Huntsville and Madison are building fast, and " +
+          "wildlife is losing ground to it. The idea there was an app with self-guided hikes " +
+          "written for different ages, so people actually use and care about the green space " +
+          "that is left. Somebody else brought microplastics breaking down ocean ecosystems and " +
+          "deforestation clearing land for development, and answered the solution question the " +
+          "way a professional would — go find somebody who researches this for a living and ask " +
+          "them. One builder took on cattle, which release a serious amount of greenhouse gas, " +
+          "and proposed changing what they eat: seaweed in the feed. Another went after waste " +
+          "running into Alabama waterways and wants to build a filter that cleans the water " +
+          "before it ever gets there. And one named something big and honest — Alabama has an " +
+          "enormous amount of biodiversity, and pieces of it are sliding toward endangerment — " +
+          "and did not have a solution yet. That is allowed. Naming the right problem is the " +
+          "harder half. We also ran a Kahoot on biodiversity, watched a short video on how " +
+          "strong FLL teams approach the season, and kept working through the remaining mission " +
+          "model builds.",
+
+        byNumbers: [
+          { value: "7",   label: "problems brought to the table" },
+          { value: "2nd", label: "meeting of the BIOGLOW season" },
+          { value: "1",   label: "problem still looking for a solution" }
+        ],
+
+        learned: [
+          "A problem is not a project until you can say who it hurts. \"Geese are annoying\" is a complaint; \"their waste runs into the water and hurts the animals that live there\" is something you can work on.",
+          "Two of our ideas are already real research. Feeding cattle seaweed to cut their greenhouse gas is something scientists are actively working on, and oiling eggs is a technique wildlife managers already use. Finding out somebody has started on your idea is good news, not bad — it means you were thinking about the right thing.",
+          "\"Go ask somebody who does this for a living\" is the most professional answer anybody gave. Real engineers and scientists talk to experts before they design. That is not cheating, it is the job.",
+          "Bringing a problem without a solution still counts. One of us named something true and hard and left the fix open, and that is honest work — you cannot solve what you have not named first.",
+          "Local beats global for this kind of project. The building-boom problem in Huntsville and Madison is something we can go look at with our own eyes, and that is worth more than a problem we can only read about."
+        ],
+
+        nextWeek:
+          "We learn how to define a problem tightly enough to actually solve it, and keep " +
+          "finishing the mission model builds. Seven good ideas is a great place to start and a " +
+          "terrible place to stay — the next step is picking one.",
+
+        photoConsentPending: false
+      },
+      {
         week:  "1.1",
         date:  "Sunday, August 16, 2026",
         theme: "Kickoff — The Boxes Come Open",
