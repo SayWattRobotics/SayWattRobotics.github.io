@@ -139,8 +139,56 @@ MEETING 1.4 — Sunday, September 6, 2026 · "Mission Strategy, and a Guest"
   half minutes. That is the standard match length and is stated as
   general fact, not as something the team measured.
 
+MEETING 1.5 — Sunday, September 13, 2026 · "Design for the Board You Have"
+  00-hero-three-robot-bases.jpg
+    HERO. The team gathered along the competition table with the three
+    candidate robot bases set out on the mat. Students in frame; adults
+    only at the edges, per the hero rule.
+  01-homework-design-sketches.jpg
+    The homework laid out on the dining table — three hand-drawn robot
+    concepts (overhead, front, and side views) plus a written list of
+    recommendations.
+
+    Both source files were large JPEGs; converted to progressive JPEG and
+    resized to 1920 px on the long edge, per the house convention.
+    Originals are in assets/meetings/_originals/fll-1.5/.
+
+  SOURCE — a partial audio transcript of the session plus the two photos.
+  No attendance list was recorded, so the entry claims no headcount; the
+  byNumbers block counts bases (3) and homework sheets (4), both of which
+  are visible in the photos.
+
+  Raw transcript is in assets/meetings/_originals/fll-1.5/ (gitignored).
+  It carries student first names and casual conversation and must NOT be
+  committed to this repo — the repo is a public GitHub Pages site.
+
+  NO TIME FIELD — the session time was not recorded. Entries 1.2 through
+  1.4 carry 1:30 – 2:30 PM; this one omits `time` rather than assume it.
+  Backfill if that was the slot.
+
+  NAMES — the transcript names several students and adults (coaches, a
+  parent, and a reference to an ROV-team student). None appear in the
+  entry, per the house rule. "One of our builders" and "the coaches" do
+  the work. The land trust is referred to by role, not by organization
+  name, because the notes do not confirm which trust it is — name it
+  once that is settled.
+
+  FACT CHECK
+    · 62.4 mm is a real LEGO wheel size and is what the homework sheet
+      recommends by name. Quoted as the students' recommendation, not as
+      a team decision.
+    · The turning-radius vs. stability trade and the "start with the
+      environment" framing are straight from the coaching in the session.
+    · The claim that the board demands no tight turns is the team's own
+      read of the table during this session, stated as such.
+
+  INNOVATION PROJECT — this is the first entry to describe the project
+  idea in public: a trail app for identifying and pinning invasive
+  plants for a local land trust, gamified in the spirit of a scavenger
+  hunt. It is described as the current idea, not a locked decision.
+
 FIELD NOTE ON `time`
-  Entry 1.1 has no `time` field. Entries 1.2, 1.3 and 1.4 include one
+  Entries 1.1 and 1.5 have no `time` field. Entries 1.2, 1.3 and 1.4 include one
   (1:30 – 2:30 PM) because the source notes recorded it and the renderer
   displays it beside the date. Worth backfilling 1.1 if anyone remembers
   the hour.
@@ -166,7 +214,7 @@ HOUSE RULES FOR FLL ENTRIES
     that ever changes.
 
 CONSENT
-  Entries 1.1 and 1.4 are published with photoConsentPending: false — hero and
+  Entries 1.1, 1.4 and 1.5 are published with photoConsentPending: false — hero and
   gallery live. If a release is ever pulled, flip that flag to true in
   content.js and the renderer hides the hero and the gallery on its own
   and shows a short placeholder instead. Adults appear in the hero; the

@@ -2481,6 +2481,74 @@ window.SITE = {
        hero and gallery for any entry whose releases are not yet on file. */
     meetingNotes: [
       {
+        week:  "1.5",
+        date:  "Sunday, September 13, 2026",
+        theme: "Design for the Board You Have — Three Robot Bases, and an App for the Trail",
+
+        heroPhoto: {
+          src:     "assets/meetings/fll/1.5/00-hero-three-robot-bases.jpg",
+          alt:     "Say Watt Robotics FLL builders gathered along the BIOGLOW competition table in the garage, looking at three candidate LEGO robot bases set out on the mat.",
+          caption: "Three candidate robot bases on the table, and the whole team standing over them. Before anybody builds, the question is what the board actually asks the robot to do.",
+          requiresConsent: false
+        },
+
+        recap:
+          "Two threads this week, and both of them were about starting in the right place. First, the " +
+          "Innovation Project has a shape. The idea on the table is an app for hiking trails — a kid " +
+          "opens it on the trail, identifies an invasive plant, and marks where it is, so the land trust " +
+          "that owns the property knows exactly where the invasives are taking hold and pushing the " +
+          "native species out. The team wants it to feel like a game rather than a field guide: scan the " +
+          "plant, find out what it is, and get something back for finding it — closer to a scavenger " +
+          "hunt, or to Pokémon Go, than to homework. The part the coaches keep pushing on is the why. " +
+          "Naming the plant is not enough. A kid who uses the app should come off the trail knowing why " +
+          "that plant being there is a problem for the biodiversity of that particular stretch of woods. " +
+          "We are working on getting somebody from the land trust in front of the team, so the problem " +
+          "gets described by the people who actually manage the land. Then we turned to the robot, and " +
+          "that is where the hour got good. Three candidate bases were sitting on the table, and instead " +
+          "of voting for the one that looked coolest we went through what actually separates them. " +
+          "Wheels close together pivot in a tight circle. Wheels far apart are more stable. That is a " +
+          "real trade, and you do not settle it by preference — you settle it by looking at the board " +
+          "and asking where the tightest turn you actually need is. The team looked, and could not find " +
+          "one. So stability wins, because the environment is not asking for anything smaller. That is " +
+          "the whole lesson: start with where the robot has to go, and design for that. Design a car " +
+          "when the job is at the bottom of the ocean and you have made a very bad decision, no matter " +
+          "how good the car is. We also talked about what the judges actually reward, which is not a " +
+          "perfect first robot. It is the story of the second one — we built this, we tested it, we " +
+          "found out it wobbled or the attachment kept popping off, so we changed it. Iteration is the " +
+          "score. Homework came in as sketches, and they were good ones: a box-shaped base for balance, " +
+          "the 62.4 mm wheels for speed and grip and accuracy, a note that the color sensor matters less " +
+          "this year because there are fewer black lines to follow, and a line that gyro sensors are " +
+          "pretty useful. By the end of the hour somebody had already started building.",
+
+        byNumbers: [
+          { value: "5th", label: "meeting of the BIOGLOW season" },
+          { value: "3",   label: "candidate robot bases to choose from" },
+          { value: "0",   label: "tight turns the board actually demands" },
+          { value: "4",   label: "homework sketches on the table" }
+        ],
+
+        learned: [
+          "Start with the environment, not the robot. Where does it have to go, and what does that place require of it? Design a car when the job is at the bottom of the ocean and you have made a bad decision, no matter how good the car is.",
+          "Wheels close together turn tighter. Wheels far apart are more stable. Neither one is better on its own — it depends on whether the board ever asks you to pivot in a tight space. We looked, and it does not, so stability wins.",
+          "The judges are not scoring your first robot. They are scoring the story of how it changed: we built this, we tested it, here is what we found, here is what we did about it. Iteration is the point, which means you do not have to get it right the first time.",
+          "The best teams at Worlds are not driving all over the board. They go to one area with one attachment, solve a group of missions while they are there, come home, swap a piece, and go again. Fewer, more intentional trips beat a pile of little attachments.",
+          "The homework showed up in the design conversation, which is the whole reason to do it. A box shape for balance, bigger wheels for speed and grip, a gyro because heading matters, and less weight on the color sensor this year because there are fewer black lines to follow — all of that came from builders who went and looked it up."
+        ],
+
+        nextWeek:
+          "Pick a base and build it out. Once it drives, the attachments start, and that is when the " +
+          "real testing begins — and when the first round of \"we noticed this, so we changed that\" " +
+          "gets written down. On the project side, we are working to get somebody from the land trust " +
+          "in front of the team so the invasive-plant problem comes straight from the people who " +
+          "manage the land.",
+
+        photos: [
+          { src: "assets/meetings/fll/1.5/01-homework-design-sketches.jpg", caption: "Homework, laid out on the table: three robot concepts drawn from different angles, plus a written list of recommendations — box shape for balance, the 62.4 mm wheels, gyro sensors useful, color sensor less so this year." }
+        ],
+
+        photoConsentPending: false
+      },
+      {
         week:  "1.4",
         date:  "Sunday, September 6, 2026",
         time:  "1:30 – 2:30 PM",
