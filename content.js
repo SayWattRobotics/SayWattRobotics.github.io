@@ -909,6 +909,106 @@ window.SITE = {
        entry until every kid in the photos has a release form on file. */
     meetingNotes: [
       {
+        week:  "1.13",
+        date:  "Sunday, September 13, 2026",
+        time:  "3:00 – 5:00 PM",
+        theme: "Why a Company Has a Name — Liability, a Gripper That Closes, and a Shopping List for the CFO",
+
+        heroPhoto: {
+          src:     "assets/meetings/1.13/00-hero-closeout-living-room.jpg",
+          alt:     "Thirteen Say Watt Robotics ROV team members gathered in the living room with laptops open for the end-of-session closeout meeting.",
+          caption: "Thirteen at 1.13, laptops open for the closeout. It ran long, because the company name came up — and with it, the question of why companies exist at all.",
+          requiresConsent: false
+        },
+
+        recap:
+          "Thirteen of us at 1.13 — Trenton, Isaac, Liam, Annabelle, Lillian, Tyler, Evan, Oliver, Eli, " +
+          "Frankie, Sam, Rebecca, and Rhylan — from 3:00 to 5:00. Every track moved, but the moment " +
+          "worth writing down came at the closeout, when the company name came back around and the " +
+          "question underneath it got asked out loud: why does a company exist in the first place? The " +
+          "answer is liability. Build something under your own name and your own Social Security " +
+          "number, and if somebody is hurt using it, they sue you — your house, your savings, " +
+          "everything you have already earned. Build it under a company, and they sue the company. The " +
+          "company can fail. You do not. That is what the letters in LLC actually mean, and it is why " +
+          "MATE teams compete as companies rather than as clubs: the name on the technical " +
+          "documentation is a real thing, not decoration. Two candidates are on the board — Aquassential " +
+          "Systems and NewClear Systems — and the decision now has a date on it: September 30. It came " +
+          "with a second lesson, which is how to triage a decision. Is it time-sensitive? Not today. Is " +
+          "it important? Yes. That combination is exactly the kind that quietly slips, so it gets a " +
+          "deadline instead of a shrug. On the build side, the payload track has something real: a hand " +
+          "gripper driven by a linear actuator, prototyped and finished this session, with a control " +
+          "program written to drive it. The hydraulic concept gets built too, and then both get " +
+          "demonstrated side by side so the trade study is settled by watching rather than arguing. The " +
+          "sensor track closed its recommendation and handed it to the CFO as a proposal he can act on " +
+          "— a pressure sensor, an inertial measurement unit, and a camera. Management built a " +
+          "prototype budget prioritization so the money goes to whatever has to be proven first, and " +
+          "finalized the integrated master schedule, which closes an item that had been carrying since " +
+          "1.11. Electrical kept the schematic moving in KiCad. And marketing has the STEAM night slide " +
+          "show for Rainbow Elementary essentially done, with fresh photos in it.",
+
+        byNumbers: [
+          { value: "13", label: "students at the session" },
+          { value: "3",  label: "sensors on the proposal to the CFO" },
+          { value: "2",  label: "candidate company names on the board" },
+          { value: "17", label: "days to decide the name" }
+        ],
+
+        decisions: [
+          "The sensor recommendation is closed and goes to the CFO as a proposal, not a wish: a pressure sensor, an inertial measurement unit, and a camera. It carries the head-to-head comparison work from 1.11 and 1.12 behind it, which is what makes it a proposal somebody can sign.",
+          "The manipulator gets decided by demonstration. The linear-actuator hand gripper is prototyped and has code driving it; the hydraulic concept gets built next, and both get shown side by side before the trade is written down.",
+          "Prototype money gets prioritized before anything is ordered. Management built a ranked list of what has to be proven first, so the budget buys certainty in the order the team needs it.",
+          "The integrated master schedule is finalized. That item first appeared at 1.11 and carried through 1.12 — it is closed.",
+          "The company name is a scheduled decision, not an open one. Two candidates, a September 30 deadline, and the reasoning for why the name matters now on the record."
+        ],
+
+        actionItems: [
+          { item: "Finalize the company name and slogan",                                                  owner: "Trenton (CEO)",       due: "Sept 30" },
+          { item: "Buy the sensors and the prototyping parts against the prioritized budget",               owner: "Maddox (CFO)",        due: "by 1.14" },
+          { item: "Order the sensors so they can be tested during the prototype phase",                     owner: "Rhylan (Sensor)",     due: "by 1.14" },
+          { item: "Build the hydraulic manipulator, demonstrate it against the linear actuator, write the trade", owner: "Eli (Payload)",  due: "by 1.14" },
+          { item: "Finish the electrical schematic",                                                        owner: "Liam (Electrical)",   due: "by 1.14" },
+          { item: "Keep the Arduino integration research going",                                            owner: "Oliver (Software)",   due: "by 1.14" },
+          { item: "Finalize the motor control type",                                                        owner: "Oliver (Software)",   due: "by 1.14" },
+          { item: "Stand up the team Instagram account (carried from 1.12)",                                owner: "Lillian (Marketing)", due: "by 1.14" },
+          { item: "RSVP yes or no on GroupMe — no maybes",                                                  owner: "Every student",       due: "this week" }
+        ],
+
+        learned: [
+          "Why businesses incorporate, in plain terms: build something under your own name and a person hurt using it sues you personally — your house, your savings, everything already earned. Build it under a company and they sue the company. The company can fail; you do not. That is what limited liability means.",
+          "That is also why MATE teams compete as companies instead of clubs. The name goes on the technical documentation, the marketing display, and the poster at the regional — it is the entity doing the work, not a label on it.",
+          "Two questions triage any decision: is it time-sensitive, and is it important? Important-but-not-urgent is the dangerous box, because nothing forces it and it slips. The fix is to put a date on it — which is how the company name got September 30.",
+          "A prototype ends an argument a whiteboard cannot. Build the linear-actuator gripper, build the hydraulic one, run both, and let the trade study report what happened rather than what everyone expected.",
+          "Prioritize the prototype money before you spend it. Not everything needs proving, and the things that do should be bought in the order the risk demands.",
+          "A parts list becomes a purchase when somebody owns the decision. The sensor track's real job was not picking sensors — it was handing the CFO a proposal complete enough to act on."
+        ],
+
+        studentOutcomes: [
+          "Learned what an LLC is and why engineers and inventors incorporate — limited liability explained in terms a builder can use.",
+          "Closed a sensor proposal — pressure sensor, inertial measurement unit, and camera — and handed it to the CFO as a purchase recommendation.",
+          "Built and finished a payload manipulator prototype: a hand gripper driven by a linear actuator.",
+          "Wrote the control program that drives the manipulator prototype.",
+          "Continued the TriggerFish control-box schematic in KiCad.",
+          "Built a prototype budget prioritization — deciding which components get proven first, and with what money.",
+          "Finalized the integrated master schedule, closing an action item that had carried for two sessions.",
+          "Finished the STEAM night slide show for Rainbow Elementary and refreshed the photographs in it.",
+          "Brought two candidate company names to the team and learned how to put a deadline on an important decision."
+        ],
+
+        nextWeek:
+          "The name has a date now — September 30, two candidates on the board. Of the four items " +
+          "carried into this session, the integrated master schedule is closed and the name is " +
+          "scheduled; capsule dive #3 (the gate is three consecutive dry dives) and the first System " +
+          "Integration Diagram walkthrough are still open, along with the Phase 1 showcase and role " +
+          "retrospective. Near-term: get the sensors ordered so the prototype phase can actually " +
+          "start, build the hydraulic gripper and run it against the linear actuator with the trade " +
+          "written down, finish the electrical schematic, and settle the motor control type. And " +
+          "everybody RSVP on GroupMe — yes or no, no maybes.",
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/1.13/meeting-note.pdf"
+      },
+      {
         week:  "1.12",
         date:  "Sunday, September 6, 2026",
         time:  "3:00 – 5:00 PM",
