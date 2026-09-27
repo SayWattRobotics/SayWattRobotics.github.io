@@ -2581,6 +2581,74 @@ window.SITE = {
        hero and gallery for any entry whose releases are not yet on file. */
     meetingNotes: [
       {
+        week:  "1.6",
+        date:  "Saturday, September 26, 2026",
+        theme: "The I in HIPPO — Biodiversity Threats, Three Teachers, and a Building Blitz at ASCTE",
+
+        heroPhoto: {
+          src:     "assets/meetings/fll/1.6/00-hero-build-blitz-ascte.jpg",
+          alt:     "Two Say Watt Robotics FLL builders standing in the ASCTE auditorium in front of two projection screens that read BUILD!!!!",
+          caption: "Two of our builders in the ASCTE auditorium, right as the talks ended and the screens switched to the only instruction that mattered for the rest of the afternoon.",
+          requiresConsent: false
+        },
+
+        recap:
+          "A field trip this week. Three of our builders spent Saturday at the FIRST LEGO League " +
+          "building blitz at ASCTE — the Alabama School of Cyber Technology and Engineering in " +
+          "Huntsville — and the day came in two halves. First, the auditorium. Three ASCTE instructors " +
+          "gave talks on the science underneath this season's theme, and our builders filled a green " +
+          "folder with notes. Kerri Watson laid out the five biggest threats to biodiversity with an " +
+          "acronym that is easy to carry around: HIPPO. Habitat loss. Invasive species, which move in " +
+          "with nothing to compete against them and take over. Pollution. Population growth — and " +
+          "geese came up again, the same problem one of our builders brought to the table back at 1.2. " +
+          "Overharvesting, which got a nod to the Lorax. The examples stuck. The ovenbird, a songbird " +
+          "that loses its nesting ground when roads cut through the woods. Cloudy river water, which " +
+          "blocks the light underwater plants need, so the plants stop growing and everything that " +
+          "depends on them feels it next. That is the ripple effect, and it is why one loss is never " +
+          "just one loss. Angela Pelle came at it as an engineer — wetlands, erosion reshaping " +
+          "habitats, and floodplains that do their job by flooding. Jennifer Carden brought it home to " +
+          "Alabama: the glades of Jackson County, a salamander that lives nowhere on Earth but here, " +
+          "and the fact that Alabama is number one in the country for freshwater fish diversity. Then " +
+          "the screens switched to one word — BUILD — and the second half was hands-on. Kits open on " +
+          "long tables, parts sorted into trays, and a drive base coming together by the end of the " +
+          "afternoon. The best moment of the day, though, is in the margin of one of those note pages. " +
+          "Right next to the HIPPO lecture, one of our builders connected it back to the team's own " +
+          "project: a QR code on the trail, a survey that reports the health of the plant population " +
+          "back to the land trust, mark your trail, count the bugs. Invasive species are the I in " +
+          "HIPPO. The team's project is already standing on one of the five.",
+
+        byNumbers: [
+          { value: "6th", label: "meeting of the BIOGLOW season" },
+          { value: "3",   label: "ASCTE instructors on the science behind the theme" },
+          { value: "5",   label: "threats to biodiversity — H, I, P, P, O" },
+          { value: "1",   label: "margin note that tied it all back to our project" }
+        ],
+
+        learned: [
+          "HIPPO is the short list of what drives biodiversity loss: Habitat loss, Invasive species, Pollution, Population growth, Overharvesting. Five letters you can remember standing on a trail.",
+          "Invasive species win because nothing competes with them. They arrive without the predators, diseases, and rivals that kept them in check where they came from — which is why they take over, and why our project is aimed straight at them.",
+          "Nothing in an ecosystem happens alone. Cloudy water blocks the light underwater plants need; lose the plants and you lose what eats them, and then what eats that. That is the ripple effect.",
+          "Some biodiversity is hidden. You cannot always count species by looking. Scientists can test water or soil for environmental DNA — the traces living things leave behind — and learn what is there without ever seeing it.",
+          "Some species hold the whole system up. Keystone species are often the top predators, and losing one sends effects all the way down the food chain.",
+          "The biodiversity we are studying is not far away. Alabama is number one in the country for freshwater fish diversity and home to a salamander found nowhere else on Earth. The problem is in our own backyard, and so is the reason to care about it."
+        ],
+
+        nextWeek:
+          "Back to the home table. The drive base keeps coming together, and the Innovation Project " +
+          "picks up where that margin note left off — a QR code at the trailhead and a survey that " +
+          "sends the health of the plant population back to the land trust. The team now has the " +
+          "words to explain why it matters: invasive species are one of the five things driving " +
+          "biodiversity loss, and the app is aimed right at it.",
+
+        photos: [
+          { src: "assets/meetings/fll/1.6/01-hippo-notes.jpg", caption: "Our builders' notes from the talks — HIPPO spelled out letter by letter, the ovenbird, the ripple effect, and, in the margin, the first sketch of how the team's trail app could report back to the land trust." },
+          { src: "assets/meetings/fll/1.6/02-sorting-parts-at-ascte.jpg", caption: "Build time. Parts sorted into trays, the kit bin open, and a little help from someone in an ASCTE Sentinels jacket." },
+          { src: "assets/meetings/fll/1.6/03-drive-base-coming-together.jpg", caption: "A drive base coming together on the table — hub mounted, wheels on, and the kit bin within reach for whatever it needs next." }
+        ],
+
+        photoConsentPending: false
+      },
+      {
         week:  "1.5",
         date:  "Sunday, September 13, 2026",
         theme: "Design for the Board You Have — Three Robot Bases, and an App for the Trail",

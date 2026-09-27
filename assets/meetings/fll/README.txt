@@ -187,8 +187,82 @@ MEETING 1.5 — Sunday, September 13, 2026 · "Design for the Board You Have"
   plants for a local land trust, gamified in the spirit of a scavenger
   hunt. It is described as the current idea, not a locked decision.
 
+MEETING 1.6 — Saturday, September 26, 2026 · "The I in HIPPO"
+  An away session: the FIRST LEGO League building blitz at ASCTE (Alabama
+  School of Cyber Technology and Engineering, Huntsville). Talks from three
+  ASCTE instructors in the auditorium, then open build time.
+
+  00-hero-build-blitz-ascte.jpg
+    HERO. Two builders in the ASCTE auditorium under the BUILD!!!! screens.
+    Other event attendees appear small and distant in the background.
+  01-hippo-notes.jpg
+    The builders' handwritten notes from the talks in a green folder. An
+    adult's hand holds the folder; no face.
+  02-sorting-parts-at-ascte.jpg
+    Builders sorting parts at a table; a person in an ASCTE Sentinels
+    jacket helps, back to the camera.
+  03-drive-base-coming-together.jpg
+    Two builders assembling a drive base.
+
+    Sources: IMG_2447.JPG and IMG_2448.JPG (hero, notes) and IMG_2898 /
+    IMG_2899 HEIC (build shots). All resized to 1920 px on the long edge,
+    progressive JPEG. EXIF is stripped on export — the iPhone originals
+    carry GPS coordinates, which is one reason the originals live in
+    assets/meetings/_originals/fll-1.6/ (gitignored) and not in the repo.
+
+  HELD — IMG_2900 (programming at a laptop with a coach) is NOT published.
+    A girl in the frame does not match any of the three students on the
+    attendance line and is most likely from another team at the blitz;
+    there is no release on file for her. The adult coaching in the photo
+    is also unidentified. A web-ready copy is waiting at
+    _originals/fll-1.6/HELD-programming-with-a-coach.jpg. If she turns out
+    to be a Say Watt builder with a release, move it into fll/1.6/ as
+    04-programming-with-a-coach.jpg and add one line to `photos`.
+
+  SPEAKERS — verified against the ASCTE staff directory
+  (ascte.org/about-us/meet-the-ascte-team):
+    · Kerri Watson — the notes spell it "Kerry." Directory: Science and
+      History Instructor. Spoke on biodiversity threats (HIPPO).
+    · Angela Pelle — the notes spell it "Peli." Directory: Engineering
+      Instructor. Spoke on wetlands, erosion, floodplains.
+    · Jennifer Carden — Directory: Science/Biology Instructor. Spoke on
+      Alabama biodiversity.
+  The builders' notes label the talks "AP ES," "Enviro Eng," and "AP
+  Biotech." The entry names each speaker by what they talked about, not by
+  a course title, since the notes and the directory do not line up exactly.
+  Adult presenters are credited by name, same as the 1.4 guest; the
+  no-names rule covers students.
+
+  FACT CHECK
+    · "Alabama is number one for freshwater fish diversity" — confirmed.
+      Encyclopedia of Alabama, "Biodiversity in Alabama": Alabama is
+      number one for diversity of freshwater mussels, freshwater fishes,
+      freshwater snails, crayfish, and freshwater turtles.
+    · "A salamander that lives nowhere on Earth but here" — the notes say
+      Red Hills salamander, which is endemic to Alabama. The entry does not
+      name it, to keep the claim to what the talk supports.
+    · Turbidity — the notes say cloudy water "can block UV." The entry
+      says it blocks the light underwater plants need, which is the
+      accurate version of the same point.
+    · The notes read "overbird"; the photo of the notes reads "ovenBIRD."
+      The ovenbird is a real forest-interior songbird hurt by forest
+      fragmentation. Entry uses ovenbird.
+    · "Glades in Jackson County" is reported as something the talk named,
+      without further claims.
+    · A note reading "Joe Wheeler … birds" was too fragmentary to use.
+
+  SESSION TIME — the notes say 1:30 – 2:30 PM, but the photo timestamps run
+  from 12:53 PM (auditorium) to 2:59 PM (build tables). The entry omits
+  `time` rather than publish an hour the photos contradict.
+
+  Attendance was three: Claire, Savannah, and "Alec" — probably Alex from
+  earlier rosters. Names do not appear in the entry, per the house rule.
+
+  No FLL meeting was recorded for Sunday, September 20. If one happened,
+  this entry's number should move and a 1.6 should be backfilled.
+
 FIELD NOTE ON `time`
-  Entries 1.1 and 1.5 have no `time` field. Entries 1.2, 1.3 and 1.4 include one
+  Entries 1.1, 1.5 and 1.6 have no `time` field. Entries 1.2, 1.3 and 1.4 include one
   (1:30 – 2:30 PM) because the source notes recorded it and the renderer
   displays it beside the date. Worth backfilling 1.1 if anyone remembers
   the hour.
@@ -214,7 +288,7 @@ HOUSE RULES FOR FLL ENTRIES
     that ever changes.
 
 CONSENT
-  Entries 1.1, 1.4 and 1.5 are published with photoConsentPending: false — hero and
+  Entries 1.1, 1.4, 1.5 and 1.6 are published with photoConsentPending: false — hero and
   gallery live. If a release is ever pulled, flip that flag to true in
   content.js and the renderer hides the hero and the gallery on its own
   and shows a short placeholder instead. Adults appear in the hero; the
