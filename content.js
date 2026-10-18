@@ -909,6 +909,369 @@ window.SITE = {
        entry until every kid in the photos has a release form on file. */
     meetingNotes: [
       {
+        week:  "2.5",
+        date:  "Sunday, October 18, 2026",
+        time:  "3:00 – 5:00 PM",
+        theme: "Cardboard, Then Plastic, Then Brass — The Buoyancy Engine Takes Shape",
+
+        heroPhoto: {
+          src:     "assets/meetings/2.5/00-hero-wiring-the-stepper-driver.jpg",
+          alt:     "A Say Watt Robotics student and a coach at a kitchen island wiring a stepper motor driver to an ESP32 microcontroller on a breadboard, with a laptop, soldering station, and multimeter nearby.",
+          caption: "Wiring the buoyancy engine's stepper driver to the ESP32, with a coach checking the pinout. Breadboard first; solder once it works.",
+          requiresConsent: false
+        },
+
+        recap:
+          "Attendance wasn't recorded this week, but the photos tell the story: the buoyancy engine — " +
+          "the part of the float worth 20 of its 70 points — is starting to look like a machine. On the " +
+          "kitchen island, the electrical work moved from paper to a breadboard. An ESP32 is now wired " +
+          "to a TMC2209, a quiet stepper motor driver that turns pulses from the microcontroller into " +
+          "precise steps of a motor. A stepper suits this job because steps are countable: count them " +
+          "and you know exactly how far the plungers moved and how much water the float has taken on. " +
+          "Next to it sat the float's wiring diagram, drawn by hand — a 12-volt battery through a single " +
+          "fuse, a buck converter stepping down to 5 volts for the ESP32, the motor driver and stepper " +
+          "on the 12-volt side with a 470-microfarad capacitor across the supply, and a micro SD card, a " +
+          "pressure sensor, and a light sensor hanging off the ESP32. On the table, the syringe plate " +
+          "showed its whole iteration history in three pieces: a cardboard cutout, a first 3D print, and " +
+          "a second print with a brass lead-screw nut pressed into the center — the nut that will let a " +
+          "turning screw move the plungers together. In another room, the next float part was coming " +
+          "off the printer. The software track worked on the ESP32's data packets, the format the float " +
+          "will use to report what it measured, and the search for a new marketing lead continued.",
+
+        byNumbers: [
+          { value: "3",      label: "generations of the syringe plate — cardboard, print, print with brass nut" },
+          { value: "1",      label: "fuse between the battery and everything else" },
+          { value: "470 µF", label: "capacitor across the motor supply" },
+          { value: "20",     label: "of the float's 70 points riding on the buoyancy engine" }
+        ],
+
+        decisions: [
+          "The buoyancy engine runs on a stepper motor through a TMC2209 driver. Steps are countable, so the plunger position — and the water the float is carrying — is known, not guessed.",
+          "A lead screw drives the syringes. The second printed plate carries a brass lead-screw nut, so turning the screw moves every plunger together.",
+          "The float's power system is on paper: a 12 V battery through a single fuse, a 5 V buck converter for the ESP32, and the motor driver on the 12 V side with a 470 µF capacitor across it.",
+          "Prototype in the cheapest material that answers the question. Cardboard checks the fit; plastic checks the function; the hardware goes in last."
+        ],
+
+        learned: [
+          "A stepper motor moves in exact steps. Count them and you know how far the plungers traveled, which is how the float knows how much water it is holding without a separate sensor.",
+          "A stepper driver wants a big capacitor across its motor supply. Motors throw voltage spikes back into the supply when they start and stop, and the capacitor soaks them up before they reach the driver.",
+          "A lead screw multiplies force. A small motor turning a screw can push and pull syringe plungers against the water pressure at four meters, and a fine-pitch screw holds its position when the motor stops.",
+          "Draw the power system before you build it. One page showing every voltage, the fuse, and where the 12 V and 5 V sides meet is also the beginning of the System Integration Diagram the judges will ask for.",
+          "Iterate in the cheapest material first. Cardboard tests the layout for free, the first print tests the shape, and the second print adds the hardware.",
+          "Have the pinout open while you wire. The TMC2209's pin diagram was on the laptop the whole time — that is how you keep 12 volts away from a 3.3-volt pin."
+        ],
+
+        studentOutcomes: [
+          "Wired a TMC2209 stepper motor driver to an ESP32 on a breadboard.",
+          "Drew the profiler's power and signal diagram: battery, fuse, buck converter, ESP32, motor driver, stepper motor, SD card, and pressure and light sensors.",
+          "Iterated the syringe plate from cardboard to two 3D-printed versions, the second carrying a brass lead-screw nut.",
+          "Continued CAD and 3D printing of the buoyancy engine and profiler parts.",
+          "Worked on the ESP32 data packet format for the float's reports."
+        ],
+
+        nextWeek:
+          "Get the stepper turning the lead screw, then get the lead screw moving syringes. The " +
+          "hand-drawn wiring diagram is the starting point for the float's System Integration Diagram, " +
+          "and the data packets have to carry depth, water temperature, and light with a timestamp — " +
+          "the format MATE scores. The full 2027 competition manual is expected in November; when it " +
+          "lands, every number from the preview mission gets checked against the final rules.",
+
+        photos: [
+          { src: "assets/meetings/2.5/01-tmc2209-pinout-on-the-breadboard.jpg", caption: "The TMC2209 pinout on the laptop, the ESP32 on a screw-terminal breakout, and the driver going into the breadboard. Look it up first, then plug it in." },
+          { src: "assets/meetings/2.5/02-syringe-plate-cardboard-to-print.jpg", caption: "Three generations of the syringe plate under a length of PVC: the cardboard mockup, the first print, and the second print with a brass lead-screw nut in the center." },
+          { src: "assets/meetings/2.5/03-printing-a-float-part.jpg", caption: "The next float part on the printer — the slicer preview on the monitor, the same disk taking shape on the bed." },
+          { src: "assets/meetings/2.5/04-float-wiring-diagram-and-buoyancy-math.jpg", caption: "The float on paper: buoyancy math on the left, the power and signal diagram on the right, with syringes and an ESP32 within reach." }
+        ],
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/2.5/meeting-note.pdf"
+      },
+      {
+        week:  "2.4",
+        date:  "Sunday, October 11, 2026",
+        time:  "3:00 – 5:00 PM",
+        theme: "The Data Makes It Home — SD Card to Radio to Laptop, and a CAD File That Got Overwritten",
+
+        recap:
+          "Twelve of us at 2.4 — Maddox, Trenton, Adrian, Oliver, Eli, Liam, Rebecca, Annabelle, Rhylan, " +
+          "Frankie, Isaac, and Tyler — from 3:00 to 5:00. The headline is a pipeline. The ESP32 " +
+          "transmitter now stores its data on an SD card, reads it back, and sends it as one long string " +
+          "of text over the radio link. On the other end the string arrives at the laptop's serial port, " +
+          "and a Python script writes it out as a text file. Storage to radio to laptop to file: that is " +
+          "the data path the 2027 float needs, working end to end on a table, and it leads straight to " +
+          "the computer-generated graphs MATE scores at the station. Mechanical started printing the " +
+          "float's end cap and began the CAD for the buoyancy engine's syringe puller. Along the way the " +
+          "new model was saved over the original syringe-holder part — a lesson that costs exactly one " +
+          "afternoon, once. Electrical set out to lay out a printed circuit board in KiCad and came away " +
+          "with the first piece any board needs: the ESP32's pinout, drawn in KiCad. The manipulator " +
+          "trade got its scores updated. Management built the official season budget spreadsheet, logged " +
+          "the newly purchased parts, started tracking refunds, and researched team registration for the " +
+          "events in Memphis and on Dauphin Island.",
+
+        byNumbers: [
+          { value: "12",  label: "students at the session" },
+          { value: "1",   label: "data path working end to end — SD card to radio to laptop to file" },
+          { value: "1st", label: "end cap on the 3D printer" },
+          { value: "2",   label: "event registrations researched — Memphis and Dauphin Island" }
+        ],
+
+        decisions: [
+          "The float stores first and transmits second. Radio doesn't travel through water, so readings go to an SD card underwater and get sent as a text string once the float surfaces.",
+          "The receiving end is a laptop running a Python script that catches the serial string and writes it to a text file — the starting point for the graphs MATE scores.",
+          "The season has one official budget spreadsheet, with new parts logged as they arrive and refunds tracked in their own section.",
+          "The float's first physical parts are coming off the printer while the buoyancy engine's syringe puller takes shape in CAD."
+        ],
+
+        actionItems: [
+          { item: "Finish the integrated master schedule",                                         owner: "Management",       due: "by 2.5" },
+          { item: "Finish printing the end caps",                                                  owner: "Mechanical group", due: "by 2.5" },
+          { item: "Finish the CAD models",                                                         owner: "Mechanical group", due: "by 2.5" },
+          { item: "Finish soldering the buck converter",                                           owner: "Electrical group", due: "by 2.5" },
+          { item: "Find out whether the receiver can send control commands back to the profiler", owner: "Software group",   due: "by 2.5" },
+          { item: "Select a new marketing lead",                                                   owner: "Management",       due: "by 2.5" }
+        ],
+
+        learned: [
+          "Radio doesn't travel through water at these frequencies. A float measures underwater and talks at the surface, so it has to remember everything in between — that is the SD card's job.",
+          "A data pipeline is only as good as its last step. A string on a serial port isn't data until something writes it down; the Python script is what turns a stream into a file you can graph.",
+          "Never edit the only copy. Start a new part or save a new version before changing an old one — and know where your CAD tool keeps its history, because Onshape keeps every change and an overwritten part can usually be rolled back.",
+          "A pinout is page one of every circuit board. You can't route a PCB until you know exactly which pin does what, and drawing the ESP32's pins in KiCad is that page.",
+          "Track refunds like purchases. Money that comes back still has to land somewhere in the budget.",
+          "Commands can go both ways. If the receiver can tell the float what to do after it is deployed, MATE wants that described in the float's documentation — so the design and the paperwork travel together."
+        ],
+
+        studentOutcomes: [
+          "Built an end-to-end data path: ESP32 to SD card, SD card to radio, radio to laptop serial port, serial port to text file through a Python script.",
+          "Started 3D printing the profiler's end cap.",
+          "Began CAD of the buoyancy engine's syringe puller.",
+          "Drew an ESP32 pinout in KiCad as groundwork for a custom circuit board.",
+          "Updated the scores in the manipulator actuation trade study.",
+          "Built the official season budget spreadsheet, logged new parts, and set up refund tracking.",
+          "Researched team registration for the Memphis and Dauphin Island events."
+        ],
+
+        nextWeek:
+          "Finish the end caps and the CAD, finish the buck converter, and finish the integrated " +
+          "master schedule. On the software side the question flips direction — can the receiver send " +
+          "commands to the float, not just listen to it. And the marketing lead seat still needs filling.",
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/2.4/meeting-note.pdf"
+      },
+      {
+        week:  "2.3",
+        date:  "Sunday, October 4, 2026",
+        time:  "3:00 – 5:00 PM",
+        theme: "Two ESP32s Start Talking — A First Radio Link, a First Sensor, and a Wire That Wouldn't Fit",
+
+        recap:
+          "Nine of us at 2.3 — Rhylan, Tyler, Trenton, Sam, Frankie, Luke, Oliver, Eli, and Maddox — " +
+          "from 3:00 to 5:00. The profiler went from a list to parts on the table. Management turned the " +
+          "bill of materials into a parts list and updated the budget to match. The software track got " +
+          "two ESP32 microcontrollers talking to each other over ESP-NOW, a protocol that lets the boards " +
+          "send data straight to one another with no Wi-Fi network in between, then wired a temperature " +
+          "sensor into the transmitter board and tested it in air — all of it written in C++ in the " +
+          "Arduino IDE. Mechanical sharpened the sizing math: in a four-inch pipe, every centimeter of " +
+          "height adds water pushed aside and adds pipe weight, and the difference between the two is " +
+          "how much lift each centimeter buys. They also measured four- and five-inch circles to see how " +
+          "many syringes each diameter could hold, and prototyping started the cheapest way there is — " +
+          "with cardboard. Electrical soldered the power rail box and finished the 12-volt terminal " +
+          "block, then ran into the wall every electrical team hits eventually: the 18-gauge wire would " +
+          "not fit through the holes on the buck converter that steps 12 volts down to 5, so that joint " +
+          "waits for next week. The payload track went back over the manipulator trade-offs. And the " +
+          "team is looking for a new marketing lead.",
+
+        byNumbers: [
+          { value: "9",     label: "students at the session" },
+          { value: "2",     label: "ESP32s talking over ESP-NOW" },
+          { value: "1st",   label: "sensor wired into the float electronics" },
+          { value: "18 AWG", label: "wire too thick for the buck converter's holes" }
+        ],
+
+        decisions: [
+          "ESP-NOW is the first communication method proven on the bench. Of the options on the table — Bluetooth, Wi-Fi, and ESP-NOW — it is the one now working board to board.",
+          "The float is programmed in C++ in the Arduino IDE, on both the transmitter and the receiver.",
+          "Height is the tuning knob for buoyancy. In a four-inch pipe each centimeter of height adds a predictable amount of net lift, which turns the float's length into a calculation instead of a guess.",
+          "Prototype in cardboard first. Syringe layouts get cut out of cardboard before anything is printed or bought."
+        ],
+
+        actionItems: [
+          { item: "Get the parts in and inventory them",                       owner: "Sensor group",     due: "by 2.4" },
+          { item: "Test SD card storage on the ESP32",                         owner: "Software group",   due: "by 2.4" },
+          { item: "Finish the 12 V to 5 V buck converter connection",          owner: "Electrical group", due: "by 2.4" },
+          { item: "Find a new marketing lead",                                 owner: "Management",       due: "by 2.4" }
+        ],
+
+        learned: [
+          "ESP-NOW lets two ESP32s talk directly — no router, no Wi-Fi network, one board sending to the other by its hardware address. That matters at a competition where other teams' floats will be transmitting at the same time.",
+          "Wire gauge has to fit the hardware. 18-gauge wire carries current well and is useless if it won't go through the hole on the board. That is a five-second check that saves an afternoon.",
+          "Every centimeter of a float does two things at once: it pushes more water aside, which adds lift, and it adds more pipe, which adds weight. Net buoyancy per centimeter is the difference, and it lets you size the float with arithmetic.",
+          "Measure the circle before you design the bundle. How many syringes fit inside a four-inch tube versus a five-inch tube decides how much water the buoyancy engine can move.",
+          "Cardboard is the cheapest prototype there is. A syringe layout cut from a box tests the idea in minutes for nothing.",
+          "A sensor in air is a start, not a result. The temperature sensor works on the bench; the float has to read water to within two degrees Celsius at four meters."
+        ],
+
+        studentOutcomes: [
+          "Established ESP-NOW communication between two ESP32 microcontrollers.",
+          "Integrated a temperature sensor with the ESP32 transmitter and tested it in air, programming both boards in C++ in the Arduino IDE.",
+          "Calculated how a float's net buoyancy changes with its height in a four-inch pipe.",
+          "Measured four- and five-inch diameters to determine how many syringes each could hold.",
+          "Soldered the power rail box and completed the 12-volt terminal block.",
+          "Diagnosed a wire-gauge mismatch at the buck converter.",
+          "Turned the bill of materials into a parts list and updated the season budget.",
+          "Started cardboard prototyping of the profiler."
+        ],
+
+        nextWeek:
+          "Parts come in and get inventoried. The software track adds SD card storage so the float can " +
+          "hold its data until it surfaces, electrical goes back to the buck converter with a wire that " +
+          "fits, and the search for a new marketing lead continues.",
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/2.3/meeting-note.pdf"
+      },
+      {
+        week:  "2.2",
+        date:  "Sunday, September 27, 2026",
+        time:  "3:00 – 5:00 PM",
+        theme: "The List Before the Parts — A Bill of Materials, and a Sizing Pass That Said Go Smaller",
+
+        recap:
+          "Eleven of us at 2.2 — Trenton, Rhylan, Oliver, Eli, Annabelle, Liam, Maddox, Rebecca, Tyler, " +
+          "Evan, and Adrian — from 3:00 to 5:00. This was the session where the profiler stopped being a " +
+          "rubric and started being a list. The team built the float's first bill of materials. It isn't " +
+          "finished — a few things are still missing — but the bulk of it is on the page, and a bill of " +
+          "materials with gaps you can see is worth more than a design carried around in someone's head. " +
+          "The buoyancy calculations started too, and the first pass did exactly what a first pass is " +
+          "for. Sized around a six-inch PVC pipe, the math said the float would have to displace far " +
+          "more water than the team could ever ballast to bring it to neutral. So the answer came back: " +
+          "go smaller, to an outside diameter of roughly four and a half inches. Nobody had to buy or cut " +
+          "a single piece of pipe to learn that. The payload track kept developing the manipulator " +
+          "design alongside it.",
+
+        byNumbers: [
+          { value: "11",     label: "students at the session" },
+          { value: "1st",    label: "bill of materials for the profiler" },
+          { value: "6 in",   label: "pipe in the first sizing pass — too big" },
+          { value: "4.5 in", label: "outside diameter the math pointed to instead" }
+        ],
+
+        decisions: [
+          "The profiler gets a bill of materials before anything is ordered. The bulk is on the page, and the known gaps stay visible until they are filled.",
+          "A six-inch pipe is out. The first buoyancy pass showed it would take far too much ballast to bring a float that size to neutral, and the sizing moved to roughly a 4.5-inch outside diameter.",
+          "Orders follow the list. Every sub-team's job this week is the same: finish the bill of materials, then get the parts ordered."
+        ],
+
+        actionItems: [
+          { item: "Finish the profiler bill of materials",                          owner: "Every sub-team", due: "by 2.3" },
+          { item: "Order the parts once the bill of materials is closed",           owner: "Management",     due: "by 2.3" },
+          { item: "Decide how the profiler talks to the topside (carried from 2.1)", owner: "Software group", due: "by 2.3" }
+        ],
+
+        learned: [
+          "A bill of materials is a design document. Writing every part down is how you find the parts you forgot — and how the CFO learns what the float costs before the receipts arrive.",
+          "Buoyancy is a volume problem. A float is neutral when it weighs exactly as much as the water it pushes aside, so every extra bit of diameter is water you have to match with weight.",
+          "A first pass is supposed to be wrong in a useful direction. The six-inch answer was absurd, and absurd is informative: it told the team which way to go before anyone bought pipe.",
+          "Do the math on paper first. Changing a number on a page costs nothing; changing a pipe costs a trip to the store and a cut you can't undo."
+        ],
+
+        studentOutcomes: [
+          "Built the first bill of materials for the vertical profiling float.",
+          "Ran a first-pass buoyancy sizing calculation and used it to rule out an oversized hull.",
+          "Applied the neutral-buoyancy relationship — weight equals displaced water — to a real design decision.",
+          "Continued the payload manipulator design."
+        ],
+
+        nextWeek:
+          "Finish the bill of materials and get the parts ordered. The sizing calculation gets redone " +
+          "against real four-inch pipe dimensions, the profiler's communications decision is still " +
+          "waiting on the software track, and the manipulator design keeps moving.",
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/2.2/meeting-note.pdf"
+      },
+      {
+        week:  "2.1",
+        date:  "Sunday, September 20, 2026",
+        time:  "3:00 – 5:00 PM",
+        theme: "100 Cycles, Zero Leaks — Phase 2 Opens with the Float Rubric and a Syringe Test",
+
+        recap:
+          "Five of us at 2.1 — Trenton, Isaac, Tyler, Rhylan, and Rebecca — from 3:00 to 5:00, for the " +
+          "first session of Phase 2. Small table, big agenda. The first piece of the 2027 game is out: " +
+          "MATE has released the preview mission for the float, and the team went through its rubric line " +
+          "by line. The 2027 float has to stay under 60 centimeters tall including its antenna and under " +
+          "18 across. It has to sink to two meters and hold there for thirty seconds, keep going to four " +
+          "meters, then sample water temperature and light every half meter on the way back up and radio " +
+          "the data home. A buoyancy engine — something that moves water in and out to change the " +
+          "float's density — is worth 20 of the 70 points, and touching the bottom costs five. That is a " +
+          "real engineering problem, and now the team knows exactly what it is. Meanwhile the payload " +
+          "track ran the test the manipulator trade study was waiting on: is a syringe hydraulic system " +
+          "tight enough to drive the claw? They filled the syringes with green-dyed water so any leak " +
+          "would show, then cycled them — 20 push-pull cycles in air, 30 with a syringe fully underwater, " +
+          "and 50 with a plunger submerged in glycerin. A hundred cycles, no leaks. The catch they found " +
+          "was air. Bubbles in the line make the system spongy, and the longer the tube between syringes, " +
+          "the harder it is to bleed, which means a hydraulic manipulator will be hard to set up the same " +
+          "way twice. That is an honest result: it backs the leakage score in the trade table and names " +
+          "setup as the real risk. The next test is the one that counts — under the water pressure the " +
+          "manipulator will actually see.",
+
+        byNumbers: [
+          { value: "5",   label: "students — the first session of Phase 2" },
+          { value: "100", label: "push-pull cycles without a leak" },
+          { value: "70",  label: "points in the 2027 float mission" },
+          { value: "20",  label: "of them for using a buoyancy engine" }
+        ],
+
+        decisions: [
+          "The float mission is the season's first known target. The 2027 preview rubric now drives the design: under 60 cm tall, under 18 cm across, a 2.0 m hold for 30 seconds, a profile to 4.0 m, temperature and light every half meter on the way up, and the data radioed home.",
+          "A buoyancy engine is the plan, not an option. It is worth 20 of the 70 points, and a float that changes depth any other way gives half of them away.",
+          "Syringe hydraulics passed the leak test — 100 cycles across air, underwater, and glycerin with no leakage — which backs the leakage score in the manipulator trade table. Trapped air, and how hard it is to bleed out, is now the risk to beat.",
+          "The next hydraulic test happens under real water pressure. A syringe that holds at the surface hasn't been proven at depth yet."
+        ],
+
+        actionItems: [
+          { item: "Build the profiler bill of materials",                     owner: "Management",       due: "by 2.2" },
+          { item: "Go over the profiler rubric again at the next meeting",    owner: "Management",       due: "by 2.2" },
+          { item: "Research a pressure relief valve for the profiler",        owner: "Mechanical group", due: "by 2.2" },
+          { item: "Bring the manipulator actuation trade to the full team for review", owner: "Mechanical group", due: "by 2.2" },
+          { item: "Research light, pressure, and temperature sensors for the profiler", owner: "Sensor group", due: "by 2.2" },
+          { item: "Decide how the profiler talks to the topside",             owner: "Software group",   due: "by 2.2" }
+        ],
+
+        learned: [
+          "Read the rubric before you design anything. Every one of the float's 70 points traces back to a line in the preview mission — the hold, the profile, the nine readings, the packets, the graphs. A feature that can't point to the line it scores is decoration.",
+          "A buoyancy engine changes the float's density by moving water in and out — not by pushing against the water with a propeller. That distinction is worth 20 points.",
+          "Why a sealed tube needs a way to open: a battery that heats up or vents gas can raise the pressure inside a closed housing, and if the inside pushes harder than the outside, the housing has to open on purpose instead of failing on its own. For 2027 MATE accepts an O-ring end cap that can pop off, at least 2.5 cm across, or a commercial relief valve set at 15 psi or less.",
+          "Color the water. Green dye turns a leak test from \"I think it's dry\" into something you can see.",
+          "A test can pass and still find the problem. No leaks in 100 cycles — but the same test showed that trapped air, and long tubes that are hard to purge, are the real enemy of a hydraulic manipulator.",
+          "Test in the conditions you will compete in. Surface results are a start; the manipulator works at depth, so the next leak test has to happen under water pressure."
+        ],
+
+        studentOutcomes: [
+          "Reviewed the 2027 MATE float preview rubric and translated it into design requirements.",
+          "Designed and ran a 100-cycle leak test on a syringe hydraulic system in air, underwater, and in glycerin, using dyed water to make leaks visible.",
+          "Identified trapped air and tube length as the main risks of a hydraulic manipulator, and fed the result back into the actuation trade table.",
+          "Learned why the float's sealed housing needs a pressure-relief mechanism and what MATE accepts for 2027.",
+          "Set up the profiler's research tasks: bill of materials, pressure relief, sensors, and communications."
+        ],
+
+        nextWeek:
+          "The profiler gets a bill of materials, and the rubric gets a second pass with more of the " +
+          "team in the room. Research runs on three fronts — a pressure relief valve, the light, " +
+          "pressure, and temperature sensors, and how the float talks to the topside. The manipulator " +
+          "trade goes to the full team for review, and the next hydraulic test moves under real water " +
+          "pressure.",
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/2.1/meeting-note.pdf"
+      },
+      {
         week:  "1.13",
         date:  "Sunday, September 13, 2026",
         time:  "3:00 – 5:00 PM",
