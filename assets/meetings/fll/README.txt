@@ -139,6 +139,32 @@ MEETING 1.4 — Sunday, September 6, 2026 · "Mission Strategy, and a Guest"
   half minutes. That is the standard match length and is stated as
   general fact, not as something the team measured.
 
+UPDATE 18 OCT 2026 — the Team Notes doc (Drive: FLL Team 70863 >
+  2026-2027 Season > Team Notes) now has entries that were blank when 1.1,
+  1.3 and 1.4 were first written. Applied:
+    1.1  time backfilled (1:30 – 3:00 PM per the notes); "watched the season
+         rollout and game video (seems harder this year)" and "built 6
+         mission models" added to the recap and numbers. Attendance per the
+         notes was seven: Alex, Isaiah, Savannah, Claire, Jenna, Daniel,
+         Samuel. Names stay off the page.
+    1.3  the "Accomplished" line now reads "Kahoot 2nd place, finished the
+         remaining mission models." The recap says the models are done (the
+         Kahoot result is left out — the note doesn't say who placed). The
+         notes also record that Mr. Pysh talked about using AI for research
+         and five local ecosystems; the five are named in the recap by place
+         only. The detailed figures in that research (species counts, survey
+         years) are NOT published — they came from an AI research pass and
+         haven't been checked against the papers. The research itself flags
+         one of its own earlier numbers as wrong, which became a "What we
+         learned" line about checking AI output.
+    1.4  two gallery photos added from Drive > Pics, both EXIF-dated
+         6 Sep 2026: 01-mission-strategy-at-the-table.jpg (IMG_0134, 1:36 PM)
+         and 02-mr-hart-coding-lesson.jpg (IMG_0135, 2:20 PM — slide reads
+         "Coding Common Entities: Main, Variable, If Statement, If/Else
+         Statement"). One "What we learned" line added from that slide. The
+         hero (the empty finished board) was left as Preston chose it, even
+         though the hero rule prefers kids — swap it for 01 if wanted.
+
 MEETING 1.5 — Sunday, September 13, 2026 · "Design for the Board You Have"
   00-hero-three-robot-bases.jpg
     HERO. The team gathered along the competition table with the three
@@ -187,7 +213,26 @@ MEETING 1.5 — Sunday, September 13, 2026 · "Design for the Board You Have"
   plants for a local land trust, gamified in the spirit of a scavenger
   hunt. It is described as the current idea, not a locked decision.
 
-MEETING 1.6 — Saturday, September 26, 2026 · "The I in HIPPO"
+MEETING 1.6 — Sunday, September 20, 2026 · "Clean Water Is a Design Problem"
+  Backfilled 18 Oct 2026. The Team Notes doc has no entry for this date.
+  The entry is written entirely from two photos in Drive > Pics, both EXIF-
+  dated 20 Sep 2026:
+    00-hero-wastewater-talk.jpg  (IMG_0157, 1:38 PM) — the title slide:
+       "Designing Solutions for Cleaner Water — Wastewater Treatment 101 —
+       Justin Shelton, Environmental Engineer."
+    01-key-takeaways.jpg  (IMG_0158, 2:20 PM) — the summary slide, five
+       bullets, quoted closely in the recap and "What we learned."
+  Nothing is claimed beyond what the two slides say. The guest is credited
+  by the name and title on his own title slide. No attendance or time
+  recorded, so neither is published.
+
+  To upgrade this entry: attendance, and anything the builders asked or
+  took away from the talk.
+
+MEETING 1.7 — Saturday, September 26, 2026 · "The I in HIPPO"
+  (Published as 1.6; renumbered to 1.7 on 18 Oct 2026 once the Sept 20
+  meeting surfaced. Assets moved from fll/1.6/ to fll/1.7/. The originals
+  folder keeps its old name, _originals/fll-1.6/.)
   An away session: the FIRST LEGO League building blitz at ASCTE (Alabama
   School of Cyber Technology and Engineering, Huntsville). Talks from three
   ASCTE instructors in the auditorium, then open build time.
@@ -216,7 +261,7 @@ MEETING 1.6 — Saturday, September 26, 2026 · "The I in HIPPO"
     there is no release on file for her. The adult coaching in the photo
     is also unidentified. A web-ready copy is waiting at
     _originals/fll-1.6/HELD-programming-with-a-coach.jpg. If she turns out
-    to be a Say Watt builder with a release, move it into fll/1.6/ as
+    to be a Say Watt builder with a release, move it into fll/1.7/ as
     04-programming-with-a-coach.jpg and add one line to `photos`.
 
   SPEAKERS — verified against the ASCTE staff directory
@@ -258,14 +303,44 @@ MEETING 1.6 — Saturday, September 26, 2026 · "The I in HIPPO"
   Attendance was three: Claire, Savannah, and "Alec" — probably Alex from
   earlier rosters. Names do not appear in the entry, per the house rule.
 
-  No FLL meeting was recorded for Sunday, September 20. If one happened,
-  this entry's number should move and a 1.6 should be backfilled.
+  No FLL meeting was recorded for Sunday, September 20 — but one did happen
+  (see 1.6), so this entry moved to 1.7.
+
+MEETING 1.8 — Saturday–Sunday, October 3–4, 2026 · "Out on the Trail"
+  Written 18 Oct 2026 from four photos in Drive > Pics. No Team Notes
+  entry exists for either day.
+    00-hero-on-the-trail.jpg       (IMG_2954, Sat 3 Oct, 10:55 AM)
+    01-land-trust-talk.jpg         (IMG_2950, Sat 3 Oct,  9:16 AM)
+    02-seek-app-on-the-trail.jpg   (IMG_2952, Sat 3 Oct, 10:49 AM)
+    03-programming-at-the-table.jpg (IMG_2966, Sun 4 Oct, 2:36 PM)
+
+  DATES — Preston confirmed "Oct 4" for the land trust visit; the camera
+  puts the talk and the trail walk on Saturday morning, Oct 3, and the
+  robot photo on Sunday, Oct 4. The entry covers both days as one weekend.
+
+  CREDIT — Kate Gribbin, Land Trust of North Alabama, named with
+  Preston's OK. Spelling checked against her LinkedIn profile and the
+  landtrustnal.org domain. The trail itself is not named.
+
+  APP — the phone screen in IMG_2952 shows "Species Nearby" and "Seek
+  updates" on a green UI: Seek by iNaturalist. The entry says she showed
+  the team the app; it does not claim what she said about it.
+
+  The recap ties the visit to the team's own project (an app that helps
+  kids spot invasive plants and report them to the land trust, from 1.5).
+  That tie is the writer's, not a recorded team conclusion.
+
+  To upgrade: attendance, which trail, and anything Kate told the team about
+  how the land trust finds and removes invasives today.
+
+PENDING — no entries yet for Sun 11 Oct and Sun 18 Oct. The Team Notes doc
+  is blank for both; Preston has asked the team lead to fill them in. Re-
+  crawl Drive when they're done.
 
 FIELD NOTE ON `time`
-  Entries 1.1, 1.5 and 1.6 have no `time` field. Entries 1.2, 1.3 and 1.4 include one
-  (1:30 – 2:30 PM) because the source notes recorded it and the renderer
-  displays it beside the date. Worth backfilling 1.1 if anyone remembers
-  the hour.
+  Entries 1.5 through 1.8 have no `time` field — none was recorded (1.7's
+  notes gave one the photos contradicted). 1.1 is 1:30 – 3:00 PM; 1.2, 1.3
+  and 1.4 are 1:30 – 2:30 PM, all from the Team Notes doc.
 
 PDFs
   Still none for FLL, per the house rule above. The ROV team's printable
@@ -288,7 +363,7 @@ HOUSE RULES FOR FLL ENTRIES
     that ever changes.
 
 CONSENT
-  Entries 1.1, 1.4, 1.5 and 1.6 are published with photoConsentPending: false — hero and
+  Entries 1.1 and 1.4 through 1.8 are published with photoConsentPending: false — hero and
   gallery live. If a release is ever pulled, flip that flag to true in
   content.js and the renderer hides the hero and the gallery on its own
   and shows a short placeholder instead. Adults appear in the hero; the

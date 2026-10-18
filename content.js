@@ -2944,12 +2944,63 @@ window.SITE = {
        hero and gallery for any entry whose releases are not yet on file. */
     meetingNotes: [
       {
-        week:  "1.6",
+        week:  "1.8",
+        date:  "Saturday–Sunday, October 3–4, 2026",
+        theme: "Out on the Trail — A Morning with the Land Trust of North Alabama, Then Back to the Robot",
+
+        heroPhoto: {
+          src:     "assets/meetings/fll/1.8/00-hero-on-the-trail.jpg",
+          alt:     "Two Say Watt Robotics FLL builders on a wooded trail with Kate Gribbin of the Land Trust of North Alabama, who is holding a phone with a plant-identification app open.",
+          caption: "On the trail with Kate Gribbin of the Land Trust of North Alabama — the people the team's Innovation Project is meant to help.",
+          requiresConsent: false
+        },
+
+        recap:
+          "A two-part weekend. On Saturday morning the team got exactly what it had been asking for " +
+          "since the Innovation Project took shape: time with the people who actually manage the land. " +
+          "Kate Gribbin of the Land Trust of North Alabama sat down with the builders — and a few " +
+          "parents — in a living room first, then took everyone outside onto a trail. Out there the " +
+          "conversation got concrete. She pulled out her phone and showed the team Seek by iNaturalist, " +
+          "an app that identifies plants and animals through the camera, so you can stand in front of " +
+          "something growing beside the trail and find out what it is. For a team whose project idea is " +
+          "an app that helps kids spot invasive plants on a trail and tell the land trust where they " +
+          "are, that was a field demonstration of the first half of their own idea, run by the person " +
+          "the idea is meant to help. On Sunday it was back to the home table and the robot, with a " +
+          "laptop open on the game mat, coaches leaning in, and code going in.",
+
+        byNumbers: [
+          { value: "8th", label: "meeting of the BIOGLOW season" },
+          { value: "1",   label: "land trust in the room — the people the project is for" },
+          { value: "1",   label: "plant-ID app tried on the trail" },
+          { value: "2",   label: "days — a trail on Saturday, the robot on Sunday" }
+        ],
+
+        learned: [
+          "Talk to the people you are designing for. The Innovation Project is meant to help a land trust find invasive plants on its trails, so the best research the team can do is ask someone from the land trust what that problem looks like from the inside.",
+          "Part of the idea already exists, and that is good news. Seek by iNaturalist can already name a plant from a phone camera. The team doesn't have to build that part — which sharpens the real question: what does their app add? Getting what kids find back to the people who manage the land.",
+          "Get outside. A trail, and a person whose job is to take care of it, teach things a screen can't — what the problem actually looks like where it happens.",
+          "Both halves of the season keep moving. Saturday belonged to the Innovation Project; Sunday belonged to the robot."
+        ],
+
+        nextWeek:
+          "The team takes what it saw on the trail back to the project — what the land trust needs to " +
+          "know, and what an app would have to do to tell them — while the robot keeps getting code.",
+
+        photos: [
+          { src: "assets/meetings/fll/1.8/01-land-trust-talk.jpg", caption: "Kate Gribbin of the Land Trust of North Alabama talking with the team, and a few parents, before everyone headed outside." },
+          { src: "assets/meetings/fll/1.8/02-seek-app-on-the-trail.jpg", caption: "Seek by iNaturalist open on her phone: point the camera at something growing beside the trail, and the app tells you what it is." },
+          { src: "assets/meetings/fll/1.8/03-programming-at-the-table.jpg", caption: "Sunday, back at the home table: laptop on the mat, coaches looking over shoulders, code going into the robot." }
+        ],
+
+        photoConsentPending: false
+      },
+      {
+        week:  "1.7",
         date:  "Saturday, September 26, 2026",
         theme: "The I in HIPPO — Biodiversity Threats, Three Teachers, and a Building Blitz at ASCTE",
 
         heroPhoto: {
-          src:     "assets/meetings/fll/1.6/00-hero-build-blitz-ascte.jpg",
+          src:     "assets/meetings/fll/1.7/00-hero-build-blitz-ascte.jpg",
           alt:     "Two Say Watt Robotics FLL builders standing in the ASCTE auditorium in front of two projection screens that read BUILD!!!!",
           caption: "Two of our builders in the ASCTE auditorium, right as the talks ended and the screens switched to the only instruction that mattered for the rest of the afternoon.",
           requiresConsent: false
@@ -2981,7 +3032,7 @@ window.SITE = {
           "HIPPO. The team's project is already standing on one of the five.",
 
         byNumbers: [
-          { value: "6th", label: "meeting of the BIOGLOW season" },
+          { value: "7th", label: "meeting of the BIOGLOW season" },
           { value: "3",   label: "ASCTE instructors on the science behind the theme" },
           { value: "5",   label: "threats to biodiversity — H, I, P, P, O" },
           { value: "1",   label: "margin note that tied it all back to our project" }
@@ -3004,9 +3055,61 @@ window.SITE = {
           "biodiversity loss, and the app is aimed right at it.",
 
         photos: [
-          { src: "assets/meetings/fll/1.6/01-hippo-notes.jpg", caption: "Our builders' notes from the talks — HIPPO spelled out letter by letter, the ovenbird, the ripple effect, and, in the margin, the first sketch of how the team's trail app could report back to the land trust." },
-          { src: "assets/meetings/fll/1.6/02-sorting-parts-at-ascte.jpg", caption: "Build time. Parts sorted into trays, the kit bin open, and a little help from someone in an ASCTE Sentinels jacket." },
-          { src: "assets/meetings/fll/1.6/03-drive-base-coming-together.jpg", caption: "A drive base coming together on the table — hub mounted, wheels on, and the kit bin within reach for whatever it needs next." }
+          { src: "assets/meetings/fll/1.7/01-hippo-notes.jpg", caption: "Our builders' notes from the talks — HIPPO spelled out letter by letter, the ovenbird, the ripple effect, and, in the margin, the first sketch of how the team's trail app could report back to the land trust." },
+          { src: "assets/meetings/fll/1.7/02-sorting-parts-at-ascte.jpg", caption: "Build time. Parts sorted into trays, the kit bin open, and a little help from someone in an ASCTE Sentinels jacket." },
+          { src: "assets/meetings/fll/1.7/03-drive-base-coming-together.jpg", caption: "A drive base coming together on the table — hub mounted, wheels on, and the kit bin within reach for whatever it needs next." }
+        ],
+
+        photoConsentPending: false
+      },
+      {
+        week:  "1.6",
+        date:  "Sunday, September 20, 2026",
+        theme: "Clean Water Is a Design Problem — Wastewater Treatment 101 with an Environmental Engineer",
+
+        heroPhoto: {
+          src:     "assets/meetings/fll/1.6/00-hero-wastewater-talk.jpg",
+          alt:     "Justin Shelton, an environmental engineer, presenting a slide titled Designing Solutions for Cleaner Water to Say Watt Robotics FLL builders seated on couches in a living room.",
+          caption: "Justin Shelton, an environmental engineer, opening with the question the whole talk answered: how do you design a solution for cleaner water?",
+          requiresConsent: false
+        },
+
+        recap:
+          "No notes were written for this one, but the slides were photographed, and they tell the " +
+          "story. Our guest was Justin Shelton, an environmental engineer, and his talk was called " +
+          "Designing Solutions for Cleaner Water — Wastewater Treatment 101. Water that goes down a " +
+          "drain has to be cleaned before it goes back into rivers and lakes, and wastewater treatment " +
+          "is how that happens. His takeaways, straight off the last slide: filtration cleans used " +
+          "water so it is safe to return to the water cycle. It works in several steps, each one " +
+          "removing something different — solids, germs, and pollutants. How well it works depends on " +
+          "what is in the water and a lot of other factors. It costs real money, and the benefits to " +
+          "health and the environment are huge. And the last one is aimed straight at a team like " +
+          "ours: good project management and simple prototypes are how you design better filters. " +
+          "That one lands close to home. Back at 1.2, one of our builders proposed building a filter " +
+          "to clean water before it reaches Alabama's waterways. This was a working engineer showing " +
+          "the team how the professionals actually do it.",
+
+        byNumbers: [
+          { value: "6th", label: "meeting of the BIOGLOW season" },
+          { value: "1",   label: "guest environmental engineer" },
+          { value: "5",   label: "takeaways on cleaner water" },
+          { value: "3",   label: "things filtration removes — solids, germs, and pollutants" }
+        ],
+
+        learned: [
+          "Wastewater treatment cleans used water so it is safe to go back into the water cycle. Nothing that goes down a drain just disappears — it goes somewhere, and somebody has to clean it.",
+          "Cleaning water happens in steps. Each stage takes out something different — solids, germs, pollutants — and no single filter does it all.",
+          "What is in the water changes how well the filter works. A design that does fine on one kind of water can struggle on another, which is why engineers test against the real thing.",
+          "Clean water costs money, and it is worth it. Engineers weigh what a solution costs against what it protects — here, people's health and the environment.",
+          "Good project management and simple prototypes make better filters. Build something small, test it, learn, and build it again — the same way the robot gets better."
+        ],
+
+        nextWeek:
+          "Saturday, September 26: the FIRST LEGO League building blitz at ASCTE, with talks on " +
+          "biodiversity and an afternoon of build time.",
+
+        photos: [
+          { src: "assets/meetings/fll/1.6/01-key-takeaways.jpg", caption: "The last slide: five takeaways on cleaner water, ending with the one aimed straight at a team like ours — good project management and simple prototypes design better filters." }
         ],
 
         photoConsentPending: false
@@ -3115,13 +3218,19 @@ window.SITE = {
           "You cannot plan a run until you can see the whole board. That is why building every mission model by hand was worth the hours — the missions are objects on a table now, not pictures in a rulebook.",
           "Strategy comes before programming. Deciding which missions the robot goes after, and in what order, is what tells you what the robot has to be able to do. Build the plan first and the robot second.",
           "You do not have to attempt everything. A match is two and a half minutes, which is not much time at all, so choosing what to skip is part of the plan and not a failure of it.",
-          "Ask somebody who does it for a living. A software engineer came in and taught the lesson this week — the same instinct one of our builders had back at 1.2, when the answer to a hard problem was to go find an expert and ask."
+          "Ask somebody who does it for a living. A software engineer came in and taught the lesson this week — the same instinct one of our builders had back at 1.2, when the answer to a hard problem was to go find an expert and ask.",
+          "Every program is built from a few pieces: a main routine where it starts, variables that hold values, and decisions — if this, do that; if not, do something else. The robot's code is made of exactly the same parts."
         ],
 
         nextWeek:
           "The robot base build starts Monday for whoever can make it. Homework in the meantime is to " +
           "look into different robot designs — because before you build the right base, it helps to know " +
           "what other people have built, and why they built it that way.",
+
+        photos: [
+          { src: "assets/meetings/fll/1.4/01-mission-strategy-at-the-table.jpg", caption: "First go at mission strategy: the team around the finished table, working out which missions are worth the trip." },
+          { src: "assets/meetings/fll/1.4/02-mr-hart-coding-lesson.jpg", caption: "Mr. Hart's software lesson. The slide covers the building blocks of every program — a main routine, variables, if statements, and if/else." }
+        ],
 
         photoConsentPending: false
       },
@@ -3133,35 +3242,43 @@ window.SITE = {
 
         recap:
           "A smaller table this week — four builders for the hour. Two things on the plan and " +
-          "both of them got done. First, we kept working through the mission model builds, the " +
-          "little LEGO structures that go on the game table and give the robot something to " +
-          "actually do. Every one of them has to be built right, because a model that falls " +
-          "apart on the table costs points the robot already earned. Then we spent time on " +
+          "both of them got done. First, we finished the mission model builds, the little LEGO " +
+          "structures that go on the game table and give the robot something to actually do. " +
+          "Every one of them has to be built right, because a model that falls apart on the " +
+          "table costs points the robot already earned, and now every one of them is on the " +
+          "table. Then we spent time on " +
           "something that sounds simple and isn't: how to define a problem well enough to " +
           "solve it. Last week the team came in with seven ideas. Every one of them is a real " +
           "problem, and not one of them is small enough yet to build a project around. That is " +
           "the work now — taking something big and true and cutting it down to something a " +
-          "team of kids can actually do something about. We closed the hour with a Kahoot on " +
-          "biodiversity, which is the second one this season and nobody has complained yet.",
+          "team of kids can actually do something about. To help with that, Mr. Pysh walked the " +
+          "team through using AI as a research tool and five local ecosystems worth a closer " +
+          "look: the karst caves and groundwater under Madison and Jackson counties, the Paint " +
+          "Rock River, the creeks running through Huntsville's growth, the dammed Tennessee " +
+          "River, and the limestone glades and prairie remnants of the Tennessee Valley. We " +
+          "closed the hour with a Kahoot on biodiversity, which is the second one this season " +
+          "and nobody has complained yet.",
 
         byNumbers: [
           { value: "3rd", label: "meeting of the BIOGLOW season" },
           { value: "4",   label: "builders at the table" },
-          { value: "2nd", label: "biodiversity Kahoot of the season" }
+          { value: "0",   label: "mission models left to build" },
+          { value: "5",   label: "local ecosystems worth a closer look" }
         ],
 
         learned: [
           "A problem you cannot say in one sentence is a problem you cannot solve yet. If it takes a paragraph, it is still too big.",
           "\"Pollution is bad\" is not a problem statement. Who it hurts, what causes it, and where it happens are what turn a topic into a problem — and a problem is the thing you can build against.",
           "Narrow beats broad. A small problem you can actually fix makes a better project than a huge one you can only talk about.",
-          "The mission models are how you learn the game. Building them by hand is the fastest way to understand what the robot is going to be asked to do on the table."
+          "The mission models are how you learn the game. Building them by hand is the fastest way to understand what the robot is going to be asked to do on the table.",
+          "AI is a fast way to find leads and a bad place to stop. The research the team looked at even corrected one of its own earlier numbers — which is exactly why every figure gets checked against the study it came from."
         ],
 
         nextWeek:
           "The seven ideas from last week get narrowed down. The team picks the problem it is " +
           "going to carry into the Innovation Project — the one we research properly, design a " +
-          "solution for, and eventually present to judges. Mission model builds continue " +
-          "alongside it.",
+          "solution for, and eventually present to judges. With every mission model built, the " +
+          "table is ready for the robot.",
 
         photoConsentPending: false
       },
@@ -3218,6 +3335,7 @@ window.SITE = {
       {
         week:  "1.1",
         date:  "Sunday, August 16, 2026",
+        time:  "1:30 – 3:00 PM",
         theme: "Kickoff — The Boxes Come Open",
 
         heroPhoto: {
@@ -3238,13 +3356,16 @@ window.SITE = {
           "at their own pace on their own screen, which is exactly how it should work — no " +
           "waiting on the group, nobody left behind. By the end of the afternoon there were real " +
           "builds on the table, including a drive base with the hub mounted and motors on. " +
-          "That is a good first day: boxes open, screens on, and something that looks like a " +
-          "robot before anyone went home.",
+          "We also watched the season rollout and the robot game video together — the verdict " +
+          "was that this year looks harder — and got six of the mission models built. That is a " +
+          "good first day: boxes open, screens on, and something that looks like a robot before " +
+          "anyone went home.",
 
         byNumbers: [
           { value: "1st", label: "meeting of the BIOGLOW season" },
           { value: "4",   label: "build stations running at once" },
-          { value: "1",   label: "drive base built — hub mounted, motors on" }
+          { value: "1",   label: "drive base built — hub mounted, motors on" },
+          { value: "6",   label: "mission models built on day one" }
         ],
 
         learned: [
