@@ -38,3 +38,11 @@ PHOTOS
   None submitted for this session. The Drive folder "2026-2027 season > Pics"
   (last modified Oct 3) may have shots from the early Phase 2 sessions; vet
   them for releases before adding any here.
+
+UPDATE 1 NOV 2026
+  TRADE TABLE — the season notes embed the "manipulator gripper trade"
+  table under "Revised scoring (team input needed)." Totals:
+    linear actuator only 29 · all hydraulic 29 · combo 19
+  The entry now says the two leaders were tied. (They separated at 2.4.)
+  The 2.2 notes also embed three gripper CAD renders; they look like
+  reference images rather than team models and are not published.

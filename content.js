@@ -909,6 +909,130 @@ window.SITE = {
        entry until every kid in the photos has a release form on file. */
     meetingNotes: [
       {
+        week:  "2.7",
+        date:  "Sunday, November 1, 2026",
+        time:  "3:00 – 5:00 PM",
+        theme: "The Schedule Ships, the Float Gets a Flowchart — and a Short Circuit Teaches Us Why Fuses Matter",
+
+        recap:
+          "Eleven of us at 2.7 — Trenton, Isaac, Annabelle, Tyler, Luke, Liam, Rebecca, Oliver, Eli, " +
+          "Frankie, and Rhylan — from 3:00 to 5:00. The headline is a document, and it is a big one. The " +
+          "integrated master schedule — the one calendar that shows what every sub-team owes and when — " +
+          "is finished and uploaded to the team's Google Drive. It first went on the action list at 1.9, " +
+          "back on August 16. Eleven weeks is a long time for one document, and a schedule that is nearly " +
+          "done schedules nothing; now this one is done, just ahead of the full 2027 manual. The rest of " +
+          "the room was busy. Software drew the profiler's brain: a flowchart that walks the float through " +
+          "five steps — start up, descend, hold and log, surface, transmit — with three jobs underneath " +
+          "it: depth control, data collection, and getting the data back to the surface. We also learned " +
+          "PID control, the feedback loop that will hold the float at depth. Mechanical worked on the " +
+          "manipulator's wrist gearing and housing, kept building the full profiler assembly, and modeled " +
+          "stand-offs for the buoyancy engine. The O-ring test bed came off the printer and still doesn't " +
+          "seal, so it goes back to research. And electrical learned a lesson the hard way: the battery's " +
+          "positive and negative leads touched, and we think the short burned out the stepper motor " +
+          "driver. Two new drivers are on order, and protecting connections and fusing them properly is " +
+          "now written into our notes. Marketing is still looking for a new lead.",
+
+        byNumbers: [
+          { value: "11", label: "students at the session" },
+          { value: "11", label: "weeks from first assignment to a finished schedule" },
+          { value: "5",  label: "steps in the profiler's mission flowchart" },
+          { value: "2",  label: "replacement stepper drivers on order" }
+        ],
+
+        decisions: [
+          "The integrated master schedule is finished and lives on the team's Google Drive, where every sub-team can plan against it.",
+          "The profiler's software is organized as a state machine — start up, descend, hold and log, surface, transmit — with depth control, data collection, and communications as separate branches.",
+          "Depth will be held with a PID loop: the depth sensor reports, the controller decides, and the stepper-driven syringe moves.",
+          "Two replacement stepper motor drivers were ordered after a battery short took one out.",
+          "Schematic consistency gets settled before the board is laid out: whether symbols should share a size and shape is now an action item, not an afterthought."
+        ],
+
+        actionItems: [
+          { item: "Finish the profiler's full assembly and master sketch",                                                    owner: "Mechanical group", due: "by 2.8" },
+          { item: "Fix the O-ring end cap",                                                                                   owner: "Mechanical group", due: "by 2.8" },
+          { item: "Research stand-offs for the buoyancy engine",                                                              owner: "Mechanical group", due: "by 2.8" },
+          { item: "Decide whether schematic symbols need a consistent size and shape — and how to make them match in KiCad", owner: "Electrical group", due: "by 2.8" },
+          { item: "Keep building the profiler PCB",                                                                           owner: "Electrical group", due: "by 2.8" },
+          { item: "Name an owner for each piece of the profiler code: the depth control loop, sensor data collection, and the comms path", owner: "Software group", due: "by 2.8" }
+        ],
+
+        learned: [
+          "Finished is a feature. A schedule that is ninety percent done for eleven weeks schedules nothing; once it is on the shared drive, every sub-team can plan against it.",
+          "A flowchart turns one big program into jobs people can own. Once the profiler's logic was drawn as depth control, data collection, and comms, the next step was obvious: give each branch a developer.",
+          "PID control is how you hold still in moving water. The controller looks at how far the float is from its target depth, how long it has been off, and how fast that error is changing — then nudges the syringe to close the gap without overshooting.",
+          "Shorts are fast, and fuses are faster. When the battery leads touched, the stepper driver paid for it. A fuse in the right place opens before parts cook — which is why the 2027 float rules require one within 5 cm of the battery's positive terminal.",
+          "A test bed that fails is doing its job. The O-ring test bed still doesn't seal, and finding that on the bench beats finding it four meters down.",
+          "The schematic comes before the board, and consistency is how a drawing gets read. If the same kind of part always looks the same, a judge — or a teammate at 9 p.m. the night before competition — can read the schematic at a glance."
+        ],
+
+        studentOutcomes: [
+          "Finished the integrated master schedule and published it to the team's Google Drive.",
+          "Drew the profiler's software logic as a state-machine flowchart and learned the principles of PID depth control.",
+          "Modeled the manipulator's wrist gearing and housing in CAD.",
+          "Continued the profiler's full assembly and modeled stand-offs for the buoyancy engine.",
+          "Printed an O-ring test bed and found that the seal needs more work.",
+          "Worked on the profiler's electrical schematic in KiCad and traced a burned-out stepper driver to a battery short."
+        ],
+
+        nextWeek:
+          "Split the profiler code into owned pieces — depth loop, sensor data, comms — and start writing " +
+          "them against the flowchart. Mechanical finishes the full assembly and goes back at the O-ring " +
+          "seal; electrical settles the schematic symbol question, keeps building the board, and gets the " +
+          "new stepper drivers in when they arrive. The full 2027 MATE competition manual is expected this " +
+          "month; when it lands, the new schedule gets checked against the real deadlines.",
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/2.7/meeting-note.pdf"
+      },
+      {
+        week:  "2.6",
+        date:  "Sunday, October 25, 2026",
+        time:  "3:00 – 5:00 PM",
+        theme: "Does It Fit? — End Cap Seals and the Whole Profiler in CAD",
+
+        recap:
+          "Five of us at 2.6 — Trenton, Isaac, Rebecca, Adrian, and Frankie — from 3:00 to 5:00. A small " +
+          "table and a focused one. Mechanical worked on the fit of the end cap seals in CAD, picking up " +
+          "where 2.5 left off: last week the team calculated the depth of the O-ring groove, and this week " +
+          "they worked out how the cap, the ring, and the tube actually come together. They also started " +
+          "putting the whole profiler together as one CAD assembly — hull, end caps, and buoyancy engine " +
+          "in the same model — which is where parts that look perfect on their own find out whether they " +
+          "collide with their neighbors. Electrical kept moving in KiCad on the circuit board that will " +
+          "run the float.",
+
+        byNumbers: [
+          { value: "5", label: "students at the session" },
+          { value: "1", label: "full profiler assembly started in CAD" },
+          { value: "2", label: "tracks moving — mechanical CAD and KiCad" }
+        ],
+
+        decisions: [
+          "The profiler is being modeled as a full assembly, not as a pile of separate parts.",
+          "End cap seal fitment gets settled in CAD before the next print."
+        ],
+
+        learned: [
+          "Model the assembly, not just the parts. A part can look perfect alone and still collide with its neighbor; the full assembly is where interference shows up before anything gets printed.",
+          "A seal is a fit, not a part. An O-ring only works when the groove, the ring, and the surface it presses against all line up, and CAD is the cheapest place to check that.",
+          "A small table still moves the work. Five people kept both the mechanical model and the circuit board going."
+        ],
+
+        studentOutcomes: [
+          "Worked out end cap seal fitment in CAD.",
+          "Started a full CAD assembly of the profiler.",
+          "Continued the profiler's circuit board in KiCad."
+        ],
+
+        nextWeek:
+          "Bring the buoyancy engine into the full assembly, keep the KiCad board moving, and get the " +
+          "end cap ready to print.",
+
+        photoConsentPending: false,
+
+        pdfUrl: "assets/meetings/2.6/meeting-note.pdf"
+      },
+      {
         week:  "2.5",
         date:  "Sunday, October 18, 2026",
         time:  "3:00 – 5:00 PM",
@@ -922,61 +1046,73 @@ window.SITE = {
         },
 
         recap:
-          "Attendance wasn't recorded this week, but the photos tell the story: the buoyancy engine — " +
-          "the part of the float worth 20 of its 70 points — is starting to look like a machine. On the " +
-          "kitchen island, the electrical work moved from paper to a breadboard. An ESP32 is now wired " +
-          "to a TMC2209, a quiet stepper motor driver that turns pulses from the microcontroller into " +
-          "precise steps of a motor. A stepper suits this job because steps are countable: count them " +
+          "Eight of us at 2.5 — Trenton, Liam, Luke, Adrian, Tyler, Rebecca, Rhylan, and Sam — from 3:00 " +
+          "to 5:00, and the buoyancy engine — the part of the float worth 20 of its 70 points — started " +
+          "to look like a machine. Electrical finally soldered the 12-volt to 5-volt buck converter, " +
+          "closing the joint that the 18-gauge wire wouldn't fit back at 2.3. Then they reconnected the " +
+          "ESP32 to a TMC2209, a quiet stepper motor driver that turns pulses from the microcontroller " +
+          "into precise steps, reloaded the software, and tested the new stepper motor on a " +
+          "240-millimeter lead screw. A stepper suits this job because steps are countable: count them " +
           "and you know exactly how far the plungers moved and how much water the float has taken on. " +
-          "Next to it sat the float's wiring diagram, drawn by hand — a 12-volt battery through a single " +
-          "fuse, a buck converter stepping down to 5 volts for the ESP32, the motor driver and stepper " +
-          "on the 12-volt side with a 470-microfarad capacitor across the supply, and a micro SD card, a " +
-          "pressure sensor, and a light sensor hanging off the ESP32. On the table, the syringe plate " +
-          "showed its whole iteration history in three pieces: a cardboard cutout, a first 3D print, and " +
-          "a second print with a brass lead-screw nut pressed into the center — the nut that will let a " +
-          "turning screw move the plungers together. In another room, the next float part was coming " +
-          "off the printer. The software track worked on the ESP32's data packets, the format the float " +
-          "will use to report what it measured, and the search for a new marketing lead continued.",
+          "One detail from the notes is worth underlining — last season's electrical schematic is what " +
+          "made rebuilding the controller quick. Next to the bench sat the float's wiring diagram, " +
+          "drawn by hand: a 12-volt battery through a single fuse, the buck converter for the ESP32, the " +
+          "motor driver and stepper on the 12-volt side with a 470-microfarad capacitor across the " +
+          "supply, and a micro SD card, a pressure sensor, and a light sensor hanging off the ESP32. " +
+          "Mechanical finalized the end cap design and did the math for its seal: they calculated the " +
+          "depth of the groove the O-ring sits in and settled on a 25 percent squeeze. They also built a " +
+          "working CAD model of the plunger system, and the syringe plate showed its whole iteration " +
+          "history on the table in three pieces — a cardboard cutout, a first 3D print, and a second print " +
+          "with a brass lead-screw nut pressed into the center. The search for a new marketing lead " +
+          "continued.",
 
         byNumbers: [
-          { value: "3",      label: "generations of the syringe plate — cardboard, print, print with brass nut" },
-          { value: "1",      label: "fuse between the battery and everything else" },
-          { value: "470 µF", label: "capacitor across the motor supply" },
-          { value: "20",     label: "of the float's 70 points riding on the buoyancy engine" }
+          { value: "8",      label: "students at the session" },
+          { value: "25%",    label: "O-ring squeeze the end cap seal is designed for" },
+          { value: "240 mm", label: "lead screw on the new stepper motor" },
+          { value: "3",      label: "generations of the syringe plate — cardboard, print, print with brass nut" }
         ],
 
         decisions: [
-          "The buoyancy engine runs on a stepper motor through a TMC2209 driver. Steps are countable, so the plunger position — and the water the float is carrying — is known, not guessed.",
-          "A lead screw drives the syringes. The second printed plate carries a brass lead-screw nut, so turning the screw moves every plunger together.",
+          "The buoyancy engine runs on a stepper motor through a TMC2209 driver, driving a 240 mm lead screw. Steps are countable, so the plunger position — and the water the float is carrying — is known, not guessed.",
+          "The end cap seals on an O-ring, with the groove depth calculated for 25 percent squeeze.",
+          "The 12 V to 5 V buck converter is soldered, closing an item that had been open since 2.3.",
           "The float's power system is on paper: a 12 V battery through a single fuse, a 5 V buck converter for the ESP32, and the motor driver on the 12 V side with a 470 µF capacitor across it.",
-          "Prototype in the cheapest material that answers the question. Cardboard checks the fit; plastic checks the function; the hardware goes in last."
+          "The controller gets its own circuit board. The next electrical step is a PCB, starting with the ESP32 drawn properly in KiCad."
+        ],
+
+        actionItems: [
+          { item: "Create the profiler's circuit board (PCB)",                          owner: "Electrical group", due: "by 2.6" },
+          { item: "Find the ESP32 KiCad file, or redraw the ESP32 in KiCad",            owner: "Electrical group", due: "by 2.6" }
         ],
 
         learned: [
           "A stepper motor moves in exact steps. Count them and you know how far the plungers traveled, which is how the float knows how much water it is holding without a separate sensor.",
+          "An O-ring seals by being squeezed. The groove it sits in has to be cut to a depth that compresses the ring by a set fraction of its thickness — too little and it leaks, too much and it can't seat. The team designed theirs for 25 percent.",
+          "Last season's paperwork paid off. The old electrical schematic is what made rebuilding the buoyancy controller fast — which is the whole reason you draw schematics in the first place.",
           "A stepper driver wants a big capacitor across its motor supply. Motors throw voltage spikes back into the supply when they start and stop, and the capacitor soaks them up before they reach the driver.",
           "A lead screw multiplies force. A small motor turning a screw can push and pull syringe plungers against the water pressure at four meters, and a fine-pitch screw holds its position when the motor stops.",
-          "Draw the power system before you build it. One page showing every voltage, the fuse, and where the 12 V and 5 V sides meet is also the beginning of the System Integration Diagram the judges will ask for.",
-          "Iterate in the cheapest material first. Cardboard tests the layout for free, the first print tests the shape, and the second print adds the hardware.",
-          "Have the pinout open while you wire. The TMC2209's pin diagram was on the laptop the whole time — that is how you keep 12 volts away from a 3.3-volt pin."
+          "Iterate in the cheapest material first. Cardboard tests the layout for free, the first print tests the shape, and the second print adds the hardware."
         ],
 
         studentOutcomes: [
-          "Wired a TMC2209 stepper motor driver to an ESP32 on a breadboard.",
+          "Soldered the 12 V to 5 V buck converter.",
+          "Reconnected the ESP32 and TMC2209 stepper driver, reloaded the controller software, and tested a new stepper motor on a 240 mm lead screw.",
+          "Calculated the O-ring groove depth for the end cap, designing for 25 percent squeeze.",
+          "Finalized the end cap design and built a working CAD model of the plunger system.",
           "Drew the profiler's power and signal diagram: battery, fuse, buck converter, ESP32, motor driver, stepper motor, SD card, and pressure and light sensors.",
-          "Iterated the syringe plate from cardboard to two 3D-printed versions, the second carrying a brass lead-screw nut.",
-          "Continued CAD and 3D printing of the buoyancy engine and profiler parts.",
-          "Worked on the ESP32 data packet format for the float's reports."
+          "Iterated the syringe plate from cardboard to two 3D-printed versions, the second carrying a brass lead-screw nut."
         ],
 
         nextWeek:
-          "Get the stepper turning the lead screw, then get the lead screw moving syringes. The " +
-          "hand-drawn wiring diagram is the starting point for the float's System Integration Diagram, " +
-          "and the data packets have to carry depth, water temperature, and light with a timestamp — " +
-          "the format MATE scores. The full 2027 competition manual is expected in November; when it " +
-          "lands, every number from the preview mission gets checked against the final rules.",
+          "Start the profiler's circuit board in KiCad, beginning with the ESP32. The hand-drawn wiring " +
+          "diagram is the starting point for the float's System Integration Diagram, and the data " +
+          "packets have to carry depth, water temperature, and light with a timestamp — the format MATE " +
+          "scores. The full 2027 competition manual is expected in November; when it lands, every " +
+          "number from the preview mission gets checked against the final rules.",
 
         photos: [
+          { src: "assets/meetings/2.5/05-buoyancy-engine-on-the-bench.jpg", caption: "The buoyancy engine on the bench: the stepper motor and lead screw running between the printed syringe plates, the syringe tips teed into one line, with the ESP32 and TMC2209 driver wired up beside it." },
           { src: "assets/meetings/2.5/01-tmc2209-pinout-on-the-breadboard.jpg", caption: "The TMC2209 pinout on the laptop, the ESP32 on a screw-terminal breakout, and the driver going into the breadboard. Look it up first, then plug it in." },
           { src: "assets/meetings/2.5/02-syringe-plate-cardboard-to-print.jpg", caption: "Three generations of the syringe plate under a length of PVC: the cardboard mockup, the first print, and the second print with a brass lead-screw nut in the center." },
           { src: "assets/meetings/2.5/03-printing-a-float-part.jpg", caption: "The next float part on the printer — the slicer preview on the monitor, the same disk taking shape on the bed." },
@@ -1005,7 +1141,10 @@ window.SITE = {
           "new model was saved over the original syringe-holder part — a lesson that costs exactly one " +
           "afternoon, once. Electrical set out to lay out a printed circuit board in KiCad and came away " +
           "with the first piece any board needs: the ESP32's pinout, drawn in KiCad. The manipulator " +
-          "trade got its scores updated. Management built the official season budget spreadsheet, logged " +
+          "trade got its scores updated, and the tie broke: linear actuator 32, all-hydraulic 25, the " +
+          "combination 20. The biggest swing was reliability — on prone-to-failure the actuator went " +
+          "from 3 to 5 while hydraulics fell from 4 to 2, which lines up with what the 2.1 leak test " +
+          "found about trapped air. Management built the official season budget spreadsheet, logged " +
           "the newly purchased parts, started tracking refunds, and researched team registration for the " +
           "events in Memphis and on Dauphin Island.",
 
@@ -1013,14 +1152,15 @@ window.SITE = {
           { value: "12",  label: "students at the session" },
           { value: "1",   label: "data path working end to end — SD card to radio to laptop to file" },
           { value: "1st", label: "end cap on the 3D printer" },
-          { value: "2",   label: "event registrations researched — Memphis and Dauphin Island" }
+          { value: "32–25", label: "linear actuator over all-hydraulic in the updated manipulator trade" }
         ],
 
         decisions: [
           "The float stores first and transmits second. Radio doesn't travel through water, so readings go to an SD card underwater and get sent as a text string once the float surfaces.",
           "The receiving end is a laptop running a Python script that catches the serial string and writes it to a text file — the starting point for the graphs MATE scores.",
           "The season has one official budget spreadsheet, with new parts logged as they arrive and refunds tracked in their own section.",
-          "The float's first physical parts are coming off the printer while the buoyancy engine's syringe puller takes shape in CAD."
+          "The float's first physical parts are coming off the printer while the buoyancy engine's syringe puller takes shape in CAD.",
+          "The linear actuator leads the manipulator trade after the scores were updated — 32 to 25 over all-hydraulic, with the combination at 20."
         ],
 
         actionItems: [
@@ -1046,7 +1186,7 @@ window.SITE = {
           "Started 3D printing the profiler's end cap.",
           "Began CAD of the buoyancy engine's syringe puller.",
           "Drew an ESP32 pinout in KiCad as groundwork for a custom circuit board.",
-          "Updated the scores in the manipulator actuation trade study.",
+          "Updated the manipulator actuation trade study; the linear actuator now leads 32 to 25.",
           "Built the official season budget spreadsheet, logged new parts, and set up refund tracking.",
           "Researched team registration for the Memphis and Dauphin Island events."
         ],
@@ -1066,6 +1206,13 @@ window.SITE = {
         time:  "3:00 – 5:00 PM",
         theme: "Two ESP32s Start Talking — A First Radio Link, a First Sensor, and a Wire That Wouldn't Fit",
 
+        heroPhoto: {
+          src:     "assets/meetings/2.3/00-hero-cardboard-prototyping.jpg",
+          alt:     "Two Say Watt Robotics ROV team members at a kitchen counter cutting cardboard mockups of the profiler's syringe plates, with a syringe on the cardboard.",
+          caption: "Prototyping the cheapest way there is: cutting syringe-plate mockups out of a shipping box, with a real syringe on hand to check the fit.",
+          requiresConsent: false
+        },
+
         recap:
           "Nine of us at 2.3 — Rhylan, Tyler, Trenton, Sam, Frankie, Luke, Oliver, Eli, and Maddox — " +
           "from 3:00 to 5:00. The profiler went from a list to parts on the table. Management turned the " +
@@ -1077,7 +1224,8 @@ window.SITE = {
           "height adds water pushed aside and adds pipe weight, and the difference between the two is " +
           "how much lift each centimeter buys. They also measured four- and five-inch circles to see how " +
           "many syringes each diameter could hold, and prototyping started the cheapest way there is — " +
-          "with cardboard. Electrical soldered the power rail box and finished the 12-volt terminal " +
+          "with cardboard, while a coach walked everyone through the profiler model on the big screen. " +
+          "Electrical soldered the power rail box and finished the 12-volt terminal " +
           "block, then ran into the wall every electrical team hits eventually: the 18-gauge wire would " +
           "not fit through the holes on the buck converter that steps 12 volts down to 5, so that joint " +
           "waits for next week. The payload track went back over the manipulator trade-offs. And the " +
@@ -1129,6 +1277,14 @@ window.SITE = {
           "hold its data until it surfaces, electrical goes back to the buck converter with a wire that " +
           "fits, and the search for a new marketing lead continues.",
 
+        photos: [
+          { src: "assets/meetings/2.3/01-cad-walkthrough-on-the-big-screen.jpg", caption: "A coach walking the team through the profiler model in CAD on the TV." },
+          { src: "assets/meetings/2.3/02-parts-list-on-the-laptop.jpg", caption: "The bill of materials becoming a parts list — the management track's job this week." },
+          { src: "assets/meetings/2.3/03-esp32-and-sensors.jpg", caption: "The software and sensor bench: ESP32 boards and sensor modules laid out next to the laptop." },
+          { src: "assets/meetings/2.3/04-soldering-the-power-rail.jpg", caption: "At the soldering station, working on the profiler's power wiring." },
+          { src: "assets/meetings/2.3/05-12v-terminal-block.jpg", caption: "The finished 12-volt terminal block, with power fanned out to the profiler's connections." }
+        ],
+
         photoConsentPending: false,
 
         pdfUrl: "assets/meetings/2.3/meeting-note.pdf"
@@ -1138,6 +1294,13 @@ window.SITE = {
         date:  "Sunday, September 27, 2026",
         time:  "3:00 – 5:00 PM",
         theme: "The List Before the Parts — A Bill of Materials, and a Sizing Pass That Said Go Smaller",
+
+        heroPhoto: {
+          src:     "assets/meetings/2.2/00-hero-living-room-session.jpg",
+          alt:     "Say Watt Robotics ROV team members gathered on couches in a living room during a working session, with a laptop presentation on the TV.",
+          caption: "The living room at 2.2 — the session where the profiler stopped being a rubric and started being a list.",
+          requiresConsent: false
+        },
 
         recap:
           "Eleven of us at 2.2 — Trenton, Rhylan, Oliver, Eli, Annabelle, Liam, Maddox, Rebecca, Tyler, " +
@@ -1217,7 +1380,9 @@ window.SITE = {
           "was air. Bubbles in the line make the system spongy, and the longer the tube between syringes, " +
           "the harder it is to bleed, which means a hydraulic manipulator will be hard to set up the same " +
           "way twice. That is an honest result: it backs the leakage score in the trade table and names " +
-          "setup as the real risk. The next test is the one that counts — under the water pressure the " +
+          "setup as the real risk. On the revised trade table the two leading designs came out dead " +
+          "even — linear actuator 29, all-hydraulic 29, the combination 19. The next test is the one " +
+          "that counts — under the water pressure the " +
           "manipulator will actually see.",
 
         byNumbers: [
@@ -1230,7 +1395,7 @@ window.SITE = {
         decisions: [
           "The float mission is the season's first known target. The 2027 preview rubric now drives the design: under 60 cm tall, under 18 cm across, a 2.0 m hold for 30 seconds, a profile to 4.0 m, temperature and light every half meter on the way up, and the data radioed home.",
           "A buoyancy engine is the plan, not an option. It is worth 20 of the 70 points, and a float that changes depth any other way gives half of them away.",
-          "Syringe hydraulics passed the leak test — 100 cycles across air, underwater, and glycerin with no leakage — which backs the leakage score in the manipulator trade table. Trapped air, and how hard it is to bleed out, is now the risk to beat.",
+          "Syringe hydraulics passed the leak test — 100 cycles across air, underwater, and glycerin with no leakage — which backs the leakage score in the manipulator trade table. Trapped air, and how hard it is to bleed out, is now the risk to beat. On the revised table, linear actuator and all-hydraulic sit tied at 29.",
           "The next hydraulic test happens under real water pressure. A syringe that holds at the surface hasn't been proven at depth yet."
         ],
 
@@ -1305,8 +1470,8 @@ window.SITE = {
           "sensor track closed its recommendation and handed it to the CFO as a proposal he can act on " +
           "— a pressure sensor, an inertial measurement unit, and a camera. Management built a " +
           "prototype budget prioritization so the money goes to whatever has to be proven first, and " +
-          "finalized the integrated master schedule, which closes an item that had been carrying since " +
-          "1.11. Electrical kept the schematic moving in KiCad. And marketing has the STEAM night slide " +
+          "pushed the integrated master schedule toward final. Electrical kept the schematic moving in " +
+          "KiCad. And marketing has the STEAM night slide " +
           "show for Rainbow Elementary essentially done, with fresh photos in it.",
 
         byNumbers: [
@@ -1320,7 +1485,7 @@ window.SITE = {
           "The sensor recommendation is closed and goes to the CFO as a proposal, not a wish: a pressure sensor, an inertial measurement unit, and a camera. It carries the head-to-head comparison work from 1.11 and 1.12 behind it, which is what makes it a proposal somebody can sign.",
           "The manipulator gets decided by demonstration. The linear-actuator hand gripper is prototyped and has code driving it; the hydraulic concept gets built next, and both get shown side by side before the trade is written down.",
           "Prototype money gets prioritized before anything is ordered. Management built a ranked list of what has to be proven first, so the budget buys certainty in the order the team needs it.",
-          "The integrated master schedule is finalized. That item first appeared at 1.11 and carried through 1.12 — it is closed.",
+          "The integrated master schedule stays a management priority and moved toward final this session. (It was finished and published at 2.7, on November 1.)",
           "The company name is a scheduled decision, not an open one. Two candidates, a September 30 deadline, and the reasoning for why the name matters now on the record."
         ],
 
@@ -1352,14 +1517,14 @@ window.SITE = {
           "Wrote the control program that drives the manipulator prototype.",
           "Continued the TriggerFish control-box schematic in KiCad.",
           "Built a prototype budget prioritization — deciding which components get proven first, and with what money.",
-          "Finalized the integrated master schedule, closing an action item that had carried for two sessions.",
+          "Worked the integrated master schedule toward final.",
           "Finished the STEAM night slide show for Rainbow Elementary and refreshed the photographs in it.",
           "Brought two candidate company names to the team and learned how to put a deadline on an important decision."
         ],
 
         nextWeek:
           "The name has a date now — September 30, two candidates on the board. Of the four items " +
-          "carried into this session, the integrated master schedule is closed and the name is " +
+          "carried into this session, the integrated master schedule is nearly there and the name is " +
           "scheduled; capsule dive #3 (the gate is three consecutive dry dives) and the first System " +
           "Integration Diagram walkthrough are still open, along with the Phase 1 showcase and role " +
           "retrospective. Near-term: get the sensors ordered so the prototype phase can actually " +

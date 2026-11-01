@@ -73,3 +73,11 @@ CONSENT
   Students appear in the hero. photoConsentPending is false — flip it
   to true and the renderer hides the hero on its own if a release is
   ever pulled.
+
+CORRECTION 1 NOV 2026 — IMS
+  This entry originally said the integrated master schedule was finalized,
+  following the 1.13 executive summary (see SOURCE CONFLICT above). It
+  wasn't: "Finish IMS" reappeared at 2.4, and the IMS was finished and
+  uploaded at 2.7 on 1 Nov. Recap, decision, outcome and looking-ahead
+  lines were corrected to say it moved toward final, and the PDF was
+  regenerated.

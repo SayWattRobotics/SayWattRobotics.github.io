@@ -41,3 +41,35 @@ DIAGRAM NOTES
 DOCUMENT
   meeting-note.pdf — printable two-page field note, generated straight from
   this entry in content.js.
+
+UPDATE 1 NOV 2026
+  The season notes for 2.5 were filled in after this entry was first
+  written. Applied:
+    · Attendance: eight — Trenton, Liam, Luke, Adrian, Tyler, Rebecca,
+      Rhylan, Sam. "Attendance wasn't recorded" removed.
+    · Mechanical: finalizing end cap; O-ring gland depth calculated at 25%
+      squeeze; working CAD for the plunger system.
+    · Electrical: 12 V to 5 V buck converter soldered (closes the 2.3/2.4
+      item); ESP32 + stepper driver reconnected, software reloaded, new
+      stepper motor tested on a 240 mm lead screw; "the electrical
+      schematic from a previous season really helped rebuild the buoyancy
+      controller."
+    · Action items now published: create the PCB; find the ESP32 KiCad
+      file or remake it.
+    · byNumbers reworked (students, 25% squeeze, 240 mm, 3 plate versions).
+
+  NEW PHOTO
+    05-buoyancy-engine-on-the-bench.jpg — IMG_0217 from Drive > Pics,
+    EXIF 18 Oct 2026 4:37 PM. Shown first in the gallery. Resized to
+    1920 px, EXIF stripped.
+
+  DIAGRAM DATE
+    IMG_0179 in Drive (not published) shows the same hand-drawn wiring
+    diagram, EXIF-dated Sat 3 Oct, 9:15 AM — it was drawn before 2.3, not at
+    2.5. The entry only says it "sat next to the bench," which stays true.
+
+  COACHING FLAG (not published)
+    The bench photo shows a blue "KBT Lithium Ion Rechargeable Battery"
+    pack powering the prototype. Fine for bench testing, but the 2027 float
+    rules allow NiMH and AGM batteries only (ELEC-NRD-003). The competition
+    float needs a NiMH or AGM pack, fused per the battery table.

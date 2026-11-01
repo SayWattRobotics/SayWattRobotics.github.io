@@ -42,3 +42,22 @@ PHOTOS
   None submitted for this session. The Drive folder "2026-2027 season > Pics"
   (last modified Oct 3) may have shots from the early Phase 2 sessions; vet
   them for releases before adding any here.
+
+UPDATE 1 NOV 2026 — PHOTOS
+  Six photos from Drive > Pics, all EXIF-dated 4 Oct 2026 between 3:43 and
+  4:34 PM (Preston's phone, same series as the FLL 1.8 photos):
+    00-hero-cardboard-prototyping.jpg      IMG_2977  4:27 PM
+       REDACTED: a UPS shipping label on the box showed a full name, home
+       address, phone and tracking number. Blurred, along with two smaller
+       product/shipping stickers. Do not publish the original.
+    01-cad-walkthrough-on-the-big-screen.jpg IMG_2978  4:34 PM
+    02-parts-list-on-the-laptop.jpg        IMG_2973  4:04 PM
+       REDACTED: a tablet on the student's lap showed an online order page
+       with a ship-to block. The tablet screen is blurred.
+    03-esp32-and-sensors.jpg               IMG_2976  4:04 PM
+    04-soldering-the-power-rail.jpg        IMG_2975  4:04 PM
+    05-12v-terminal-block.jpg              IMG_2967  3:43 PM
+  Not used: IMG_2974 (near-duplicate of 2973). Recap gained one clause for
+  the coach's CAD walkthrough seen in IMG_2978.
+
+  The "PHOTOS: None submitted" note above is superseded.

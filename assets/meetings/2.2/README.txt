@@ -26,3 +26,8 @@ PHOTOS
   None submitted for this session. The Drive folder "2026-2027 season > Pics"
   (last modified Oct 3) may have shots from the early Phase 2 sessions; vet
   them for releases before adding any here.
+
+UPDATE 1 NOV 2026 — PHOTO
+  00-hero-living-room-session.jpg — IMG_0176 from Drive > Pics, EXIF
+  27 Sep 2026 4:57 PM. Students on couches, laptop presentation on the TV.
+  Resized to 1920 px, EXIF stripped.

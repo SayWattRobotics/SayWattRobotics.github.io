@@ -36,3 +36,18 @@ PHOTOS
   None submitted for this session. The Drive folder "2026-2027 season > Pics"
   (last modified Oct 3) may have shots from the early Phase 2 sessions; vet
   them for releases before adding any here.
+
+UPDATE 1 NOV 2026
+  TRADE TABLE — the season notes embed the updated "manipulator gripper
+  trade" table under "Updated scores." Totals now published:
+    linear actuator only 32 · all hydraulic 25 · combo 20
+  Criteria: accuracy, repeatability, complexity, ease of use, prone to
+  failure, cost, ease of system integration, O&M (higher = better).
+  Changes from the 2.1 table: prone-to-failure linear 3->5, hydraulic 4->2;
+  cost linear 2->3; system integration hydraulic 3->2; O&M hydraulic 3->2,
+  combo 2->1; combo prone-to-failure 2->3, cost 1->2. The entry links the
+  reliability swing to the 2.1 trapped-air finding as "lines up with," not
+  as a recorded team rationale.
+
+  IMS — resolved. Finished and uploaded at 2.7 (1 Nov). The 1.13 entry
+  overstated it and was corrected.
