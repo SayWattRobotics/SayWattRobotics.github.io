@@ -914,6 +914,13 @@ window.SITE = {
         time:  "3:00 – 5:00 PM",
         theme: "The Schedule Ships, the Float Gets a Flowchart — and a Short Circuit Teaches Us Why Fuses Matter",
 
+        heroPhoto: {
+          src:     "assets/meetings/2.7/00-hero-profiler-software-flowchart.jpg",
+          alt:     "Flowchart of the profiler's software: a main control state engine runs a mission sequence of init, descend, hold and log, surface, and transmit, with three branches below for depth control, data collection, and data comms.",
+          caption: "The profiler's brain on paper: a five-step mission sequence on top, with depth control (PID, stepper and syringe, depth-sensor feedback), data collection, and data comms branching underneath.",
+          requiresConsent: false
+        },
+
         recap:
           "Eleven of us at 2.7 — Trenton, Isaac, Annabelle, Tyler, Luke, Liam, Rebecca, Oliver, Eli, " +
           "Frankie, and Rhylan — from 3:00 to 5:00. The headline is a document, and it is a big one. The " +
@@ -980,6 +987,11 @@ window.SITE = {
           "seal; electrical settles the schematic symbol question, keeps building the board, and gets the " +
           "new stepper drivers in when they arrive. The full 2027 MATE competition manual is expected this " +
           "month; when it lands, the new schedule gets checked against the real deadlines.",
+
+        photos: [
+          { src: "assets/meetings/2.7/01-manipulator-wrist-gear-cad.jpg", caption: "The manipulator's wrist gearing in CAD: a large ring gear inside the housing, with a servo mounted alongside it." },
+          { src: "assets/meetings/2.7/02-manipulator-wrist-housing-cad.jpg", caption: "The wrist housing in CAD, with the arm running out to the gripper's stacked claws." }
+        ],
 
         photoConsentPending: false,
 

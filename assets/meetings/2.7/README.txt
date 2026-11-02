@@ -54,9 +54,16 @@ UPDATE — 1 Nov 2026, evening re-read
   (ELEC-NRD), not the team notes.
 
 PHOTOS (UPDATE)
-  Still nothing new in Drive Pics. The three images embedded in the notes
-  doc (wrist gear, wrist housing, software flowchart) are not on the site
-  yet; they need Preston's OK to download.
+  Still nothing new in Drive Pics. With Preston's OK (1 Nov), the three
+  images from the 2.7 notes were added:
+  - 00-hero-profiler-software-flowchart.jpg  <- Season Notes folder,
+    "Profiler-FlowChart (1).png" (1102 x 552, same image as in the notes)
+  - 01-manipulator-wrist-gear-cad.jpg         <- notes doc embed (350 x 265)
+  - 02-manipulator-wrist-housing-cad.jpg      <- notes doc embed (802 x 447)
+  Originals were taken from a .zip export of the notes doc (full size; the
+  embeds are this small at source). Converted to progressive JPEG, no
+  metadata, not resized. CAD screenshots and a diagram only: no people,
+  names, or account details visible.
 
 
 COACHING NOTES
